@@ -1,0 +1,26 @@
+package main;
+
+import java.util.Calendar;
+
+import my.MyClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+		MyClass mycls = new MyClass();
+		mycls.method();
+		mycls.function();
+		*/
+		MyClass mycls = MyClass.getInstance();
+		
+		Calendar cal = Calendar.getInstance();
+
+		// class array
+	
+	
+	}
+
+}

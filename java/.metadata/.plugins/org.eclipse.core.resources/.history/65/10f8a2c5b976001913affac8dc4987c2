@@ -1,0 +1,64 @@
+package bit;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+		
+		// AND
+		
+		int number;
+		number = 0x71 & 0xb5;
+		
+		/*
+		 
+		 		8421 8421
+		 		0111 0001
+		 		1011 0101
+		 		
+		 		0011 0001  -> 0x31 
+		 
+		 */
+
+			System.out.println("number =" + number);
+			System.out.printf("0x%x" + "\n" , number);
+			
+			// OR
+			
+			// XOR
+			
+			/*
+			 
+	 		8421 8421
+	 		0111 0001
+	 		1011 0101
+	 		
+	 		1100 0100  -> 0xC4
+	 */
+			
+			number = 0x71 ^ 0xb5;
+			System.out.println("number =" + number);
+			System.out.printf("0x%x" + "\n" , number);
+			
+			// Left shift
+			
+			/*                   *2  == left shift
+				0001	-> 1
+				0010	-> 2
+				0100	-> 4
+				1000	-> 8
+			*/
+			
+			number = 0x1 << 2;
+			System.out.println("number =" + number);
+			
+			// ~ (반전) 계산기 사용 추천 0-> 1 | 1-> 0
+			/*
+				0101 0101 -> 1010 1010
+			*/
+			nuber = ~0x55;
+			System.out.println("number =" + number);
+			
+	}
+
+}

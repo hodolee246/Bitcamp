@@ -1,0 +1,21 @@
+package marine;
+
+public class MarineClass {
+
+	int x, y;
+	
+	public void move(int x, int y) {
+		this.x = x;
+		this.y = y;
+		System.out.println("MarineClass move(int x, int y)");
+	}
+	
+	public void stop() {
+		System.out.println("MarineClass stop()");
+	}
+	
+	public void stimPack() {
+		System.out.println("MarineClass stimPack()");
+	}
+	
+}

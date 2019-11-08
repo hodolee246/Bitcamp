@@ -1,0 +1,28 @@
+package bit;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+		
+		// AND
+		
+		int number;
+		number = 0x71 & 0xb5;
+		
+		/*
+		 
+		 		8421 8421
+		 		0111 0001
+		 		1011 0101
+		 		
+		 		0011 0001  -> 0x31 
+		 
+		 */
+
+			System.out.println("number =" + number);
+			System.out.printf("%x" , number);
+			
+	}
+
+}

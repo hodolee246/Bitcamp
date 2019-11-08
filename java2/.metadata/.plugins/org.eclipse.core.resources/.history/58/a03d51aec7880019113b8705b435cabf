@@ -1,0 +1,25 @@
+package ycls;
+
+public class YouClass {
+
+	
+	private int younum;
+	
+	public YouClass() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "YouClass [younum=" + younum + "]";
+	}
+
+	public int getYounum() {
+		return younum;
+	}
+
+	public void setYounum(int younum) {
+		this.younum = younum;
+	}
+	
+}

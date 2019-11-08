@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+body{
+	color : blue;
+	text-align: center;
+}
+h1{
+	color : red;
+	text-decoration: overline;
+}
+p.ex{			/* p태그 의 ex클래스만 적용해라 */
+	color : rgb(0,255,0);
+	text-align: right;
+	text-decoration: line-through;
+}
+a{
+	text-decoration: none;
+}
+p.uppercase{
+	text-transform: uppercase;
+}
+p.lowercase{
+	text-transform: lowercase;
+}
+p.capitalize{
+	text-transform: capitalize;		/* 첫글자만 대문자로 변경 */
+}
+p.serif{
+	font-family: "Times New Roman", Times, serif;
+	font-style: normal; /* 그냥 디폴트 값이다.*/
+	font-size: 200px; 	/* pixels / 16 = em */
+}
+
+</style>
+</head>
+<body>
+
+<h1>힘들어요</h1>
+
+
+<p class="ex" style="text-align: center;">어지러워요</p>
+
+<p>피곤해요</p>
+
+<h3 class="ex">쉬고싶어요</h3>
+
+<a href="http://www.naver.com">Naver</a>
+
+<p class="uppercase">Hello</p>
+<p class="lowercase">World</p>
+<p class="capitalize">csS</p>
+<p class="serif">hello My World I can do it</p>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

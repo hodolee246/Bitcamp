@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	src="https://www.w3schools.com/lib/w3.js"
+</script>
+</head>
+<body>
+
+<h3>include.html start</h3>
+
+<!-- include : 외부 파일 부르기 이거는 현재 파일을 유지하면서 외부 파일을 부른다.
+
+	<a
+	<form
+	<location.href		이 3개는 외부 파일을 불러오는거고
+ -->
+ <div w3-include-html="index9.html"
+ 	style="width: 50%; height: 300px;"></div>
+ 
+ 
+ <h3>include.html end</h3>
+<script type="text/javascript">
+
+w3.includeHTML();
+
+</script> 
+</body>
+</html>

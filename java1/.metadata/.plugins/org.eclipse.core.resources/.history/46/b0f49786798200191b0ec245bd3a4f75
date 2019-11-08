@@ -1,0 +1,31 @@
+package game;
+
+import dice.Dice;
+
+public class gamePlay {
+
+	
+	
+	private int coin = 20;
+	private int batting;
+	private int inputNumber;
+	
+	Dice dice1 = new Dice();
+	Dice dice2 = new Dice();
+	
+	public void init() {
+		dice1.diceRandom();
+		dice2.diceRandom();
+		
+		System.out.println("첫번째 주사위: " + dice1.getNumber());
+		System.out.println("두번째 주사위: " + dice2.getNumber());
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

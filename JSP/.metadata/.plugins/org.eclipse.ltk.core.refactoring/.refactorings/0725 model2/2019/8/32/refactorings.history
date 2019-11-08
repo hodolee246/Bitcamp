@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;0725 model2/WebContent/WEB-INF/lib/ojdbc6 (1).jar&apos; to &apos;ojdbc6.jar&apos;" description="Rename resource &apos;ojdbc6 (1).jar&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/WEB-INF/lib/ojdbc6 (1).jar" name="ojdbc6.jar" stamp="1565141349766" updateReferences="true"/>
+</session>

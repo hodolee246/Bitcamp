@@ -1,0 +1,26 @@
+package main;
+
+import child.Child;
+import child.Parent;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+			상속성 : 부모클래스에 있는 모든 특성을 하위(자식)클래스 에서
+					상속(계승)을 받는걸 의미한다 
+
+		*/
+		
+		Child ch = new Child();
+		ch.pMethod();
+		
+		Parent pa = new Parent();
+		pa.pMethod();
+		
+		ch.pNumber = 12;
+		
+		
+	}
+
+}

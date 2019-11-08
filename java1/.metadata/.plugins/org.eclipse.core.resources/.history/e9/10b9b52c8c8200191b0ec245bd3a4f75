@@ -1,0 +1,40 @@
+package test;
+
+public class testClass {
+
+	
+	private int year;
+	
+	private String habby;
+
+	public int getYear() {
+		return year;
+	}
+
+	public void setYear(int year) {
+		this.year = year;
+	}
+
+	public String getHabby() {
+		return habby;
+	}
+
+	public void setHabby(String habby) {
+		this.habby = habby;
+	}
+
+	@Override
+	public String toString() {
+		return "testClass [year=" + year + ", habby=" + habby + "]";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

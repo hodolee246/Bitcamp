@@ -1,0 +1,9 @@
+package sup;
+
+public class SuperClass {
+
+	public SuperClass() {
+		System.out.println("SuperClass SuperClass()");
+	}
+	
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!-- Link
+html
+
+<a
+<form	form 안의 있는 name 으로 가져감
+
+Java Script
+location.href	값을 만들어서 파라메터로 
+
+Java
+
+ -->
+ 
+ <form action="NewFile.jsp">
+ 	ID:<input type="text" name="id" id="_id" placeholder="insert id"> <!-- placeholder 는 사라지지 않고 text에 계속 남아있는다. -->
+ 	<br>
+	<!-- <input type="submit" value="Moveform"> -->
+	<button type="button" onclick="btnClick()">move</button>
+ </form>
+ <script type="text/javascript">
+ function btnClick() {
+	var id = document.getElementById("_id").value;
+	location.href = "NewFile.jsp?_id=" + id;
+}
+ </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

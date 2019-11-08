@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>	<!-- html 태그의 노드는 head 와 body 2개가있다. -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	
+	
+	
+	<!-- DOM	: Document Object Model -->
+	
+	<!-- childNodes -->
+	
+	
+	</body>
+</html>

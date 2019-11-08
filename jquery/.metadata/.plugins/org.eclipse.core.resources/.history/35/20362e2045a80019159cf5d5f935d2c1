@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+.q5{
+	color:#00ffff;
+	border: 2px solid;
+}
+</style>
+</head>
+<body>
+
+<button type="button">실행</button>
+
+<p id="q01">Hello JQuery</p>
+<p id="q02">Hello JQuery</p>
+<p id="q03">Hello JQuery</p>
+<p id="q04">Hello JQuery</p>
+
+<ul id="q05">
+	<li>사과</li>
+	<li>딸기</li>
+	<li>수박</li>
+	<li>망고</li>
+	<li>자두</li>
+	
+</ul>
+
+<p id="q06">최선을 다함</p>
+
+<script type="text/javascript">
+$(function () {
+	
+	$("button").click(function () {
+		// font color 변경
+		$("#q01").css("color", "red");	// red or #ff0000
+		
+		// font color, background-color 변경
+		$("#q02").css({"color":"red",		// attr 변경
+						"background-color":"skyblue"	
+		});
+		
+	//	$("#q03").text("헬로우 제이쿼리");
+		$("#q03").html("<b>헬로우</b> 제이쿼리");	// html 로 추가했기에 <b> 태그가 적용된다.
+		
+		// html 변경
+		$("#q04").html("<a href ='#'>World JQuery</a>");	// 4번째 p태그의 링크를 걸고 텍스트를 바꿔라
+		
+		// class 추가
+		$("#q05").addClass("q5");		// 5번째 p태그에 클래스 추가
+		
+		// 항목 추가
+		$("#q05").append("<li>오렌지</li>");	// 리스트 추가
+		var app = $("<li></li>").text("복숭아");
+		$("#q05").append(app);
+		
+		// 항목 삭제
+		//$("#q05 li").remove(); 	// list를 삭제해라
+	
+		// 항목 추가
+		$("#q06").prepend("<p>끝까지</p>");	// 앞에 추가
+		
+		$("#q06").append("<p>나는 성공할 것이다.</p>");	// 뒤에 추가
+	});
+	
+});
+
+
+</script>
+
+
+</body>
+</html>
+
+
+

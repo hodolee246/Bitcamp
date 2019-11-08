@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+cookie : 저장공간(client) == String
+		ex) id, password 저장하는 공간, 방문회수
+		Java Script에서 접근이 가능하다.
+		저장 기한이 존재한다
+		
+		
+session : 저장공간(server) == Object setAttribute, getAttribute		
+ 		ex) id, password, MemberDto(주로사용)
+ 		저장 기한(저장기한이 끝날때까지 데이터(object를 가지고 있기에 계속해서
+ 		다른 곳에 set, getAttribute로 넘기고 받아주면 계속 저장이되어서 서버가 무거워진다.
+ 		한글 사용 금지!!
+ -->
+
+</body>
+</html>

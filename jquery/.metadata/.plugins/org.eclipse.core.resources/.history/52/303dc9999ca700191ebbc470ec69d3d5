@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h2>room image</h2>
+
+<img src="b_pic1.jpg">
+
+<script type="text/javascript">
+
+$(function () {
+	$('img').hover(function() {
+		$('img').attr("src", "b_pic2.jpg")
+		$('img').attr("src", "b_pic1.jpg")
+	})
+		
+})
+
+</script>
+</body>
+</html>

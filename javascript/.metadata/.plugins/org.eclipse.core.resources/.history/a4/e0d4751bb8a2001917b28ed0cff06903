@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+
+document.getElementById("demo").innerHTML = 
+	/*
+	parseInt("10") +
+	"<br>" + parseInt("23.4") + "<br>" + 
+	parseFloat("23.4") + "<br>" + 
+	parseInt("    23.4") + "<br>" +
+	parseInt("5 10");
+	*/
+	
+	Number(true) + "<br>" + 
+	Number(false) + "<br>" +
+	Number(new Date()) + "<br>" +
+	Number("10") + "<br>" +
+	Number("     10") + "<br>" +
+	Number("23.4") + "<br>" +
+	Number("   23.4") + "<br>" +
+	Number("5 10") + "<br>" +
+</script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,119 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import javax.swing.JOptionPane;
+
+import dao.MemberDao;
+import dto.Human;
+
+public class DeleteView extends Frame implements ActionListener, WindowListener {
+
+	Label label;
+	TextField textField;
+	Button btn1, btn2;
+	
+	
+	
+	public DeleteView() {
+		super("DeleteView");
+		
+		label = new Label("Name");
+		label.setBounds(50, 200, 100, 40);
+		add(label);
+		
+		textField = new TextField("");
+		textField.setBounds(170, 200, 100, 40);
+		add(textField);
+		
+		btn1 = new Button("Remove");
+		btn1.setBounds(50, 400, 70, 50);
+		btn1.addActionListener(this);
+		add(btn1);
+		
+		btn2 = new Button("Back");
+		btn2.setBounds(170, 400, 70, 50);
+		btn2.addActionListener(this);
+		add(btn2);
+		
+		
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		if(obj == btn1) {
+			System.out.println();
+			String name = textField.getText();
+			MemberDao dao = new MemberDao();
+			boolean b;
+			b = dao.delete(name);
+			if(b) {
+				JOptionPane.showMessageDialog(null, "Remove");
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Faile to Remove");
+				
+			}
+		}else if(obj == btn2) {
+			new MenuView();
+			this.dispose();
+		}
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

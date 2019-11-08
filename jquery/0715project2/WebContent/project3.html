@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+.cls{
+	border: 5px solid green;
+
+	border-bottom: 20px solid green;
+}
+</style>
+</head>
+<body>
+<h2>Life on the water</h2>
+<br>
+<button type="button" id="addframe">프레임의 추가</button>
+<button type="button" id="removeframe">프레임의 삭제</button>
+<br><br>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<br>
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<script type="text/javascript">
+$(function () {
+	
+	$("#addframe").click(function () {
+			$("img").addClass("cls");
+			
+		});
+	$("#removeframe").click(function () {
+			$("img").removeClass("cls");
+		
+		});
+});
+
+
+</script>
+</body>
+</html>

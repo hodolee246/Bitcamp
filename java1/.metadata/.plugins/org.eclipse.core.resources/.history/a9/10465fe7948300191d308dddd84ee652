@@ -1,0 +1,7 @@
+package doing;
+
+import robot.Robot;
+
+public class DoingClass extends Robot {
+
+}

@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int com, user = 0;
+		com = (int)(Math.random()*3);
+		System.out.println(com);
+	out:for (int i = 0; i < i+1; i++) {
+		
+		System.out.print("0[가위], 1[바위], 2[보] ");
+		System.out.println(" 3개중 하나를 입력해 주세요");
+		user = scan.nextInt();
+		
+		int ma = 0;
+		
+		if(com == user) {
+			System.out.println("비기셨습니다.");
+			
+		}
+		else if((com + user !=2 && user > com)
+				|| (com == 2 && user == 0)) {
+			System.out.println("이기셨습니다.");
+			break out;
+		}
+			else {
+				System.out.println("패배하셨습니다.");
+			}
+		
+		}
+		
+		
+		
+			
+		
+		
+	}
+
+}

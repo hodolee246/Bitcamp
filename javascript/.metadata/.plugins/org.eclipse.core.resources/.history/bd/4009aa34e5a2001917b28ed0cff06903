@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" style="color: white;">
+
+<h3>풍경 사진</h3>
+<br>
+<br>
+※이미지 위로 마우스를 이동하면 그 이미지가 칼러로 보입니다.
+<br>
+<br>
+<img alt="" src="nature01.jpg"> &ensp;&ensp;&ensp;
+<img alt="" src="nature02.jpg"> &ensp;&ensp;&ensp;
+<img alt="" src="nature03.jpg"> &ensp;&ensp;&ensp;
+<br><br>
+<img alt="" src="nature04.jpg"> &ensp;&ensp;&ensp;
+<img alt="" src="nature05.jpg"> &ensp;&ensp;&ensp;
+<img alt="" src="nature06.jpg"> &ensp;&ensp;&ensp;
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var num = 12;
+var str = "hello";
+var fnum = 12.34;
+var swit = true;
+
+// switch, if, for, foreach 전부다 사용가능
+
+// Object
+var person = {
+		firstname:"길동",
+		lastname:"홍",
+		age:24,
+		info:function(){
+			return this.firstname + " " +
+			this.lastname + " " + this.age;
+		}
+}
+
+document.getElementById("demo").innerHTML = person.info;
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+

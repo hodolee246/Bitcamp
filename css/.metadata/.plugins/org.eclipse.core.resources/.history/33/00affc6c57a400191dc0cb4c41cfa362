@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div#maindiv{
+	width: 600px;
+	height: 600px;
+	background-color: orange;
+}
+
+
+div#fd{
+	width: 200px;
+	height: 600px;
+	background-color: black;
+	float: left;
+}
+div#fdo{
+	width: 200px;
+	height: 500px;
+	background-color: red;
+}
+div#fdt{
+	width: 200px;
+	height: 100px;
+	background-color: yellow;
+}
+
+
+div#sd{
+	width: 200px;
+	height: 600px;
+	background-color: black;
+	float: left;
+}
+div#sdo{
+	width: 200px;
+	height: 200px;
+	background-color: blue;
+}
+div#sdt{
+	width: 200px;
+	height: 400px;
+	background-color: green;
+</style>
+</head>
+<body>
+
+<div id="maindiv">
+
+
+<div id="fd">
+<div id="fdo">
+</div>
+<div id="fdt">
+</div>
+</div>
+
+<div id="sd">
+<div id="sdo">
+</div>
+<div id="sdt">
+</div>
+</div>
+
+<div id="td">
+<div id="tdo"></div>
+<div id="tdt"></div>
+
+</div>
+
+
+
+</div>
+
+</body>
+</html>

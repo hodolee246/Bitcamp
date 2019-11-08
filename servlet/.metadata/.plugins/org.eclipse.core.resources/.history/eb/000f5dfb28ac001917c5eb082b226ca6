@@ -1,0 +1,9 @@
+package sample08;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/visitedCookie")
+public class VisitedCookie extends HttpServlet {
+
+}

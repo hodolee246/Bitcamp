@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"> p tag </p>
+
+<script type="text/javascript">
+var text = "<bookstore>" +
+				"<book>" +
+					"<title>탈무드</title>" +
+					"<author>랍비들</author>" +
+					"<year>2001</year>" +
+				"</book>" +
+				"<book>" +
+					"<title>이솝이야기</title>" +
+					"<author>누군가</author>" +
+					"<year>2005</year>" +
+				"</book>" +
+			"</bookstore>";
+			
+var parser, xmlDoc;
+
+parser = new DOMParser();
+xmlDoc = parser.parseFromString(text, "text/html");	/* 넣을 문자열, 형식 */
+
+
+</script>
+
+
+
+</body>
+</html>

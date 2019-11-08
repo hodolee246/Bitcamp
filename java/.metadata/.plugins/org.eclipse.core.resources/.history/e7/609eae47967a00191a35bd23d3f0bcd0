@@ -1,0 +1,95 @@
+package study4;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+			저번주 복습
+			
+			java == OPP (Object Oriented Program)
+			
+			기본 자료형
+			숫자
+			byte	1 byte	== 8 bit 0000 0000
+			short	1 byte
+			int		4 byte
+			long	8 byte (long 사용시 L 를 붙여야 long 으로 인식을 한다)
+			
+			float 	4 byte
+			double 	8 byte
+			
+			문자
+			char 	2 byte
+			String	? byte length()
+			
+			true/false
+			boolean 1 byte (딱히 바이트는 중요하지않음)
+			
+			Array(배열)
+			: 같은 자료형 변수의 묶음
+			
+			int iArray[] = new int[10]; (처음부터 할당), (new 가 나올경우 동적 할당이다.)
+			동적 할당 10
+			int iArray[]; (배열의 숫자가 정해지지 않을경우)
+			iArray = new int[5] 동적할당 5
+			정적사용 -> 0 ~ 4 -> 5X
+			
+			자료형 변환	char -> int
+			
+			char ch = 'A' ;  출력시 A
+			System.out.println(ch); -> A
+			System.out.println((int)ch); -> 65  (아스키 코드로 변환되어서 나온다)
+			
+			int num = (int)ch; -> 자동 형변환
+			
+			byte by = (byte)num;	강제(cast) 형변환
+			
+			int num1 = 3, num2 = 2;
+			double avg = num1 / num2 ; = 1.0
+			double avg = (double)num1 / num2;  = 1.5 (앞에 숫자가 매인 숫자이므로 앞만 형변환 시켜도 정상적으로 작동한다.)
+			
+			// 영어 대문자를 -> 영어 소문자
+			// A == 65 a == 97  
+			
+			 
+		*/
+			char c = 'A';
+			int n = c;
+			System.out.println(c);
+			n = n + 32;
+			c = (char)n;
+			System.out.println(c);
+			
+			// toUpperCase, toLowerCase
+			
+			String str = "abc" ;
+			
+			str.charAt(0);
+			System.out.println(str);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

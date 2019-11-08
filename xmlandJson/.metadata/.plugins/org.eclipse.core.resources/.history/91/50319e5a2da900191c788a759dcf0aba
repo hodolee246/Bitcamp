@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo">p tag</p>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+		func( xmlhttp.responseText ); 	// this.responseText
+		
+	}
+}
+xmlhttp.open("GET", "data.json", true);
+xmlhttp.send();
+
+function func( resp ) {
+	var arr = JSON.parse(resp);	// String -> json
+	var txt = "";
+	alert(arr)''
+	
+	
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+package dropship;
+
+import main.Unit;
+
+public class DropShip extends Unit {
+
+}

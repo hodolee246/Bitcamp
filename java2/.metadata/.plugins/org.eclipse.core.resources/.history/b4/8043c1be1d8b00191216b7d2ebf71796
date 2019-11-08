@@ -1,0 +1,20 @@
+package abstractweapon;
+
+import bomb.Bomb;
+import weapon.Weapon;
+
+public class BtypeClass implements AbstractWeapon {
+
+	@Override
+	public Weapon CreateWeapon() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Bomb CreateBomb() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

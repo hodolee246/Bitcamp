@@ -1,0 +1,19 @@
+package child;
+
+import parent.ParentClass;
+
+public class ChildClass extends ParentClass {
+	
+	int x = 3000;
+	
+	public ChildClass() { // 부모 클래스에 접근을 할때 Super를 통해서 접근을 한다.
+		this(1000);  // 1번 호출
+	}
+	
+	public ChildClass(int x) {
+					// 2번 호출
+		this.x = x;
+		
+	}
+
+}

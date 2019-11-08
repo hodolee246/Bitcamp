@@ -1,0 +1,10 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+// Java ¿µ¿ª == Scriptlet
+String id = request.getParameter("id");
+String pwd = request.getParameter("pwd");
+System.out.println(pwd);
+System.out.println(id);
+
+%>

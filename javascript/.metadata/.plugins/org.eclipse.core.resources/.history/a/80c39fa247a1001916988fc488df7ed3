@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- Valriable(변수) -->
+
+<p id="demo">Tag P</p>
+
+<script type="text/javascript">
+
+// document.getEl..... Javascrip를 간략화 한것이 -> JQuery
+/*
+
+	var -- int, double, String , object, char
+*/
+var pi = 3.141592;
+var name = "홍길동";
+var number = 123;
+var updown = true;
+
+var person = "일지매", num = 234 + 5;		/* 하나의 변수의 2가지 자료형을 넣는것이 가능하다. */
+
+alert("person:" + person + "num:" + num);
+
+num = "정수동;"
+
+alert("person:" + person + "num:" + num);	// 정수동이 출력된다.
+
+var nn = "5" + 3 + 1;
+
+alert(nn);	// 531 이출력된다.
+
+var nn =  3 + 1 + "5";
+
+alert(nn);  	// 45 가 출력된다.
+
+// 배열
+var cars[] = { }; 	// 자바 문법
+
+var cars = ["Saab", "Volvo", "BMW"];	//자바 스크립트 문법
+
+alert(cars[1]);		// Saab 가 출력된다.
+
+var cars = new Array(3);	// 자바 스크립트 문법
+cars[0] = "사보";
+cars[1] = "볼보";
+cars[2] = "BMW";
+
+alert(cars[1]);		// 사보가 출력된다;
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

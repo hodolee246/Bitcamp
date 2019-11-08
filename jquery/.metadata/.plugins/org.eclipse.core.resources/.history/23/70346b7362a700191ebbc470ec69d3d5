@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+이름:<input type="text"><br><br>
+
+이메일:<input type="text"><br><br>
+
+<input onchange="func()">	<!-- handling 기존처리에서 다른 함수를 호출하는 행동-->
+
+
+
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,12 @@
+package robot;
+
+import ro.Robot;
+
+public class SingClass extends Robot {
+	
+	
+	
+	public void print() {
+		System.out.println("노래를 합니다.");
+	}
+}

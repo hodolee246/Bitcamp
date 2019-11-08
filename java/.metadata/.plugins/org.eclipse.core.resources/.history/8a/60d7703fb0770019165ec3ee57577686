@@ -1,0 +1,51 @@
+package project17;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int a ;
+		a = scan.nextInt();
+		if(a > 9 && a < 20)
+		{
+			System.out.println("입력한 수는 10보다 크고 20보다 작습니다.");
+		}
+		else if(a > 19 && a <30)
+		{
+			System.out.println("입력한 수는 20보다 크고 30보다 작습니다.");
+		}
+		else if(a > 29 && a <40)
+		{
+			System.out.println("입력한 수는 30보다 크고 40보다 작습니다.");
+		}
+		else if(a > 39 && a <50)
+		{
+			System.out.println("입력한 수는 40보다 크고 50보다 작습니다.");
+		}
+		else if(a > 49 && a <60)
+		{
+			System.out.println("입력한 수는 50보다 크고 60보다 작습니다.");
+		}
+		else if(a > 59 && a <70)
+		{
+			System.out.println("입력한 수는 60보다 크고 70보다 작습니다.");
+		}
+		else if(a > 69 && a <80)
+		{
+			System.out.println("입력한 수는 70보다 크고 80보다 작습니다.");
+		}
+		else if(a > 79 && a <90)
+		{
+			System.out.println("입력한 수는 80보다 크고 90보다 작습니다.");
+		}
+		else if(a > 89 && a <100)
+		{
+			System.out.println("입력한 수는 90보다 크고 100보다 작습니다.");
+		}
+	}
+
+}

@@ -1,0 +1,48 @@
+package main;
+
+import ro.Robot;
+import robot.DanceClass;
+import robot.DrawClass;
+import robot.SingClass;
+
+public class mainClass {
+
+	
+
+	static void action(Robot rt[]) {
+		for (int i = 0; i < rt.length; i++) {
+			if(rt[i] instanceof DanceClass) {
+				DanceClass d = (DanceClass)rt[i];
+				d.print();
+				
+			}else if(rt[i] instanceof SingClass) {
+				SingClass s = (SingClass)rt[i];
+				s.print();
+				
+			}else if(rt[i] instanceof DrawClass) {
+				DrawClass dc = (DrawClass)rt[i];
+				dc.print();
+				
+			}
+		}
+	}
+	
+	public static void main(String[] args) {
+	
+		Robot rt[] = new Robot[3];
+		
+		rt[0] = new DanceClass();
+		rt[1] = new SingClass();
+		rt[2] = new DrawClass();
+		
+		
+		
+			action(rt);
+		
+		
+		
+	}
+
+	
+	
+}

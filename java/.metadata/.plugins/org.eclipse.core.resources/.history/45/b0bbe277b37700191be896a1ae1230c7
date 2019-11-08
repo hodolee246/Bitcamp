@@ -1,0 +1,25 @@
+package project17;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		
+		int num ;
+		num = 0;
+		int 
+		
+		num = scan.nextInt();
+		
+		
+		for()
+		}
+		
+	}
+
+		

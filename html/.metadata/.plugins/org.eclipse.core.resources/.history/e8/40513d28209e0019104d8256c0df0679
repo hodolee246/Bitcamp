@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<img alt = "헉! 이미지가 없어요 ㅠㅠ" src = "./images/picture.png">
+
+<br><br>
+
+<img alt = "헉! 이미지가 없어요 ㅠㅠ" src = "http://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81749/81749_185.jpg">
+
+<br><br>
+
+<img alt = "헉! 이미지가 없어요!!" src = "./images/huk (1).gif">
+
+<br><br>
+
+<img alt ="이미지가 없네요..." src = "./images/picture.png" width ="200" height ="200">
+<!-- 테두리 라인을 넣을때 -->
+<img alt ="이미지가 없네요..." src = "./images/picture.png" width ="200" height ="200" border="2">
+
+<br><br><br><br><br>
+
+<!-- 이미지 와 기사를 같이 넣고 싶은 경우 -->
+멋진 산입니다~~~.
+<img alt=" 이미지가 없어요 " src = "./images/picture.png" width="200" height="200" align = "right" hspace = " 10 "><br clear = "right">
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div id="demo">안녕하세요 반갑습니다.</div>
+<br>
+<button type="button" onclick="func()">클릭</button>
+
+
+<script type="text/javascript">
+
+function func() {
+	obj = document.getElementById("demo");
+	obj.style.color = "white";
+}
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+package work3;
+
+import java.awt.BufferCapabilities;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+			1. 파일생성
+			2. 파일삭제
+			3. 파일수정
+			4. 파일읽기
+			5. 파일추가수정
+			6. 모두출력
+			7. 검색 // 이름을 검색했을경우 그 사람의 나이랑 주소가 출력되게끔
+			8. 종료
+		
+		*/
+		
+		
+		
+		// createFile("test");
+		
+		//	deleteFile("test");
+		
+		//	writeFile("test");
+		
+		//	appendWriteFile("test");
+		
+		/*	String arr[] = readFile("test");
+			for (int i = 0; i < arr.length; i++) {
+				System.out.println(arr[i]);
+			}*/
+		//	serchFile("test");
+		String human = searchData("test", "홍길동");
+		//System.out.println(human);
+		String split[] = human.split("-");
+		System.out.println( split[0]);
+		System.out.println( split[1]);
+		System.out.println( split[2]);
+	}
+	
+	static File createFile(String filename) {
+		
+		File dirFile = new File("e:\\tmp"); // 경로지정
+		String fileList[] = dirFile.list();
+		boolean b = false;
+		
+		
+		for (int i = 0; i < fileList.length; i++) {
+			if(fileList[i].equals(filename + ".txt") == true) {
+				b = true;
+				break;
+				
+			}
+		}
+		if(b) {
+			System.out.println("같은 이름의 파일이 존재합니다. 파일을 생성하지 못했습니다.");
+			return null;
+		}
+		File newFile = new File("e:\\tmp\\" + filename + ".txt");
+		
+		try {
+			if(newFile.createNewFile()) {
+				System.out.println(filename +".txt 파일을 생성에 성공했습니다.");
+			}else {
+				System.out.println("파일을 생성에 실패했습니다.");
+				return null;
+			}
+		} catch (IOException e) {
+			System.out.println("예외가 발생했습니다.");
+		}
+		return newFile;
+	}
+	
+	static void deleteFile(String filename) {
+		File file = new File("e:\\tmp\\" + filename + ".txt"); // 경로지정
+		
+		boolean b = file.exists(); // 파일이 있는지 유무를 true, false로 받는다  
+		if(b == false) {
+			System.out.println("삭제할 파일" + filename + ".txt 가 존재하지 않습니다.");
+		}else {
+			if(file.delete()) {
+				System.out.println("파일" + filename + ".txt를 삭제했습니다.");
+			} else {
+				System.out.println("파일" + filename + ".txt를 삭제하지 못했습니다.");
+			}
+		}
+		
+	}
+	
+	static boolean writeFile(String filename) {
+		Scanner sc = new Scanner(System.in);
+		File file = new File("e:\\tmp\\" + filename + ".txt");
+		boolean b = file.exists();
+		
+		if(b == false) {
+			System.out.println(filename + ".txt 파일이 존재하지 않습니다.");
+			return false;
+		}else {
+			System.out.print("이름 >> ");
+			String name = sc.next();
+			
+			System.out.print("나이 >> ");
+			int age = sc.nextInt();
+			
+			System.out.print("주소 >> ");
+			String address = sc.next();
+			
+			String data = name + "-" + age + "-" + address; // split(String 함수 토큰을 매개체로 자르는 함수)
+			
+			PrintWriter pw;
+			
+			try {
+				pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+				pw.println(data);
+				pw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}			
+			System.out.println(filename + ".txt 파일에 " + data + "를 작성하였습니다.");
+			return true;
+		}
+		
+		
+		
+		
+		
+		
+	}
+	
+	static boolean appendWriteFile(String filename) {
+		Scanner sc = new Scanner(System.in);
+		File file = new File("e:\\tmp\\" + filename + ".txt");
+		boolean b = file.exists();
+		
+		if(b == false) {
+			System.out.println(filename + "파일이 존재하지 않습니다.");
+			return false;
+		}else {
+			System.out.print("이름 >> ");
+			String name = sc.next();
+			
+			System.out.print("나이 >> ");
+			int age = sc.nextInt();
+			
+			System.out.print("주소 >> ");
+			String address = sc.next();
+			
+			String data = name + "-" + age + "-" + address; // split(String 함수 토큰을 매개체로 자르는 함수)
+			
+			PrintWriter pw;
+			
+			try {
+				pw = new PrintWriter(new BufferedWriter(new FileWriter(file, true)));
+				pw.println(data);
+				pw.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}			
+			System.out.println(filename + ".txt 파일에 " + data + "를 추가 작성하였습니다.");
+			return true;
+		}
+
+		
+	}
+	
+		static String[] readFile(String filename) {
+			File file = new File("e:\\tmp\\" + filename + ".txt");
+			
+			String datas[] = null; // return 할 배열이지만 크기는 아직 모르니 null 로 처리한다
+			
+			if(!file.exists()) {
+				System.out.println("읽을 파일이 존재하지 않습니다.");
+				return null; // 읽을 파일이 없으면 null로 대체한다 null 이랑 0이랑은 다르다.
+				
+			}else {
+				
+				try {
+					BufferedReader br = new BufferedReader(new FileReader(file));
+					
+					// 데이터 수를 조사 (얼마나 있는지)
+					int count = 0 ;
+					String str;
+					while((str = br.readLine()) != null) { // while문을 돌리면서 파일을 읽는데 읽는 과정에서 버퍼 리더는 마지막 글 다음라인까지 읽고 끝내기 때문에 
+						count++;
+					}
+					br.close(); // 사용후 닫는다
+					// String 배열의 크기를 조사 후 값으로 입력
+					datas = new String[count]; 
+					
+					// 데이터들을 배열에다가 넣는다.
+					int len = 0;
+					br = new BufferedReader(new FileReader(file)); // 다시 읽을때 초기화를 시켜서 마지막 라인이 아니라 첫 라인으로 이동시킨다.
+					while((str = br.readLine()) != null) {
+						datas[len] = str;
+						len++;
+					}
+					br.close(); // 사용후 닫는다
+				} catch (FileNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				return datas;
+			}
+			
+			
+		}
+	
+	static void serchFile(String filename) {
+		Scanner sc = new Scanner(System.in);
+		File file = new File("e:\\tmp\\" + filename + ".txt");
+		String str;
+		
+		
+		try {
+			BufferedReader br = new BufferedReader(new FileReader(file));
+			
+			while((str = br.readLine()) != null) 
+		
+			br.close();
+				String arr[] = str.split("-");
+				
+				System.out.println("찾고싶은 이름을 입력해주세요.");
+				String serch = sc.next();
+				for (int i = 0; i < arr.length; i= i + 3) {
+					if(arr[0].contains(serch)) {
+						for (int j = 1; j < arr.length; j++) {
+							if(j/3 != 0)
+							System.out.println(arr[i]);
+						}
+						
+					}else {
+						System.out.println("해당 문구를 찾지를 못했습니다.");
+					}
+				}
+	
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+			
+		}
+		// 검색 이름, 파일명
+		static String searchData(String filename, String name) {
+			
+			String datas[] = readFile(filename);
+			
+			// 검색
+			int findIndex = -1;
+			for (int i = 0; i < datas.length; i++) {
+				String data[] = datas[i].split("-");
+				
+				if(name.equals(data[0])) {
+					findIndex = i;
+					break;
+				}
+			}
+			if(findIndex == -1) {
+				return ""; // String 을 return 할때 "" 공백으로 하면 null point Exception이 안뜬다
+			}
+			return datas[findIndex];
+		}
+		
+	
+	
+	
+	
+}
+
+
+
+
+
+

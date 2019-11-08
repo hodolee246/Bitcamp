@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven Bundle Plugin
+Built-By: nlebas
+Build-Jdk: 1.6.0_24
+Specification-Title: Autotag - Core runtime
+Specification-Version: 1.1.0
+Specification-Vendor: Apache Software Foundation
+Implementation-Title: Autotag - Core runtime
+Implementation-Version: 1.1.0
+Implementation-Vendor-Id: org.apache.tiles
+Implementation-Vendor: Apache Software Foundation
+Bnd-LastModified: 1342028068858
+Bundle-Description: Autotag: runtime core classes.
+Bundle-DocURL: http://tiles.apache.org/tiles-autotag/tiles-autotag-cor
+ e-runtime/
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: Autotag - Core runtime
+Bundle-SymbolicName: org.apache.tiles-autotag-core-runtime
+Bundle-Vendor: Apache Software Foundation
+Bundle-Version: 1.1.0
+Export-Package: org.apache.tiles.autotag.core.runtime.annotation;versi
+ on="1.1.0",org.apache.tiles.autotag.core.runtime;version="1.1.0",org.
+ apache.tiles.autotag.core.runtime.util;version="1.1.0"
+Tool: Bnd-1.50.0
+

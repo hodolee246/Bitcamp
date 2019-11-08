@@ -1,0 +1,14 @@
+package exception2;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// NullpointerException => new 를 안해 줘서 발생
+		
+		String str = null;
+		
+		System.out.println(str.length());
+
+	}
+
+}

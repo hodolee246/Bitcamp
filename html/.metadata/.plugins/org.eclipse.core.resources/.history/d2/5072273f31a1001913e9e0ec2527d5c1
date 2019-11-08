@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table class="t1">
+	<tr>
+		<th>LOGIN</th>
+	</tr>
+</table>
+
+<table class="t2">
+	<tr>
+		<td><input type="text" value="" style="height: 30px; width: 320px;"></td>
+	</tr>
+</table>
+
+<table class="t3">
+	<tr>
+		<td><input type="password" value="" style="height: 30px; width: 320px;"></td>
+	</tr>
+</table>
+<form action="">
+<table class="t4">
+	<tr>
+		<td>Remember</td>
+		<td><input type="checkbox" name="remember" value=""></td>
+		<td><input type="submit" value="LOGIN" style="height: 15px; width: 40px; background-color: #0050ff; color: white;"></td>
+	</tr>
+</table>
+</form>
+
+
+
+</body>
+</html>

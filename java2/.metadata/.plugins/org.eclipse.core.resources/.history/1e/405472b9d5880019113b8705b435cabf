@@ -1,0 +1,60 @@
+package file;
+
+import java.io.File;
+import java.io.IOException;
+
+import single.Singleton;
+
+public class FileClass {
+
+	private File myfile;
+	
+	private String name;
+	
+	public FileClass() {
+		myfile = new File("e:\\tmp\\Student.txt");
+		name = "Student.txt";
+		createFile();		
+	}
+	
+	public FileClass(String name) {
+		myfile = new File("e:\\tmp\\" + name + ".txt");
+		this.name = name;
+		createFile();
+	}
+	
+	public File createFile() {
+		try {
+			if(myfile.createNewFile()) {
+				System.out.println(name + "파일생성");
+			}else {
+				System.out.println(name + "파일생성실패");
+			}
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		return myfile;
+	}
+	
+	public void dataSave() {	// list -> file
+		Singleton sc = Singleton.getInstance();
+		int size = sc.dsa.size();
+		String data[] = new String[size];
+		
+		int a = 0 ; // for문 안에서 돌아갈 data의 길이
+		
+		for (int i = 0; i < sc.dsa.size(); i++) {
+			data[size] = sc.dsa.toString();
+			a++;
+		}
+		
+		myfile.writeFile
+		
+		
+	}
+	
+	public void dataLoad() {	// file -> list
+		
+	}
+}

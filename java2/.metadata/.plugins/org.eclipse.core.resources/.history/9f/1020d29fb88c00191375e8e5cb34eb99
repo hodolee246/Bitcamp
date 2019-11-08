@@ -1,0 +1,32 @@
+package main;
+
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+
+public class WindowTest extends JFrame {
+	
+	JTable table; // 하나의 데이터를 Rows라고 한다(한명의 데이터(방어율, 승, 패))
+					// 컬럼 (항목) 
+	JScrollPane scrPane; // table은 계속 늘어나서 ScroolPane을 잡아ㅜㄴ다.
+	
+	String columnNames[] = {"상품번호", "상품명", "상품가격", "상품회사"};
+	
+	Object rowData[][];		// 3 * 4
+	/*
+	  	{a, b, c, d}
+	  	{e, f, g, h}
+	  	{i, j, k, l}
+	  
+	 */
+	
+	public WindowTest() {
+	
+		rowData = new Object[3][4];
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

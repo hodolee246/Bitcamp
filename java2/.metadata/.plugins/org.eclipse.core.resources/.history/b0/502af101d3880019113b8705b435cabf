@@ -1,0 +1,36 @@
+package file;
+
+import java.io.File;
+
+import single.Singleton;
+
+public class FileClass {
+
+	private File myfile;
+	
+	private String name;
+	
+	public FileClass() {
+		myfile = new File("e:\\tmp\\Student.txt");
+		name = "Student.txt";
+		createFile();		
+	}
+	
+	public void createFile() {
+		if(myfile.createNewFile()) {
+			System.out.println(name + "파일생성");
+		}else {
+			System.out.println(name + "파일생성실패");
+		}
+	}
+	
+	public void dataSave() {	// list -> file
+		Singleton sc = Singleton.getInstance();
+		
+		
+	}
+	
+	public void dataLoad() {	// file -> list
+		
+	}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h3>
+JQuery
+</h3>
+
+<form>
+이름:<input type="text" id="name"><br>
+나이:<input type="text" id="age"><br>
+주소:<input type="text" id="address"><br>
+<button type="button" id="btn">전송</button>
+
+
+
+</form>
+
+<script type="text/javascript">
+$(function () {
+	/* $("#btn").click(function () {	// 아래와 약간의 차이가존재한다.
+		
+	}); */
+	$("#btn").on("click", function () {
+//		alert("x");	
+		location.href = "NewFile1.jsp"
+	});
+});
+</script>
+
+</body>
+</html>
+
+
+

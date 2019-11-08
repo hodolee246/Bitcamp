@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Bbs">
+
+<select id="getBbsList" parameterType="bit.com.a.model.BbsParam" resultType="bit.com.a.model.BbsDto">
+	SELECT SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT,
+		WDATE, PARENT, DEL, READCOUNT
+	FROM (SELECT ROW_NUMBER()OVER(ORDER BY REF DESC, STEP ASC)AS RNUM,
+			SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT, 
+			WDATE, PARENT, DEL, READCOUNT
+			FROM BBS
+			WHERE 1=1
+			<choose>
+			<when test="s_category != null AND s_category != ''
+			AND s_kayword != null AND s_keyword != ''">
+			AND WHERE			
+			</when>
+			
+			
+			
+			</choose>
+			)
+	
+	
+	<!-- ORDER BY REF DESC, STEP ASC -->
+</select>
+
+
+
+</mapper>  
+
+
+
+
+
+

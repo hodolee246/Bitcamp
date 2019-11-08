@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+
+	이름 텍스트
+	나이 셀렉트
+	성별 라디오
+	취미 체크
+	생년 제이커리
+	연봉 셀렉트
+	
+ -->
+ <form action="hello">
+ 
+ 이름:<input type="text" name="name" size="10" placeholder="Name">
+ <select name="age">
+ 	<option>10대</option>
+ 	<option>20대</option>
+ 	<option>30대</option>
+ </select>
+ 
+<input type="radio" value="man">남성
+<input type="radio" value="woman">여성
+
+<input type="checkbox" value="집">밖
+<input type="checkbox" value="밖">집
+ 
+ </form>
+ 
+</body>
+</html>

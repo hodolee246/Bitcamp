@@ -1,0 +1,19 @@
+package main;
+
+import cls.MyClass;
+import ycls.YouClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		MyClass mcls = new MyClass();
+		
+		YouClass ycls = new YouClass();
+		
+		int n = mcls.getMynum();
+
+		ycls.setYounum(n);
+	}
+
+}

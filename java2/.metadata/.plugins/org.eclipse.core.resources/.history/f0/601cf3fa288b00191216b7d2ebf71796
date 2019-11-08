@@ -1,0 +1,14 @@
+package view;
+
+import java.awt.Frame;
+
+public class WindowTest extends Frame{
+	
+	public WindowTest() {
+		super("간단한 예제입니당");
+		
+		setSize(640, 480);	// 화면 폭, 높이
+		setLocation(0, 0);	// 화면 위치(나올 위치)
+		setVisible(true);	// 시각화 
+	}
+}

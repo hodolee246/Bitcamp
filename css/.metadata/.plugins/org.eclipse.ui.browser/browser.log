@@ -1,0 +1,11 @@
+
+7월 15, 2019 10:10:49.37 NEW SESSION
+7월 15, 2019 10:10:49.37 [720:2484:0715/101049.218:ERROR:http_bridge.cc(127)] NOT IMPLEMENTED
+7월 15, 2019 10:10:49.37 [720:8076:0715/101049.265:ERROR:browser_process_sub_thread.cc(217)] Waited 12 ms for network service
+7월 15, 2019 10:10:54.12 [4048:5508:0715/101054.111:ERROR:http_bridge.cc(127)] NOT IMPLEMENTED
+7월 15, 2019 10:10:54.12 [4048:7448:0715/101054.111:ERROR:get_updates_processor.cc(245)] PostClientToServerMessage() failed during GetUpdates
+7월 15, 2019 10:10:54.18 [4048:972:0715/101054.189:ERROR:browser_process_sub_thread.cc(217)] Waited 35 ms for network service
+
+7월 15, 2019 20:19:43.36 NEW SESSION
+7월 15, 2019 20:19:43.36 [8816:3828:0715/201943.363:ERROR:http_bridge.cc(127)] NOT IMPLEMENTED
+7월 15, 2019 20:19:43.47 [8816:1432:0715/201943.478:ERROR:browser_process_sub_thread.cc(217)] Waited 43 ms for network service

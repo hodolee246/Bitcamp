@@ -1,0 +1,15 @@
+package robot;
+
+public class Robot {
+
+	
+	public Robot() {
+		
+	}
+	
+	public void print() {
+		
+		System.out.println("입니다.");
+	}
+	
+}

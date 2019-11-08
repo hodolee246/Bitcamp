@@ -1,0 +1,112 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		/*
+		 
+		  스위치문 은 조건 이 정확해야한다 범위 지정 불가능
+		 
+		 	switch : 조건 명시
+		 		.
+		 		.
+		 		.
+		 	switch : 조건 명시2	
+		 
+		 
+		 	형식:
+		 	switch ( 대상이 되는 변수 )
+		 	{
+		 		case 값(value):
+		 			값이 트루면 처리 할 처리 값
+		 			break;
+		 		case 값2(value):
+		 			값이 트루면 처리 할 처리 값
+		 			break;
+		 		default(조건문에서 else랑 비슷한애): 	
+		 			default 에는 break(써도 되고 안써도 되고)
+		 
+		 */
+		
+		int number = 1;
+		
+		switch(number)
+		{
+			case 1:
+				System.out.println("number는 1입니다. ");
+				break; // 탈출
+				
+			case 2:
+				System.out.println("number는 2입니다. ");
+				break;
+			default:       // if문의 else 격
+				break;
+		}
+
+		if(number == 1 )
+		{
+		}	
+		else if(number ==2)
+		{
+		}
+		else
+		{
+			
+		}
+		
+		char c = '가' ;
+		
+		switch (c)
+		{
+			case '가' :
+				System.out.println("c = 가");
+				break;
+		}
+		
+		// switch 문은 실수를 사용할수 없습니다.
+		/*
+		double d = 123.4567;
+		
+		switch(d)
+		{
+		case 123.4567:
+			break;
+		}
+		*/
+		double d = 123.4567;
+		if( d == 123.4567)
+		{
+			// if문은 가능하다
+		}
+		
+		
+
+		String str = "abc" ;
+		
+		switch(str)
+		{
+			case "ABC":
+				break;
+			case "abc":
+				System.out.println("str == abc");
+				break;
+				
+			// switch 문은 잘 안쓰지만 만약에 속도가 빨라야 하는 프로그램을
+			//	만들경우 if 문 보다는 switch 문이 처리 속도는 더 빠르다.
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		}
+
+	}
+
+

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="modi"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="insert"/>
+			<item value="modi"/>
+			<item value="create table message"/>
+			<item value="auth"/>
+			<item value="authg"/>
+			<item value="member"/>
+			<item value="sms_mem"/>
+			<item value="sms_member"/>
+			<item value="VIDEO"/>
+			<item value="create"/>
+			<item value="create me"/>
+			<item value="message_blacklist"/>
+			<item value="create message_blacklist"/>
+			<item value="ex_check"/>
+			<item value="select * from message_blacklist"/>
+		</list>
+		<list key="replacehistory">
+			<item value="공간지정"/>
+			<item value=""/>
+			<item value="&lt;/h4&gt;"/>
+			<item value="&lt;h4&gt;"/>
+			<item value="&lt;/h3&gt;"/>
+			<item value="&lt;h3&gt;"/>
+			<item value="819"/>
+			<item value="817px"/>
+			<item value="815px"/>
+			<item value="800px"/>
+			<item value="790px"/>
+			<item value="780px"/>
+			<item value="int total_price"/>
+			<item value="getRoomList"/>
+			<item value="Room"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="679"/>
+		<item key="DIALOG_Y_ORIGIN" value="649"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>

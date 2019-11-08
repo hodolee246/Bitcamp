@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<button type="button">태그 추가</button>
+
+<script type="text/javascript">
+
+$(function () {
+	$("button").click(function() {
+		
+		// html(text) 추가
+		var txt1 = "<p>html text 추가</p>";
+		$('body').append(txt1);
+		// java script 추가
+		
+		// jquery 추가
+		
+	});
+});
+</script>
+
+
+</body>
+</html>
+
+
+
+

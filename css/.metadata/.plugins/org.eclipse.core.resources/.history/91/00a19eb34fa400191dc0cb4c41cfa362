@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	border: 2px solid #00ffff;
+}
+</style>
+</head>
+<body>
+
+<ul>
+	<li>항목1</li>
+	<li>항목2</li>
+	<li>항목3</li>
+</ul>
+
+<br>
+<br>
+
+<ul class="menu">
+	<li>class="menu"있는 항목1</li>
+	<li>class="menu"있는 항목2</li>
+	<li>class="menu"있는 항목3</li>
+</ul>
+
+</body>
+</html>

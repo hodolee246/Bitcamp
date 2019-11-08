@@ -1,0 +1,33 @@
+package project13;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		int a, b, c ;
+		int array[] = {3, 7, 9, 13, 15};
+		
+		
+		
+		a = (int)(Math.random()*100);
+		
+		System.out.println("0~99 랜덤 숫자 = " + a);
+		
+		b = ((int)(Math.random() * 5)+11) ;
+		
+		System.out.println("11~15 랜덤 숫자 = " + b);
+		
+		c = (int)(Math.random()*array.length);
+		
+		
+		System.out.println("3,7,9,13,15중 랜덤숫자  = " + array[c]);
+		
+		
+		
+		
+		
+
+	}
+
+}

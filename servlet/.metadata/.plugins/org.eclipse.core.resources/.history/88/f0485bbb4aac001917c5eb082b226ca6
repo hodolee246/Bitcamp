@@ -1,0 +1,110 @@
+package project;
+
+import java.util.Arrays;
+
+/*
+ 	이름 텍스트
+	나이 셀렉트
+	성별 라디오
+	취미 체크
+	생년 제이커리
+	연봉 셀렉트 
+ */
+
+public class ummDto {
+
+	private String name;
+	private String age;
+	private String[] mw;
+	private String[] hb;
+	private String year;
+	private String month;
+	private String day;
+	private String week;
+	private String sal;
+	
+	public ummDto() {
+		
+	}
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getAge() {
+		return age;
+	}
+
+	public void setAge(String age) {
+		this.age = age;
+	}
+
+	public String[] getMw() {
+		return mw;
+	}
+
+	public void setMw(String[] mw) {
+		this.mw = mw;
+	}
+
+	public String[] getHb() {
+		return hb;
+	}
+
+	public void setHb(String[] hb) {
+		this.hb = hb;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public String getMonth() {
+		return month;
+	}
+
+	public void setMonth(String month) {
+		this.month = month;
+	}
+
+	public String getDay() {
+		return day;
+	}
+
+	public void setDay(String day) {
+		this.day = day;
+	}
+
+	public String getWeek() {
+		return week;
+	}
+
+	public void setWeek(String week) {
+		this.week = week;
+	}
+
+	public String getSal() {
+		return sal;
+	}
+
+	public void setSal(String sal) {
+		this.sal = sal;
+	}
+
+	@Override
+	public String toString() {
+		return "ummDto [name=" + name + ", age=" + age + ", mw=" + Arrays.toString(mw) + ", hb=" + Arrays.toString(hb)
+				+ ", year=" + year + ", month=" + month + ", day=" + day + ", week=" + week + ", sal=" + sal + "]";
+	}
+	
+	
+}

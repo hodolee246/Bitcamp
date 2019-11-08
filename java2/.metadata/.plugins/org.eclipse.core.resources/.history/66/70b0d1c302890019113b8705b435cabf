@@ -1,0 +1,17 @@
+package processing;
+
+import dao.DaoInterface;
+import single.Singleton;
+
+public class DescendingClass implements DaoInterface{
+
+	@Override
+	public void Process() {
+		Singleton ss = Singleton.getInstance();
+		Iterable<Double>
+		
+		
+		
+	}
+
+}

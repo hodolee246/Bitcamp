@@ -1,0 +1,62 @@
+package main;
+
+import java.util.Calendar;
+
+import vo.MemberVo;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+		MyClass mycls = new MyClass();
+		mycls.method();
+		mycls.function();
+		*/
+		MyClass mycls = MyClass.getInstance();
+		
+		Calendar cal = Calendar.getInstance();
+
+		// class array
+		YouClass ycls[] = new YouClass[5]; // 배열만 생성 == 비어있는 instance 만 선언된다 (변수만 선언)
+		YouClass ycls0, ycls1, ycls2;
+		for (int i = 0; i < ycls.length; i++) {
+			ycls[i] = new YouClass();
+		}
+		
+		ycls[0].setNumber(1);
+		ycls[0].method();
+		
+		// 3명의 data
+		MemberVo member[] = new MemberVo[3];
+		
+		for (int i = 0; i < member.length; i++) {
+			member[i] = new MemberVo();
+		}
+		
+		member[0].setAge(20);
+		member[0].setName("강아지");
+		
+		member[1].setAge(21);
+		member[1].setName("고양이");
+		
+		member[2].setAge(10);
+		member[2].setName("송아지");
+		
+		for (int i = 0; i < member.length; i++) {
+			System.out.println(member[i].toString());
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

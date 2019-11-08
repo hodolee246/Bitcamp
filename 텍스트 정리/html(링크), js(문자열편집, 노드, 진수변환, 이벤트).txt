@@ -1,0 +1,310 @@
+진수변환(script)---------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<p id="demo"></p>
+
+<button type="button" onclick="func()">눌러주세요</button>
+
+<script type="text/javascript">
+
+function func() {
+	
+
+	var number = 128;
+	
+	// 10진수 -> 2진수, 8진수, 16진수
+	
+	/*document.getElementById("demo").innerHTML = 
+		"10진수:" + number + "<br>" +
+		"2진수:" + number.toString(2) + " <br> " +
+		"8진수:" + number.toString(8) + " <br> " +
+		"16진수:" + number.toString(16);
+	*/
+	// 2진수, 8진수, 16진수 -> 10진수
+	var bin = "11001010";
+	var oct = "342";
+	var hex = "7af";
+	
+	document.getElementById("demo").innerHTML = 
+		"2진수:" + bin + "10진수:" + parseInt(bin, 2) + "<br>" +
+		"8진수:" + oct + "10진수:" + parseInt(oct, 8) + "<br>" +
+		"16진수:" + hex + "10진수:" + parseInt(hex, 16);
+		
+}
+</script>
+
+</body>
+</html>
+
+문자열 편집(script)----------------------------------------------------------------------------------------------------
+
+//str = str.indexOf("골대");
+//str = str.lastIndexOf("골대");
+//str = str.search("골대");	// 골대를 찾아라 indexOf랑 같다.
+//str = str.substring(4, 8);	// 4부터 시작해서 8전까지만 가지고 와라.
+//str = str.slice(0, 3);	// 0번째 부터 3번째 전까지 가지고와라 subString이랑 똑같네!
+//str = str.charAt(0); // 0번째 하나만 가지고와라!
+
+str = "aa,bb,cc,dd,ee,ff,gg";
+var arr = str.split(",");
+str = arr[1];
+링크(html) ----------------------------------------------------------------------------------------------------
+<input type="button" value="현재 페이지 갱신(F5)"
+onclick="location.reload()">
+
+<input type="button" value="진행"	// 앞으로 화살표
+onclick="history.forward()">
+
+<button type="button"	// 뒤로 화살표
+ onclick="history.back()">이전으로 돌아가기</button>
+이벤트(script) ----------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 
+<body onload="checkMessage()">
+onload		한번 읽어올때 사용한다 (자주는 안씀)
+<p id="demo"></p>
+
+<script type="text/javascript">
+function checkMessage() {
+//	document.getElementById("demo").innerHTML = "checkMessage() 호출";
+
+}
+</script>
+</body>
+ --> 
+<!--  <body onload="viewScroll()">	스크롤 내리기
+ 
+
+ <script type="text/javascript">
+ posY = 0;
+ function viewScroll() {
+	window.scroll(0, posY);		
+	posY = posY + 2;
+	if(posY == 300) posY = 0;
+	
+	setTimeout("viewScroll()", 100);
+}
+ 
+ </script>
+ 
+ </body> -->
+ 
+ 
+ <body>
+ 
+ <!-- onblur : 포커스가 이동했을때-->
+ 나이:<input type="text" onblur="isRegNum()" size="10" maxlength="3" onchange="isPostNum(this)">세 <br>
+ <br>
+ 
+ <script type="text/javascript">
+ function isRegNum() {
+	alert("onblur 실행잘됩니다.");
+}
+ </script>
+ 
+ <!-- onchange : 입력 값이 바뀌고 포커스가 다른곳을 설정한 경우-->
+ 우편번호 입력란
+ T:<input type="text" size="5" maxlength="3" onchange="isPostNum(this)" >
+ -
+ <input type="text" size="5" maxlength="3" onchange="isPostNum(this)">
+ <br>
+ <script type="text/javascript">
+ 
+ function isPostNum( obj ) {
+//	alert("onchange 실행");	
+
+ 	var str = obj.value;
+ 	
+ 	// 숫자가 아닌 문자열이 포함되어 있는 경우
+ 	if(str.match(/[^0-9]/g)){
+ 		alert("숫자가 아닌 문자가 포함되어 있습니다.");
+ 	}
+ }
+ 
+ </script>
+ <br>
+ <br>
+ 
+ <!-- onkeydown -->
+ 
+ <input type="text" name="title">
+ 
+ <script type="text/javascript">
+/*  document.getElementsByName("title")[0].onkeydown = function(event) {
+	console.log("keydown = keycode :" + event.keyCode);	
+} */
+ 
+ document.getElementsByName("title")[0].onkeypress = function(event) {
+		console.log("onkeypress = keycode :" + event.keyCode);	
+	}
+ </script>
+ <br><br>
+ 
+<!--  onMouseDown, onMouseUp, onMouseOver, onMouseOut -->
+ 
+ <input type="image" src="san0.gif"
+ 	onmousedown="mouseDown(this)"
+ 	onmouseup="mouseUp(this)"
+ 	onmouseover="mosuerOver(this)"
+ 	onmouseout="mosueOut(this)">
+ 	
+<script type="text/javascript">
+function mouseDown(obj) {
+	obj.src = "san1.gif";
+}
+function mouseUp(obj) {
+	obj.src = "san0.gif";
+}
+function mosuerOver(obj) {
+	obj.src = "san2.gif";
+}
+function mosueOut(obj) {
+	obj.src = "san0.gif";
+}
+</script>
+<br>
+<br>
+<a href="#" onmouseover="document.box.src='surprise.gif'"
+	onmouseout="document.box.src='box.gif'">
+<img alt="" name="box" src="box.gif" border="0">
+</a>
+</body>
+ 
+</html>
+
+노드(자식노드)(script)---------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html>	<!-- html 태그의 노드는 head 와 body 2개가있다. -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+	
+	
+	<!-- DOM	: Document Object Model -->
+	
+	<!-- childNodes -->
+<h3 id="intro">h3 tag intro</h3>
+
+<p id="demo">p tag</p>	
+	
+<button type="button" onclick="func()">버튼</button>
+	
+<script type="text/javascript">
+function func() {
+	var text = document.getElementById("intro").childNodes[0].nodeValue;
+	document.getElementById("demo").innerHTML = text;
+}
+</script>	
+	
+<br><br>
+
+<select id="car">
+	<option>아우디</option>
+	<option>벤츠</option>
+	<option>볼보</option>
+</select>	
+	
+<button type="button" onclick="myfunc()">클릭</button>	
+	
+	
+<script type="text/javascript">
+
+function myfunc() {
+	var text = document.getElementById("car").childNodes;
+	alert(text[5].text);
+}
+
+</script>	
+	
+<br><br>
+
+<!-- appendChild, insertChild --> 
+
+<div id="div1">
+	<p id="p1">첫번째p태그</p>
+	<p id="p2">두번째p태그</p>
+</div>	
+	
+<button type="button" onclick="appendBtn()">뒤에 추가</button>
+<button type="button" onclick="insertBtn()">앞에 추가</button>
+<button type="button" onclick="deletetBtn()">삭제</button>
+
+<script type="text/javascript">
+
+function appendBtn() {
+	// tag 생성
+	var ptag = document.createElement("p")  //<p></p> 준비
+	var textNode = document.createTextNode("새로운 p태그"); 	// 문자열
+	
+	ptag.appendChild(textNode);	//	<p>새로운 p태그</p>
+	
+	// div1에 추가
+	var Element = document.getElementById("div1");
+	Element.appendChild(ptag);
+}
+function insertBtn() {
+	var h3tag = document.createElement("h3")  //<p></p> 준비
+	var textNode = document.createTextNode("새로운  h3 p태그"); 	// 문자열
+	
+	h3tag.appendChild(textNode);		//	<p>새로운 p태그</p>
+	
+	var element = document.getElementById("div1");
+	// 누구 앞에 추가할지
+	var elementBefore = document.getElementById("p2");
+	element.insertBefore(h3tag, elementBefore);
+	
+}
+function deletetBtn() {
+	var element = document.getElementById("div1");
+	var delChild = document.getElementById("p2");
+	element.removeChild(delChild);
+}
+</script>
+	<br>
+	<br>
+	
+<!-- NodeList -->	
+
+<p onclick="pdelfunc(this)">까악까악</p>
+<p onclick="pdelfunc(this)">멍멍멍멍</p>
+<p onclick="pdelfunc(this)">야옹야옹</p>
+<p onclick="pdelfunc(this)">음메음메</p>
+
+<button type="button" onclick="NodeList()">클릭</button>
+	
+<script type="text/javascript">
+function NodeList() {
+	var nodeList = document.getElementsByTagName("p");
+//	alert(nodeList.length);
+
+
+	nodeList[3].innerHTML = "안녕하세요";
+
+	for(i = 0; i < nodeList.length; i++){
+		
+		nodeList[i].style.backgroundColor = "#0ff";
+		
+	}
+	
+}
+
+function pdelfunc( obj ) {
+	obj.remove();
+}
+
+</script>	
+	
+	</body>
+</html>

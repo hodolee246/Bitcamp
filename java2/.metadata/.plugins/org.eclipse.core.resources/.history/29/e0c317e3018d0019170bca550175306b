@@ -1,0 +1,133 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import dto.Batter;
+import dto.Human;
+import single.Singleton;
+
+public class UpdataBatter extends Frame implements ActionListener, WindowListener {
+
+	Label label[] = new Label[6];
+	TextField tf[] = new TextField[6];
+	Button btn1, btn2;
+	
+	public UpdataBatter() {
+		super("UpdataBatter");
+		
+		setLayout(null);
+		String str[] = {"Name", "Age", "Height", "Ball", "Hit", "Hitavg"};
+		for (int i = 0; i < label.length; i++) {
+			label[i] = new Label(str[i]);
+			label[i].setBounds(50, 100 + (40 * i), 80, 30);
+			add(label[i]);
+		}
+		
+		for (int i = 0; i < tf.length; i++) {
+			tf[i] = new TextField();
+			tf[i].setBounds(130, 100 + (40 * i), 150, 30);
+			add(tf[i]);
+		}
+		Singleton si = Singleton.getInstance();
+		String str2 = si.name;
+		Human olddata = si.dao.select(str2);
+		tf[0].setText(olddata.getName());
+		tf[1].setText(olddata.getAge() + "");
+		tf[2].setText(olddata.getHeight() + "");
+		tf[3].setText();
+		tf[4].setText();
+		tf[5].setText();
+		
+		
+		btn1 = new Button("Updata");
+		btn1.setBounds(50, 400, 100, 40);
+		btn1.addActionListener(this);
+		add(btn1);
+		
+		btn2 = new Button("Back");
+		btn2.setBounds(50, 400, 100, 40);
+		btn2.addActionListener(this);
+		add(btn2);
+		
+		setBounds(0, 0, 640, 480);
+		
+		setVisible(true);	
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+
+		Object obj = e.getSource();
+		if(obj == btn1) {
+			String name = tf[0].getText();
+			String str = tf[1].getText();
+			int age = Integer.parseInt(str);
+			str = tf[2].getText();
+			double height = Double.parseDouble(str);
+			str = tf[3].getText();
+			int ball = Integer.parseInt(str);
+			str = tf[4].getText();
+			int hit = Integer.parseInt(str);
+			str = tf[5].getText();
+			double hitavg = Double.parseDouble(str);
+			
+			Batter newdata = new Batter(0, name, age, height, ball, hit, hitavg);
+			Singleton si = Singleton.getInstance();
+			Human olddata = si.dao.select(name);
+			si.dao.update(olddata, newdata);
+		}
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

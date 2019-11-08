@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 
+<body onload="checkMessage()">
+onload		한번 읽어올때 사용한다 (자주는 안씀)
+<p id="demo"></p>
+
+<script type="text/javascript">
+function checkMessage() {
+//	document.getElementById("demo").innerHTML = "checkMessage() 호출";
+
+}
+</script>
+</body>
+ --> 
+<!--  <body onload="viewScroll()">	스크롤 내리기
+ 
+
+ <script type="text/javascript">
+ posY = 0;
+ function viewScroll() {
+	window.scroll(0, posY);		
+	posY = posY + 2;
+	if(posY == 300) posY = 0;
+	
+	setTimeout("viewScroll()", 100);
+}
+ 
+ </script>
+ 
+ </body> -->
+ 
+ 
+ <body>
+ 
+ <!-- onblur : 포커스가 이동했을때-->
+ 나이:<input type="text" onblur="isRegNum()" size="10" maxlength="3" onchange="isPostNum(this)">세 <br>
+ <br>
+ 
+ <script type="text/javascript">
+ function isRegNum() {
+	alert("onblur 실행잘됩니다.");
+}
+ </script>
+ 
+ <!-- onchange : 입력 값이 바뀌고 포커스가 다른곳을 설정한 경우-->
+ 우편번호 입력란
+ T:<input type="text" size="5" maxlength="3" onchange="isPostNum(this)" >
+ -
+ <input type="text" size="5" maxlength="3" onchange="isPostNum(this)">
+ <br>
+ <script type="text/javascript">
+ 
+ function isPostNum( obj ) {
+//	alert("onchange 실행");	
+
+ 	var str = obj.value;
+ 	
+ 	// 숫자가 아닌 문자열이 포함되어 있는 경우
+ 	if(str.match(/[^0-9]/g)){
+ 		alert("숫자가 아닌 문자가 포함되어 있습니다.");
+ 	}
+ }
+ 
+ </script>
+ <br>
+ <br>
+ 
+ <!-- onkeydown -->
+ 
+ <input type="text" name="title">
+ 
+ <script type="text/javascript">
+/*  document.getElementsByName("title")[0].onkeydown = function(event) {
+	console.log("keydown = keycode :" + event.keyCode);	
+} */
+ 
+ document.getElementsByName("title")[0].onkeypress = function(event) {
+		console.log("onkeypress = keycode :" + event.keyCode);	
+	}
+ </script>
+ <br><br>
+ 
+<!--  onMouseDown, onMouseUp, onMouseOver, onMouseOut -->
+ 
+ <input type="image" src="san0.gif"
+ 	onmousedown="mouseDown(this)"
+ 	onmouseup="mouseUp(this)"
+ 	onmouseover="mosuerOver(this)"
+ 	onmouseout="mosueOut(this)">
+ 	
+<script type="text/javascript">
+function mouseDown(obj) {
+	obj.src = "san1.gif";
+}
+function mouseUp(obj) {
+	obj.src = "san0.gif";
+}
+function mosuerOver(obj) {
+	obj.src = "san2.gif";
+}
+function mosueOut(obj) {
+	obj.src = "san0.gif";
+}
+</script>
+<br>
+<br>
+<a href="#" onmouseover="document.box.src='surprise.gif'"
+	onmouseout="document.box.src='box.gif'">
+<img alt="" name="box" src="box.gif" border="0">
+</a>
+</body>
+ 
+</html>
+
+ 

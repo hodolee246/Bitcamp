@@ -1,0 +1,12 @@
+package ycls;
+
+public class YouClass {
+
+	
+	private int younum;
+	
+	public YouClass() {
+		
+	}
+	
+}

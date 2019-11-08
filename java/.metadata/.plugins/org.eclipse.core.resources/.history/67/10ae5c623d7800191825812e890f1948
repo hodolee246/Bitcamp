@@ -1,0 +1,41 @@
+package project17;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int number;
+		System.out.println("숫자를 입력해 주세요.");
+		
+		
+		number = scan.nextInt();
+	/*
+		while(number <0 || number > 100) {
+			System.out.println("잘못 입력하셨습니다. 숫자를 다시 입력해 주세요.");
+			number = scan.nextInt();
+		}
+		int ten ; // 49
+		
+		ten= number / 10*10; // 49/10*10 = 40
+		
+		System.out.println("입력한 수는 " + ten+"보다 같거나  크고 "+ (ten+10) +" 보다 작다.");
+		*/
+		
+		for(int i =1; i<11; i++)
+		{
+			
+			if(number <= i*10+10 && number > i*10 )
+			{
+				System.out.println("입력하신 숫자는"+(i*10)+"보다 크고"+(i*10+10)+"이거나 그 수보다 작습니다.");
+				
+			}
+			
+		}
+
+	}
+
+}

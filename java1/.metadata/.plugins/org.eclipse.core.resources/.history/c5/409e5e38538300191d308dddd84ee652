@@ -1,0 +1,14 @@
+package animal;
+
+public class Cat extends Animal {
+
+	public Cat(String name) {
+		super(name);
+	}
+	
+	public void print() { // over ride
+		super.print();
+		System.out.println("고양이 입니다.");
+	}
+	
+}

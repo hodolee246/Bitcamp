@@ -1,0 +1,138 @@
+package work2;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		Scanner scan = new Scanner(System.in);
+		int temp = 0 ;
+		int one = 0;
+		int two = 0;
+		int three = 0;
+		int four = 0;
+		int five = 0;
+		int six = 0;
+		int seven = 0;
+		int eight = 0;
+		int nine = 0;
+		int a= 0;
+		
+		int d = 0;
+		int sc = 0;
+		int i = 0;
+		int temp2 = 0;
+		*/
+		/*
+		System.out.println("원하시는 구구단의 숫자를 입력해 주세요");
+		sc = scan.nextInt();
+		for(i=1; i<2; i++)
+		{
+			for(d=1; d<10; d++)
+			{
+				temp2 = d*sc;
+				System.out.println(sc+"*"+d+"="+temp2);
+			}
+		}
+		
+		
+		for(a=1; a<2; a++)
+		{
+			for(one=1; one<10; one++)
+			{
+				temp = one*1;
+				System.out.print(1+"*"+one+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(two=1; two<10; two++)
+			{
+				temp = two*2;
+				System.out.print(2+"*"+two+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(three=1; three<10; three++)
+			{
+				temp = three*3;
+				System.out.print(3+"*"+three+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(four=1; four<10; four++)
+			{
+				temp = four*4;
+				System.out.print(4+"*"+four+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(five=1; five<10; five++)
+			{
+				temp = five*5;
+				System.out.print(5+"*"+five+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(six=1; six<10; six++)
+			{
+				temp = six*6;
+				System.out.print(6+"*"+six+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(seven=1; seven<10; seven++)
+			{
+				temp = seven*7;
+				System.out.print(7+"*"+seven+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(eight=1; eight<10; eight++)
+			{
+				temp = eight*8;
+				System.out.print(8+"*"+eight+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+			for(nine=1; nine<10; nine++)
+			{
+				temp = nine*9;
+				System.out.print(9+"*"+nine+"=");
+				System.out.println(temp);
+			}
+			System.out.print("\n");
+			
+		}
+		
+		*/
+
+		int i =0;
+		int y = 0;
+		int sum = 0;
+		int n = 0;
+		
+		for(i=1;i<10;i++)
+		{
+			for(y=1;y<10;y++)
+			{
+			
+			
+			System.out.println(i+"*"+y+"="+i*y);
+			}
+			System.out.print("\n");
+		}
+		
+		
+		
+	}
+
+}

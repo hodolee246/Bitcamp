@@ -1,0 +1,19 @@
+package single;
+
+public class SingletonClass {
+
+	private static SingletonClass single = null;
+	public int num;
+	
+	private SingletonClass() { // 프라이빗으로 싱글톤 생성자 생성
+		
+	}
+	
+	public static SingletonClass getInstance() { // 인스턴스값을 하나만 만들고 계속 유지시킨다.
+		if(single == null) {
+			single = new SingletonClass();
+		}
+		return single;
+	}
+	
+}

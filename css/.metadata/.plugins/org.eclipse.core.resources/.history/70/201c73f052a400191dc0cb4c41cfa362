@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div#fullscreen{
+	width: 500px;
+	height: 300px;
+	background-color: red;
+	margin: 0 auto;
+}
+</style>
+</head>
+<body>
+
+
+<div id="fullscreen">
+fullscreen
+</div>
+
+
+</body>
+</html>

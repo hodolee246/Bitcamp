@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h2>사진들</h2>
+
+<img src="img01.jpg" title="『성 자비에르 성당 (내부)』의 사진입니다.">
+<img src="img02.jpg" title="『성 자비에르 성당 (외부)』의 사진입니다.">
+<img src="img03.jpg" title="건물..?">
+<img src="img04.jpg" title="가로등..?">
+
+<script type="text/javascript">
+$(function () {
+	$('img').click(function() {
+		alert($(this).attr("title"));
+	})
+})
+</script>
+</body>
+</html>

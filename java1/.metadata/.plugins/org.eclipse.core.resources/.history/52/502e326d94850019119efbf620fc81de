@@ -1,0 +1,19 @@
+package parent;
+
+public class ParentClass {
+
+	int x = 100;
+	
+	public ParentClass() {
+		this(200);
+	}
+	
+	public ParentClass(int x) {
+		this.x = x;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+}

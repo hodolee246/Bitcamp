@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h3>Detail</h3>
+<textarea row = '2' cols = '10' placeholder = 'insert'></textarea>
+
+<br><br>
+
+<button type = 'button' id = 'btn'>답글입력</button>
+
+<br>
+
+<div id="answer">
+
+</div>
+
+<script type ="text/javascript">
+
+$(function () {
+
+	$('#btn').click(function () {
+		var txt = "<br>답글:<input type ='text' id = 't1'>";
+		$('#answer').append(txt);
+
+		var btn = "<br><br><button type='button' id='anbtn'>작성완료</button>";
+		$('#answer').append(btn);
+	});
+
+});
+	/* 1. div 태그에 resource를 모아 놓고 hide로 설정
+	     클릭시 show로 설정하여 보여준다.
+	*/
+	$(document).on("click", "#anbtn", function () {
+		alert("x");
+	});
+</script>
+
+
+
+</body>
+</html>

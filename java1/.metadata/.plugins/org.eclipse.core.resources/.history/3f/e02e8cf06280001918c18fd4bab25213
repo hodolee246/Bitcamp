@@ -1,0 +1,75 @@
+package filework;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+		File howtofile = new File("e:\\tm2\\");
+		
+		howtofile = createFile(howtofile);
+					deleteFile();
+					fileWrite(howtofile);
+	
+}
+	static File createFile(File howtofile) {
+		
+		// 파일 생성
+		Scanner scan = new Scanner(System.in);
+		System.out.println("생성하실 파일명을 입력해 주세요.");
+		String abc = scan.next();
+				
+				howtofile = new File(abc);
+				
+				try {
+					if(howtofile.createNewFile()) {
+						System.out.println(abc + " 파일 생성 성공!");
+						
+					}
+					else {
+						System.out.println(abc + " 파일 생성 실패!");
+					}
+				} catch (IOException e) {			
+					e.printStackTrace();
+				}
+		
+		return howtofile;
+				
+	}
+	static void deleteFile() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("삭제하실 파일명을 입력해주세요.");
+		String str = sc.next();
+		File howtofile = new File(str);
+		
+		if(howtofile.delete()) {
+			System.out.println("파일을 삭제했습니다.");
+		}
+		else {
+			System.out.println("파일을 삭제하지 못했습니다.");
+		}
+	}
+	static void fileWrite(File howtofile) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("내용입력 하실 파일명을 입력해주세요.");
+		String str = sc.next();
+		howtofile = new File(str);
+		System.out.println(str + " 파일의 입력할 문자를 입력해주세요.");
+		String str2 = sc.next();
+		try { // 선언후 입력시 try catch 문으로 인셉션을 잡아주지않으면 오류가 발생한다.
+			FileWriter howtofileWrite = new FileWriter(howtofile); // 기존 파일Write 선언 후 Write 할 file 입력
+			howtofileWrite.write(str2);
+			howtofileWrite.close(); // 사용이 끝나면 닫아준다.
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

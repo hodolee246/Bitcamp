@@ -1,0 +1,108 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		/*
+		
+			for : loop(순환, 반복) 문
+		
+		   			포문
+		
+			for( 순환, 반복)
+			
+			 for( 초기화 (선언)(1) ; 조건문 (4); 연산식(3))
+			 	// 처리(2)(5)
+			 	 
+			 	 
+			 	 int num = 0 ;
+			 	 
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			
+		*/
+		/*
+		int i;
+		for(i=0; i<10; i++)
+		{
+			System.out.println("loop i:"+i);
+		}
+			System.out.println("loop out i:"+i);
+		*/
+		int t, temp;
+		temp = 0;
+		for(t=1; t<11; t++)
+		{
+			temp = temp + t ;
+			
+		}
+		System.out.println(temp);
+		int i = 0 ;
+		int n =1;
+		temp = 0;
+		for(i=0; i<10; i++)
+		{
+			temp = temp +n ;
+			n++;
+		}
+		System.out.println(temp);
+		
+		for(i = 0; i<10; i= i+2)
+		{
+			System.out.println(i);
+		}
+		
+		for(i = 10; i>0; i--)
+		{
+			System.out.println(i);
+		}
+		
+		// endless loop (무한루프)
+		// 무한 루프시 조건을 삭제하든 인클리먼트를 삭제하든 해서 일단 탈출.
+		int j= 0;
+		for( ;j<10;  )
+		{
+			System.out.println(j);
+			j++;
+			
+			for(i = 0, j = 0; i <10; i++, j++)
+					{
+				System.out.println(i);
+				System.out.println(j);
+					}
+			
+			//초기화 에서 선언도 가능하다
+			
+			
+			for(int k = 0; k<10; k++)
+			{
+				System.out.println(k);
+			}
+			// 포문 팁 변수를 루프내에서 설정(지역변수?)
+			//루프가 돌아가면서 ++ 되는 값을 가져오기 보다는 돌아갈때마다 ++ 하는 방식을 사용을 더욱 더많이사용한다.
+			
+			i= 0;
+			j= 0;
+			
+			for(i = 0; i<10; i++)
+			{
+				for(j=0; j<5; j++)
+					System.out.println("loop i:" +i);
+					System.out.println("\t loop j:" +j);
+				{
+					
+				}
+			}
+			
+			
+			
+			
+			
+			
+		}
+	}
+
+}

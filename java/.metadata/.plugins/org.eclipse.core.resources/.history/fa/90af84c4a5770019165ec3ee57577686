@@ -1,0 +1,29 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		 
+		 	continue == 생략
+		 
+		 
+		 	continue문 자체만으로 사용할 수 없다.
+		 	loop문이랑 같이 사용을 해야 한다. ( for , while, do while)
+		 */
+		
+		for (int i = 0; i < 10; i++) {
+			System.out.println("i ="+i);
+			System.out.println("for start");
+			
+			if(i > 4 && i<8) {
+				continue;
+			}
+			
+			
+			System.out.println("for end");
+			
+		}
+
+	}
+
+}

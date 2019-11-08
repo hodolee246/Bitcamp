@@ -1,0 +1,7 @@
+package sample09;
+
+import javax.servlet.http.HttpServlet;
+
+public class Delsession extends HttpServlet {
+
+}

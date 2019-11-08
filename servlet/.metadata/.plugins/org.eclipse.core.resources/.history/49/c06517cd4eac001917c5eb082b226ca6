@@ -1,0 +1,76 @@
+package project;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+/*
+	이름 텍스트
+나이 셀렉트
+성별 라디오
+취미 체크
+생년 제이커리
+연봉 셀렉트 
+*/
+
+@WebServlet("/hello")
+public class HelloServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+		String name = req.getParameter("name");
+		String age = req.getParameter("age");
+		String mw = req.getParameter("mw");
+		String hb[] = req.getParameterValues("hb");
+		String birthday = req.getParameter("birthday");
+		String sal = req.getParameter("sal");
+		
+		System.out.println(name + age + mw + hb[0] + hb[1] + birthday + sal);
+		
+		req.setAttribute("dto", new ummDto(name, age, mw, hb, birthday, sal));
+		
+		
+		/*
+		 * if(mw.equals("man")) {
+		 * 
+		 * 
+		 * 
+		 * }
+		 */
+		
+		
+		
+		
+		
+		resp.setContentType("text/html; charset=utf-8");
+		
+		PrintWriter pw = resp.getWriter();		
+				
+		pw.println("<html>");		
+		
+		pw.println("<head>");
+		pw.println("<title>제목</title>");	
+		
+		pw.println("</head>");
+		
+		pw.println("<body>");
+		
+		pw.println("<h3>Hello Servlet</h3>");
+		pw.println("</body>");
+		
+		pw.println("</html>");		
+		pw.close();
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+	
+}

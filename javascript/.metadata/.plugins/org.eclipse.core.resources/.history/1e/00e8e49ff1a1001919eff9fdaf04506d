@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<br>
+
+<input type="text" id="time" width="30" >
+<br><br>
+
+<button onclick="displayDate()">지금시각</button>
+
+<script type="text/javascript">
+
+function displayDate() {
+	
+	document.getElementById("demo")innerHTML = date();
+	document.getElementById("time").value = date();
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

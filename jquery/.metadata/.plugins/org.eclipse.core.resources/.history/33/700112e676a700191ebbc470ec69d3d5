@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+
+<!--
+	DOM Document Object Model
+	
+	Java Script : innerHTML, value
+	
+	JQuery : html(), text(), css(), attr(), prop()
+							
+		setter -> css("background-color", "#123456");
+						한개 이상일때
+				  css({"background-color" : "#123456", 
+				  		"border" : "3px soild #123789",
+				  		"" : ""...
+				  })
+ 
+ -->
+ 
+ 
+
+
+</body>
+</html>
+
+
+

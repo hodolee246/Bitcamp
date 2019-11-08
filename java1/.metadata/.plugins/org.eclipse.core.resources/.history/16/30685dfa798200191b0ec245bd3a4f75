@@ -1,0 +1,40 @@
+package main;
+
+import game.gamePlay;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		 
+		 	OOP : class 구축
+		 	클래스 설계를해서 
+		 	
+		 		gamePlay	:	play class -> Dao
+		 		dice		:	object 2개 생성
+		 
+		 	User Interface	-> Graphic User Interface
+		 	- Application
+		 	- Web
+		 	- 
+		 	
+		 */
+		gamePlay play = new gamePlay();
+		
+		play.init();
+		play.input();
+		play.finding();
+				
+		
+
+	}
+
+}
+
+
+
+
+
+
+
+

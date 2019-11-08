@@ -1,0 +1,15 @@
+package doing;
+
+import dao.DaoInterface;
+
+public class SearchClass extends DaoInterface {
+
+	public SearchClass() {
+		
+	}
+	
+	public void search(String name) {
+		
+	}
+	
+}

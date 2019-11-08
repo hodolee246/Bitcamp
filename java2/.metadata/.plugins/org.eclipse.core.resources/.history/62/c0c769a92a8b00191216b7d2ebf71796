@@ -1,0 +1,22 @@
+package main;
+
+import view.WindowTest;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		  	Abstract Window Toolkit -> Application == Android
+		  	
+		  	Model View Controller 	-> MVC 
+		  	Front end	View	-> Web(html, js), App
+		  	Back end	Model -> DataBase + Dao + Dto
+		  
+		 */
+		
+		new WindowTest();
+		
+ 
+	}
+
+}

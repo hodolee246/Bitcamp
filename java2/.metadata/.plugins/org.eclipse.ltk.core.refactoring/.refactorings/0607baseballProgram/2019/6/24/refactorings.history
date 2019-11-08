@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 packages to &apos;0611BaseballProgram(UI)/src/src&apos;&#x0D;&#x0A;- Original project: &apos;0607baseballProgram&apos;&#x0D;&#x0A;- Destination element: &apos;0611BaseballProgram(UI)/src/src&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     0607baseballProgram/src/dto&#x0D;&#x0A;     0607baseballProgram/src/main&#x0D;&#x0A;     0607baseballProgram/src/processing&#x0D;&#x0A;     0607baseballProgram/src/dao&#x0D;&#x0A;     0607baseballProgram/src/file&#x0D;&#x0A;     0607baseballProgram/src/single" description="Copy packages" destination="=0611BaseballProgram\(UI)/src&lt;src" element1="/src&lt;dto" element2="/src&lt;main" element3="/src&lt;processing" element4="/src&lt;dao" element5="/src&lt;file" element6="/src&lt;single" flags="589830" fragments="6" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1560229555647" version="1.0"/>
+</session>

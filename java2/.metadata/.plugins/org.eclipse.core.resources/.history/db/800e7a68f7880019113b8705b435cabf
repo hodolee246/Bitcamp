@@ -1,0 +1,18 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class UpdateClass implements DaoInterface{
+
+	public UpdateClass() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void Process() {
+
+		
+		
+	}
+
+}

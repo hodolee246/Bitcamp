@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+	filter:gray();
+	}
+</style>
+</head>
+<body bgcolor="black" style="color: white;">
+
+<h3>풍경 사진</h3>
+<br>
+<br>
+※이미지 위로 마우스를 이동하면 그 이미지가 칼러로 보입니다.
+<br>
+<br>
+<img src="nature01.jpg" onmouseover="over(this)" onmouseout="out(this)" style="{FILTER: gray}"> &ensp;&ensp;&ensp;
+<img src="nature02.jpg" onmouseover="over(this)" onmouseout="out(this)"> &ensp;&ensp;&ensp;
+<img src="nature03.jpg" onmouseover="over(this)" onmouseout="out(this)"> &ensp;&ensp;&ensp;
+<br><br>
+<img src="nature04.jpg" onmouseover="over(this)" onmouseout="out(this)"> &ensp;&ensp;&ensp;
+<img src="nature05.jpg" onmouseover="over(this)" onmouseout="out(this)"> &ensp;&ensp;&ensp;
+<img src="nature06.jpg" onmouseover="over(this)" onmouseout="out(this)"> &ensp;&ensp;&ensp;
+
+<script type="text/javascript">
+
+function onmouseout(obj) {
+	obj.style ="FILTER: gray()";
+}
+function onmouseover(obj) {
+	obj.style ="FILTER: none()";
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h1>~요금~</h1>
+
+<table>
+	<tr>
+		<th class="_green">유형</th>
+		<th class="_green">정원</th>
+		<th>화장실</th>
+		<th>목욕탕</th>
+		<th>1박 요금</th>
+	</tr>
+	<tr>
+		<td>A타입</td>
+		<td>15명</td>
+		<td>유</td>
+		<td>유</td>
+		<td>28,000원</td>
+	</tr>
+	<tr>
+		<td>B타입</td>
+		<td>12명</td>
+		<td>유</td>
+		<td>유</td>
+		<td>25,000원</td>
+	</tr>
+	<tr>
+		<td>C타입</td>
+		<td>10명</td>
+		<td>유</td>
+		<td>무</td>
+		<td>21,000원</td>
+	</tr>
+	<tr>
+		<td>D타입</td>
+		<td>8명</td>
+		<td>유</td>
+		<td>무</td>
+		<td>19,500원</td>
+	</tr>
+	<tr>
+		<td>E타입</td>
+		<td>6명</td>
+		<td>무</td>
+		<td>무</td>
+		<td>17,000원</td>
+	</tr>
+	<tr>
+		<td>F타입</td>
+		<td>4명</td>
+		<td></td>
+		<td>무</td>
+		<td>15,000원</td>
+	</tr>
+</table>
+</body>
+
+<script type="text/javascript">
+
+	$(document).ready(function () {
+		
+		$("table").css("border", "1px soild");
+		$("tr:even").css("background-color", "#0000ff");
+		
+		$("td").mousedown(function () {
+		//	alert("td click");
+			var tr = $(this).parent().index();
+		//	alert(tr);
+			var td = $(this).index();
+		//	alert(td);
+		alert(	$("tr:eq(" + tr + ") td:eq(" + td + ")").text());
+		});
+		
+		});
+	
+
+	
+
+
+</script>
+
+</html>

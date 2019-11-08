@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+
+	html -- > Web Server
+
+	<a href = 
+	<form submit
+	
+	location.href
+	
+	JQuery
+	$("#frm").attr("action", "loc").submit();
+	
+	Java
+	
+
+ -->
+
+<h1>상태 코드선택</h1>
+
+<form action="loc" method="get">
+
+<table>
+	<tr>
+		<td>상태 코드</td>
+		<td>
+			<select name="code">
+				<option value="200">SC_OK</option>
+				<option value="404">SC_NOT_FOUND</option>
+				<option value="500">SE_INTERNAL_SERVER_ERR</option>
+			</select>
+		</td>		
+	</tr>
+</table>
+
+<input type="submit" value="송신">  
+</form>
+
+</body>
+</html>

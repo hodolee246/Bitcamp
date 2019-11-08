@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- font -->
+<font size = "1" color = "#07ac0b">폰트 크기 1 색은 초록색 계열</font>
+
+<br>
+
+<font size = "2" color = "#27acdb">폰트 크기 1 색은 초록색 계열</font>
+
+
+</body>
+</html>
+
+
+

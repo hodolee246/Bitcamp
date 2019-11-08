@@ -1,0 +1,88 @@
+package dao;
+
+import java.util.Scanner;
+
+import dto.StudentDto;
+
+// Data Access Object	
+public class DaoClass {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	private int count;
+
+	StudentDto students[];
+	
+	
+	
+	public DaoClass() {
+		students = new StudentDto[10];
+		count = 0;
+	}
+	
+	
+	// insert(추가)
+	public void insert() {
+		// 학생정보 추가
+		
+		// 입력
+		StudentDto dto = new StudentDto(1, "홍길동", 90, 100, 85);   // 번호 이름 점수 점수 점수
+	
+		while(count < 3) {
+			
+		
+		System.out.println("학생의 번호를 입력해 주세요.");
+		int number = sc.nextInt();
+		students[count].setNumber(number);
+		
+		
+		System.out.println("학생의 이름을 입력해 주세요.");
+		String name = sc.next();
+		students[count].setName(name);
+		
+		
+		System.out.println("학생의 국어점수를 입력해 주세요.");
+		int kor = sc.nextInt();
+		students[count].setKor(kor);
+		
+		
+		System.out.println("학생의 영어점수를 입력해 주세요.");
+		int eng = sc.nextInt();
+		students[count].setEng(eng);
+		
+		
+		System.out.println("학생의 수학점수를 입력해 주세요.");
+		int math = sc.nextInt();
+		students[count].setMath(math);
+		
+		
+		students[count] = dto;
+		count++;
+		
+		}
+		
+		for (int i = 0; i < students.length; i++) {
+			System.out.println(students[i]);
+		}
+		
+	}
+	// delete(삭제)
+	
+	// select == search(검색)
+	
+	// update
+	
+	// allprint
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+

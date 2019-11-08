@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>다음 생일까지 남은 일수</h1>
+버튼을 눌러 생일을 입력 하시면 다음 생일 까지 <br>
+몇일이 남았는지 알 수 있습니다.
+<br><br>
+
+<button type="button" onclick="func()">클릭</button>
+<br><br>
+
+남은 일수:<h3 id="days"></h3>
+<input type="text" id="textdays" size="10px">
+
+
+<script type="text/javascript">
+
+function func() {
+	
+	// input 
+	var birthMonth = prompt("생일 월을 작성해 주십시오.");
+	var birthDay = prompt("생일 날짜를 작성해 주십시오.");
+	
+	// 현재 날짜를 취득
+	var nowday = new Date();
+	var birth = new Date();
+	
+	// 자신의 생일을 설정
+	birth.setMonth(birthMonth - 1);
+	birth.setDate(birthDay);
+	
+	var msecond = birth.getTime() - nowday.getTime();
+
+	if(msecond <= 0){
+		var birthYear = birth.getFullYear();
+		birth.setFullYear(birthYear+1);
+		msecond = birth.getTime() - nowday.getTime();
+		
+	}
+		// year,month, date, hour, minute, second, msecond
+		//					 24		60		60		1000
+	var days = msecond / (24 * 60 * 60 * 1000);
+	alert(days);
+	document.getElementById("days").innerHTML = days;
+	document.getElementById("textdays").value = days;
+	
+	
+}
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

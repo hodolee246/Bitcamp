@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="3" style="color: black">
+<col width="80%"><col width="100%"><col width="100%">
+<caption>가격표</caption>
+<tr>
+<td align="center">크기</td>
+<td align="center"><b>내용량</b></td>
+<td align="center">가격</td>
+</tr>
+<tr>
+<td align="center">보통</td>
+<td>500g</td>
+<td>4,800원</td>
+</tr>
+<tr>
+<td align="center">대</td>
+<td>800g</td>
+<td>7,200원</td>
+</tr>
+<tr>
+<td align="center">특대</td>
+<td><a style="color: red">1,200g</a></td>
+<td><a style="color: red">10,000원</a></td>
+</tr>
+
+</table>
+
+
+
+
+
+</body>
+</html>

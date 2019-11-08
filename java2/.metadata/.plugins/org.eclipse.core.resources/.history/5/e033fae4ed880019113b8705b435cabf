@@ -1,0 +1,7 @@
+package doing;
+
+import dao.DaoInterface;
+
+public class SerchClass extends DaoInterface {
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <link rel = " stylesheet" href = ""> External 방식 -->
+<style type="text/css">  /* internal 방식 */
+		
+</style>
+
+
+</head>
+<body bgcolor="">
+
+<!-- inline 방식 -->
+<!-- <p style="background-color: gray">hi CSS</p>
+
+style = 어트리뷰트 (밖에서 지정되어있는값으로 변경하기 힘듬)
+background color = 프럼프트 (선택을 자유로 값을 변경할 수 있음)
+ -->
+
+</body>
+</html>

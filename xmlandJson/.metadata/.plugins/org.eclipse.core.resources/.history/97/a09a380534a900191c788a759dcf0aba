@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+		
+	}
+}
+xmlhttp.open("GET", "book.json", true);
+xmlhttp.send();
+
+function func(resp) {
+	var bookarr = JSON.parse(resp);	// String -> json
+	var booktxt = "";
+	
+	alert(bookarr);
+}
+
+</script>
+
+</body>
+
+
+</html>

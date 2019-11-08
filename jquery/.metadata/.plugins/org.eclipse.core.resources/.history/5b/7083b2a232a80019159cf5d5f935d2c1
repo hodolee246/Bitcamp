@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<div id="news">
+로딩중...
+</div>
+
+<script type="text/javascript">
+$(document).ready( function () {
+	$(window).resize(function () {
+		alert("x");
+	});
+});
+
+</script>
+</body>
+</html>

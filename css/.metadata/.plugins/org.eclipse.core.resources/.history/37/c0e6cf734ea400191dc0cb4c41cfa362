@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table{
+	width : 80%;
+	border-collapse: collapse;
+	border: 2px solid blue;
+}
+
+h1{
+	text-align: left;
+	color: red;
+}
+h2{
+	text-align: left;
+	color: blue;
+}
+h3{
+	text-align: left;
+	color: green;
+}
+
+
+</style>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td><h1>H1 텍스트</h1></td>
+	</tr>
+	<tr>
+		<td>단락 텍스트</td>
+	</tr>
+	<tr>
+		<td><h2>H2 텍스트</h2></td>
+	</tr>
+</table>
+
+</body>
+</html>

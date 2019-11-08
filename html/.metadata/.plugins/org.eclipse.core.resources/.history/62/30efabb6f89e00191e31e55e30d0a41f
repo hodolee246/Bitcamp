@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+
+
+table.cls7 th{
+	
+}
+
+.cls7 caption{
+text-align : left;
+}
+
+</style>
+
+
+
+</head>
+<body>
+
+<h2>고교수영부기록</h2>
+
+<br>
+<br>
+
+<table class="cls7" border="1">
+<caption>■ 수영 기록</caption>
+<col width="20%"><col width="20%"><col width="15%"><col width="25%">
+	<tr  style="background-color: cyan;">
+	<th>종목</th>
+	<th>거리</th>
+	<th>성별</th>
+	<th>기록</th>
+	</tr>
+	
+	<tr>
+	<th><b>자유형</b></th>
+	<th><b>100m</b></th>
+	<td>남자</td>
+	<td>50초60</td>
+	</tr>
+	
+	<tr>
+	<th><b>자유형</b></th>
+	<th><b>100m</b></th>
+	<td>女子</td>
+	<td>55초56</td>
+	</tr>
+	
+	<tr>
+	<th><b>자유형</b></th>
+	<th><b>200m</b></th>
+	<td>남자</td>
+	<td>1분49초23</td>
+	</tr>
+	
+	<tr>
+	<th><b>자유형</b></th>
+	<th><b>200m</b></th>
+	<td>여자</td>
+	<td>1분59초56</td>
+	</tr>
+	
+	<tr>
+	<th><b>배형</b></th>
+	<th><b>100m</b></th>
+	<td>남자</td>
+	<td>51초16</td>
+	</tr>
+	
+	<tr>
+	<th><b>배형</b></th>
+	<th><b>100m</b></th>
+	<td>여자</td>
+	<td>1분01초13</td>
+	</tr>
+	
+	<tr>
+	<th><b>배형</b></th>
+	<th><b>200m</b></th>
+	<td>남자</td>
+	<td>1분59초74</td>
+	</tr>
+	
+	<tr>
+	<th><b>배형</b></th>
+	<th><b>200m</b></th>
+	<td>여자</td>
+	<td>2분10초46</td>
+	</tr>
+	
+	
+
+
+</table>
+
+
+
+<br><br><br>
+
+<table border="1">
+
+<tr>
+	<th width="70" bgcolor = "#99ccff">종목</th>
+	<th width="60" bgcolor = "#99ccff">거리</th>
+	<th width="50" bgcolor = "#99ccff">성별</th>
+	<th width="100" bgcolor = "#99ccff">기록</th>
+</tr>
+<tr>
+	<th>자유형</th>
+	<th>100m</th>
+	<th>남자</th>
+	<td>50초60</td>
+</tr>
+<tr>
+	<th>자유형</th>
+	<th>100m</th>
+	<th>여자</th>
+	<td>55초56</td>
+</tr>
+
+
+</table>
+
+
+
+
+
+
+</body>
+</html>

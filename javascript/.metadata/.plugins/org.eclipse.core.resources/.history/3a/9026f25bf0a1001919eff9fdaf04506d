@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script type="text/javascript">
+
+var num = 12;
+var str = "hello";
+var fnum = 12.34;
+var swit = true;
+
+// switch, if, for, foreach 전부다 사용가능
+
+// Object
+var person = {
+		firstname:"길동",
+		lastname:"홍",
+		age:24,
+		info:function(){
+			return this.firstname + " " +
+			this.lastname + " " + this.age;
+		}
+}
+
+document.getElementById("demo").innerHTML = person.info;
+
+</script>
+
+<br><br>
+
+<h3 id="h3tag"><b>여기는 h3 태그입니다.</b></h3>
+
+<p id="ptag">여기는 ptag 입니다.</p>
+<br>
+
+<input type="text" id="text">
+<br>
+<br>
+
+<button type="button" onclick="_click()">클릭</button>
+
+<script type="text/javascript">
+function _click() {
+	// innerHTML, value 
+	var h3str = document.getElementById("h3tag").innerHTML;
+	alert(h3str);
+	var pstr = document.getElementById("ptag").innerHTML;	// 일반 태그는 전부다 innerhtml 로 사용한다.
+	alert(pstr);
+	
+	var text = document.getElementById("text").value;
+	var _text = document.getElementById("text").innerHTML;
+	alert(text);
+	alert(_text);
+	
+}
+
+</script>
+
+
+</body>
+</html>
+
+
+
+

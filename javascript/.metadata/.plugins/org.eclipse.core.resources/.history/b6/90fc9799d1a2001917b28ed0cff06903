@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<body onload="checkMessage()">
+
+
+<!-- onload -->		<!-- 한번 읽어올때 사용한다 (자주는 안씀) -->
+<p id="demo"></p>
+
+<script type="text/javascript">
+function checkMessage() {
+	document.getElementById("demo").innerHTML = "checkMessage() 호출";
+}
+
+	
+</script>
+
+
+</body>
+</html>

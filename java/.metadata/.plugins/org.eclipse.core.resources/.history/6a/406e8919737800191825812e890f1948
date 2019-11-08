@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		/*
+		String op = "";
+		out:for(int i=0; i <i+1; i++) {
+			op=scan.nextLine();
+			System.out.println(eval(op));
+			if(op == "탈출") {
+				break out;
+			}
+		}
+		*/
+		
+		
+		
+		int last;
+		int first ;
+		out:for(int i = 0; i <i+1; i++) {
+			System.out.println("첫번째 숫자를 입력해 주세요");
+			first = scan.nextInt();
+			
+			if(first == 00) {
+				break out;
+			}
+			System.out.println("연산을 입력해 주세요");
+			String op = scan.next();
+			
+			if(true == op.equals("+")) {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first + second;
+				System.out.println(last+"입니다.");
+			}
+			else if(true == op.equals("-")) {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first - second;
+				System.out.println(last+"입니다.");
+			}
+			else if(true == op.equals("/")) {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first / second;
+				System.out.println(last+"입니다.");
+			}
+			else if(true == op.equals("*")) {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first * second;
+				System.out.println(last+"입니다.");
+			}
+			
+			else {
+				System.out.println("연산을 잘못 입력 하셨습니다.");
+			}
+		}
+		System.out.println("수고하셨습니다.");
+			
+	}
+
+}

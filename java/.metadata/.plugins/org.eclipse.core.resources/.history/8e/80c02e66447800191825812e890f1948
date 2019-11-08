@@ -1,0 +1,79 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		//String == 문자열
+		//wrapper class   c에서는 string 이 없어서 char 로 배열을 만들어서 사용한다.
+		
+		String str; // string 클래스명 == class template(형태)
+					// str 변수(object:객체) --> instance(주체)
+		
+		str = "안녕하세요"; // 문자열을 그냥 넣을수있다.
+		System.out.println(str);
+		
+		String str1 = new String("하 이"); // "new" 가 붙어있다는 동적 할당이다.
+		//원래 라면 이렇게 사용을 해야하지만 Wrapper Class 이기 때문에 그냥  Value 값을 입력하고 사용을 할수있다. (Wrapper Clas == 편리하게 사용하기 위해 만든것)
+		
+		System.out.println(str1); // str = "adsadas" 이렇게 집어넣은거랑 string str1 = new string("gasda"); 동일하게 값이 넣어진다.
+									// 그래서 뭘로 쓰든 상관은 없다 결론 : 쓰고 싶은거 쓰자.
+		
+		String str2 = "반갑습니다." ;
+		
+		String str3;
+						//문자열과 문자열을 더하는 방법
+		str3 = str1 + str2; 
+		System.out.println(str3); // str3 == "하이반갑습니다." 가 출력이 된다.
+ 		
+		// concat()
+		String str4 = "건강하세요";
+		
+		String str5=str3.concat(str4); // 대상1.concat(대상2); 으로 문자열과 문자열을 합할수 있다 위에 대상1 + 대상2 로 합하는 방법과 동일한 방법이 출력이된다. 쓰고싶은거 쓰자
+		System.out.println(str5);
+		
+		char cdata[] = {'h','e','l','l','o'};
+		
+		String str6 = new String(cdata);		// string 에 char 배열을 집어넣으면서 선언할수 있다. 근데 굳이 글을 한번에 쓰는데 한글짜 씩 따로따로 써서 붙일 필요가 있을까?
+		System.out.println(str6);
+		
+		/*
+		 	class 인간
+		 		기능(함수(function) == 메소드 (method))
+		 			먹는다
+		 			걷는다  	이 3개의 행위를 처리해주는게 기능이다.
+		 			공부한다 						
+		 			
+		 											input     들어가는(input)값이 하나일수도 있지만 여러개일수도 있다.
+													\  /_________
+													|			 |
+													|	+5 처리	 |
+													|_______	_|
+															/  \
+															output 들어오는(n) 갯수만큼 출력된다.
+		
+		*/																
+		
+		// 자주쓰는함수 equals == 문자열 비교 함수이다.
+		
+		String str7 = "Hello";
+		String str8 = "Hell";
+		str8 = str8 + "o";
+		if(str7==str8) {
+			System.out.println("str7과str8은 똑같습니다.");
+		}
+		else {
+			System.out.println("str7과str8은 다릅니다.");
+		}
+		if(str7.equals(str8)==true) {
+			System.out.println("str7과str8은 똑같습니다");	
+		}
+		else {
+			System.out.println("다르다");
+		}
+		
+		
+		
+		
+	}
+
+}

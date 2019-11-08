@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+	<tr>
+		<td>
+			아이디<input th:value="${dto.getId()}" type="text" id="_login">
+		</td>
+	</tr>
+	<tr>	
+		<td>
+			비밀번호<input type="text" th:value="${dto.getPwd()}">
+		</td>
+	</tr>
+	</table>
+	 
+</body>
+</html>

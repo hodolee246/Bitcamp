@@ -1,0 +1,17 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class SelectClass extends DaoInterface{
+
+	public SelectClass() {
+		
+	}
+	
+	public void process() {
+		super.Procces();
+		
+		
+	}
+	
+}

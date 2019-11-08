@@ -1,0 +1,25 @@
+package qwe3;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		System.out.println("──────────────────────────────");
+		System.out.println("1.예금  | 2.출금 | 3.잔고 | 4.종료")
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

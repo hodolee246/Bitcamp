@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.9
+Bnd-LastModified: 1562250036035
+Bundle-ManifestVersion: 2
+Bundle-Name: TOMCAT_9_0_22
+Bundle-SymbolicName: TOMCAT_9_0_22
+Bundle-Version: 0
+Created-By: 1.8.0_212 (AdoptOpenJDK)
+DSTAMP: 20190704
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.22
+Import-Package: javax.net.ssl,javax.servlet,javax.servlet.annotation,j
+ avax.servlet.http,org.apache.coyote.http11.upgrade,org.apache.juli.lo
+ gging,org.apache.tomcat,org.apache.tomcat.util,org.apache.tomcat.util
+ .buf,org.apache.tomcat.util.codec.binary,org.apache.tomcat.util.colle
+ ctions,org.apache.tomcat.util.net,org.apache.tomcat.util.res,org.apac
+ he.tomcat.util.security,org.apache.tomcat.util.threads
+Originally-Created-By: 1.8.0_212-b03 ()
+Private-Package: javax.websocket,javax.websocket.server,org.apache.tom
+ cat.websocket,org.apache.tomcat.websocket.pojo,org.apache.tomcat.webs
+ ocket.server
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+TODAY: July 4 2019
+Tool: Bnd-4.0.0.201805111645
+TSTAMP: 1520
+X-Compile-Source-JDK: 1.8
+X-Compile-Target-JDK: 1.8

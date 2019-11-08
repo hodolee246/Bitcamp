@@ -1,0 +1,31 @@
+package view;
+
+import java.awt.event.MouseListener;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class WindowTest extends JFrame implements MouseListener{
+
+	JLabel label;
+	int posX, posY;	// 마우스 좌표값으로 사용예정
+	
+	
+	public WindowTest() {
+		// 마우스 이벤트
+		super("졸리고 배고프다");
+		
+		setLayout(null); // 굳이 사용할 이유X (배치하기 힘듬)
+		
+		label = new JLabel("x = y =");
+		label.setBounds(50, 100, 200, 50);
+		add(label);
+		
+		
+		
+		setBounds(0, 0, 600, 480);
+		
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

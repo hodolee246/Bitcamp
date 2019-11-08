@@ -1,0 +1,72 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.9
+Bnd-LastModified: 1562250034943
+Bundle-ManifestVersion: 2
+Bundle-Name: TOMCAT_9_0_22
+Bundle-SymbolicName: TOMCAT_9_0_22
+Bundle-Version: 0
+Created-By: 1.8.0_212 (AdoptOpenJDK)
+DSTAMP: 20190704
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.22
+Import-Package: javax.annotation,javax.annotation.security,javax.crypt
+ o,javax.crypto.spec,javax.ejb,javax.imageio,javax.mail,javax.mail.int
+ ernet,javax.management,javax.management.loading,javax.management.mode
+ lmbean,javax.management.openmbean,javax.management.remote,javax.manag
+ ement.remote.rmi,javax.naming,javax.naming.directory,javax.naming.lda
+ p,javax.naming.spi,javax.net,javax.net.ssl,javax.persistence,javax.rm
+ i.ssl,javax.security.auth,javax.security.auth.callback,javax.security
+ .auth.login,javax.security.auth.spi,javax.security.auth.x500,javax.se
+ curity.cert,javax.servlet.jsp.tagext,javax.sql,javax.wsdl,javax.wsdl.
+ extensions,javax.wsdl.extensions.soap,javax.wsdl.factory,javax.wsdl.x
+ ml,javax.xml.namespace,javax.xml.parsers,javax.xml.rpc,javax.xml.rpc.
+ handler,javax.xml.transform,javax.xml.transform.dom,javax.xml.transfo
+ rm.stream,javax.xml.ws,org.ietf.jgss,org.w3c.dom,org.w3c.dom.ls,org.x
+ ml.sax,org.xml.sax.ext,org.xml.sax.helpers
+Originally-Created-By: 1.8.0_212-b03 ()
+Private-Package: javax.security.auth.message,javax.security.auth.messa
+ ge.callback,javax.security.auth.message.config,javax.security.auth.me
+ ssage.module,javax.servlet,javax.servlet.annotation,javax.servlet.des
+ criptor,javax.servlet.http,javax.servlet.resources,org.apache.catalin
+ a,org.apache.catalina.authenticator,org.apache.catalina.authenticator
+ .jaspic,org.apache.catalina.connector,org.apache.catalina.core,org.ap
+ ache.catalina.deploy,org.apache.catalina.filters,org.apache.catalina.
+ loader,org.apache.catalina.manager,org.apache.catalina.manager.host,o
+ rg.apache.catalina.manager.util,org.apache.catalina.mapper,org.apache
+ .catalina.mbeans,org.apache.catalina.realm,org.apache.catalina.securi
+ ty,org.apache.catalina.servlets,org.apache.catalina.session,org.apach
+ e.catalina.ssi,org.apache.catalina.startup,org.apache.catalina.users,
+ org.apache.catalina.util,org.apache.catalina.valves,org.apache.catali
+ na.valves.rewrite,org.apache.catalina.webresources,org.apache.catalin
+ a.webresources.war,org.apache.coyote,org.apache.coyote.ajp,org.apache
+ .coyote.http11,org.apache.coyote.http11.filters,org.apache.coyote.htt
+ p11.upgrade,org.apache.coyote.http2,org.apache.juli,org.apache.juli.l
+ ogging,org.apache.naming,org.apache.naming.factory,org.apache.naming.
+ factory.webservices,org.apache.naming.java,org.apache.tomcat,org.apac
+ he.tomcat.jni,org.apache.tomcat.util,org.apache.tomcat.util.bcel,org.
+ apache.tomcat.util.bcel.classfile,org.apache.tomcat.util.buf,org.apac
+ he.tomcat.util.codec.binary,org.apache.tomcat.util.collections,org.ap
+ ache.tomcat.util.compat,org.apache.tomcat.util.descriptor,org.apache.
+ tomcat.util.descriptor.tagplugin,org.apache.tomcat.util.descriptor.tl
+ d,org.apache.tomcat.util.descriptor.web,org.apache.tomcat.util.digest
+ er,org.apache.tomcat.util.file,org.apache.tomcat.util.http,org.apache
+ .tomcat.util.http.fileupload,org.apache.tomcat.util.http.fileupload.d
+ isk,org.apache.tomcat.util.http.fileupload.servlet,org.apache.tomcat.
+ util.http.fileupload.util,org.apache.tomcat.util.http.fileupload.util
+ .mime,org.apache.tomcat.util.http.parser,org.apache.tomcat.util.json,
+ org.apache.tomcat.util.log,org.apache.tomcat.util.modeler,org.apache.
+ tomcat.util.modeler.modules,org.apache.tomcat.util.net,org.apache.tom
+ cat.util.net.jsse,org.apache.tomcat.util.net.openssl,org.apache.tomca
+ t.util.net.openssl.ciphers,org.apache.tomcat.util.res,org.apache.tomc
+ at.util.scan,org.apache.tomcat.util.security,org.apache.tomcat.util.t
+ hreads,org.apache.tomcat.util.threads.res
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+TODAY: July 4 2019
+Tool: Bnd-4.0.0.201805111645
+TSTAMP: 1520
+X-Compile-Source-JDK: 1.8
+X-Compile-Target-JDK: 1.8

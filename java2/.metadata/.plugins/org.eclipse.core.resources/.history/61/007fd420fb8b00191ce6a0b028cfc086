@@ -1,0 +1,12 @@
+package ma;
+
+import tt.window;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		new window();
+	}
+
+}

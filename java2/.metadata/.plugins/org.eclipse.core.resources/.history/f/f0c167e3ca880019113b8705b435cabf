@@ -1,0 +1,19 @@
+package hcls;
+
+import single.SingletonClass;
+
+public class HeClass {
+
+	private int hnum;
+	
+	public HeClass() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public void method() {
+		SingletonClass sc = SingletonClass.getInstance();
+		hnum = sc.num;
+		
+	}
+	
+}

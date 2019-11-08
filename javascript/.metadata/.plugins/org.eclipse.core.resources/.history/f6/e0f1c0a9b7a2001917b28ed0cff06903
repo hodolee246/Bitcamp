@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+
+<script type="text/javascript">
+
+document.getElementById("demo").innerHTML = parseInt("10") +
+"<br>" + parseInt("23.4") + "<br>" + 
+parseInt("    23.4") + "<br>" +
+parseInt("5 10");
+
+</script>
+
+
+
+</body>
+</html>
+
+

@@ -1,0 +1,19 @@
+package main;
+
+// 자식 클래스
+public class Child extends Parent { // extends ValueClass name
+
+	public void func() {
+		
+		 pNumber = 1; // private 처리 되있어서 접근을 못할경우 방법
+		 				// getter로 받아 오거나, 상속 해주는 클래스 에서 
+		 		//protected 접근 지정자로 하면 상속 클래스에서는 접근이 가능하다.
+		
+		int num = getpNumber();
+		
+		
+		
+		System.out.println("Child func()");
+	}
+	
+}

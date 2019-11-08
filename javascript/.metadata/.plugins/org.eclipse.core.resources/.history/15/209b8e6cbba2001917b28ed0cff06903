@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<!-- 10 -> 2 
+입력
+	 16 -> 10
+입력
+ -->
+
+<input type= "checkbox" id="bin1">
+<input type= "checkbox" id="dex1">
+<input type= "checkbox" id="oct1">
+<input type= "checkbox" id="hex1">
+
+<input type="text" id="intext">
+
+<button type="button" onclick="func()">변환</button>
+
+<input type= "checkbox" id="bin2">
+<input type= "checkbox" id="dex2">
+<input type= "checkbox" id="oct2">
+<input type= "checkbox" id="hex2">
+
+<input type="text" id="outtext">
+
+
+<script type="text/javascript">
+
+function func() {
+	
+
+var inbin = document.getElementById("bin1").checked;
+var index = document.getElementById("dex1").checked;
+var inoct = document.getElementById("oct1").checked;
+var inhex = document.getElementById("hex1").checked;
+
+var _intext = document.getElementById("intext").value;
+
+var inbin2 = document.getElementById("bin2").checked;
+var index2 = document.getElementById("dex2").checked;
+var inoct2 = document.getElementById("oct2").checked;
+var inhex2 = document.getElementById("hex2").checked;
+
+}
+
+
+</script>
+
+
+	
+</body>
+</html>

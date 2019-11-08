@@ -1,0 +1,34 @@
+package main;
+
+import java.util.Calendar;
+
+import my.MyClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+		MyClass mycls = new MyClass();
+		mycls.method();
+		mycls.function();
+		*/
+		MyClass mycls = MyClass.getInstance();
+		
+		Calendar cal = Calendar.getInstance();
+
+		// class array
+		YouClass ycls[] = new YouClass[5]; // 배열만 생성 == 비어있는 instance 만 선언된다 (변수만 선언)
+		YouClass ycls0, ycls1, ycls2;
+		for (int i = 0; i < ycls.length; i++) {
+			ycls[i] = new YouClass();
+		}
+		
+		ycls[0].setNumber(1);
+		ycls[0].method();
+		
+	
+	}
+
+}

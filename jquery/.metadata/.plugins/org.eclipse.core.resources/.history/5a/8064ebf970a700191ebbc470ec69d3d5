@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!-- radio, checkbox -->
+<ul>
+	<li><input type="radio" name="radio_test" value="사과">사과</li>
+	<li><input type="radio" name="radio_test" value="배">배</li>
+	<li><input type="radio" name="radio_test" value="복숭아" checked>복숭아</li>
+</ul>
+
+<p id="get_p">클릭</p>
+
+<br><br>
+
+<input type="checkbox">
+</body>
+</html>
+

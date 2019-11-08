@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move package &apos;main&apos; to &apos;0528Tokenizer/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;MyClass&apos;&#x0D;&#x0A;- Destination element: &apos;0528Tokenizer/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;MyClass/src/main&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move package" destination="=0528Tokenizer/src&lt;" element1="/src&lt;main" flags="589830" fragments="1" id="org.eclipse.jdt.ui.move" policy="org.eclipse.jdt.ui.movePackages" stamp="1559021523163" version="1.0"/>
+</session>

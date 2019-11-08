@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Bbs">
+
+	<select id="allList" resultType="bit.com.bbs.model.BbsDto">
+		SELECT * FROM BBS
+	</select>
+	
+	<update id="upReadcount" parameterType="java.lang.Integer">
+		UPDATE BBS
+		SET READCOUNT = READCOUNT + 1
+		WHERE SEQ = #{seq}
+	</update>
+	
+	<select id="listDetail" parameterType="java.lang.Integer" resultType="bit.com.bbs.model.BbsDto">
+		SELECT * FROM BBS
+		WHERE SEQ = #{seq}
+	</select>
+	
+	<update id="upBbs" parameterType="bit.com.bbs.model.BbsDto">
+		UPDATE BBS
+		SET TITLE = #{title}, CONTENT = #{content}
+		WHERE SEQ = #{seq}
+	</update>
+	
+	<delete id="delBbs" parameterType="java.lang.Integer">
+		DELETE BBS
+		WHERE SEQ = #{seq}
+	</delete>
+	
+	<insert id="writeBbs" parameterType="bit.com.bbs.model.BbsDto">
+		INSERT INTO BBS
+		(SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT)
+		VALUES(SEQ_BBS.NEXTVAL, #{id}, (SELECT NVL(MAX(REF), 0)+1 FROM BBS), 0, 0, #{title}, #{content}, SYSDATE, 0, 0, 0)
+	</insert>
+	
+	<select id="searchBbs" parameterType="bit.com.bbs.model.BbsParam" resultType="bit.com.bbs.model.BbsDto">
+		SELECT SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT
+		FROM (SELECT ROW_NUMBER()OVER(ORDER BY REF DESC, STEP ASC) AS RNUM, SEQ, ID, REF,
+		STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT FROM BBS
+		ORDER BY REF DESC, STEP ASC)
+		WHERE RNUM<![CDATA[>=]]> #{num} AND RNUM <![CDATA[<=]]> #{num2}
+		<if test="s_category == 'title'">
+			AND TITLE LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="s_category == 'content'">
+			AND CONTENT LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="s_category == 'id'">
+		<!-- <if test="s_category.equals('id')"> -->
+			AND ID LIKE '%' || #{keyword} || '%'
+		</if>
+		
+	</select>
+	
+	<select id="searchBbsPaging" parameterType="bit.com.bbs.model.BbsParam" resultType="bit.com.bbs.model.BbsDto">
+		SELECT SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT
+		FROM (SELECT ROW_NUMBER()OVER(ORDER BY REF DESC, STEP ASC) AS RNUM, SEQ, ID, REF,
+		STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT FROM BBS
+		ORDER BY REF DESC, STEP ASC)
+		WHERE 1 = 1
+		<if test="s_category == 'id'">
+			AND ID LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="s_category == 'title'">
+			AND TITLE LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="s_category == 'content'">
+			AND CONTENT LIKE '%' || #{keyword} || '%'
+		</if>
+		
+	</select>
+
+	<select id="bbsPaging" parameterType="bit.com.bbs.model.BbsParam" resultType="bit.com.bbs.model.BbsDto">
+		
+		SELECT SEQ, ID, REF, STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT
+		FROM (SELECT ROW_NUMBER()OVER(ORDER BY REF DESC, STEP ASC) AS RNUM, SEQ, ID, REF,
+		STEP, DEPTH, TITLE, CONTENT, WDATE, PARENT, DEL, READCOUNT FROM BBS
+		ORDER BY REF DESC, STEP ASC)
+		WHERE RNUM<![CDATA[>=]]> #{num} AND RNUM <![CDATA[<=]]> #{num2}
+		
+	</select>
+	
+</mapper>

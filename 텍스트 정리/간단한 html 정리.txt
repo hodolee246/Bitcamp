@@ -1,0 +1,46 @@
+	컨트롤러 뷰
+	모델
+	서비스
+	다오
+
+(스프링 개념) jsp에서는 안나온다
+
+뷰는 awt swing 사용 웹을 사용할경우 뷰를 웹으로 치환하는 느낌?
+결론저으로 백핸드를 기술은 무조건 필요하다.
+
+오늘부터 배울 html 자바스크립트 jquery css(디자인 쪽은 자체적으로 하기보다는 남들거를 가져와서 사용하는편)
+xml, jason, jsoup 다 배울거임 그중에 중요하게 배울게 ajax 를 배운다
+
+html 을 이용할때 자바스크립트, jquery가 html을 지어해준다.
+
+xml(파일 입출력) 요즘은 jason을 더 선호함
+
+ajax 현재 화면은 유지하면서 데이터만 가지고올수있음
+
+간단히 다 배우고 
+
+ajax, jason 제외하고는 웹서버가 필요가없다.
+
+servlet은 웹서버랑 연관이있음
+
+jsp 생산목적(회원가입, 게시판, 자료실)
+
+jsp 에서는 html, js, jq, ajax, java 를 다 사용할수있다. 
+
+
+Hyper Text MarkUp Language
+띄우다
+
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+

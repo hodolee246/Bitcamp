@@ -1,0 +1,7 @@
+package sing;
+
+import robot.Robot;
+
+public class SingClass extends Robot {
+
+}

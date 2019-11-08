@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>GET</h2>
+
+<input type="text" id="_text">
+
+<script type="text/javascript">
+
+// document.getElementById("_text").val
+
+</script>
+</body>
+</html>

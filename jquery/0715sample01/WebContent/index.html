@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  w3school 에서 링크(코드)복사
+</script> -->
+<!-- <script type="text/javascript" src = "./js/jquery.min.js">  첫번째 url 에서 소스복사후 파일 저장 js폴더
+</script> -->
+<script src ="https://code.jquery.com/jquery-3.4.1.min.js">	/* jquery 사이트 다운로드에서 링크(코드)복사 */
+</script>
+</head>
+<body>
+<!-- 
+	Java Script: client 언어(화면). front end.	web server랑은 관련이 없다.
+	CSS(cascading style sheet): 디자인 담당.  front end.
+	JQuery : Java Script를 경량화 시켜놓은것 (간략화). client언어
+			Ajax를 포함한다. Ajax는 server 와 client가 모두 필요하다.
+			DOM 을 단순화 시켜놓은 것 이다.
+
+	JQuery-UI : 버튼, 슬라이드... 제일 모양이 이쁘다...?? 디자인적으로 좋다.
+	
+				this -> 자기 자신을 가리키는 Object.
+ -->
+
+<p id="demo">여기가 p태그 입니다. id demo</p>
+
+<h3 id="demo">여기가 h3태그 입니다. id demo</h3>
+
+<p class="demo">여기가 p태그 입니다. class demo</p>
+
+<h3 class="demo">여기가 p태그 입니다. class demo</h3>
+
+<pre>
+입력:<input type="text" id="tid" value="abcde">
+<button type="button" id="btn" >입력</button>
+</pre>
+
+<script type="text/javascript">
+// JS
+/* var arrPtag = document.getElementsByTagName("p");
+
+for(i = 0; i < arrPtag.length; i++){
+	arrPtag[i].innerHTML = "Hello P tag";
+} */
+
+$(document).ready(function () {
+	alert("JQuery active");
+
+	/*
+		사용방법
+		$(태그명 or class or id).핸들러 함수명(파라메터 값);
+	*/
+
+	/* $("p").html("Hello P tag");		
+	$("p").html("<b>Hello P tag</b>");  html은 적용 가능 */
+	/* $("p").text("<b>Hello P tag JQuery</b>");  text는 적용 x */	 
+	
+	// JS	code
+	/* var demo = document.getElementById("demo").innerHTML;	//getter
+	document.getElementById("demo").innerHTML = "world JS";	//setter id 는 하나만 인식한다. */
+	
+	// JQuery code
+	var demo = $("#demo").text();		// getter
+	alert(demo);
+	$("#demo").text("World JQuery"); 	// setter
+
+	$("#btn").click(function () {
+		var text = $("#tid").val();		// getter
+		alert(text);
+		$("#tid").val("안녕하세요");
+	});
+	
+
+});
+	// JS	code
+/* function func() {
+	var text = document.getElementById("tid").value;
+	alert(text);
+} */
+
+
+
+</script>
+
+</body>
+</html>

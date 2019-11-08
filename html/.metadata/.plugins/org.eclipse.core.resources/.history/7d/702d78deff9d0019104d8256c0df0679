@@ -1,0 +1,18 @@
+
+
+HTML
+
+Hyper 		Text	 	Markup		 Language
+띄워주는 	문자열		표시			언어
+구성 : Tag
+표시언어 
+
+HTML -> Standard Tag + 사용자 Tag도 사용이 가능하다
+XML -> 사용자 Tag 용도 : Data, Setup
+<br>
+<br>
+추가 텍스트
+<!-- html 주석문 -->
+<%-- JSP 주석문 --%>
+<br>
+언제든지 F5키를 통해서 새롭게 갱신을 할 수 있다. (굳이 서버를 계속해서 끄고 키는걸 할 필요는없다.)

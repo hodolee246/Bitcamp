@@ -1,0 +1,19 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class WindowClass extends JFrame {
+
+	
+	public WindowClass() {
+		super("집가고싶다");
+		
+		setSize(640, 480);
+		setLocation(0, 0);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}
+
+

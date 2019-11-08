@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!-- createElement -->
+
+<p>靑 "日제안 '제3국 중재위' 수용불가…입장변화 없어</p>
+<p>상반기 유럽 수입차 부진속 일본차 판매는 10%↑</p>
+
+<ol>
+	<li>수박</li>
+	<li>자두</li>
+	<li>키위</li>
+</ol>
+
+<br>
+
+<select id="food">
+	<option value="짜장면">짜장면</option>
+	<option value="파스타">파스타</option>
+	<option value="컵라면">컵라면</option>
+</select>
+
+<br><br>
+
+<button type="button" id="btn1">추가 텍스트(뒤에)</button>
+<button type="button" id="btn2">추가 텍스트(앞에)</button>
+
+<script type="text/javascript">
+$(function () {
+	$("#btn1").click(function () {	// 뒤에다가 추가한다.
+//		$('p').append("<br> 추가(append) 요소 입니다.");
+//		$('ol').append("<li>오렌지</li>")	// 생성될때마다 번호가 하나씩 증가하며 뒤에 생성된다.
+		$('select').append("<option value = '스테이크'>스테이크</option>");
+	});
+	$("#btn2").click(function () {	// 앞에다가 추가한다.
+//		$('p').prepend("<br> 추가(prepend) 요소 입니다.")
+//		$('ol').prepend("<li>파인애플</li>")	// 생성될때마다 자동적으로 번호가 밀리면서 맨앞에 생성된다.
+	
+	});
+});
+</script>
+
+</body>
+</html>
+
+
+

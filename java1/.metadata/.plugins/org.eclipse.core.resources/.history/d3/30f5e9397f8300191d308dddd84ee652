@@ -1,0 +1,16 @@
+package robot;
+
+import ro.Robot;
+
+public class DrawClass extends Robot {
+private String name;
+	
+	public DrawClass(String name) {
+		super(name);
+	}
+	public void print(String name) {
+		this.name = name;
+	}
+}
+
+

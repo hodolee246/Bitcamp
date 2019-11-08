@@ -1,0 +1,43 @@
+package file;
+
+import java.io.File;
+import java.io.IOException;
+
+import single.Singleton;
+
+public class FileClass {
+
+	private File myfile;
+	
+	private String name;
+	
+	public FileClass() {
+		myfile = new File("e:\\tmp\\Student.txt");
+		name = "Student.txt";
+		createFile();		
+	}
+	
+	public File createFile() {
+		try {
+			if(myfile.createNewFile()) {
+				System.out.println(name + "파일생성");
+			}else {
+				System.out.println(name + "파일생성실패");
+			}
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+		return myfile;
+	}
+	
+	public void dataSave() {	// list -> file
+		Singleton sc = Singleton.getInstance();
+		
+		
+	}
+	
+	public void dataLoad() {	// file -> list
+		
+	}
+}

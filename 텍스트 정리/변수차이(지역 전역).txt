@@ -1,0 +1,76 @@
+객체를 만드는 이유 = 프로그래머가 관리하기 편하려고 객체로 만든다.
+
+관리하기 편하려면(가독성) 이 좋아야함.
+
+변수의 차이
+static (정적 변수, 글로벌 변수)  -> 선언시 static 영역에 생성 프로그램에서 초기화, 사용 (저장공간이 하나임)  // 선언 방법 선언된 클래스명.정적변수
+member(멤버 변수) -> 클래스 선언시 heap 영역에 생성 클래스에서 초기화, 사용 그 멤버 변수의 값은 init 값임 // 선언 방법 클래스 선언후 인스턴스.멤버변수
+local (지역 변수) -> 선언시 stack 영역에 생성 해당 필드에서만 초기화, 사용이 이루어진다. // 선언 방법 해당 필드에서 변수명 으로 사용됨
+
+method
+static(스테틱 메소드에서는 지역 변수를 선언 후 사용하거나 기존에 선언된 정적변수만 사용할 수 있다.) 그 외 선언되있는 멤버 변수를 가져올경우 오류가 일어난다.
+
+public method ( 제약 없이 모든 변수를 사용할 수 있다.)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+System.out.println("학생의 번호를 입력해 주세요.");
+		int number = sc.nextInt();
+		dto.setNumber(number);
+		
+		
+		System.out.println("학생의 이름을 입력해 주세요.");
+		String name = sc.next();
+		dto.setName(name);
+		
+		
+		System.out.println("학생의 국어점수를 입력해 주세요.");
+		int kor = sc.nextInt();
+		dto.setKor(kor);
+		
+		
+		System.out.println("학생의 영어점수를 입력해 주세요.");
+		int eng = sc.nextInt();
+		dto.setEng(eng);
+		
+		
+		System.out.println("학생의 수학점수를 입력해 주세요.");
+		int math = sc.nextInt();
+		dto.setMath(math);

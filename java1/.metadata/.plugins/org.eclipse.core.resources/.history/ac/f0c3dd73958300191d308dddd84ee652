@@ -1,0 +1,12 @@
+package sing;
+
+import robot.Robot;
+
+public class SingClass extends Robot {
+
+	public SingClass() {
+		super();
+		System.out.println("SingClass");
+	}
+	
+}

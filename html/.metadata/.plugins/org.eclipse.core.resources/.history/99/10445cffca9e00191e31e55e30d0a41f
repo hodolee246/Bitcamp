@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<!-- list -->
+
+<ul>				<!-- unordered List  순서없는 목록-->
+
+	<li>coffee</li>
+	<li>tea</li>
+	<li>milk</li>
+
+</ul>
+
+<ul style="list-style-type: disc">				<!-- 앞의표시 기본 타입이 disc라 변화가없다.-->
+
+	<li>coffee</li>
+	<li>tea</li>
+	<li>milk</li>
+
+</ul>
+
+
+<ul style="list-style-type: circle">				<!-- 앞의표시 칸이 비여있다.-->
+
+	<li>coffee</li>
+	<li>tea</li>
+	<li>milk</li>
+
+</ul>
+
+<ul style="list-style-type: square;">				<!-- 앞의 표시 사각영역-->
+
+	<li>coffee</li>
+	<li>tea</li>
+	<li>milk</li>
+
+</ul>
+
+
+<ul style="list-style-type: none;">				<!-- 앞의 표시 를 없앤다.-->
+
+	<li>
+		<a href="#">coffee</a>				<!-- 이렇게 링크로 걸어줄 수 도있다. -->
+	</li>
+	<li>tea</li>
+	<li>milk</li>
+
+</ul>
+
+
+<ol type="2">					<!-- Ordered List(순서있는리스트) html 4 type은 변화가 없다-->
+
+	<li>apple</li>					
+	<li>pear</li>
+	<li>banana</li>
+
+</ol>
+
+
+<ol start="2">					<!-- Ordered List(순서있는리스트) html 5  type은 변화가없지만 start로 시작값을 정할 수 있다.(번호로만 들어 가게되어있다)-->
+
+	<li>apple</li>					
+	<li>pear</li>
+	<li>banana</li>
+
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

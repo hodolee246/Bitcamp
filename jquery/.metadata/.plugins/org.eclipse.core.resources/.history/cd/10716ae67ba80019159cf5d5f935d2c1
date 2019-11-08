@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+.qq20{
+	width: 500px;
+	height: 300px;
+}
+</style>
+</head>
+<body>
+
+<div id="q20">
+<img alt="사진이없습니다." src="">
+</div>
+
+<ul class="eee">
+<li>리스트1</li>
+<li>리스트2</li>
+<li>리스트3</li>
+<li>리스트4</li>
+<li>리스트5</li>
+<li>리스트6</li>
+</ul>
+<p id="q21"></p>
+
+<div id="q22"></div>
+
+<input type="text" id="t1">
+<button type="button" id="btn">점수</button>
+<div id="q23">
+
+</div>
+
+<h4>주인공</h4>
+<ul class="q24">
+<li>홍길동</li>
+<li>일지매</li>
+<li>임꺽정</li>
+<li>정수동</li>
+</ul>
+<p class="q25">주인공들의 모임</p>
+
+
+
+<script type="text/javascript">
+
+$(function () {
+	$("#q20").addClass("qq20");
+	var abc = $(".eee").children().length;
+	$("#q21").text(abc);
+
+	$("li").click(function() {
+		alert($(this).index() +1);
+	});
+	
+	$("#btn").click(function() {
+		
+		if($("#t1").val() >= 76){
+			$("#q23").children().remove();
+			$("#q23").append("<p>합격</p>");	
+		}else{
+			$("#q23").children().remove();
+			$("#q23").append("<p>불합격</p>");
+	}
+	});
+	
+	var bbc = $(".q24 li").children().eq(1);
+	alert(bbc);
+	
+});
+</script>
+
+</body>
+</html>

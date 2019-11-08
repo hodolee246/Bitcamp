@@ -1,0 +1,12 @@
+package parent;
+
+public class ParentClass {
+
+	public void Parent() {
+		
+		System.out.println("Parent Parent()");
+		
+	}
+	
+	
+}

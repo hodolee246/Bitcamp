@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>2개의 주사위</h1>
+<br><br>
+버튼을 클릭하면 2개의 주사위가 랜덤으로 표시됩니다.<br>
+
+
+<br><br>
+<button type="button" onclick="_random()">리롤</button>
+
+<script type="text/javascript">
+
+function _random() {
+	var ab = Math.floor((Math.random()*6))+1;	
+	alert(ab);
+}
+
+</script>
+</body>
+</html>

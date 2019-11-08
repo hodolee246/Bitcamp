@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <link rel = " stylesheet" href = ""> External 방식 -->
+<!-- 적용이 안될경우도 있고 외부파일 불러오는게 느림 -->
+
+<style type="text/css">  /* internal 방식 */
+body{	/* tag class id     id, class(css, js) name(js, form)*/
+	/* background-color: red; */
+	/* propertyu */	/* value */
+	/* background-image: url("ez.jpg");		/* 이것만 설정시 사진의 크기가 화면의 크기보다 작을경우 그사진이 계속해서 나머지공백에 추가된다. */
+	/*  background-repeat: repeat-x; 		/* 옆으로만 이미지를 이어주고 싶은경우(공백에도 같은사진을 넣는데 좌우로만) */
+	/* background-repeat: no-repeat; */			/* 화면에 사진의 크기와 상관없이 하나만 뿌려진다(공백은 남는다.) */
+	/* background-position: right top;	 */		/* 화면의 사진이 나오는 시작점의 위치 디폴트(기본)값은 왼쪽 상단이다. */
+	/* margin-right: 100px; */ 	 		/* 밖의 여백 */
+	/* border: solid 2px #ffffff; */		/* 바디 부분의 테두리를 설정해준다. */
+	background: #00ff00 url("ez.jpg") no-repeat right-top;		/* 위 에 명령어를 한번에 표현한거다. */
+	background: #00ff00 url("ez.jpg") no-repeat; right-top;
+}
+
+h1{
+	background-color: #ffffff;
+
+}
+p{
+	background-color: #9abf81;
+}
+div{
+	background-color: #bafcad
+}
+
+</style>
+
+
+</head>
+<body bgcolor="#83deff">	<!-- 속도는 빠르고 적용도 쉽다 하지만 전부다 타이핑을 해야되서 코드가 길어진다.-->
+
+<!-- inline 방식 -->
+<!-- <p style="background-color: gray">hi CSS</p>
+
+style = 어트리뷰트 (밖에서 지정되어있는값으로 변경하기 힘듬)
+background color = 프럼프트 (선택을 자유로 값을 변경할 수 있음)
+ -->
+
+<h1>졸려요</h1>
+
+
+<div>
+초복에는
+<p>피곤해요</p>
+삼계탕?
+</div>
+</body>
+</html>

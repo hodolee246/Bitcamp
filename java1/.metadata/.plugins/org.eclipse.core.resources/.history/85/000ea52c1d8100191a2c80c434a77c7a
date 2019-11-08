@@ -1,0 +1,21 @@
+package Student;
+
+public class Student {
+	
+	public String name;
+	public int ban, no, kor, eng, math;
+
+	
+	
+	public int getTotal(int kor,int eng,int math) {
+		int total = kor + eng + math;
+		return total;
+	}
+	
+	public int getAverage() {
+		int avg = (Math.round(getTotal(kor, eng, math) / 3) * 10 / 10);
+		return avg;
+	}
+	
+	
+}

@@ -1,0 +1,12 @@
+package main;
+
+public class AnimalFactory {
+
+	public static void Create(String animalName) { // 어디서든 사용해야하면 Static 을 붙이면 좋지먼 
+		if(animalName.equals("")) {
+			System.out.println("생성할 클래스가 없습니다.");
+		}
+	}
+	
+	
+}

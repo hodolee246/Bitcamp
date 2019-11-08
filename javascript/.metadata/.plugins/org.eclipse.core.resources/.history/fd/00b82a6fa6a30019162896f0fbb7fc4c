@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>단가 x 수량 일람표</h3>
+
+<table border="1" id="mytable">
+<tr>
+	<th>갯수</th><th>제품 A</th><th>제품 B</th><th>제품 C</th>
+</tr>
+</table>
+
+<script type="text/javascript">
+var a = 300;
+var b = 450;
+var c = 520;
+
+var tbody = document.getElementById("mytable");
+
+for (var i = 0; i < 10; i++) {
+	
+var trow = document.createElement("tr");
+
+var tdata0 = document.createElement("td");	// <td></td>	
+tdata0.appendChild(document.createTextNode("<b>" + i + 1 + "</b>")); // <td>1</td>
+
+var tdata1 = document.createElement("td");	// <td></td>
+tdata1.appendChild(document.createTextNode( a + "원" )); // <td>300원</td>
+
+var tdata2 = document.createElement("td");	// <td></td>
+tdata2.appendChild(document.createTextNode( b + "원" )); // <td>450원</td>
+
+var tdata3 = document.createElement("td");	// <td></td>
+tdata3.appendChild(document.createTextNode( c + "원" )); // <td>520원</td>
+
+// td -> tr 추가
+trow.appendChild(tdata0);
+trow.appendChild(tdata1);
+trow.appendChild(tdata2);
+trow.appendChild(tdata3);
+
+// tr -> table 추가
+tbody.appendChild(trow);
+
+a = a + 300;
+b = b + 450;
+c = c + 520;
+}
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

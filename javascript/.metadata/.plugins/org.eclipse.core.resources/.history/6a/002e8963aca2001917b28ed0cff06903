@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+영어 속담으로 "1일 1개씩 먹으면 의사는 필요없다" 라고하는 과일은 무엇일까요?<br><br>
+
+<input type="checkbox" id="eng">Only English<br><br>
+답:<input type="text" id="answer" size="8">
+<button type="button" onclick="check()">클릭</button> 
+
+<script type="text/javascript">
+function check() {
+	
+	var eng = document.getElementById("eng").checked;
+
+	if(eng == true){
+		var answer = document.getElementById("answer").value;
+		if(answer == 'apple' || answer == 'APPLE'){}
+		alert("정답입니다.");
+	}else{
+		alert("오답입니다.");
+	}
+	
+	
+
+}
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+package main;
+
+import mytv.MytvClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// 붕어빵틀
+		MytvClass t = new MytvClass();  // t : 객체, 인스턴스
+		
+		
+		t.setChannel(10);
+		System.out.println("CH:" + t.getChannel());
+		t.setChannel(20);	// prev == 10;
+		System.out.println("CH:" + t.getChannel());
+		t.gotoPrevChannel(); // prev == 20
+		System.out.println("CH:" + t.getChannel());
+		t.gotoPrevChannel(); // prev == 10
+		System.out.println("CH:" + t.getChannel());
+		
+		
+		
+		
+	}
+}

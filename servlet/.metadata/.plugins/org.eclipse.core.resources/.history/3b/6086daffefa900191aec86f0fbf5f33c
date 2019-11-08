@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>이름</td>
+		<td><input type="text" size="20"></td>
+	</tr>
+	<tr>
+		<td>s나이</td>
+		<td><input type="text" size="20"></td>
+	</tr>
+	<tr>
+		<td>좋아하는 과일</td>
+		<td>
+			<select multiple="multiple">
+				<option value="apple">사과</option>
+				<option value="pear">배</option>
+				<option value="banana">바나나</option>
+			
+			</select>	
+</table>
+
+</body>
+</html>

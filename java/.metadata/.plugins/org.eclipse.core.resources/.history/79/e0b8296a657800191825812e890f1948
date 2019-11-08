@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		
+		int last;
+		
+		for(int i = 0; i <10; i++) {
+			System.out.println("첫번째 숫자를 입력해 주세요");
+			int first = scan.nextInt();
+			System.out.println("연산을 입력해 주세요");
+			String op = scan.next();
+			
+			if(true == op.equals("+")) {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first + second;
+				System.out.println(last+"입니다.");
+			}
+			else if(op == "-") {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first - second;
+				System.out.println(last+"입니다.");
+			}
+			else if(op == "/") {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first / second;
+				System.out.println(last+"입니다.");
+			}
+			else if(op == "*") {
+				System.out.println("두번째 숫자를 입력해 주세요");
+				int second = scan.nextInt();
+				last = first * second;
+				System.out.println(last+"입니다.");
+			}
+			else {
+				System.out.println("연산을 잘못 입력 하셨습니다.");
+			}
+		}
+
+	}
+
+}

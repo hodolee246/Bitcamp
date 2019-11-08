@@ -1,0 +1,91 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+
+		/*
+		
+			brek == 탈출(escape) == retur
+		
+		*/
+
+		int num =1 ;
+		
+		switch(num)
+		{
+		case 1:
+			System.out.println("num = 1");
+			break;
+			//return ;
+		case 2:
+			System.out.println("num = 1");
+			break;
+		}
+		
+			// break만으로는 사용할수없다.
+		// break; 단독 사용시 오류가 난다. 단 리턴은 안난다.
+		/*
+			탈출할 제어문 : for, while, do while
+		
+			형식
+			for(	;	;	)
+			{
+			if(  )
+			{
+				break; 포문에 이프문 중첩 사용을 할때 브레이크 문을 사용한다.
+			}
+			}
+		
+		*/
+		
+		for(int i =0; i < 10; i++)
+		{
+			System.out.println("for i:" + i);
+			if(i == 5)
+			{
+				break;
+			}
+		}
+		
+		char cArray[] = {'a', 'b', 'c'};
+		
+		for(int i=0;i< cArray.length; i++)
+		{
+			System.out.println(cArray[i]);
+			if(cArray[i] == 'b')
+			{
+				System.out.println("탈출!");
+				break;
+			}
+		}
+		
+		
+		int iArray[] = {1,2,3,-1,7};
+		
+		for (int i = 0; i < iArray.length; i++) {
+			System.out.println("iArray["+i+"]="+iArray[i]);
+			if(iArray[i] < 0)
+			{
+				System.out.println("xx");
+				break;
+			}
+		}
+		// 2중 for문 탈출
+		for (int i = 0; i < 10; i++) {
+			
+			System.out.println("i="+i);
+			for (int j = 0; j < 10; j++) {
+				System.out.println("\t j ="+j);
+				if(i == 5 && j == 3) {
+					break;
+				}
+				
+			}
+			
+		}
+		
+		
+	}
+
+}

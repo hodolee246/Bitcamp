@@ -1,0 +1,173 @@
+package dao;
+
+import java.util.Scanner;
+
+import dto.StudentDto;
+
+// Data Access Object	
+public class DaoClass {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	private int count;
+	private int value;
+
+	StudentDto students[];
+	
+	
+	
+	public DaoClass() {
+		students = new StudentDto[10];
+		count = 0;
+	}
+	
+	// insert(추가)
+	public void insert() {
+		
+		
+		// 학생정보 추가
+		
+		// 입력
+	   // 번호 이름 점수 점수 점수
+		int number, kor, eng, math;
+		number = kor = eng = math = 0;
+		String name;
+		
+			
+			System.out.println(count +1 + "번째 학생의 번호를 입력해 주세요.");
+			if(getNumber())
+			number = value;
+			
+			
+			
+			
+			
+			
+			
+			System.out.println(count +1 + "번째 학생의 이름을 입력해 주세요.");
+			name = sc.next();
+			
+			System.out.println(count +1 + "번째 학생의 국어점수를 입력해 주세요.");
+			kor = sc.nextInt();
+			
+			System.out.println(count +1 + "번째 학생의 영어점수를 입력해 주세요.");
+			eng = sc.nextInt();
+			
+			System.out.println(count +1 + "번째 학생의 수학점수를 입력해 주세요.");
+			math = sc.nextInt();
+			
+			StudentDto dto = new StudentDto(number, name, kor, eng, math); 	
+		
+			students[count] = dto;
+			System.out.println(students[count]);
+			count++;
+		
+		
+	}
+	// delete(삭제)
+	
+	public void delete() {
+		
+		System.out.println("삭제하고 싶으신 학생의 번호를 입력해주세요.");
+		int delnum = sc.nextInt();
+		for (int i = 0; i < students.length; i++) {
+			
+		if(delnum == students[i].getNumber() ) {
+			students[i].setNumber(0);
+			students[i].setName("");
+			students[i].setKor(0);
+			students[i].setEng(0);
+			students[i].setMath(0);
+			System.out.println(delnum + " 번 학생을 찾아 정보를 지웠습니다.");
+			break;
+		}else if(delnum == students[i].getNumber() && i == students.length -1 ) {
+			System.out.println("정보를 찾지를 못했습니다.");
+		}
+		}
+		
+	}
+	
+	// select == search(검색)
+	public void select() {
+		
+		System.out.println("찾고싶은 학생의 번호를 입력해주세요.");
+		int selectnum = sc.nextInt();
+		for (int i = 0; i < students.length; i++) {
+			
+		if(selectnum == students[i].getNumber() ) {
+			System.out.println(selectnum + "번 학생의 정보입니다.");
+			System.out.print("  학생의 번호: " + students[i].getNumber());
+			System.out.print("  학생의 이름: " + students[i].getName());
+			System.out.print("  학생의 국어점수: " + students[i].getKor());
+			System.out.print("  학생의 영어점수: " + students[i].getEng());
+			System.out.println("  학생의 수학점수: " + students[i].getMath());
+			break;
+		}else if(selectnum == students[i].getNumber() && i == students.length -1 ) {
+			System.out.println("정보를 찾지를 못했습니다.");
+		}
+		}
+		
+	}
+	// update
+	public void update() {
+		System.out.println("수정하실 학생의 번호를 입력해 주세요.");
+		int updatenum = sc.nextInt();
+		
+		for (int i = 0; i < students.length; i++) {
+			if(updatenum == students[i].getNumber()) {
+				System.out.println("학생의 번호를 입력해 주세요.");
+				int number = sc.nextInt();
+				
+				System.out.println("학생의 이름을 입력해 주세요.");
+				String name = sc.next();
+				
+				System.out.println("학생의 국어점수를 입력해 주세요.");
+				int kor = sc.nextInt();
+				
+				System.out.println("학생의 영어점수를 입력해 주세요.");
+				int eng = sc.nextInt();
+				
+				System.out.println("학생의 수학점수를 입력해 주세요.");
+				int math = sc.nextInt();
+				
+				StudentDto dto = new StudentDto(number, name, kor, eng, math); 	
+			
+				students[i] = dto;
+				
+				break;
+			
+			}else if(updatenum == students[i].getNumber() && i == students.length -1 ) {
+				System.out.println("정보를 찾지를 못했습니다.");
+			}
+		}
+	}
+	// allprint
+	public void allprint() {
+		for (int i = 0; i < students.length; i++) {
+			System.out.println(students[i]);
+		}
+	}
+	
+	public boolean getNumber() {
+			while(true) {
+			try {
+				value = sc.nextInt();
+				return true;
+			} catch (Exception e) {
+				System.out.println("숫자를 입력해주세요");
+			}
+		}	
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+

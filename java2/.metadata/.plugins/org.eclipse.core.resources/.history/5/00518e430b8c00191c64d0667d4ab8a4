@@ -1,0 +1,111 @@
+package UI;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class InsertPicher extends Frame implements ActionListener, WindowListener {
+
+	
+	
+	// fkqpf 7 txtf 7 bu2
+	
+	Label la1, la2, la3, la4, la5, la6;
+	TextField tf1, tf2, tf3, tf4, tf5, tf6;
+	Button btn1, btn2;
+	
+	
+	
+	
+	public InsertPicher() {
+		super("Picher");
+		
+		setLayout(null);
+		
+		la1 = new Label("Name");
+		la1.setBounds(50, 50, 100, 35);
+		add(la1);
+		
+		la2 = new Label("Age");
+		la2.setBounds(50, 100, 100, 35);
+		add(la2);
+		
+		la3 = new Label("Height");
+		la3.setBounds(50, 150, 100, 35);
+		add(la3);
+		
+		la4 = new Label("Win");
+		la4.setBounds(50, 200, 100, 35);
+		add(la4);
+		
+		la5 = new Label("lose");
+		la5.setBounds(50, 250, 100, 35);
+		add(la5);
+		
+		la6 = new Label("Defence");
+		la6.setBounds(50, 300, 100, 35);
+		add(la6);
+		
+
+		
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		addWindowListener(this);
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

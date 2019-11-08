@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>다음 생일까지 남은 일수</h1>
+<br><br>
+다음 버튼을 크릭하여 생일을 입력하면, <br>
+다음 생일까지 남은 일수를 볼 수 있습니다.
+<br><br>
+<input type="button" value="생일을 입력" onclick="func()">
+
+<script type="text/javascript">
+function func() {
+	var dday = prompt("생일을 입력해주세요,"");
+	alert(dday);
+}
+</script>
+</body>
+</html>

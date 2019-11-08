@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- link -> anchor <a href="이동하고 싶은 주소" http  .html  id -->
+
+
+
+			<!-- form 과 input은 서로 다른 태그지만 서로 묶어서 사용을 많이한다. -->
+<!-- form 	(값을 통해 이동하는 매개체 값을 가지고 있는것은 input에서 가지고있는다) -->
+			<!-- id		: 현재 페이지에서 1개만 인식 	JavaScript(==JQuery) 에서 접근
+				 class	: 다중 인식. CSS(디자인)사용을 자주한다. JavaScript(==JQuery) 에서 접근	
+				 name	: link. 값을 가지고 이동. (변수의 역활)
+			-->
+			<!-- action 을 통해서 어디로 갈지 설정해준다. -->
+<form action="NewFile.html"> 	<!-- form 하나당 submit 의 해당하는 버튼은 하나만 사용할 수 있다. -->
+<input type="submit" value="BTN">		<!-- submit link 를 만들어줄때 사용(버튼) -->
+</form>			
+	
+<br><br>		
+			
+<form action="NewFile.html">
+name:<input type="text" value="" size="14">
+<br>
+password:<input type="password" value="" size="14">
+<br>
+<input type="submit" value="이동">
+<br>
+
+<input type="reset" value="초기화">
+			<!-- reset == 처음 설정값으로 돌아간다 텍스트 필드에 값이 입력 되있어도 초기화시 맨처음 초기값으로 돌아간다. -->
+
+</form>
+			
+
+<br>
+<br>
+
+<!-- input -->
+<div align="center">
+		<!-- 방식에 get, post 2가지 방식이 있는데 get은 url 을 통해서 넘기는거고 post는 다르게 넘긴다. -->
+<form action="NewFile.jsp"  method="post">		<!-- form 으로 이동시 name의 값을 가져간다.(쉽게말하면 변수의 값을 가져간다) -->
+<table border="1">
+<tr>
+	<td>id:</td>
+	<td><input type="text" name="id" value="" size="14"></td> <!-- 입력받은 값의 접근할 변수 명이 id로 설정한거다 -->
+</tr>				
+<tr>
+	<td>password:</td>
+	<td><input type="password" name="pwd" value="" size="14"></td>	<!-- 입력받은 값의 접근할 변수 명이 pwd로 설정 -->
+</tr>	
+<tr>
+	<td colspan="2">
+	&nbsp;<input type="submit" value="이동">		<!-- 두번언급하지만 form 하나당 submit은 하나다 -->
+	<input type="reset" value="초기화">
+	</td>
+</tr>			
+							
+
+<!-- reset == 처음 설정값으로 돌아간다 텍스트 필드에 값이 입력 되있어도 초기화시 맨처음 초기값으로 돌아간다. -->
+</table>
+</form>
+</div>
+<!-- 실행시 이 id 와 password 줄 간격이 조금씩 어긋나있다. 그럴경우 table 로 디자인을 맞출수있다. -->
+<br><br>
+
+<form action="NewFile1.jsp">	<!-- html5 -->
+number:<input type="number" name="num" max="5" min="1"> <!-- number = 1 ~ 5 -->
+<br>
+date:<input type="date" name="date">
+<br>
+color:<input type="color" name="color" value="#000000">
+<br>
+range:<input type="range" name="range" max="10" min="0">
+<br>
+search:<input type="search" name="search">
+<br>
+<input type="submit" value="선택!">
+
+
+</form>
+
+<br>
+<br>
+
+CheckBox
+<form action="NewFile2.jsp">
+
+<input type="checkbox" name="job" value="패션">패션<br>		<!-- 3개의 값의 name 을 전부다 같게 해도 다르게 해도 상관은없다 -->
+<input type="checkbox" name="job" value="음악">음악<br>		<!-- 이럴경우 넘겨 받을때 배열로 넘겨받고 for문으로 풀어쓰면 된다. -->
+<input type="checkbox" name="job" value="게임">게임<br>
+<input type="submit" value="골라주세요~">
+
+</form>
+
+<br><br><br><br><br>
+
+<form action="">
+<!-- 라디오버튼은 하나만 누를수 있기때문에 group으로 묶는게 name 으로 같은 이름으로 설정하는거다 -->
+<input type="radio" name="car" value="벤츠">벤츠
+<br>
+<input type="radio" name="car"  value="BMW" checked="checked">BMW
+<br>
+<input type="radio" name="car"  value="K5">K5
+<br>
+<input type="submit" value="선택">
+</form>
+
+<br><br><br>
+
+<!-- select == choice, combobox -->
+
+<form action="">
+<select>
+	<option value="볼보">Volvo</option>
+	<option value="사브">Saab</option>
+	<option value="피아트" selected="selected">Fiat</option>
+	<option value="프리우스">Prius</option>
+</select>
+
+</form>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

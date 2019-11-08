@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<ul id="ulist">
+	<li>커피</li>
+	<li>홍차</li>
+	<li>우유</li>
+	<li>쥬스</li>
+	<li>녹차</li>
+</ul>
+<br>
+<p id="ptag">5개의 요소가 있습니다.</p>
+<br>
+선택한 항목:<input type="text" id="t1">
+<br>
+추가항목:<input type="text" id="t2">
+<br>
+
+<button type="button" id="btn">추가</button>
+
+<script type="text/javascript">
+
+$(function () {
+	$("#ulist").click(function () {
+//		alert("x");
+		var txt = $("#ulist").children(this).text();
+		$("#t1").val(txt);
+	$("#btn").click(function() {
+		var txt2 = $("#t2").val();
+		alert(txt2);
+		$("#ulist").append(txt2);
+		
+		$("#ptag").text($("#ulist").length + "개의 요소가 있습니다.");
+	});
+	});
+});
+
+</script>
+</body>
+</html>

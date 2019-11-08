@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Built-By: ave
+Build-Jdk: 11.0.2
+Specification-Title: mybatis-spring-boot-starter
+Specification-Version: 2.1.0
+Specification-Vendor: MyBatis.org
+Implementation-Title: mybatis-spring-boot-starter
+Implementation-Version: 2.1.0
+Implementation-Vendor-Id: org.mybatis.spring.boot
+Implementation-Vendor: MyBatis.org
+Implementation-URL: http://www.mybatis.org/spring-boot-starter/mybatis-s
+ pring-boot-starter/
+Automatic-Module-Name: org.mybatis.spring.boot.starter
+Implementation-Build-Date: 2019-07-15 07:02:32+0000
+X-Compile-Source-JDK: 1.8
+X-Compile-Target-JDK: 1.8
+Bnd-LastModified: 1563174243449
+Bundle-Description: Spring Boot Support for MyBatis
+Bundle-DocURL: http://www.mybatis.org/spring-boot-starter/mybatis-spring
+ -boot-starter/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: mybatis-spring-boot-starter
+Bundle-SymbolicName: org.mybatis.spring.boot.mybatis-spring-boot-starter
+Bundle-Vendor: MyBatis.org
+Bundle-Version: 2.1.0
+Tool: Bnd-4.1.0.201810181252
+

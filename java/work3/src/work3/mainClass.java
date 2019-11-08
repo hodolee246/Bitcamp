@@ -1,0 +1,117 @@
+package work3;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		
+		5x9
+		column	row
+		열		행
+
+		
+		for(int j=0; j<9; j++) {
+			
+			for(int i=0; i<5; i++) {
+			
+				System.out.print("*"); // 행을 만들어주는 for문
+		}
+		System.out.println();	
+	}
+		
+		
+		int len = 0;
+		
+		for(int j=0; j<9; j++) {
+			if(j < 5) len++;
+			else if ( j > 4) len--;
+			for(int i=0; i<len; i++) {
+			
+				System.out.print("*");
+		}
+		System.out.println();	
+	}
+		
+		
+		int len = 0;
+		int numArr[] = {3,7,5,6,8,7,6,4,2} ;
+		
+		for(int j=0; j<10; j++) {
+			if(j < numArr[j]) len++;
+			
+			else if(j > numArr[j]+1) len--;
+				
+			for(int i=0; i<numArr[j]; i++) {
+			
+				System.out.print("*");
+		}
+		System.out.println();	
+	}
+		*/
+		/*
+		//1부터 1000 사이 수의 합
+		int sum = 0; //첫번째 방법
+		for(int i=1; i<1001; i++) {
+			sum = sum +i;
+		}
+			System.out.println("합계 =" + sum);
+			
+			
+		int count = 0;  //두번째 방법
+		sum = 0 ;
+		System.out.println(sum);
+		
+		for(int i=0; i<1000;i++) {
+			count += 1;
+			
+			sum = sum +count;
+		}
+			System.out.println("합계 =" + sum);
+		
+		*/
+		
+		
+		// 하나의 수를 입력 받고 10의 배수로 입력 받은 수는 어느 범위에 있는지 출력되는 프로그램을 작성하시오.
+		/*
+		Scanner sc = new Scanner(System.in);
+		int inputNumber;
+		System.out.println("숫자를 입력해 주세요");
+		inputNumber = sc.nextInt();
+		
+		if(inputNumber <= 10 && inputNumber > 0) {
+			System.out.println("0보다 크고 10보다 크거나 같습니다.");
+		}
+		else if(inputNumber <= 20 && inputNumber > 10) {
+			System.out.println("10보다 크고 20보다 크거나 같습니다.");
+		}
+		*/
+		
+		//1~100 사이 짝수의 합과 홀수의 합을 구하시오.
+		/*
+		int sum1, sum2;
+		sum1 = sum2 = 0;
+		int _num = 0;
+		for(int i=0; i<100; i++) {
+			_num++;
+			if(_num % 2 ==0) {
+				sum2 = sum2+_num;
+			}
+			else {
+				sum1 = sum1+_num;
+			}
+			
+		}
+		System.out.println("짝수의 값"+sum2);
+		System.out.println("홀수의 값"+sum1);
+		*/
+		char c = 'A';
+		System.out.println((char)(c+32));
+		
+		
+		
+		
+	}
+
+}

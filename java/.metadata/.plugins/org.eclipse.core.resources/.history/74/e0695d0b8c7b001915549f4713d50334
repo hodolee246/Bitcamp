@@ -1,0 +1,28 @@
+package project21;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		int[]coinUnit = {500, 100, 50, 10};
+		int money = 2680;
+		int fh, oh, ft, t;
+		fh = oh = ft = t = 0;
+	
+		fh = money / 500;
+		money = money % 500;
+		oh = money / 100;
+		money = money % 100;
+		ft = money / 50;
+		money = money % 50;
+		t = money /10;
+		money = money % 10;
+		
+		System.out.println("500원짜리"+fh+"개");
+		System.out.println("100원짜리"+oh+"개");
+		System.out.println("50원짜리"+ft+"개");
+		System.out.println("10원짜리"+t+"개");
+		}
+		
+	}
+
+

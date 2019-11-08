@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table align="center" height="40" width="430" border="0" style="border:solid 4px #050099; margin-top:4%">
+	<tr>
+		<td><div id="main-title">&ensp;&ensp;&ensp;&ensp;&ensp;Login</div></td>
+	</tr>
+</table>
+
+<table class="t2">
+	<tr>
+		<td><input type="text" value="" size="14"></td>
+	</tr>
+</table>
+
+<table class="t3">
+	<tr>
+		<td><input type="password" value="" size="14"></td>
+	</tr>
+</table>
+<form action="">
+<table class="t4">
+	<tr>
+		<td><input type="submit" value="LOGIN" size="14"></td>
+	</tr>
+</table>
+</form>
+
+
+
+</body>
+</html>

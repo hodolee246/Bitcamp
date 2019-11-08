@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table{
+	width : 80%;
+	border-collapse: collapse;
+	border: 2px solid blue;
+}
+
+
+</style>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+</body>
+</html>

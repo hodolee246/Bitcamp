@@ -1,0 +1,13 @@
+package file;
+
+import dao.DaoInterface;
+
+public class FileClass implements DaoInterface {
+
+	@Override
+	public void Process() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

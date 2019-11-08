@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h2>TOPICS</h2>
+<br>
+<div>
+<pre>
+2015/02/15
+2015시즌 1차전의 결과를 공개했다.
+</pre>
+</div>
+
+<br>
+
+<div>
+<pre>
+2015/01/10
+2015시즌 최종전의 결과를 공개했다.
+</pre>
+</div>
+
+<br>
+
+<div>
+<pre>
+2014/12/20
+2014시즌 연간 일정을 발표했다.
+다음 시즌은 10개 지역에서 총 12경기를 예정.
+</pre>
+</div>
+
+<br>
+
+<div>
+<pre>
+2014/12/15
+2014시즌 10차전의 결과를 공개했다.
+</pre>
+
+</div>
+
+</body>
+
+
+<script type="text/javascript">
+$(document).ready(function () {
+	$('div').mouseover(function () {
+		$(this).css("background-color", "orange");
+	});
+//	$(".ab, .bc").mouseout(function (){}) 	이런식으로 다중으로 가능함
+	$('div').mouseout(function () {
+		$(this).css("background-color", "white");
+	});
+
+});
+
+</script>
+
+</html>

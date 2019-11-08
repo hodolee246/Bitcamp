@@ -1,0 +1,91 @@
+
+7월 25, 2019 11:26:43.71 NEW SESSION
+7월 25, 2019 11:26:43.71 [8908:9916:0725/112643.711:ERROR:platform_sensor_reader_win.cc(244)] NOT IMPLEMENTED
+7월 25, 2019 16:57:35.91 [8908:6592:0725/165735.919:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:07:53.59 [8908:6592:0725/170753.597:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:07:58.63 [8908:6592:0725/170758.637:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:08:09.37 [8908:6592:0725/170809.376:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:10:26.08 [8908:6592:0725/171026.085:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:11:24.57 [8908:6592:0725/171124.571:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:11:30.49 [8908:6592:0725/171130.499:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:11:39.09 [8908:6592:0725/171139.095:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 25, 2019 17:47:36.48 [8908:10000:0725/174736.489:ERROR:browser_process_sub_thread.cc(217)] Waited 23 ms for network service
+
+7월 29, 2019 09:30:35.94 NEW SESSION
+7월 29, 2019 09:30:35.94 [632:10660:0729/093035.772:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 29, 2019 09:32:16.74 [632:10660:0729/093216.745:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 29, 2019 09:33:57.70 [632:10660:0729/093357.700:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+
+7월 29, 2019 20:10:51.59 NEW SESSION
+7월 29, 2019 20:10:51.59 [7188:2784:0729/201051.454:ERROR:browser_process_sub_thread.cc(217)] Waited 13 ms for network service
+
+8월 06, 2019 20:06:47.81 NEW SESSION
+8월 06, 2019 20:06:47.81 [7720:11380:0806/200647.799:ERROR:textfield.cc(1773)] NOT IMPLEMENTED
+
+8월 07, 2019 09:32:06.65 NEW SESSION
+8월 07, 2019 09:32:06.65 [6336:740:0807/093206.433:ERROR:textfield.cc(1773)] NOT IMPLEMENTED
+8월 07, 2019 15:14:21.35 [6336:12032:0807/151421.355:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 07, 2019 21:28:29.68 [6336:7652:0807/212829.689:ERROR:browser_process_sub_thread.cc(217)] Waited 35 ms for network service
+
+8월 08, 2019 09:28:15.07 NEW SESSION
+8월 08, 2019 09:28:15.07 [4256:5124:0808/092815.077:ERROR:browser_process_sub_thread.cc(217)] Waited 26 ms for network service
+8월 08, 2019 12:42:09.81 [12200:9936:0808/124209.814:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 08, 2019 12:42:09.91 [12200:9936:0808/124209.912:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 08, 2019 12:42:10.22 [12200:9936:0808/124210.227:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 08, 2019 12:46:32.32 [12200:9936:0808/124632.327:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 08, 2019 16:29:36.25 [12200:7832:0808/162936.253:ERROR:browser_process_sub_thread.cc(217)] Waited 26 ms for network service
+
+8월 09, 2019 17:47:34.61 NEW SESSION
+8월 09, 2019 17:47:34.61 [6344:6152:0809/174734.551:ERROR:browser_process_sub_thread.cc(217)] Waited 25 ms for network service
+
+8월 09, 2019 18:47:09.47 NEW SESSION
+8월 09, 2019 18:47:09.47 [8656:7064:0809/184709.468:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 09, 2019 18:47:32.26 [8656:2888:0809/184732.266:ERROR:textfield.cc(1773)] NOT IMPLEMENTED
+8월 09, 2019 20:13:21.65 [8656:8904:0809/201321.656:ERROR:browser_process_sub_thread.cc(217)] Waited 23 ms for network service
+
+8월 10, 2019 12:36:06.90 NEW SESSION
+8월 10, 2019 12:36:06.90 [1912:8636:0810/123606.907:ERROR:browser_process_sub_thread.cc(217)] Waited 13 ms for network service
+8월 10, 2019 12:53:27.40 [1164:8440:0810/125327.403:ERROR:browser_process_sub_thread.cc(217)] Waited 9 ms for network service
+
+8월 12, 2019 14:04:48.56 NEW SESSION
+8월 12, 2019 14:04:48.56 [220:4416:0812/135200.981:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 12, 2019 14:04:53.13 [220:4416:0812/135200.997:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 12, 2019 14:04:53.13 [220:2752:0812/140448.562:ERROR:gcm_channel_status_request.cc(151)] GCM channel request failed.
+8월 12, 2019 14:04:53.13 [220:4416:0812/140449.540:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 12, 2019 14:04:53.85 [220:4416:0812/140453.856:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 12, 2019 15:33:12.70 [220:2752:0812/153312.700:ERROR:textfield.cc(1773)] NOT IMPLEMENTED
+8월 12, 2019 18:38:23.38 [220:6952:0812/183823.389:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 12, 2019 18:39:34.00 [220:4416:0812/183934.004:ERROR:browser_process_sub_thread.cc(217)] Waited 9990 ms for network service
+
+8월 13, 2019 08:57:49.35 NEW SESSION
+8월 13, 2019 08:57:49.35 [5752:5552:0813/085749.356:ERROR:browser_process_sub_thread.cc(217)] Waited 27 ms for network service
+8월 13, 2019 14:24:46.58 [9896:7500:0813/142446.580:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 13, 2019 14:24:52.27 [9896:7500:0813/142452.273:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+
+8월 13, 2019 17:55:18.00 NEW SESSION
+8월 13, 2019 17:55:18.00 [8700:9748:0813/175518.002:ERROR:browser_process_sub_thread.cc(217)] Waited 24 ms for network service
+
+8월 14, 2019 11:59:29.15 NEW SESSION
+8월 14, 2019 11:59:29.15 [10092:8112:0814/115929.149:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 11:59:29.41 [10092:8112:0814/115929.418:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 11:59:29.81 [10092:8112:0814/115929.812:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 11:59:52.10 [10092:8112:0814/115952.101:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 12:00:18.36 [10092:8112:0814/120018.362:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 12:00:39.99 [10092:8112:0814/120039.990:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 12:00:40.02 [10092:8112:0814/120040.020:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 12:00:40.41 [10092:8112:0814/120040.416:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+8월 14, 2019 13:30:11.76 [10092:6320:0814/133011.764:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 14, 2019 14:06:59.14 [10092:6320:0814/133011.779:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -105
+8월 14, 2019 14:06:59.14 [10092:6320:0814/140655.819:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 14, 2019 18:28:49.52 [10092:6320:0814/182849.523:ERROR:browser_process_sub_thread.cc(217)] Waited 11 ms for network service
+
+8월 16, 2019 11:35:58.20 NEW SESSION
+8월 16, 2019 11:35:58.20 [3108:7872:0816/113558.207:ERROR:browser_process_sub_thread.cc(217)] Waited 60 ms for network service
+8월 16, 2019 14:25:38.93 [3756:3296:0816/142538.936:ERROR:socket_stream.cc(219)] Closing stream with result -2
+8월 16, 2019 14:33:37.15 [3756:3296:0816/142538.936:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 16, 2019 14:33:37.15 [3756:3296:0816/143333.341:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+8월 16, 2019 14:33:37.82 [3756:3296:0816/143337.829:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21
+8월 16, 2019 16:55:43.95 [3756:3296:0816/165543.952:ERROR:browser_process_sub_thread.cc(217)] Waited 50 ms for network service
+
+8월 20, 2019 21:47:25.48 NEW SESSION
+8월 20, 2019 21:47:25.48 [8016:3428:0820/214725.343:ERROR:socket_stream.cc(219)] Closing stream with result -2

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black">
+
+<input type="image" src=""> &ensp;&ensp; 사진을 선택 <br>
+<select id="_img" onchange="func()">
+	<option>사진을 선택</option>
+	<option>첫번째 사진</option>
+	<option>두번째 사진</option>
+	<option>세번째 사진</option>
+	<option>네번째 사진</option>
+</select>
+
+</body>
+</html>

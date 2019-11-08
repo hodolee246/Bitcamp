@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="demo">
+</div>
+
+<script type="text/javascript">
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function () {
+	if(this.readyState == 4 && this.status == 200){
+		func(this);
+	}	
+}
+xhttp.open("GET", "books.xml", true);
+xhttp.send();
+
+function func( xml ) {
+//	alert(xml);				// ( object xmlHttpRequest )
+	var arr;
+	var xmlDoc = xml.responseXML;	// json 에서는 responseText를 사용하고 xml 에서는 XML을 사용한다.
+	var txt = "";
+	
+	
+	// root tag 취득
+	var rootTagName = xmlDoc.documentElement.nodeName;
+	alert(rootTagName);	// books
+	
+	// node명을 취득
+	
+	
+}
+
+</script>
+
+
+
+</body>
+</html>

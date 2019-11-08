@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+집가고싶다.
+<p id="demo"></p>
+
+<button type="button" onclick="func()">눌러주세요</button>
+
+<script type="text/javascript">
+
+function func() {
+	
+
+	var number = 128;
+	
+	// 10진수 -> 2진수, 8진수, 16진수
+	
+	document.getElementById("demo").innerHTML = 
+		"10진수:" + number + "<br>" +
+		"2진수:" + number.toString(2) + " <br> " +
+		"8진수:" + number.toString(8) + " <br> " +
+		"16진수:" + number.toString(16);
+	
+	// 2진수, 8진수, 16진수 -> 10진수
+	
+}
+</script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<table>
+	<tr>
+		<th>Login</th>
+	</tr>
+</table>
+</div>
+<table>
+	<tr>
+		<td><input type="text" value="" size="14"></td>
+	</tr>
+</table>
+
+<table>
+	<tr>
+		<td><input type="password" value="" size="14"></td>
+	</tr>
+</table>
+
+
+
+
+
+</body>
+</html>

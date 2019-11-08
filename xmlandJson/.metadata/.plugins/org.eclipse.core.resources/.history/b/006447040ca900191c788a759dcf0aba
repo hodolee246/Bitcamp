@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+
+	XML
+	eXtensible Markup Language
+	(확장		표시	언어)
+	
+	html	-> 출력용		html<->xml 사용목적이 다르다!
+	xml		-> 데이터용
+	
+	1. Data관리	-> 배포(file)
+	2. Setting(setup) - 초기화설정
+ 
+ 
+ 
+ 1.[
+ data.txt 라는 파일에 데이터를 아래와 같이 넣었을경우
+ 이름:홍길동
+ 나이:24
+ 주소:논현동
+ 
+ 라는 데이터를 편하게 가지고 오기 위해서는 원하는 데이터에 토근(-)을 달아서
+ 쉽게 가져올 수 있게 한다.
+ 홍길동-24-논현동	->	Parsing -> Parser
+ 
+
+ Parsing : 데이터를 배포하기 위하여 공통점으로 통합을 한 데이터
+ data.xml
+ <이름>홍길동</이름>
+ <나이>24</나이>
+ <주소>논현동</주소>
+ 이런식으로 태그로 묶어서 관리를한다.
+ ]
+ 2.[
+ <손님>
+ 	<인원수>20</인원수>	이런식으로 인원수의 데이터를 받으면 
+ 	<연령대>30</연령대> 연령대를 받으면
+ 	<성별>여성</성별> 성별을 받으면 (설정된 데이터를 받으면) 더욱더 빠르게 데이터를 처리할 수 가 있다.
+ </손님>
+ 
+ 
+ <program>ojdbc6.jar</program> 위와 같은 세팅값을 저장을한 뒤 불러와 주기만 하면 된다.
+ ]
+ 
+ HTML <<->> XML 서로의 목적이 다르다.
+ HTML : Standard Tag + User Tag
+ XML : User Tag
+
+ 
+ 
+ -->
+</body>
+</html>

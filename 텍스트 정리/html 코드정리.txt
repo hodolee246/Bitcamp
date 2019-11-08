@@ -1,0 +1,223 @@
+링크 및 챕터 이동
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p><a href="http://www.google.com">Google Move</a></p>
+
+
+<a href="index01.html">index1.html으로 이동</a>
+
+
+<br>
+<br>
+
+<a href="index02.html" target="_self">index2.html으로 이동</a>
+
+<br><br>
+
+<a href="index03.html" target = "_blank">index3.html 으로 이동</a>
+<br><br>
+<a href="index03.html">
+	<img alt="이미지없음" src="Lionel.png">
+</a>
+
+<br><br>
+
+<a href="#"> 위로 이동합니다~</a>
+<br><br>
+
+<!-- # == id(Resource에서 주로사용(tf or btn)) . == class(CSS에서 주로사용) -->
+<p><a href="#chap1">Chapter1로 이동</a></p>
+<p><a href="#chap2">Chapter2로 이동</a></p>
+<p><a href="#chap3">Chapter3로 이동</a></p>
+
+<br><br><br><br><br><br>
+
+<h3 id = "chap1">Chapter 1</h3>
+<p>here is Chapter1 </p>
+
+<br><br><br><br><br><br>
+
+<h3 id = "chap2">Chapter 2</h3>
+<p>here is Chapter2 </p>
+
+<br><br>
+
+<h3 id = "chap3">Chapter 3</h3>
+<p>here is Chapter3 </p>
+
+</body>
+</html>
+
+사진올리기--------------------------------------------------------------------------------------------------
+
+<body bgcolor="#000000" text="#ffffff">
+
+<h1>타히티의 사진</h1>
+다음 사진을 클릭하면  확대사진을 볼 수 있습니다.<br><br>
+
+<a href = "images/tahiti01.jpg" target="photo">
+	<img alt="" src="images/tahiti01s.jpg">
+</a>
+
+<a href = "images/tahit02.jpg" target="photo">
+	<img alt="" src="images/tahit02s.jpg">
+</a>
+
+<a href = "images/tahit03.jpg" target="photo">
+	<img alt="" src="images/tahit03s.jpg">
+</a>
+
+<a href = "images/tahit04.jpg" target="photo">
+	<img alt="" src="images/tahit04s.jpg">
+</a>
+
+<a href = "images/tahit05.jpg" target="photo">
+	<img alt="" src="images/tahit05s.jpg">
+</a>
+
+
+
+<iframe src="./images/tahiti01.jpg" width="400" height="266" name="photo">
+</iframe>
+
+짧은 비디오 올리기-------------------------------------------------------------------------------------------------
+
+<video width="400" controls="controls">
+	<source src="mov_bbb.mp4" type="video/mp4">
+</video>
+
+테이블 활용예제-------------------------------------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table.cls8 td{
+	text-align: center;
+}
+
+.cls8.cl td{
+	text-align: right;
+}
+
+.cls8 caption{
+text-align: left;
+}
+
+td.cl.td{
+	text-align: right;
+}
+
+</style>
+
+
+</head>
+<body>
+
+<h2>고교기록</h2>
+
+<br>
+<br>
+
+<table class="cls8" border="1">
+<caption>■ 수영 기록</caption>
+<col width="20%"><col width="20%"><col width="15%"><col width="25%">
+	<tr  style="background-color: cyan;">
+	<th>종목</th>
+	<th>거리</th>
+	<th>성별</th>
+	<th>기록</th>
+	</tr>
+	
+	<tr>
+	<th rowspan="4"><b>자유형</b></th>
+	<th rowspan="2"><b>100m</b></th>
+	<td class="cl">남자</td>
+	<div style="text-align: right;"><td>50초60</td></div>
+	
+	</tr>
+	
+	<tr>
+	<!-- <td><b>자유형</b></td> -->
+	<!-- <td><b>100m</b></td> -->
+	<td>여자</td>
+	<td>55초56</td>
+	</tr>
+	
+	<tr>
+	<!-- <td><b>자유형</b></td> -->
+	<th rowspan="2"><b>200m</b></th>
+	<td>남자</td>
+	<td>1분49초23</td>
+	</tr>
+	
+	<tr>
+	<!-- <td><b>자유형</b></td> -->
+	<!-- <td><b>200m</b></td> -->
+	<td>여자</td>
+	<td>1분59초56</td>
+	</tr>
+	
+	<tr>
+	<th rowspan="4"><b>배형</b></th>
+	<th rowspan="2"><b>100m</b></th>
+	<td>남자</td>
+	<td>51초16</td>
+	</tr>
+	
+	<tr>
+	<!-- <td><b>배형</b></td> -->
+	<!-- <td><b>100m</b></td> -->
+	<td>여자</td>
+	<td>1분01초13</td>
+	</tr>
+	
+	<tr>
+	<!-- <td><b>배형</b></td> -->
+	<th rowspan="2"><b>200m</b></th>
+	<td>남자</td>
+	<td>1분59초74</td>
+	</tr>
+	
+	<tr>
+	<!-- <td><b>배형</b></td> -->
+	<!-- <td><b>200m</b></td> -->
+	<td>여자</td>
+	<td>2분10초46</td>
+	</tr>
+
+</table>
+
+</body>
+</html>
+쓸만한 tag 모음---------------------------------------------------------------------------------------------
+tag 안에 tag를 사용할 수 있는 tag
+
+<p>보통의 텍스트</p>
+
+<p><b>두꺼운 텍스트</b></p>
+
+<p><strong>스트롱 텍스트</strong></p>
+
+<p style = "font-size:200%"><b>ptag + 속성 + bold</b></p>
+
+<p><i>이탤릭 텍스트</i></p>
+
+<p>나는 성공할 수 있습니다. 이 점을 <em>강조</em>하고 싶습니다.</p>
+
+<h2>HTML <mark>Markup</mark> Fomatting</h2>
+
+<p> 보시는 글은 <del>삭제</del>된 글 입니다.</p>
+
+<p>이것은 <sub>아래첨자</sub> 입니다.</p>
+
+<p>이것은 <sup>윗첨자</sup> 입니다.</p>

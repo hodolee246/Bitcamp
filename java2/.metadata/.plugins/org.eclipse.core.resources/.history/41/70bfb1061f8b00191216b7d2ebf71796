@@ -1,0 +1,11 @@
+package weapon;
+
+public class Sword implements Weapon {
+
+	@Override
+	public void DrawWeapone() {
+		System.out.println("Weapon : Sword");
+
+	}
+
+}

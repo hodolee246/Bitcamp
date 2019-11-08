@@ -1,0 +1,63 @@
+package dao;
+
+import java.util.Scanner;
+
+import dto.StudentDto;
+
+// Data Access Object	
+public class DaoClass {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	private int count;
+
+	StudentDto students[];
+	
+	
+	
+	public DaoClass() {
+		students = new StudentDto[10];
+		count = 0;
+	}
+	
+	
+	// insert(추가)
+	public void insert() {
+		// 학생정보 추가
+		
+		// 입력
+		StudentDto dto = new StudentDto(1, "홍길동", 90, 100, 85);   // 번호 이름 점수 점수 점수
+	
+		while(count < 2) {
+
+		
+		students[count] = dto;
+		count++;
+		
+		}
+		
+		for (int i = 0; i < students.length; i++) {
+			System.out.println(students[i]);
+		}
+		
+	}
+	// delete(삭제)
+	
+	// select == search(검색)
+	
+	// update
+	
+	// allprint
+	
+	
+	
+	
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+apply plugin: 'java'
+apply plugin: 'eclipse-wtp' // 이클립스에서 구동하고 배포하기위해 플러그인 설치합니다.
+apply plugin: 'war'
+  
+sourceCompatibility = 1.8   // 자바 버전입니다.
+targetCompatibility = 1.8
+ 
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Gradle Quickstart',
+                   'Implementation-Version': version
+    }
+}
+ 
+eclipse {
+    // 빌드하고나면 프로젝트정보도 같이 지워지는데, Gradle프로젝트임을 인식시켜줍니다.
+    project.natures "org.springsource.ide.eclipse.gradle.core.nature"
+    wtp {
+        facet {
+            facet name: 'jst.web', version: '3.1'
+            facet name: 'jst.java', version: '1.8'
+        }
+    }
+}
+ 
+repositories {
+    mavenCentral()
+}
+ 
+dependencies {
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+     
+    //추가 내용
+     providedCompile "javax.servlet:javax.servlet-api:3.1.0"
+    compile "org.springframework:spring-webmvc:4.1.6.RELEASE"
+    compile "org.springframework.boot:spring-boot-starter-web:1.5.8.RELEASE"
+    /*내장 톰켓에서 jstl 인식하도록 추가*/
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '8.5.20'
+  compile('javax.servlet:jstl:1.2') /*jsp를 사용하기 위해 jstl 추가 */
+}
+ 
+[compileJava, compileTestJava]*.options*.encoding = 'UTF-8' // 인코딩 UTF-8로 통일.
+ 
+test {
+    systemProperties 'property': 'value'
+}
+ 
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}

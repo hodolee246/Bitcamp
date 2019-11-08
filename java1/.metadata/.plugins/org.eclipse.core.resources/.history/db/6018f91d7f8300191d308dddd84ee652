@@ -1,0 +1,16 @@
+package robot;
+
+import ro.Robot;
+
+public class DanceClass extends Robot {
+	
+	private String name;
+	
+	public DanceClass(String name) {
+		super(name);
+	}
+
+	public void print(String name) {
+		this.name = name;
+	}
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	img{
+	filter:gray();
+	}
+</style>
+</head>
+<body bgcolor="black" style="color: white;">
+
+<h3>풍경 사진</h3>
+<br>
+<br>
+※이미지 위로 마우스를 이동하면 그 이미지가 칼러로 보입니다.
+<br>
+<br>
+
+<table style="size: 60%">
+	<tr>
+		<td><img src="m_nature01.jpg" onmouseover="nature01.jpg" onmouseout="m_nature01.jpg"></td>
+		<td></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td></td>
+	</tr>
+</table>
+<!-- <img src="m_nature01.jpg" onmouseover="over1(this)" onmouseout="out1(this)"> &ensp;&ensp;&ensp;
+<img src="m_nature02.jpg" onmouseover="over2(this)" onmouseout="out2(this)"> &ensp;&ensp;&ensp;
+<img src="m_nature03.jpg" onmouseover="over3(this)" onmouseout="out3(this)"> &ensp;&ensp;&ensp;
+<br><br>
+<img src="m_nature04.jpg" onmouseover="over4(this)" onmouseout="out4(this)"> &ensp;&ensp;&ensp;
+<img src="m_nature05.jpg" onmouseover="over5(this)" onmouseout="out5(this)"> &ensp;&ensp;&ensp;
+<img src="m_nature06.jpg" onmouseover="over6(this)" onmouseout="out6(this)"> &ensp;&ensp;&ensp;
+
+
+
+<input type="image" src="m_nature01.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature01.jpg">
+<input type="image" src="m_nature02.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature02.jpg">
+<input type="image" src="m_nature03.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature03.jpg">
+<br><br>
+<input type="image" src="m_nature04.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature04.jpg">
+<input type="image" src="m_nature05.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature05.jpg">
+<input type="image" src="m_nature06.jpg" onmouseover="func(this)" onmouseout = "func2(this)" value="nature06.jpg"> -->
+
+<script type="text/javascript">
+
+function func( obj ) {
+	o
+}
+
+function over1(obj) {
+	obj.src = "nature01.jpg"
+}
+function over2(obj) {
+	obj.src = "nature02.jpg"
+}
+function over3(obj) {
+	obj.src = "nature03.jpg"
+}
+function over4(obj) {
+	obj.src = "nature04.jpg"
+}
+function over5(obj) {
+	obj.src = "nature05.jpg"
+}
+function over6(obj) {
+	obj.src = "nature06.jpg"
+}
+function out1(obj) {
+	obj.src = "m_nature01.jpg"
+}
+function out2(obj) {
+	obj.src = "m_nature02.jpg"
+}
+function out3(obj) {
+	obj.src = "m_nature03.jpg"
+}
+function out4(obj) {
+	obj.src = "m_nature04.jpg"
+}
+function out5(obj) {
+	obj.src = "m_nature05.jpg"
+}
+function out6(obj) {
+	obj.src = "m_nature06.jpg"
+}
+
+</script>
+</body>
+</html>

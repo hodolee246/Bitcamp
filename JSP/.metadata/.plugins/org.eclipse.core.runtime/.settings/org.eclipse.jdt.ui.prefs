@@ -1,0 +1,27 @@
+content_assist_disabled_computers=org.eclipse.jdt.ui.textProposalCategory\u0000org.eclipse.jdt.ui.javaAllProposalCategory\u0000org.eclipse.jdt.ui.javaTypeProposalCategory\u0000org.eclipse.jdt.ui.javaNoTypeProposalCategory\u0000
+content_assist_favorite_static_members=org.assertj.core.api.Assertions.*;org.mockito.Matchers.*;org.mockito.Mockito.*;org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.*;org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.*;org.springframework.test.web.client.match.MockRestRequestMatchers.*;org.springframework.test.web.client.response.MockRestResponseCreators.*;org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;org.hamcrest.CoreMatchers.*;org.junit.Assert.*
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="project.dto"><rhs name\="project.dto"/></lhs><lhs name\="dto.MemberDto"><rhs name\="dto.MemberDto"/></lhs><lhs name\="java.util.Collection"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.lang.Iterable"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="java.util.List"><rhs name\="java.util.ArrayList"/></lhs><lhs name\="dto.CustuserDto"><rhs name\="dto.CustuserDto"/></lhs><lhs name\="dao.CustuserDao"><rhs name\="dao.CustuserDao"/></lhs><lhs name\="java.io.Writer"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.lang.Appendable"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="java.io.Closeable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.lang.AutoCloseable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.BufferedOutputStream"/><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.Flushable"><rhs name\="java.io.PrintWriter"/><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.PrintWriter"><rhs name\="java.io.PrintWriter"/></lhs><lhs name\="dto.coffeDto"><rhs name\="dto.coffeDto"/></lhs><lhs name\="dto.BbsDto"><rhs name\="dto.BbsDto"/></lhs><lhs name\="dto.CalendarDto"><rhs name\="dto.CalendarDto"/></lhs><lhs name\="dao.ipdsDao"><rhs name\="dao.PdsDao"/></lhs><lhs name\="dao.PdsDao"><rhs name\="dao.PdsDao"/></lhs><lhs name\="pds.PdsDto"><rhs name\="pds.PdsDto"/></lhs><lhs name\="java.io.FilterOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.OutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.BufferedOutputStream"><rhs name\="java.io.BufferedOutputStream"/></lhs><lhs name\="java.io.FilterInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="java.io.InputStream"><rhs name\="java.io.BufferedInputStream"/><rhs name\="java.io.FileInputStream"/></lhs><lhs name\="java.io.BufferedInputStream"><rhs name\="java.io.BufferedInputStream"/></lhs><lhs name\="pds.ipdsDao"><rhs name\="pds.PdsDao"/></lhs><lhs name\="org.jsoup.nodes.Node"><rhs name\="org.jsoup.nodes.Element"/></lhs><lhs name\="java.lang.Cloneable"><rhs name\="org.jsoup.nodes.Element"/><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="org.jsoup.nodes.Element"><rhs name\="org.jsoup.nodes.Element"/></lhs><lhs name\="BookingDao.BookingDao"><rhs name\="BookingDao.BookingDao"/></lhs><lhs name\="BookingDto.BookingDto"><rhs name\="BookingDto.BookingDto"/></lhs><lhs name\="Dao.iRoomDao"><rhs name\="Dao.RoomDao"/></lhs><lhs name\="Dao.RoomDao"><rhs name\="Dao.RoomDao"/></lhs><lhs name\="Dto.BookingDto"><rhs name\="Dto.BookingDto"/></lhs><lhs name\="Dao.iBookingDao"><rhs name\="Dao.BookingDao"/></lhs><lhs name\="java.text.DateFormat"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.text.Format"><rhs name\="java.text.SimpleDateFormat"/></lhs><lhs name\="java.text.SimpleDateFormat"><rhs name\="java.text.SimpleDateFormat"/></lhs></history>
+content_assist_number_of_computers=23
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.internal.ui.navigator.layout=2
+org.eclipse.jdt.internal.ui.navigator.librariesnode=true
+org.eclipse.jdt.ui.formatterprofiles.version=16
+org.eclipse.jdt.ui.text.code_templates_migrated=true
+org.eclipse.jdt.ui.text.custom_code_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
+org.eclipse.jdt.ui.text.templates_migrated=true
+spelling_ignore_ampersand_in_properties=true
+spelling_ignore_digits=true
+spelling_ignore_java_strings=true
+spelling_ignore_mixed=true
+spelling_ignore_non_letters=true
+spelling_ignore_sentence=true
+spelling_ignore_single_letters=true
+spelling_ignore_upper=true
+spelling_ignore_urls=true
+spelling_locale_initialized=true
+spelling_user_dictionary_encoding=UTF-8
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

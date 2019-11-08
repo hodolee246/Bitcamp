@@ -1,0 +1,62 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+			over load : function의 명칭은 같고
+						매개변수(인자, 인수, Parameter)
+						갯수가 다른 함수들을 의미한다.
+			
+			
+						
+						
+			image draw	->	RGB, RGBA
+						배경을 draw		paint(String imagename)
+						달, 해의 이미지	paint(String imagename, int x, int y)
+						
+						
+		*/
+		method();
+		
+		method('A');
+		
+		method(12);
+		
+		method('C', 51);  	// 매개변수 순서가 서로 달라도 overload가 된다
+							// 가인수가 다른것은사용할수 없다. (가상인수) (매게변수 이름만 다른것)
+		method(14, 'B');
+	}
+		
+		static void method() {
+			System.out.println("method() 호출 ");
+		}
+		static void method(char c) {
+			System.out.println("method(char c) 호출 ");
+		}
+		static void method(int i) {
+			System.out.println("method(int i) 호출 ");
+		}
+		static void method(char c, int i) { // getter : 
+			System.out.println("method(char c, int i) 호출");
+		}
+		static void method(int i, char c) { // getter : 
+			System.out.println("method(int i, char c) 호출");
+		}
+	/*	static int method() { // overload 는 매개변수만 구별한다. return 값은 overload 와 관련이 없다.
+			System.out.println("method() 호출");
+			return 1;
+		}	*/
+		
+		// 가변인수
+		static int displaySum(int...num) {
+			int sum = 0;
+			for (int i = 0; i < num.length; i++) {
+				sum = sum + num[i];
+			}
+			return sum;
+		}
+		
+		
+		
+		
+}

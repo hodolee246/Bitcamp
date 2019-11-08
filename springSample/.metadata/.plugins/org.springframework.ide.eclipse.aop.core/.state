@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="project1"/>
+<aop-project name="sample01"/>
+<aop-project name="Thymeleaf"/>
+<aop-project name="legacySample1"/>
+<aop-project name="FinalPro"/>
+<aop-project name="FinalProject"/>
+<aop-project name="mhjBootExamStudy"/>
+<aop-project name="SecurityExam"/>
+<aop-project name="ExamProject"/>
+<aop-project name="0828SampleAopXml">
+<aspect-definition advice-class-name="com.aopex.logAOP" advice-method-name="loggerAop" advice-type="AROUND" aspect-end-line-number="21" aspect-name="logApp" aspect-start-line-number="21" factory-id="org.springframework.ide.eclipse.aop.core.beanAspectDefinitionElementFactory" file="/0828SampleAopXml/src/bean.xml" pointcut-expression="within(com.aopex.*)" proxy-target-class="false">
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~getName" target-start-line="24"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~setName~QString;" target-start-line="28"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~setColor~QString;" target-start-line="44"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~getAge" target-start-line="32"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~catInfo" target-start-line="48"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~getColor" target-start-line="40"/>
+<aop-reference advice-type="AROUND" bean="1:BeansModel|2:0828SampleAopXml|3:src/bean.xml|7:beans:6|8:myCat:26" bean-file="/0828SampleAopXml/src/bean.xml" bean-start-line="26" factory-id="org.springframework.ide.eclipse.aop.core.aopReferenceElementFactory" file="/0828SampleAopXml/src/bean.xml" source="=0828SampleAopXml/src&lt;com.aopex{logAOP.java[logAOP~loggerAop~QProceedingJoinPoint;" source-start-line="8" target="=0828SampleAopXml/src&lt;com.aopex{CatDto.java[CatDto~setAge~I" target-start-line="36"/>
+</aspect-definition>
+</aop-project>
+<aop-project name="SpringSecurityExam"/>
+<aop-project name="KakaoPayAPIExam"/>
+</aop-reference-model>

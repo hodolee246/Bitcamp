@@ -1,0 +1,185 @@
+package dao;
+
+import java.util.Scanner;
+
+import dto.StudentDto;
+
+// Data Access Object	
+public class DaoClass {
+	
+	Scanner sc = new Scanner(System.in);
+	
+	private int count;
+	private int value;
+	private int stunum = 1;
+
+	StudentDto students[];
+	
+	
+	
+	public DaoClass() {
+		students = new StudentDto[10];
+		count = 0;
+	}
+	
+	// insert(추가)
+	public void insert() {
+		
+		
+		// 학생정보 추가
+		
+		// 입력
+	   // 번호 이름 점수 점수 점수
+		int kor, eng, math;
+		kor = eng = math = 0;
+		String name;
+		
+		
+			
+			
+			System.out.println(count +1 + "번째 학생의 이름을 입력해 주세요.");
+			name = sc.next();
+			
+			System.out.println(count +1 + "번째 학생의 국어점수를 입력해 주세요.");
+			kor = sc.nextInt();
+			
+			System.out.println(count +1 + "번째 학생의 영어점수를 입력해 주세요.");
+			eng = sc.nextInt();
+			
+			System.out.println(count +1 + "번째 학생의 수학점수를 입력해 주세요.");
+			math = sc.nextInt();
+			
+			StudentDto dto = new StudentDto(stunum, name, kor, eng, math); 	
+		
+			students[count] = dto;
+			
+			count++;
+			stunum++;
+		// stunum ( 보통의 번호는 본인이 정하기 보다는 자동으로 들어오게 설정된다.)
+		// Dto.set(value)(sc.nextint());	이런식으로 직접적으로 집어넣을수도 있다.
+		// studentdto Class의 Setter 값은 모아서 사용할 수 있다.
+	}
+	// delete(삭제)
+	
+	public void delete() {
+		
+		System.out.println("삭제하고 싶으신 학생의 번호를 입력해주세요.");
+		int delnum = sc.nextInt();
+		
+		int index = search(delnum);
+		
+		if(index == -1) {
+			System.out.println("해당 학생정보가 없습니다.");
+		}else {
+			StudentDto dto = students[index];
+			dto.setNumber(0);
+			dto.setName("");
+			dto.setKor(0);
+			dto.setEng(0);
+			dto.setMath(0);
+			System.out.println("데이터를 지웠습니다.");
+		}
+		
+		
+	}
+	
+	public int search(int no) {
+		
+		int findIndex = -1;
+		for (int i = 0; i < students.length; i++) {
+			
+			StudentDto dto = students[i];
+			if(dto != null && dto.getNumber() != 0) {
+				
+				if(no == dto.getNumber()) {
+					findIndex = i;
+					break;
+				}
+			}
+		}
+		return findIndex;
+	}
+			
+	// select == search(검색)
+	public void select() {
+		
+		System.out.println("찾고싶은 학생의 번호를 입력해주세요.");
+		int selcnum = sc.nextInt();
+		
+		int index = search(selcnum);
+		
+		if(index == -1) {
+			System.out.println("해당 번호를 못찾았습니다.");
+		}else {
+			System.out.print("검색된 학생의 정보: ");
+			StudentDto dto = students[index];
+					System.out.println(dto.toString());
+		}
+		
+	
+	}
+	// update
+	public void update() {
+		
+		System.out.println("수정할 학생의 번호를 입력해주세요.");
+		int upnum = sc.nextInt();
+		
+		int index = search(upnum);
+		
+		if(index == -1) {
+			System.out.println("해당 번호를 못찾았습니다.");
+			return;
+		}
+		System.out.println("수정할 데이터를 입력해주세요");
+		
+		System.out.println("국어점수를 입력해 주세요.");
+		int kor = sc.nextInt();
+		
+		System.out.println("영어점수를 입력해 주세요.");
+		int eng = sc.nextInt();
+		
+		System.out.println("수학점수를 입력해 주세요.");
+		int math = sc.nextInt();
+		
+		StudentDto dto = students[index];
+		dto.setKor(kor);
+		dto.setEng(eng);
+		dto.setMath(math);
+		
+		System.out.println("수정을 완료했습니다.");
+		
+		
+	}
+	// allprint
+	public void allprint() {
+		for (int i = 0; i < students.length; i++) {
+			StudentDto dto = students[i];
+			if(dto != null && dto.getNumber() != 0) {
+				System.out.println(dto.toString());
+			}
+		}
+	}
+	
+	public boolean getNumber() {
+			
+			try {
+				value = sc.nextInt();
+				return true;
+			} catch (Exception e) {
+				return false;
+			}
+		
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+

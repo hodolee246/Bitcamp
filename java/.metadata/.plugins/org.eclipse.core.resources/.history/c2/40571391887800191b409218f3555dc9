@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.println("1에서 100까지 랜덤으로 생성된 숫자 맞추기 입니다.");
+		int a, b, c;
+		a = (int)Math.random()*100;
+		System.out.println(a);
+		
+	}
+
+}
+	

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="demo">
+</div>
+
+
+<script type="text/javascript">
+var xhttp = new XMLHttpRequest();
+
+xhttp.onreadystatechange = function () {
+	if(this.readyState == 4 && this.status == 200){
+		func(this);
+	}	
+}
+xhttp.open("GET", "books.xml", true);
+xhttp.send();
+
+function func( xml ) {
+//	alert(xml);				// ( object xmlHttpRequest )
+	var nodeArr;
+	var xmlDoc = xml.responseXML;	// json 에서는 responseText를 사용하고 xml 에서는 XML을 사용한다.
+	
+	
+	// root tag 취득
+	var rootTagName = xmlDoc.documentElement.nodeName;
+//	alert(rootTagName);	// books
+	
+	// node명을 취득
+	var nodeName
+	nodeArr = xmlDoc.documentElement.childNodes;
+	for (i = 0; i < nodeArr.length; i++){
+		if(nodeArr[i].nodeType == 1){	// tag name 
+			// element node : 태그는 요소에 이름을 붙인것 (요소노드) == type 1
+			// attribute node : 속성은 요소에 항상포함됨 (속성노드) == type 2
+			// text node: ?? (??) == type 3
+		
+			nodeName = nodeArr[i].nodeName;	// 루프 태그 아래에 어떤 태그가 있는지 알 수 있다
+//			alert(nodeName);	// book 태그 네임을 취득한걸 알 수 있다.
+			break;
+		}
+	}
+	
+	// table 준비
+	
+	var out = "<table border = '1'>";
+	out += "<col width = 100><col width = 140><col width = 100>";
+	out += "<tr>";
+	
+	// column 명을 취득
+	
+	nodeArr = xmlDoc.getElementsByTagName(nodeName)[0];
+	var child = nodeArr.firstChild;
+	
+	for (var i = 0; i < nodeArr.childNodes.length; i++) {
+		if(child.nodeType == 1){	// 1은 tagName 이다.
+			out += "<th>" + child.nodeName + "</th>";
+			
+		}
+		child = child.nextSibling;
+	}
+		out += "</tr>";
+		
+		// data를 출력한다
+		var dataArr;
+		var leng = xmlDoc.getElementsByTagName(nodeName).length;	// 데이터가 몇개가 있는지 취득할 수 있다.
+//		alert(leng);
+		
+		for (var i = 0; i < leng; i++) {
+			
+			out += "<tr>";
+			dataArr = xmlDoc.getElementsByTagName(nodeName)[i];
+			
+			child = dataArr.firstChild;
+			alert(child);
+			for (var j = 0; j < dataArr.childNodes.length; j++) {	// <book> 의 자식노드만큼 돌아간다.
+				
+				if(child.nodeType == 1){
+					alert("x");
+					out += "<td>" + child.childNodes[0].nodeValue + "</td>";	// 자식노드의 데이터를 얻으려면 nodeValue로 접근한다.	
+					
+				}
+				child.nextSibling;
+			}
+			
+			
+			out += "</tr>";
+		}
+		
+
+		out += "</table>";
+		
+		document.getElementById("demo").innerHTML = out;
+}
+
+</script>
+
+
+
+</body>
+</html>

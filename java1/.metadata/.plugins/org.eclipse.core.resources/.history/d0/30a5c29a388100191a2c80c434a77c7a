@@ -1,0 +1,23 @@
+package mainClass;
+
+import java.util.Scanner;
+
+import sortingclass.sortingClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		sortingClass sc = new sortingClass();
+		
+		sc.arrayindexnumber();
+			
+		
+		
+		
+		
+		
+
+	}
+
+}

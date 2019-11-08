@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo">p tag</p>
+
+<button type="button" onclick="func()">버튼1</button>
+
+<script type="text/javascript">
+function func() {
+	
+	document.getElementById("demo").innerHTML = "hello";
+}
+
+
+</script>
+
+
+
+
+</body>
+</html>

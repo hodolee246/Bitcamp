@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Movies>	<!--  root tag -->
+
+<movie>
+	<title>신세계</title>
+	<point>95</point>
+	<review>매우 재밌음</review>
+</movie>
+	<!-- 비어 있더라도 제대로 형식에 맞는 태그를 가지고 있어야한다. -->
+<movie>
+	<title>범죄와의 전쟁</title>
+	<point>85</point>
+	<review>흥미있음</review>
+</movie>
+
+
+
+</Movies>

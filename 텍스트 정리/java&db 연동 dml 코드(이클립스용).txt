@@ -1,0 +1,142 @@
+package db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
+public class DBConnection {
+
+	
+	public static void initConnection() {
+		try {
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+			
+			System.out.println("Driver Loading Success");
+			
+		} catch (ClassNotFoundException e) {
+			
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	public static Connection getConnection() {
+		
+		Connection conn = null;
+		
+		try {
+			conn = DriverManager.getConnection("jdbc:oracle:thin:@192.168.0.47:1521:xe", "hr", "hr");		// 커넥션 주소 및 연결할 아이디 패스워드
+		
+			System.out.println("DB Connection Success");
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return conn;
+	
+	}
+}
+
+package db;
+
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class DBClose {
+	
+	public static void close(Statement stmt, Connection conn, ResultSet rs) {
+		try {
+		if(stmt != null) {
+
+			stmt.close();
+			
+		}
+		if(conn != null) {
+			
+			conn.close();
+			
+		}
+		if(rs != null) {
+			
+			rs.close();
+			
+		}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}
+
+package up;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+import db.DBClose;
+import db.DBConnection;
+
+public class UpdateTest {
+
+	public boolean update(String id, int age) {
+		
+		String sql = " UPDATE USERDTO "
+					+ " SET AGE = " + age + " "
+					+ " WHERE ID = '" + id + "'";	// update 쿼리문
+	Connection conn = DBConnection.getConnection();	// 기존의 경로를 설정한 커넥션함수를 불러온다.
+	Statement stmt = null;
+	
+	int count = 0;
+	
+	System.out.println("sql:" + sql);
+	
+		try {
+			stmt = conn.createStatement();	
+			
+			count = stmt.executeUpdate(sql);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}	finally {
+			DBClose.close(stmt, conn, null);
+		}
+		return count>0?true:false;		// 0보다 크면 트루 그렇지 않을경우 펄스
+	}
+}
+
+
+package main;
+
+import db.DBConnection;
+import dto.UserDto;
+import up.UpdateTest;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		DBConnection.initConnection();
+		
+		UpdateTest ut = new UpdateTest();
+		
+		String id = "bbb";
+		int age = 25;
+		
+		boolean b = ut.update(id, age);
+		
+		if(b) {
+			System.out.println("성공적으로 수정했습니다.");
+		}
+		else {
+			System.out.println("수정을 실패했습니다.");
+		}
+		}
+	}
+
+

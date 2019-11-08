@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--  Server + Applet = Servlet
+
+		Web(html, client) <-> Java(String, Object, Server) <-> DB(oracle)
+		
+			http://xxx.xxx.xxx.xxx:8090/project명/index.html 이런식으로 파일을 접근해서 요청을 한다.
+Web Browser	 request(요청)	Web Application Server(WAS) 가 2개가있다
+client ---------------- > 	Web Server -- >  Web Container	< -- > DB
+										 	 Servlet
+										 	 서블릿에서는
+										 	 *.html
+											 *.jsp
+										 	 *.php	이런식으로 웹문서를 찾는다
+ 	
+ 			웹서버가 동작을할때 처음으로 읽어오는 문서가있는데
+ 					그것이 web.xml 이다.(xml 파일은 베포용 파일이면서 설정용 파일이다.)
+ 					여기서는 설정의 용도로 사용이 된다.
+ 		<----------------				<----
+			response(응답)
+
+  -->
+
+<h1>servlet 기본</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

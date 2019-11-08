@@ -1,0 +1,24 @@
+1567757894585	Rename package 'jeon.in.woo'
+1567757921188	Rename package 'jeon.in.woo.controller'
+1567757925409	Rename package 'jeon.in.woo.model'
+1567757956618	Rename package 'jeon.in.woo.Service.Impl'
+1567757973627	Delete element
+1567757978504	Delete element
+1567757993343	Rename package 'jeon.in.woo.Service.Impl'
+1567758269855	Delete elements
+1567758274782	Delete element
+1567840790075	Rename type 'MemberDto'
+1567840915724	Rename type 'Member'
+1567840918773	Rename type 'StuExam'
+1567840921507	Rename type 'Exam'
+1567840924391	Rename type 'ExamSub'
+1567841021509	Rename type 'BitMemberController'
+1567841288221	Delete element
+1567841305517	Delete element
+1567841306586	Delete element
+1567841307645	Delete element
+1567841312217	Rename resource 'BitMember.xml'
+1567841727510	Delete element
+1567841728550	Delete element
+1567841731006	Delete element
+1567841732151	Delete element

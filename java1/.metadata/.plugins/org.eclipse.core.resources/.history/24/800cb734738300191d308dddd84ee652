@@ -1,0 +1,25 @@
+package dropship;
+
+public class DropShipClass {
+
+	int x, y;
+	
+	public void move(int x, int y) {
+		this.x = x;
+		this.y = y;
+		System.out.println("DropShipClass move(int x, int y)");
+	}
+	
+	public void stop() {
+		System.out.println("DropShipClass stop()");
+	}
+	
+	public void load() {
+		System.out.println("DropShipClass load()");
+	}
+	
+	public void unload() {
+		System.out.println("DropShipClass unload()");
+	}
+}
+

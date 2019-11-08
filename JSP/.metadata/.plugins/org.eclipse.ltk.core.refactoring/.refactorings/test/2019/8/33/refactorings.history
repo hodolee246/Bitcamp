@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 8 elements from project &apos;test&apos;&#x0D;&#x0A;- Original project: &apos;test&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     bower.json&#x0D;&#x0A;     gulpfile.js&#x0D;&#x0A;     LICENSE.md&#x0D;&#x0A;     NewFile.jsp&#x0D;&#x0A;     NewFile1.jsp&#x0D;&#x0A;     package.json&#x0D;&#x0A;     README.md&#x0D;&#x0A;     visual-tests.html" description="Delete elements" element1="WebContent/bower.json" element2="WebContent/visual-tests.html" element3="WebContent/NewFile.jsp" element4="WebContent/README.md" element5="WebContent/NewFile1.jsp" element6="WebContent/LICENSE.md" element7="WebContent/package.json" element8="WebContent/gulpfile.js" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="8" stamp="1565934648376" subPackages="false" version="1.0"/>
+</session>

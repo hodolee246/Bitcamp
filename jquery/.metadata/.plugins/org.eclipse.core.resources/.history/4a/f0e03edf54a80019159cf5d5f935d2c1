@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<div id="imgdiv">
+
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	for (var i = 1; i < 10; i++) {
+		var imgary = new Array();
+		imgary[i] = "<img alt='' src='photo_" + i + ".jpg'>";
+		$('#imgdiv').append(imgary[i]);
+		if(i==5){
+			var nextrow = "<br>";
+			$('#imgdiv').append(nextrow);
+		}
+	}
+});
+$(function () {
+	$(document).on("click", "#imgdiv img" function () {
+		$(this).remove();
+	}); 	
+});
+
+	
+
+
+</script>
+</body>
+</html>

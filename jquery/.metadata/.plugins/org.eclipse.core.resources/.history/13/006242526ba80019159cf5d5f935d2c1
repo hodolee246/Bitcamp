@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+.aaa{
+	color:#f00;
+}
+
+</style>
+</head>
+<body>
+
+<p id="q01">Hello jq</p>
+<p id="q02">Hello jq</p>
+<p id="q03"></p>
+<p id="q04">하이</p>
+<ul id="q05">
+
+	<li>리스트1</li>
+	<li>리스트2</li>
+	<li>리스트3</li>
+</ul>
+
+<ul id="q06">
+	<li>리스트1</li>
+	<li>리스트2</li>
+	<li>리스트3</li>
+</ul>
+
+<p id="q9"></p>
+
+<script type="text/javascript">
+ $(function () {
+	$("#q01").css("color", "red");
+	$("#q02").css({"background-color":"yellow", "color":"blue"});
+	$("#q03").html("JQUERY");
+	$("#q04").html("<a href = '#'>안녕하세요</a> ");
+	$("#q05").addClass("aaa");
+	$("#q06").children().remove();
+//	$("#q9").html($("#q9").attr("color"));
+	var abc = $("#q9").attr("color");
+}); 
+
+
+
+</script>
+</body>
+</html>

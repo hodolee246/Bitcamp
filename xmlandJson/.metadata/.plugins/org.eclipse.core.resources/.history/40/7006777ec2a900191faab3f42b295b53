@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="demo">
+</div>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(this.readyState == 4 && this.status == 400){
+		func( xmlhttp.responseText );	// this를 집어넣어도 상관은 없지만 XML 과 구분을 하기 위해서 직접 입력을 해 주었다.
+	}
+}
+xmlhttp.open("GET", "books.json", true);
+xmlhttp.send();
+
+function func( resp ) {
+	
+	arr = JSON.parse(resp);	// String 을 Json type 으로 변환을 해준다 !
+//	JSON.stringify(json);		// Json -> String
+	
+	
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+p.one{
+	border-style: solid;	/* 보더 스타일을 입력해야 선이 표시됨 */
+	border-width: 5px;		
+}
+p.two{
+	border-style: 
+}
+</style>
+</head>
+<body>
+<p class="one">Hello Css</p>
+<p class="two">Hello Css</p>
+<p class="three">Hello Css</p>
+</body>
+</html>

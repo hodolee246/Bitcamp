@@ -1,0 +1,7 @@
+package eating;
+
+import robot.Robot;
+
+public class Eating extends Robot {
+
+}

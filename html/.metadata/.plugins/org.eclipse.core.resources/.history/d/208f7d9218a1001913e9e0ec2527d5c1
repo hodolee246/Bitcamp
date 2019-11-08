@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- link -> anchor <a href="이동하고 싶은 주소" http  .html  id -->
+
+
+
+			<!-- form 과 input은 서로 다른 태그지만 서로 묶어서 사용을 많이한다. -->
+<!-- form 	(값을 통해 이동하는 매개체 값을 가지고 있는것은 input에서 가지고있는다) -->
+			<!-- id		: 현재 페이지에서 1개만 인식 	JavaScript(==JQuery) 에서 접근
+				 class	: 다중 인식. CSS(디자인)사용을 자주한다. JavaScript(==JQuery) 에서 접근	
+				 name	: link. 값을 가지고 이동. (변수의 역활)
+			-->
+			<!-- action 을 통해서 어디로 갈지 설정해준다. -->
+<form action="NewFile.html"> 	<!-- form 하나당 submit 의 해당하는 버튼은 하나만 사용할 수 있다. -->
+<input type="submit" value="BTN">		<!-- submit link 를 만들어줄때 사용(버튼) -->
+</form>			
+	
+<br><br>		
+
+<form action="NewFile.html">
+name:<input type="text" value="" size="14">
+<br>
+password:<input type="password" value="" size="14">
+<br>
+<input type="submit" value="이동">
+<br>
+
+<input type="reset" value="초기화">
+			<!-- reset == 처음 설정값으로 돌아간다 텍스트 필드에 값이 입력 되있어도 초기화시 맨처음 초기값으로 돌아간다. -->
+
+</form>
+			
+
+<br>
+<br>
+
+			
+<!-- input -->
+<form action="NewFile.jsp">		<!-- form 으로 이동시 name의 값을 가져간다.(쉽게말하면 변수의 값을 가져간다) -->
+id:<input type="text" name="id" value="" size="14">
+<br>			<!-- 입력받은 값의 접근할 변수 명이 id로 설정한거다 -->
+password:<input type="password" name="pwd" value="" size="14">		<!-- 입력받은 값의 접근할 변수 명이 pwd로 설정 -->
+<br>					
+<input type="submit" value="이동">
+<br>
+<input type="reset" value="초기화">
+<!-- reset == 처음 설정값으로 돌아간다 텍스트 필드에 값이 입력 되있어도 초기화시 맨처음 초기값으로 돌아간다. -->
+</form>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

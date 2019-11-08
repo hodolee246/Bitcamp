@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="531"/>
+		<item key="x" value="193"/>
+		<item key="y" value="169"/>
+	</section>
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="SpringCap"/>
+			<item value="CaptchaTest"/>
+			<item value="exam"/>
+			<item value="0829springSamples"/>
+			<item value="0828SampleTiles"/>
+			<item value="0828SampleAOPAnno"/>
+			<item value="0828SampleAopXml"/>
+			<item value="lombok"/>
+			<item value="0826bbs"/>
+			<item value="0826SampleAjax"/>
+			<item value="project01"/>
+			<item value="project1"/>
+			<item value="sample002"/>
+			<item value="sample2"/>
+			<item value="testSample"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="SpringCap"/>
+			<item value="CaptchaTest"/>
+			<item value="exam"/>
+			<item value="0829springSamples"/>
+			<item value="0828SampleTiles"/>
+			<item value="0828SampleAOPAnno"/>
+			<item value="0828SampleAopXml"/>
+			<item value="lombok"/>
+			<item value="0826bbs"/>
+			<item value="0826SampleAjax"/>
+			<item value="project01"/>
+			<item value="project1"/>
+			<item value="sample002"/>
+			<item value="sample2"/>
+			<item value="testSample"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

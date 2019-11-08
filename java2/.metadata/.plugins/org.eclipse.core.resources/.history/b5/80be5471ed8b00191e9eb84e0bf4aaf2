@@ -1,0 +1,24 @@
+package view;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class WindowTest extends JFrame {
+
+	JLabel label;
+	int posX, posY;	// 마우스 좌표값으로 사용예정
+	
+	
+	public WindowTest() {
+		
+		super("졸리고 배고프다");
+		
+		setLayout(null); // 굳이 사용할 이유X
+		
+		
+		setBounds(0, 0, 600, 480);
+		
+		setVisible(true);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

@@ -1,0 +1,19 @@
+package capsul;
+
+public class Myclass {
+
+	
+	private int number;  // privata == 개인적인
+	String name;
+	
+	public void setNumber(int num) {	// setter 메서드 
+		number = num;
+	}
+	public int getNumber() {
+		return number;
+	}
+	
+	
+	
+	
+}

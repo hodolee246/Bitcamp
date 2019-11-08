@@ -1,0 +1,127 @@
+EL태그는
+연산식, 문자열, 논리식 등을 사용할 수 있으며
+request.setAtrubute("name", value)로 세터를 해준 값을
+${name } 형식으로 사용한다. 예제를 살펴보자
+
+${'값' }	<!-- 문자열 값이 출력된다. -->
+${2+3}	<!-- 연산식 이기에 5가 출력된다. -->
+${3>2?100:200} <!-- 3항 연산자도 가능해서 100이 출력된다 -->
+<%
+request.setAttribute("data", "안녕");
+%>
+<!-- EL태그 사용규칙 setAttribute를 사용해야한다. -->
+${empty data } <!--  data 데이터가 null 값일경우 true 값이 나온다. -->
+${not empty data} <!-- null 이 아닐때 true 값이 나온다 --> 
+${1<9 } <!-- 논리 연산의 값도 true false 중 해당 연산식에 맞게 출력된다. -->
+${2 + 3 }	<!-- 이건 계산식이라 5가 출력된다 연산식이랑 혼동 하지말자 -->
+<%/* setAttribute 에는 Integer 는 들어가지 못한다. */
+Integer a, b; 	
+a = 10;
+b = 3;
+request.setAttribute("_a", a);
+request.setAttribute("_b", b);
+
+boolean c;
+c = false;
+request.setAttribute("_c", c);
+%>
+${_a }	<!-- a의 -->
+${_b }	<!-- b의 -->
+${_c }	<!-- c의 값이 나온다 -->
+${_a+_b }	<!-- 이렇게 하면 연산식이 나온다. -->
+${_a eq _b }	<!-- 이것도 논리식으로 나온다. -->
+${_a == _b }	<!-- 이것도 논리식으로 나온다. -->
+
+${_a ne _b }	<!--a != b-->
+${_a != _b }
+
+${_a gt _b }	<!--a > b-->
+${_a > _b }
+
+${_a lt _b }	<!--a < b-->
+${_a < _b }
+
+${_a le _b }	<!--a <= b-->
+${_a ge _b }	<!--a >= b-->
+
+${_a div _b } <!-- _a / b -->
+
+${_a mod _b }<!-- a % _b -->
+
+${!_c }	<!-- _c == false 이기에 부정을 붙이면 true 가 나온다. -->
+
+${_a == 10 && !_c }	<!-- true && ture 이기에 true 가 나온다. -->
+
+
+dto 와 Map을 연계해서 사용하는 코드
+
+<%
+MemberDto mem = new MemberDto();
+mem.setMessage("Hello EL");
+
+request.setAttribute("_mem", mem);
+%>
+
+<%=mem.getMessage()%>
+<br><br>
+${_mem.message }
+<br><br>
+
+<%
+String array[] = {"Hello", "World"};
+
+request.setAttribute("_array", array);
+%>
+
+<%=array[0] %>
+<br>
+<br>
+${_array[1] }
+<br>
+<br>
+<%
+List<String> list = new ArrayList<>();
+list.add("world");
+list.add("EL");
+
+request.setAttribute("_list", list);
+
+%>
+<%=list.get(0) %>	 <!-- wolrd가 나온다 -->
+<br>
+${_list[1]}		<!-- EL이 나온다 -->		
+<br><br>
+<%
+List<MemberDto> memlist = new ArrayList<>();
+MemberDto m = new MemberDto();
+m.setMessage("메세지 one");
+memlist.add(m);
+%>
+<br>
+<%
+m = new MemberDto();
+m.setMessage("메세지 two");
+memlist.add(m);
+%>
+<br>
+<%
+request.setAttribute("_memlist", memlist);
+%>
+<br>
+<%=memlist.get(0).getMessage() %>
+<br>
+${_memlist[0].message }
+
+<%
+HashMap<String, String> map = new HashMap();
+
+map.put("apple", "사과");
+map.put("grape", "포도");
+
+request.setAttribute("_map", map);
+%>
+${_map.apple }	<!-- 사과가 나온다 -->
+<br>
+${_map.grape }	<!-- 포도가 나온다. -->
+<br>
+${_map["apple"] }	<!-- 사과가 나온다 index 대신 문자열이 들어간거다 -->

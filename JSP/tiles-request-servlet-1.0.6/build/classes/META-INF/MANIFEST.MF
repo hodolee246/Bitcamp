@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.tiles.request.servlet;version="1.0.6",org.a
+ pache.tiles.request.servlet.extractor;version="1.0.6"
+Implementation-Title: Tiles request - Servlet support
+Implementation-Version: 1.0.6
+Specification-Vendor: The Apache Software Foundation
+Built-By: nlebas
+Tool: Bnd-1.50.0
+Bundle-Name: Tiles request - Servlet support
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.tiles
+Bundle-Version: 1.0.6
+Build-Jdk: 1.7.0_67
+Bnd-LastModified: 1410838574007
+Bundle-ManifestVersion: 2
+Specification-Title: Tiles request - Servlet support
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: Tiles request implementation for Servlet technolog
+ y.
+Bundle-SymbolicName: org.apache.tiles-request-servlet
+Bundle-DocURL: http://tiles.apache.org/tiles-request/tiles-request-ser
+ vlet/
+Import-Package: javax.servlet,javax.servlet.http,org.apache.tiles.requ
+ est,org.apache.tiles.request.attribute,org.apache.tiles.request.colle
+ ction,org.apache.tiles.request.locale
+Specification-Version: 1.0.6
+Archiver-Version: Plexus Archiver
+

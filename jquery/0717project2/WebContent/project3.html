@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<div id="q27"></div>
+
+<ul class="q28"></</ul>
+
+<br><br><br>
+<input id="q29_val" type="text" />
+<input id="q29_button" type="button" value="결과는" />
+<p id="q29_answer"></p>
+
+<script type="text/javascript">
+$(function () {
+	for (var i = 1; i < 101; i++) {
+	if(i < 100){	
+	$("#q27").before(i + ",");
+	}else {
+		$("#q27").before(i);
+	}
+	}
+	var drink = ["커피", "홍차", "우유", "주스", "소다"];
+	for (var i = 0; i < drink.length; i++) {
+		$(".q28").append("<li>" + drink[i] +"</li>");
+		
+	}
+	
+});
+function funcValReturn() {
+	$("#q29_button").click(function funcValReturn() {
+		var ccc = $("#q29_val").value();
+		if(ccc > 70){
+			$("#q29_answer").text("합격");
+		}else{
+			$("#q29_answer").text("불합격");
+		}
+		
+	})
+}
+</script>
+</body>
+</html>

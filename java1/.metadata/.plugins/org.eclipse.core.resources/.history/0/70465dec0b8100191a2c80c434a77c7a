@@ -1,0 +1,29 @@
+package main;
+
+import myclass.MYClass;
+
+public class mainClass {
+	public static void main(String[] args) {
+		
+	
+	//(우리가 선언한 클래스의 자료형)
+	 MYClass 				cls = new MYClass();
+	// class template(형태) 변수(객체object, 주체instance)
+	//						Main(stack) 		heap 영역
+
+	System.out.println(cls);
+
+	
+	}
+	
+
+
+
+}
+
+
+
+
+
+
+

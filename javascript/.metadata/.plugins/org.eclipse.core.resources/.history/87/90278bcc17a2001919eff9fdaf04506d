@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+※다음 버튼을 클릭하면 홈페이지의 배경색을 변경할 수 있습니다.
+<br>
+<br>
+<input type="button" onclick="_red(red)" value="빨강">
+<input type="button" onclick="_green()" value="녹색">
+<input type="button" onclick="_blue()" value="청색">
+<input type="button" onclick="_orange()" value="주황색">
+<input type="button" onclick="_black()" value="검정색">
+<input type="button" onclick="_white()" value="흰색">
+
+<script type="text/javascript">
+function _red(c) {
+	document.getElementsByTagName("body")[0].style.backgroundColor = c;
+}
+function _green() {
+	document.getElementsByTagName("body")[0].style.backgroundColor = "green";
+}
+function _orange() {
+	document.getElementsByTagName("body")[0].style.backgroundColor = "orange";
+}
+function _blue() {
+	document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+}
+function _black() {
+	document.getElementsByTagName("body")[0].style.backgroundColor = "black";
+}
+function _white() {
+	document.getElementsByTagName("body")[0].style.backgroundColor = "white";
+}
+</script>
+</body>
+</html>

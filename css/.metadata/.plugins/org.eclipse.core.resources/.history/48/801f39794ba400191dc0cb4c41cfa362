@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+t1{
+	border-collapse: collapse;
+	border: 1px solid blue;
+}
+
+t1.th{
+	color: red;
+}
+
+</style>
+</head>
+<body>
+
+<table class="t1">
+	<tr>
+		<th>#box</th>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+	<tr>
+		<td></td>
+	</tr>
+</table>
+
+</body>
+</html>

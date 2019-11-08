@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="header">
+	<h1>City Gallery</h1>
+</div>
+
+<div id="nav">
+London<br>
+Paris<br>
+Seoul<br>
+</div>
+
+<div id="section">
+<h2>London</</h2>
+<p>잉글랜드 남동부 템스강 하구에서부터 약 60km 상류에 있다. 영국의 정치·경제·문화 그리고 교통의 중심지일 뿐만 아니라, 영국연방의 사실상의 중심도시다.
+</p>
+
+<h2>Paris</h2>
+<p>
+교외를 포함한 ‘파리 데파르트망(Department)’은 면적 2,844㎢, 인구 약 1,041만 명(2009)이다. 오랫동안 센
+</p>
+
+<h2>Seoul</h2>
+<p>한반도 중앙부에 있는 대한민국의 수도. 대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다. </p>
+</div>
+<div id="footer">
+City@naver.com
+</div>
+</body>
+</html>

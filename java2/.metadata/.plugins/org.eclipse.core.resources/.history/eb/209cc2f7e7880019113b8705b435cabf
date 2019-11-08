@@ -1,0 +1,43 @@
+package dto;
+
+public class Batter extends Human {
+
+	private int ball;
+	private int hit;
+	private double hitavg;
+	
+	public Batter() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + "Batter [ball=" + ball + ", hit=" + hit + ", hitavg=" + hitavg + "]";
+	}
+
+	public int getBall() {
+		return ball;
+	}
+
+	public void setBall(int ball) {
+		this.ball = ball;
+	}
+
+	public int getHit() {
+		return hit;
+	}
+
+	public void setHit(int hit) {
+		this.hit = hit;
+	}
+
+	public double getHitavg() {
+		return hitavg;
+	}
+
+	public void setHitavg(double hitavg) {
+		this.hitavg = hitavg;
+	}
+	
+	
+}

@@ -1,0 +1,9 @@
+package marine;
+
+import main.Unit;
+
+public class Marine extends Unit {
+
+	
+	
+}

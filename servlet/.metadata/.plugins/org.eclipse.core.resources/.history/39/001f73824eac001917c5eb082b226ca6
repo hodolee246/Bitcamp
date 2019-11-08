@@ -1,0 +1,28 @@
+package project;
+
+import java.util.Arrays;
+
+/*
+ 	이름 텍스트
+	나이 셀렉트
+	성별 라디오
+	취미 체크
+	생년 제이커리
+	연봉 셀렉트 
+ */
+
+public class ummDto {
+
+	private String name;	//이름
+	private String age;		//나이
+	private String mw;	//성별
+	private String[] hb;	//취미
+	private String birthday;	//생년월일
+	private String sal;		//연봉
+	
+	public ummDto() {
+		
+	}
+	
+
+}	

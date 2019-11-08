@@ -1,0 +1,20 @@
+package main;
+
+import animal.Animal;
+import animal.Cat;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		Animal animal1 = new Cat("초롱이");
+		
+		animal1.print();
+		
+
+	}
+
+}

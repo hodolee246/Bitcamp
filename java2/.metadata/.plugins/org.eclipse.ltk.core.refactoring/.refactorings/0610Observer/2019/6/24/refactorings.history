@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;main.Observer&apos; to &apos;ObserverA&apos;&#x0D;&#x0A;- Original project: &apos;0610Observer&apos;&#x0D;&#x0A;- Original element: &apos;main.Observer&apos;&#x0D;&#x0A;- Renamed element: &apos;main.ObserverA&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Observer&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;main{Observer.java[Observer" matchStrategy="1" name="ObserverA" qualified="false" references="true" similarDeclarations="false" stamp="1560133133700" textual="false" version="1.0"/>
+</session>

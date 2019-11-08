@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+<!-- 	xml: <bean  tag: <jsp:useBean
+xml 에서 생성할때에는 그냥 <bean> 을 사용</bean>(bean 목적 항상 상주할경우 생성)
+tag(el, core) <jsp:userBean>을 사용한다</jsp:userBean>
+ -->
+ 	<!-- aop annotation -->
+	<aop:aspectj-autoproxy/>
+
+	<!-- aop object 생성 -->
+	<bean id="logApp" class="com.aopex.logAOP"/>
+	<!-- logAOP logApp = new logAOP(); -->
+	
+	<!-- Cat -->	<!-- xml 에서도 객체를 생성할 수 있다. -->
+	<bean id="myCat" class="com.aopex.CatDto">
+		<property name="name" value="야옹이anno"/>
+		<property name="age" value="4"/>
+		<property name="color" value="파랑"/>
+	</bean>
+	
+</beans>

@@ -1,0 +1,23 @@
+package main;
+
+import java.util.Scanner;
+
+import dao.DaoInterface;
+import file.FileClass;
+import processing.AllPrintClass;
+import processing.DeleteClass;
+import processing.DescendingClass;
+import processing.InsertClass;
+import processing.SelectClass;
+import processing.UpdateClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		new InsertClass();
+		
+		
+	}
+}
+		

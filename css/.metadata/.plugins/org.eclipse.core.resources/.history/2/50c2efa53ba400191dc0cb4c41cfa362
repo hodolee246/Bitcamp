@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <link rel = " stylesheet" href = ""> External 방식 -->
+<!-- 적용이 안될경우도 있고 외부파일 불러오는게 느림 -->
+
+<style type="text/css">  /* internal 방식 */
+body{	/* tag class id     id, class(css, js) name(js, form)*/
+	background-color: red;
+	/* propertyu */	/* value *//
+}
+
+h1{
+	background-color: #ffffff;
+}
+p{
+	background-color: 9abf81;
+}
+div{
+	background-color: #bafcad
+}
+
+</style>
+
+
+</head>
+<body bgcolor="#83deff">	<!-- 속도는 빠르고 적용도 쉽다 하지만 전부다 타이핑을 해야되서 코드가 길어진다.-->
+
+<!-- inline 방식 -->
+<!-- <p style="background-color: gray">hi CSS</p>
+
+style = 어트리뷰트 (밖에서 지정되어있는값으로 변경하기 힘듬)
+background color = 프럼프트 (선택을 자유로 값을 변경할 수 있음)
+ -->
+
+<h1>졸려요</h1>
+
+
+<div>
+초복에는
+<p>피곤해요</p>
+삼계탕?
+</div>
+</body>
+</html>

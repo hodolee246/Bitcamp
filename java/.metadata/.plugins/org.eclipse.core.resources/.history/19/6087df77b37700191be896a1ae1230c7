@@ -1,0 +1,24 @@
+package project17;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int a ;
+		a = scan.nextInt();
+		for(int w =1; w<11; w++)
+		{
+			
+			if(a > w*10 && a < w*20)
+			{
+				System.out.println("입력한 수는"+w*10+"보다 크고"+w*20+"보다 작습니다.");;
+			}
+		}
+		
+	}
+}
+		

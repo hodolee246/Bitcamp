@@ -1,0 +1,19 @@
+System.out.println("sql:" + sql);
+				
+		try {
+			conn = DBConnection.getConnection();
+			psmt = conn.prepareStatement(sql);
+			psmt.setString(1, id);
+			
+			rs = psmt.executeQuery();
+			
+			if(rs.next()) {	// ¿÷¥Ÿ
+				findid = true;
+			}			
+			
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally {
+			DBClose.close(psmt, conn, rs);			
+		}
+		return findid;

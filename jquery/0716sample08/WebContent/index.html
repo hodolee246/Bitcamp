@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<p>
+ 	<a href="http://www.naver.com" title="naver" id="id">naver</a>
+</p>
+<p>
+ 	<a href="http://www.tutorialspoint.com" title="tutorial" class="cls" id="_tutorial">
+ 		tutorialspoint
+ 	</a>
+</p>
+
+<button>title과 href를 변경</button>
+
+<script type="text/javascript">
+$(function () {
+		$("button").click(function() {
+	/*	$("#id").attr("title", "daum");
+		$("#id").attr("href", "http://www.daum.net");
+		
+		alert($("#id").attr("title"));
+	}); */
+		// 기본 href의 값을 조작하여 뒷부분에 /jsp 을 추가한다.
+	$(".cls").attr("href", function (i, origVal) {	// 여러개의 갯수의 어트리뷰트가 존재할수있으니 매개변수로 관리
+	//	alert(i);
+	//	alert(origVal);
+		return origVal + "/jsp";
+		});
+	
+	});
+
+});
+
+
+</script>
+</body>
+</html>

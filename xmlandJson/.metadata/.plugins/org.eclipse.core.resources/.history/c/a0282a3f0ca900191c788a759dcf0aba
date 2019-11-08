@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo">p tag</p>
+
+<script type="text/javascript">
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function () {
+	
+	if(this.readyState == 4 && this.status == 200){
+		//func(this);
+	}
+};
+xhttp.open("GET", "job.xml", true);
+xhttp.send();
+
+function func( xml ) {
+	var num, name;
+	var txt, ntxt, xmlDoc;
+	
+	txt = ntxt = "";
+	
+	xmlDoc =  xml.responseXML;
+//	alert(xmlDoc);
+	num = xmlDoc.getElementsByTagName("번호");		// 배열로 받는다.
+	name = xmlDoc.getElementsByTagName("이름");		// 배열로 받는다.
+
+//	alert(num.length);		// job xml 의 3개의 파일이 넘어와서 길이는 3이다.
+	
+	for (var i = 0; i < num.length; i++) {
+		txt += num[i].childNodes[0].nodeValue + "<br>";
+		ntxt += name[i].childNodes[0].nodeValue + "<br>";	
+	}
+	
+	document.getElementById("demo").innerHTML = txt + ntxt;
+}
+
+function nodeNamefunc() {
+	
+}
+	
+</script>
+
+
+</body>
+</html>

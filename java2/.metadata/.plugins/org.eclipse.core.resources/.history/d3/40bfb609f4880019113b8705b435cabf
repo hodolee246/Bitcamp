@@ -1,0 +1,19 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class SelectClass implements DaoInterface{
+
+	public SelectClass() {
+		
+	}
+
+	@Override
+	public void Process() {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
+	
+}

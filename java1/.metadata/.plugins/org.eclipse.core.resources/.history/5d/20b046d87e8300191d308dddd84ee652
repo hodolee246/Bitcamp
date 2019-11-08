@@ -1,0 +1,7 @@
+package robot;
+
+import ro.Robot;
+
+public class DrawClass extends Robot {
+
+}

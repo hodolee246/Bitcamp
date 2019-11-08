@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>환영합니다</h1><br><br>
+※현재 시간은<input type="text" id="_time" size="10px">입니다.
+
+<script type="text/javascript">
+setInterval("timego", 1000);	
+var d = new Date();
+function timego() {
+document.getElementById("_time").value = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+
+}
+/* 
+setInterval(,1000); */
+
+</script>
+</body>
+</html>

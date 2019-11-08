@@ -1,0 +1,47 @@
+package main;
+
+import ro.Robot;
+import robot.DanceClass;
+import robot.DrawClass;
+import robot.SingClass;
+
+public class mainClass {
+
+	
+
+	static void action(Robot rt[]) {
+		
+			if(rt[0] instanceof DanceClass) {
+				DanceClass d = (DanceClass)rt[0];
+				d.Dance();
+				
+			}else if(rt[1] instanceof SingClass) {
+			((SingClass)rt[1]).Sing();
+				
+			}else if(rt[2] instanceof DrawClass) {
+				DrawClass dc = (DrawClass)rt[2];
+				dc.Draw();
+				
+			}
+		}
+	
+	
+	public static void main(String[] args) {
+	
+		Robot rt[] = new Robot[3];
+		
+		rt[0] = new DanceClass();
+		rt[1] = new SingClass();
+		rt[2] = new DrawClass();
+		
+		System.out.println();
+		
+			action(rt);
+		
+		
+		
+	}
+
+	
+	
+}

@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// 국어, 영어, 수학점수를 입력 -> 출력 (학생 5명)
+		Scanner sc = new Scanner(System.in);
+		
+		
+		
+		int array2[][] = new int[5][3];
+		int i,j ;
+		for (i = 0; i < array2.length; i++) {
+			
+			for (j = 0; j < array2.length; j++) {
+				
+			System.out.println("수학점수를 입력해주세요");
+			array2[i][j] = sc.nextInt();
+			System.out.println("국어점수를 입력해주세요");
+			array2[i][j] = sc.nextInt();
+			System.out.println("영어점수를 입력해주세요");
+			array2[i][j] = sc.nextInt();
+			
+			
+			}
+			
+		}
+		
+
+	}
+
+}

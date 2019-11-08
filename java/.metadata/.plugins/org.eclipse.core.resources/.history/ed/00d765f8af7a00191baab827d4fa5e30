@@ -1,0 +1,57 @@
+package wrapper;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		
+		Wrapper class
+		일반 자료형(char, int, double)을 클래스화 한 것
+		
+		일반 자료형	wrapper class
+		boolean		Boolean
+		
+		byte		Byte
+		short		Short
+		int			Integer  ----  기억 ★★★
+		long		Long
+		
+		float		Float
+		double		Double	-----  기억 ★★★
+		
+		char		Character
+		char[]		String	----  기억 ★★★
+		
+		String 
+		숫자 == > 문자열
+		String.valueOf('1') -> "1"
+		String.valueOf(12) -> "12"
+		String.valueOf(12.345) -> "12.345"
+		
+		12 + "";
+		12.345 + "";
+
+		
+		*/
+		
+		// Integer == int 동일하게 사용을한다
+		
+		int i = 12;
+		Integer iobj = 34;
+		Integer _iobj = new Integer(i);
+		
+		int num = iobj.intValue();
+		int _num = iobj;
+		
+		System.out.println("_num =" + _num); // 사실상 Integer를 int 처럼 사용할수 있다. 그래서 별로 쓰는 방식은 상관없다
+		
+		// 숫자 -> 문자열 	toString()
+		String  nstr = iobj.toString(); // 문자열로 변형이 되어서 넘어간다. 34 -> "34"
+		nstr = iobj + "";
+		
+		// 문자열 -> 숫자
+		
+		
+	}
+
+}

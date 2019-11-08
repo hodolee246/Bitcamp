@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Created-By: Apache Maven Bundle Plugin
+Built-By: ave
+Build-Jdk: 11.0.2
+Specification-Title: mybatis-spring-boot-autoconfigure
+Specification-Version: 2.1.0
+Specification-Vendor: MyBatis.org
+Implementation-Title: mybatis-spring-boot-autoconfigure
+Implementation-Version: 2.1.0
+Implementation-Vendor-Id: org.mybatis.spring.boot
+Implementation-Vendor: MyBatis.org
+Implementation-URL: http://www.mybatis.org/spring-boot-starter/mybatis-s
+ pring-boot-autoconfigure/
+Automatic-Module-Name: org.mybatis.spring.boot.autoconfigure
+Implementation-Build-Date: 2019-07-15 07:02:32+0000
+X-Compile-Source-JDK: 1.8
+X-Compile-Target-JDK: 1.8
+Bnd-LastModified: 1563174225978
+Bundle-Description: Spring Boot Support for MyBatis
+Bundle-DocURL: http://www.mybatis.org/spring-boot-starter/mybatis-spring
+ -boot-autoconfigure/
+Bundle-License: https://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-ManifestVersion: 2
+Bundle-Name: mybatis-spring-boot-autoconfigure
+Bundle-SymbolicName: org.mybatis.spring.boot.mybatis-spring-boot-autocon
+ figure
+Bundle-Vendor: MyBatis.org
+Bundle-Version: 2.1.0
+Export-Package: org.mybatis.spring.boot.autoconfigure;version="2.1.0"
+Import-Package: javax.sql,org.apache.ibatis.annotations,org.apache.ibati
+ s.io,org.apache.ibatis.mapping,org.apache.ibatis.plugin,org.apache.ibat
+ is.scripting,org.apache.ibatis.session,org.apache.ibatis.type,org.mybat
+ is.scripting.freemarker,org.mybatis.scripting.thymeleaf,org.mybatis.scr
+ ipting.velocity,org.mybatis.spring,org.mybatis.spring.mapper,org.slf4j,
+ org.springframework.beans,org.springframework.beans.factory,org.springf
+ ramework.beans.factory.config,org.springframework.beans.factory.support
+ ,org.springframework.boot.autoconfigure,org.springframework.boot.autoco
+ nfigure.condition,org.springframework.boot.autoconfigure.jdbc,org.sprin
+ gframework.boot.context.properties,org.springframework.context.annotati
+ on,org.springframework.core.io,org.springframework.core.io.support,org.
+ springframework.core.type,org.springframework.util
+Include-Resource: {META-INF/additional-spring-configuration-metadata.jso
+ n=src/main/resources/META-INF/additional-spring-configuration-metadata.
+ json},{META-INF/spring.factories=src/main/resources/META-INF/spring.fac
+ tories}
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Tool: Bnd-4.1.0.201810181252
+

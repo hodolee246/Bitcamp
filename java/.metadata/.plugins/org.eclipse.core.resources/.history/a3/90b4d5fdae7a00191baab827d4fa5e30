@@ -1,0 +1,30 @@
+package wrapper;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		
+		Wrapper class
+		일반 자료형(char, int, double)을 클래스화 한 것
+		
+		일반 자료형	wrapper class
+		boolean		Boolean
+		
+		byte		Byte
+		short		Short
+		int			Integer  ----  기억 ★★★
+		long		Long
+		
+		float		Float
+		double		Double	-----  기억 ★★★
+		
+		char		Character
+		char[]		String	----  기억 ★★★
+		
+		
+		
+		*/
+	}
+
+}

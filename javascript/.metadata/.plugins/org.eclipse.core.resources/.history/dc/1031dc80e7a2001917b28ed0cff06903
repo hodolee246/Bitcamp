@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+사나이들의 영화인 탑건은 군인 영화입니다. 그러면 육군, 해군, 공군 중 어느 군의 영화일까요?
+
+<br><br>
+
+<button type="button">답을 본다</button>
+
+<br>
+※버튼을 한 번 클릭하면 흰트가 표시됩니다.
+※버튼을 두 번 클릭하면 답이 표시됩니다.
+
+</body>
+</html>

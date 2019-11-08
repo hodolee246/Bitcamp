@@ -1,0 +1,9 @@
+package project;
+
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+
+@WebServlet("/man")
+public class man extends HttpServlet {
+
+}

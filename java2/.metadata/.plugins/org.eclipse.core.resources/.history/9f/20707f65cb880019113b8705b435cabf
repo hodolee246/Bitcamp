@@ -1,0 +1,33 @@
+package ycls;
+
+import single.SingletonClass;
+
+public class YouClass {
+
+	
+	private int younum;
+	private String youname;
+	public YouClass() {
+		
+	}
+
+	@Override
+	public String toString() {
+		return "YouClass [younum=" + younum + "]";
+	}
+
+	public int getYounum() {
+		return younum;
+	}
+	
+	public void method() {
+		SingletonClass sc = SingletonClass.getInstance();
+		younum = sc.num;
+		
+	}
+
+	public void setYounum(int younum) {
+		this.younum = younum;
+	}
+	
+}

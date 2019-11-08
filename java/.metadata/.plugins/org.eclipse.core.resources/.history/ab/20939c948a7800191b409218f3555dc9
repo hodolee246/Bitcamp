@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		
+		int ranNum, wnum, c;
+		ranNum = (int)(Math.random()*100);
+		System.out.println(ranNum+"답!?");
+		System.out.println("1에서 100까지 랜덤으로 생성된 숫자 맞추기 입니다.");
+		System.out.println("기회는 10번 입니다.");
+		System.out.println("숫자를 입력해 주세요");
+		for(int i = 0; i<10; i++) {
+			wnum = scan.nextInt();
+			if(wnum <=0 || wnum>=100) {
+				System.out.println("숫자 범위를 확인해주시고 입력해주세요");
+				i--;
+			}
+			else if(wnum > ranNum) {
+				System.out.println("너무 높아요");
+				System.out.println(i+"번째입니다.");
+			}
+			else if(wnum <ranNum) {
+				System.out.println("너무 낮아요");
+				System.out.println(i+"번째입니다.");
+			}
+			else if(wnum == ranNum) {
+				System.out.println("정답입니다.");
+				break;
+			}
+		}
+		
+	}
+
+}
+	

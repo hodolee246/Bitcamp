@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>집</h1>을 가고싶지만 지금 시간은:
+
+<form name="frm">
+
+<input type="text" size="8.5" name="timebox">
+
+</form>
+
+<script type="text/javascript">
+	var _now = new Date();
+document.frm.timebox.value = _now.getHours() + ":" + _now.getMinutes() + ":" + _now.getSeconds();
+
+function nowTime() {
+	var now = new Date();
+	var hour = now.getHours();
+	var minute = now.getMinutes();
+	var second = now.getSeconds();
+	
+	if(hour < 10){
+		hour = "0" + hour;
+	}
+	if(minute < 10){
+		minute = "0" + minute;
+	}
+	if(second < 10){
+		second = "0" + second;
+	}
+	
+	document.frm.timebox.value = hour +":" + minute +":"+ second;
+	
+}
+
+setInterval("nowTime()", 1000);
+
+</script>
+
+</body>
+</html>

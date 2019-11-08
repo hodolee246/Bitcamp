@@ -1,0 +1,57 @@
+package exception2;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// NullpointerException => new 를 안해 줘서 발생
+		
+		String str = null;
+		
+		try {
+			System.out.println(str.length());
+		}catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+	//	System.out.println("프로그램 실행중...");
+
+	
+		// ArrayIndexOutOfBoundsException
+		int arr[] = {1, 2, 3};
+		try {
+			System.out.println(arr[3]);
+		}catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}
+	
+		// fileNotfoundException
+		
+		File file = new File("c:\\xxxxx");
+		FileInputStream is;
+		try {
+		is = new FileInputStream(file);
+		}catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		// StringIndexOutOfBoundsException
+		String str1 = "java";
+		try {
+			System.out.println(str1.charAt(4));
+		}catch (StringIndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}
+		// NumberFormatException     ==  숫자를 입력해야 하는데 문자를 입력했을때
+		
+		int i ;
+		try {
+			i = Integer.parseInt("11a2");
+		}catch (NumberFormatException e) {
+			e.printStackTrace();
+		}
+		}
+
+}

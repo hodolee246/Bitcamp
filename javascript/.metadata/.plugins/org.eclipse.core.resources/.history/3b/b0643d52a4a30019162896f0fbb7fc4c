@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" style="color: white;">
+
+<h1>사진들</h1>
+<div style="float: left">
+<table border="5" bordercolor = "orange" style="border-collapse: collapse; margin-left: 15px;">
+	<tr>
+		<td><input type="image" alt="항목을 선택해주세요." src="" id="imgs" style="color: white;"></td>
+	</tr>
+</table>
+</div>
+&ensp; 사진의 선택 <br>
+&ensp;<select id="_img" onchange="func()">
+	<option>사진을 선택</option>
+	<option value="meiji01.jpg">첫번째 사진</option>
+	<option value="meiji02.jpg">두번째 사진</option>
+	<option value="meiji03.jpg">세번째 사진</option>
+	<option value="meiji04.jpg">네번째 사진</option>
+</select>
+
+<script type="text/javascript">
+
+function func() {
+	var _imgs = document.getElementById("_img").value;
+	if(document.getElementById("_img").seletedIndex != 0){
+	document.getElementById("imgs").src = _imgs;
+	// name 으로 설정한경우 document.name.src = _imgs;
+	}
+}
+
+</script>
+</body>
+</html>

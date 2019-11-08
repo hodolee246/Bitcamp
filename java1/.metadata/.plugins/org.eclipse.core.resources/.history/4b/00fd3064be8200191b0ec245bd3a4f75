@@ -1,0 +1,89 @@
+package main;
+
+import java.util.Scanner;
+
+import dao.DaoClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		DaoClass dao = new DaoClass();
+
+		
+		// menu
+
+		/*
+		
+		1. 학생정보를 추가
+		2. 학생정보를 삭제한다
+		3. 학생정보를 검색						
+		4. 학생정보를 수정
+		5. 학생정보를 모두 출력한다.
+		*/
+		String abc = "";
+		
+		System.out.println("학생정보 편집기에 오신걸 환영합니다. ");
+		
+		
+		while(abc == "y" || abc == "Y") {
+		
+		System.out.println("1. 학생정보 입력");
+		System.out.println("2. 학생정보 삭제");
+		System.out.println("3. 학생정보 검색");
+		System.out.println("4. 학생정보 수정");
+		System.out.println("5. 학생정보 전부 출력");
+			
+		
+		System.out.println("편집 하고싶은 번호를 입력해 주세요");
+		int n = sc.nextInt();
+		
+			switch (n) {
+			case 1:
+				int number;
+				while(true) {
+					System.out.println("몇명의 정보를 입력하시겠습니까? (최대 10명)");
+					number = sc.nextInt();
+				if(number > 10) {
+					System.out.println("최대 10명 까지 입력이 가능합니다.");
+				}else {
+					break;
+			}
+			}
+			for (int i = number; i < number; i++) {
+				dao.insert();
+			}
+			break;
+
+		case 2:
+			dao.delete();
+			break;
+	
+		case 3:
+			dao.select();
+			break;
+		
+		case 4:
+			dao.update();
+			break;
+			
+		case 5:
+			dao.allprint();
+			break;
+		
+			}
+			System.out.println("계속 하시겠습니까? Y/N ");
+			abc = sc.next();
+
+		}
+		
+		
+		
+	
+		
+	
+		
+		
+	}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src = "./js/jquery.min.js">
+</script>
+</head>
+<body>
+
+<p>p tag</p>
+
+<p id="demo">p tag id demo</p>
+
+<p class="cls">p tag class cls</p>
+
+<p name="_name">p tag name _name</p>
+
+<button type="button">click</button>
+
+<script type="text/javascript">
+
+$(function () {
+	
+	$("p").click(function () {
+		console.log( $(this).text() );		// 누른것 obj 의 text(value)를 콘솔창에 띄운다.
+	});
+	
+	$("button").click(function () {
+		/* $('p').hide(); */
+		/* $('*').hide(); */		// 안의 있는 태그를 전부다 숨겨라(버튼까지 사라진다.)
+	//	$('p#demo').hide();	//	p태그 중 id가 demo인 놈만 숨겨라	
+	//	$('p.cls').hide();	// p태그중 클래스 cls만 숨겨라
+		$('p[name=_name]').hide();	// name 접근방법
+	});
+	
+});
+</script>
+
+<br><br>
+
+<ul id="list">
+	<li>Coffee</li>
+		<ul>
+			<li>black</li>
+			<li>Milk</li>
+		</ul>
+	<li>Tea</li>
+	<li>Milk</li>
+</ul>
+
+<button type="button" id="btn">선택</button>
+
+<script type="text/javascript">
+
+$(function () {
+	$("#btn").click(function () {
+	//	$("#list").hide();
+	
+	//	$("ul li:first").hide();	첫번째 리스트를 숨겨라
+	//	$("#list li:first").hide();	id가 리스트인 첫번째놈을 숨겨라
+	
+	//	$("ul ul li:first-child").hide();	// 문자 그대로 li의 첫번째 자식노드가 숨겨진다. black 이 숨겨진다.	
+		$("ul ul li:nth-child(2)").hide();	// li의 두번째 자식인 milk 가 숨겨진다.
+		
+	});
+});
+
+</script>
+
+
+
+</body>
+</html>
+
+
+

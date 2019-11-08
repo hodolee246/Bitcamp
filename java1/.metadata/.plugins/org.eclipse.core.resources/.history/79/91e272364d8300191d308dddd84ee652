@@ -1,0 +1,13 @@
+package Child;
+
+import parent.Parent;
+
+public class Child extends Parent {
+
+	public Child() {
+		super();
+		System.out.println("Child Child()");
+	}
+	
+	
+}

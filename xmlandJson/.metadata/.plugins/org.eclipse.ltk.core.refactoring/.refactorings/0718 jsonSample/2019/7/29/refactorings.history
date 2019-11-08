@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;0718 jsonSample/WebContent/index2.html&apos; to &apos;index1.html&apos;" description="Rename resource &apos;index2.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/index2.html" name="index1.html" stamp="1563434484860" updateReferences="true"/>
+</session>

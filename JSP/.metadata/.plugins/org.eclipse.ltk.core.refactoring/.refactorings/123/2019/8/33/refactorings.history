@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;ilwoo&apos;&#x0D;&#x0A;- Original project: &apos;ilwoo&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     ilwoo/src/src&#x0D;&#x0A;     ilwoo/src/src.Controller&#x0D;&#x0A;     ilwoo/src/src.db&#x0D;&#x0A;     ilwoo/src/src.Store" description="Delete elements" element1="/src&lt;src.db" element2="/src&lt;src.Store" element3="/src&lt;src.Controller" element4="/src&lt;src" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1565571878323" subPackages="false" version="1.0"/>
+</session>

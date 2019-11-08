@@ -1,0 +1,26 @@
+package processing;
+
+import java.util.Iterator;
+
+import dao.DaoInterface;
+import dto.Human;
+import single.Singleton;
+
+public class AllPrintClass implements DaoInterface {
+
+	@Override
+	public void Process() {
+		Singleton si = Singleton.getInstance();
+		Iterator<Integer> it = si.TMap.keySet().iterator();
+		
+		Integer k = 0;
+		while(it.hasNext()) {
+			Integer key = it.next();
+			
+			Human hu = si.TMap.get(key);
+			System.out.println(hu.toString());
+		}
+
+	}
+
+}

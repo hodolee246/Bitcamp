@@ -1,0 +1,25 @@
+package hcls;
+
+import single.SingletonClass;
+
+public class HeClass {
+
+	private int hnum;
+	private String name;
+	
+	public HeClass() {
+		name = "전인우";
+	}
+	
+	public void method() {
+		SingletonClass sc = SingletonClass.getInstance();
+		hnum = sc.num;
+		
+	}
+
+	@Override
+	public String toString() {
+		return "HeClass [hnum=" + hnum + "]";
+	}
+	
+}

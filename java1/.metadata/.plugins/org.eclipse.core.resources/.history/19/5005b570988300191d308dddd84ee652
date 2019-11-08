@@ -1,0 +1,16 @@
+package robot;
+
+import ro.Robot;
+
+public class DanceClass extends Robot {
+	
+	
+	
+	public DanceClass() {
+		
+	}
+
+	public void print() {
+		System.out.println("춤을 춥니다.");
+	}
+}

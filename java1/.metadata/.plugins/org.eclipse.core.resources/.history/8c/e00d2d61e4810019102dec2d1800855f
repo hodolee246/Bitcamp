@@ -1,0 +1,79 @@
+package coin;
+
+import java.util.Scanner;
+
+public class coinClass {
+
+	Scanner sc = new Scanner(System.in);
+	
+	int dice_a;
+	int dice_b;
+	int coin;
+	int user;
+	int usercoin;
+	
+	public void init() {
+		
+		dice_a = (int)(Math.random()*6);
+		dice_b = (int)(Math.random()*6);
+		coin = 20;
+		user = 0;
+		usercoin = 0;
+		
+	}
+	
+	public void batcoin() {
+		init();
+		System.out.println("배팅할 코인 갯수를 입력해주세요");
+		usercoin = sc.nextInt();
+		if(usercoin > coin) {
+			System.out.println("현재 코인 갯수 : " + coin);
+		}
+		
+		
+		
+	}
+	
+	
+	
+	
+	public void bating() {
+		init();
+		while(coin > 0) {
+			System.out.println("남은 코인 : " + coin + "배팅할 코인 수 : ");
+			
+			while(usercoin > coin) {
+				usercoin = sc.nextInt();
+				if(usercoin > coin) {
+					System.out.println("현재 코인 숫자 : " + coin);
+				}
+			}
+			while(user != 2 && user != 12) {
+			System.out.println("두 주사위의 합은?");
+			user = sc.nextInt();
+			if(user == 2 || user == 12) {
+				System.out.println("2와 12를 제외하고 입력해주세요");
+			}
+			}
+			//-------------------------------------
+			if((user == 3 || user == 11) &&
+			(dice_a + dice_b == 3 || dice_a + dice_b == 11) ) {
+				usercoin = (usercoin * 18);
+				coin = (coin + usercoin);
+			}else if((user == 4 || user == 10) &&
+					(dice_a + dice_b == 4 || dice_a + dice_b == 10) ) {
+				usercoin = (usercoin * 12);
+				coin = (coin + usercoin);
+			}
+			
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+}

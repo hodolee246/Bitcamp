@@ -1,0 +1,14 @@
+
+7월 08, 2019 09:20:36.08 NEW SESSION
+7월 08, 2019 09:20:36.08 [8592:6944:0708/092036.088:ERROR:http_bridge.cc(127)] NOT IMPLEMENTED
+7월 08, 2019 09:20:36.15 [8592:5256:0708/092036.150:ERROR:browser_process_sub_thread.cc(217)] Waited 18 ms for network service
+7월 08, 2019 11:43:46.23 [4924:6792:0708/114346.237:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 11:43:46.30 [4924:6792:0708/114346.302:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 11:43:46.61 [4924:6792:0708/114346.613:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 11:48:26.97 [4924:6792:0708/114826.972:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 11:48:26.99 [4924:6792:0708/114826.991:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 11:48:27.40 [4924:6792:0708/114827.399:ERROR:audio_manager_base.cc(363)] Invalid audio output parameters received; using fake audio path: format: 0, channel_layout: 0, channels: 0, sample_rate: 0, frames_per_buffer: 0, effects: 0, mic_positions: 
+7월 08, 2019 13:49:58.10 [4924:1836:0708/134958.107:ERROR:socket_stream.cc(219)] Closing stream with result -2
+7월 08, 2019 13:49:58.11 [4924:1836:0708/134958.118:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -105
+7월 08, 2019 13:58:28.54 [4924:1836:0708/135828.540:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -106
+7월 08, 2019 13:58:32.82 [4924:1836:0708/135832.828:ERROR:connection_factory_impl.cc(413)] Failed to connect to MCS endpoint with error -21

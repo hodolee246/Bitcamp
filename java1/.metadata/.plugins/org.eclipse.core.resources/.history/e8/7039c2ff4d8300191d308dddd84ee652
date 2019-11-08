@@ -1,0 +1,30 @@
+package main;
+
+import Child.Child;
+import children.children;
+import parent.Parent;
+
+public class main {
+
+	public static void main(String[] args) {
+		
+		
+	//	Parent pa1 = new Parent();
+		
+	//	Parent pa2 = new Parent(2);
+		
+		
+	//	Child ch1 = new Child();
+		
+	//	int n = ch1.getNumber();
+	//	System.out.println("n = " n);
+		
+	//	ch1.method();
+	
+		Child ch = new Child();
+		ch.method();
+		children aa = new children();
+	
+	}
+	
+}

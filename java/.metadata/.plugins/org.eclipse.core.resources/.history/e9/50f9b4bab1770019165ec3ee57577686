@@ -1,0 +1,25 @@
+package project18;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		int even;
+		int evenTotal = 0;
+		int oddTotal = 0;
+		for(even =0; even <101;  even++)
+		{
+			if( even % 2 == 0)
+			{
+			evenTotal = even + evenTotal ;
+			}
+			else 
+			{
+				oddTotal = even + oddTotal;
+			}
+		}
+		System.out.println("1부터 100 사이 짝수의 합은:"+evenTotal);
+		System.out.println("1부터 100 사이 홀수의 합은:"+oddTotal);
+	
+	}
+
+}

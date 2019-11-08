@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!-- Link
+html
+
+<a
+<form	form 안의 있는 name 으로 가져감
+
+Java Script
+location.href	값을 만들어서 파라메터로 
+
+Java
+
+ -->
+ 
+ <form action="NewFile.jsp">
+ 	ID:<input type="text" name="id" id="_id">	<br>
+	PW:<input type="text" name="pwd" id="_pwd">
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+

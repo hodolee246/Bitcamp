@@ -1,0 +1,29 @@
+1568941357284	Delete element
+1568941361253	Delete element
+1568941366815	Delete element
+1568941402361	Rename package 'com.exam'
+1568941454314	Delete element
+1568941559018	Delete element
+1568941607249	Rename type 'CommonController'
+1568941739314	Rename compilation unit 'Controller.java'
+1568941954314	Move 'welcome.jsp' to 'welcome'
+1568942051127	Rename type 'MariaExamPrjApplication'
+1568942141204	Delete element
+1568942159361	Delete element
+1568942164142	Rename package 'com.finalproject.service.impl'
+1568942187376	Move compilation unit
+1568942203221	Delete element
+1568942205602	Delete element
+1568942208970	Rename package 'com.finalproject.dao.impl'
+1568942275350	Rename type 'testDAOImpl'
+1568942278801	Rename type 'testDAO'
+1568942290548	Rename compilation unit 'testService.java'
+1568942293407	Rename type 'testServiceImpl'
+1568942459111	Rename resource 'exam'
+1568942463651	Rename resource 'Exam.xml'
+1568942535423	Rename type 'testDTO'
+1568943692778	Rename package 'com.exam'
+1568943720095	Rename type 'MariaExamPrjApplicationTests'
+1568944457293	Copy compilation unit
+1568948974190	Copy folder
+1568948978080	Copy folder

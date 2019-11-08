@@ -1,0 +1,85 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class UpdataBatter extends Frame implements ActionListener, WindowListener {
+
+	Label label[] = new Label[6];
+	TextField tf[] = new TextField[6];
+	Button btn1, btn2;
+	
+	public UpdataBatter() {
+		super("UpdataBatter");
+		
+		setLayout(null);
+		String str[] = {"Name", "Age", "Height", "Ball", "Hit", "Hitavg"};
+		for (int i = 0; i < label.length; i++) {
+			label[i] = new Label(str[i]);
+			label[i].setBounds(50, 100 + (40 * i), 80, 30);
+			add(label[i]);
+		}
+		
+		for (int i = 0; i < tf.length; i++) {
+			tf[i] = new TextField();
+			tf[i].setBounds(130, 100 + (40 * i), 150, 30);
+			add(tf[i]);
+		}
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

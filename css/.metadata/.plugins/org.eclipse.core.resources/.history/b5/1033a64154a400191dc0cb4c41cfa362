@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+#fullScr{
+	width: 800px;
+	height: 500px;
+}
+</style>
+</head>
+<body>
+
+<div id="fullScr">
+
+</div>
+
+</body>
+</html>

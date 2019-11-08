@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+		func(this.responseText);
+	}
+}
+xmlhttp.open("GET", "book.json", true);
+xmlhttp.send();
+
+var _key;
+function func(resp) {
+	var arr = JSON.parse(resp);	// String -> json
+	var booktxt = "";
+	
+//	alert(bookarr);
+	
+	for (var i = 0; i < arr.length; i++) {
+//		booktxt += arr[i].title;
+//		alert(booktxt);
+		
+	}
+	for(key in arr[3]){
+		_key = key;
+	alert(_key);
+	};
+	
+	
+	
+	
+	
+}
+
+</script>
+
+</body>
+
+
+</html>

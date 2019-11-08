@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<!-- radio, checkbox -->
+<ul>
+	<li><input type="radio" name="radio_test" value="사과">사과</li>
+	<li><input type="radio" name="radio_test" value="배">배</li>
+	<li><input type="radio" name="radio_test" value="복숭아" checked>복숭아</li>
+</ul>
+
+<p id="get_p">클릭</p>
+
+<br><br>
+
+<input type="checkbox" id="ch1">그림 그리기
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#get_p").click(function() {
+//		alert("test");
+		
+		// radio
+		// getter 
+// 		var rvalue = $("#radio_text").val();					// id
+		var rvalue = $("input[name='radio_test']:checked").val(); // name
+		alert(rvalue);
+		// setter
+		$("input[name='radio_test']").val(["배"]);	// radio 이기에 [] 배열안에 value 선택할 value 값을 써준다.
+	
+		// checkbox
+		// getter
+	//	var check = $("#ch1").is(":checked");
+	//	alert(check);
+		var check = $("input:checkbox[id='ch1']").is(":checked");	
+		alert(check);
+	// setter
+	//	$("#ch1").is() = true;
+	});
+	
+});
+</script>
+</body>
+</html>
+

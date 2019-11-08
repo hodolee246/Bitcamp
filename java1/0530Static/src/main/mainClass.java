@@ -1,0 +1,60 @@
+package main;
+
+import my.MyClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		MyClass cls = new MyClass();
+		
+		cls.setNumber(123);
+		cls.method();
+		cls.method();
+		cls.method();
+		*/
+
+		/*
+			static : 정적  != 동적
+			값을 유지
+			프로그램 시작시에 메모리에 올라감으로 계속 유지된다.
+			static 변수는 global variable(전역 변수) 라고 한다.
+			static 변수는 객체가 여러개로 해놔도 메모리 공간이 하나이기 때문에(모든 붕어빵의 내용물이 같다)
+			보통 static 변수를 접근할때에는 인스턴스로 접근을 하지 않고 클래스명 으로 접근을 한다.
+						
+		*/
+		/*
+		MyClass.st_number = 123; // 정적 변수는 클래스 선언이 없어도 독긻적으로 사용할 수 가있다.
+		
+		MyClass cls = new MyClass();
+		System.out.println(cls.st_number); // 인스턴스를 통해 접근도 가능하다.
+	
+		System.out.println(MyClass.st_number); 
+		
+		MyClass cls1 = new MyClass();
+		cls1.st_number = 222;
+		
+		System.out.println(MyClass.st_number); 
+		System.out.println(cls.st_number);
+		System.out.println(cls1.st_number);
+		*/
+		// st_number 생성 -> static 영역에 생성
+		
+		MyClass cls2 = new MyClass(); // 멤버 변수는 인스턴스 호출시 -> heap 영역에 생성
+		
+		cls2.function();	// 지역 변수는 여기서 생성 -> stack 영역에 생성
+		cls2.function();
+		cls2.function();
+		cls2.function();
+		
+		MyClass cls3 = new MyClass();
+		System.out.println("\n");
+		cls3.function();
+		cls3.function();
+		cls3.function();
+		cls3.function();
+		
+		MyClass.st_method();
+	}
+
+}

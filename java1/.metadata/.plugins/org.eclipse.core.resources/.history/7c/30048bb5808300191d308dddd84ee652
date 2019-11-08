@@ -1,0 +1,29 @@
+package main;
+
+import ro.Robot;
+import robot.DanceClass;
+import robot.DrawClass;
+import robot.SingClass;
+
+public class mainClass {
+
+	
+
+	public void action() {
+		
+	}
+	
+	public static void main(String[] args) {
+		
+
+		Robot r = new DanceClass("춤");
+		r.print();
+		Robot r2 = new SingClass("노래");
+		r2.print();
+		Robot r3 = new DrawClass("그림");
+		r3.print();
+		
+		
+	}
+
+}

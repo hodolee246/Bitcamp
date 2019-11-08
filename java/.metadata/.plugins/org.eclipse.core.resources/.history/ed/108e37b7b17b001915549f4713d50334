@@ -1,0 +1,40 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// 1~10 jqk *4
+		// == 52
+		//52을 셔풀하고 0~51
+		// 스페이드, 다이아, 하트, 클로버
+		// 0~12    13~25 26~38 39~51
+		/*
+		 	랜덤 숫자 	카드 숫자 	그림
+		 	13		1		다이아
+		 	51		13		클로버
+		 */
+		int array[][] = new int[4][13];
+		int temp;
+		for (int i = 0; i < array.length; i++) {
+			
+			for (int j = 0; j < array[0].length; j++) {
+				array[i][j] = array[i][j];
+			}
+		}
+		
+		String s, d, h, c ;
+		s = spade;
+		d = dia;
+		h = heart;
+		c = clover;
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 
+	Java Script != Java		-> Node.JS(문법만 자바일뿐 자바가 아니다.)자바스크립트로 서버 뷰 전부다 구현
+	Front End 제어하기 위한 스크립트.
+	보조 프로그래밍적인 요소이다.
+	화면제어 언어이다. Client
+	컴파일을 하지 않는다.
+	속도가 빠르다. 가볍다.
+	
+	예) 회원가입 -> 빈칸조사, ID글자수를 조사, PW 숫자, 문자포함 체크
+	
+	Timer를 설정해서 특수효과 같은 처리를 할 수 있다.
+	차트, 그래프등도 표현이 가능하다.
+	
+	id(1개, data), class(다수, CSS), name(link)
+ -->
+ 
+ <p id="demo">p tag id demo</p>
+ 
+ <script type="text/javascript">
+ // 한줄 주석문
+ 
+ /*
+ 	범위 주석문
+ */
+ alert("Java Script 실행")
+ 
+ 
+ </script>
+
+</body>
+</html>

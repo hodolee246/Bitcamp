@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+#frist{
+	font-size : 15pt;
+	text-align : right;
+	color : #ccff66;
+}
+#second{
+
+}
+.frist{
+
+}
+.second{
+
+}
+</style>
+</head>
+<body style="background-color: gray;">
+
+<h1 style="color: BLUE; font-size: 35pt">Hello CSS h1</h1>
+
+<p style="background-color: red; color: #ccff66; text-align: center; font-size: 45pt">Web 디자인 소프트웨어 p tag</p>
+
+<p id="frist">Hello CSS p id</p>
+
+<p class="frist">Hello CSS p class</p>
+
+<h3 class="second">Hello CSS h3 class</h3>
+
+<h3 id="second">Hello CSS h3 id</h3>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+package my;
+
+public class MyClass {
+	
+	private int number; // member 변수( variable )
+	
+	public static int st_number; // 정적 변수
+	
+	public int getNumber() {	// member(인스턴스) method
+		return number;
+	}
+	
+	public void setNumber(int number) {
+		this.number = number;
+	}
+
+	public void method() {
+		int i; // stack == auto(자동)
+		// local(지역) variable
+		System.out.println("MyClass method()");
+		
+		MyClass.st_number = 222;
+	}
+	
+	
+	
+}

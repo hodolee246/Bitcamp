@@ -1,0 +1,324 @@
+
+CREATE TABLE MEMBER(
+	ID VARCHAR2(50) PRIMARY KEY,
+	PWD VARCHAR2(50) NOT NULL,
+	NAME VARCHAR2(50) NOT NULL,
+	ADDRESS VARCHAR2(100) NOT NULL,
+	BIRTHDAY VARCHAR2(50) NOT NULL,
+	PHONE VARCHAR2(50) NOT NULL,
+	EMAIL VARCHAR2(50) NOT NULL,
+	NOW_MONEY NUMBER(20) NOT NULL,
+	TOTAL_MONEY NUMBER(20) NOT NULL,
+	NOW_POINT NUMBER(20) NOT NULL,
+	TOTAL_POINT NUMBER(20) NOT NULL,
+	HEIGHT NUMBER(3,2) NOT NULL,
+	WEIGHT NUMBER(3,2) NOT NULL,
+	REPORT_COUNT NUMBER(10) NOT NULL,
+	AUTH NUMBER(1) NOT NULL,
+	REGIDATE DATE NOT NULL
+)
+
+
+
+select * from member_auth
+
+select * from member;
+
+DROP TABLE TEAM_BBS
+CASCADE CONSTRAINTS;
+
+DROP SEQUENCE TEAM_BBS_SEQ;
+
+CREATE TABLE TEAM_BBS(
+    SEQ                NUMBER(10) PRIMARY KEY,
+    ID                   VARCHAR2(50) NOT NULL,
+    TEAM_NAME             VARCHAR2(100) NOT NULL,
+    TITLE                VARCHAR2(500) NOT NULL,
+    CONTENT             VARCHAR2(4000) NOT NULL,
+    LIKE_COUNT             NUMBER(10) NOT NULL,
+    REPORT_COUNT         NUMBER(10) NOT NULL,
+    SUBJECT_CATEGORY       VARCHAR2(50) NOT NULL,
+    READ_COUNT             NUMBER(10) NOT NULL,
+    WDATE                DATE NOT NULL,
+    FILE_NAME             VARCHAR2(1000),
+    ORIGINAL_FILE_NAME       VARCHAR2(1000)
+);
+
+CREATE SEQUENCE TEAM_BBS_SEQ
+START WITH 1
+INCREMENT BY 1
+
+
+insert into team_bbs
+values(team_bbs_seq.nextval, 'testid123', 'teamname9', 'tit73', 'content3',
+1, 0, 'subCat3', 1, sysdate, 'fn3', 'ofn3')
+
+SELECT * FROM MEMBER
+
+alter table member
+add(TEAM_NAME VARCHAR2(50))
+
+alter table message
+add(receive_del number(1))
+
+select * from team_bbs
+where id ='testid123'
+
+SELECT SEQ, ID, TEAM_NAME, TITLE, CONTENT, LIKE_COUNT, REPORT_COUNT, SUBJECT_CATEGORY, READ_COUNT, WDATE, FILE_NAME, ORIGINAL_FILE_NAME
+ 	  FROM(SELECT ROW_NUMBER()OVER(ORDER BY SEQ DESC) AS RNUM, 
+       SEQ, ID, TEAM_NAME, TITLE, CONTENT, LIKE_COUNT, REPORT_COUNT,  SUBJECT_CATEGORY, READ_COUNT, WDATE, FILE_NAME, ORIGINAL_FILE_NAME
+       FROM TEAM_BBS
+		WHERE ID='testid123'
+		AND CONTENT LIKE '%con%') A
+  		 WHERE RNUM BETWEEN 0 AND 10
+
+CREATE TABLE OVERLAP(
+   SEQ NUMBER(10) PRIMARY KEY,
+   ID VARCHAR2(50) NOT NULL,
+   BBS_LIKE NUMBER(10),
+   BBS_COOMENT_LIKE NUMBER(10),
+   MEMBER_REPORT NUMBER(10),
+   BBS_REPORT NUMBER(10),
+   BBS_COMMENT_REPORT NUMBER(10)
+)
+  		 
+  		 
+insert into overlap
+values(16, 'testid123', 32, 0, 0, 0, 0)
+
+
+select * from overlap  		
+
+select * from team_bbs
+
+select * from member
+  		 
+select * from team_bbs
+where seq in (select bbs_like from overlap where id='testid123')		 
+
+
+DROP TABLE BETTING
+CASCADE CONSTRAINTS;
+
+DROP SEQUENCE BET_SEQ;
+
+bet_seq.nextval
+
+CREATE TABLE BETTING(
+   SEQ_BET NUMBER(10) PRIMARY KEY,
+   SEQ_GAME NUMBER(10),
+   ID VARCHAR2(50),
+   TEAM_NAME VARCHAR2(100),
+   BETTING_MONEY NUMBER(10),
+   RDATE DATE
+);
+
+insert into betting
+values(bet_seq.nextval, bet_seq.nextval, 'testid123', 'testid123', 24, sysdate)
+
+select * from betting where id = 'testid123'
+
+select * from betting
+
+drop table betting
+
+CREATE SEQUENCE BET_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+DROP TABLE GAME
+CASCADE CONSTRAINTS;
+
+DROP SEQUENCE GAME_SEQ;
+
+CREATE TABLE GAME(
+   SEQ_GAME NUMBER(10) PRIMARY KEY,
+   CATEGORY VARCHAR2(50),
+   NAME_TEAM1 VARCHAR2(50),
+   NAME_TEAM2 VARCHAR2(50),
+   GDATE VARCHAR2(50),
+   NAME_STADIUM VARCHAR2(50),
+   
+   TITLE VARCHAR2(500),
+   CONTENT VARCHAR2(2000),
+   
+   DEL NUMBER(1),
+   PAYOUT_R1 NUMBER(5,2),
+   PAYOUT_R2 NUMBER(5,2),
+   SCORE1 NUMBER(10),
+   SCORE2 NUMBER(10),
+   GAME_RESULT VARCHAR2(50),
+   
+   LEAGUE VARCHAR2(50),
+   READ_COUNT NUMBER(10),
+   WDATE DATE
+);
+
+INSERT INTO GAME
+VALUES(game_seq.nextval, '축구', 'team1ab', 'team2ab', 'gdateab', 'stadiumaab', 'title2b', 'content2b', 0, 0, 0, 0, 0, null, 'leagueab', 0, sysdate)
+
+CREATE SEQUENCE GAME_SEQ
+START WITH 26
+INCREMENT BY 1;
+
+drop game_seq
+
+SELECT * FROM GAME
+
+SELECT * FROM BETTING
+
+CREATE SEQUENCE MESSAGE_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+CREATE TABLE MESSAGE(
+	SEQ NUMBER(10) PRIMARY KEY,
+	SEND_ID VARCHAR2(50) NOT NULL,
+	RECEIVE_ID VARCHAR2(50) NOT NULL,
+	CONTENT VARCHAR2(500) NOT NULL,
+	READING NUMBER(1) NOT NULL,
+	WDATE DATE NOT NULL,
+	RDATE DATE,
+	SEND_DEL NUMBER(1) NOT NULL,
+	RECEIVE_DEL NUMBER(1) NOT NULL
+)
+
+drop table message
+
+INSERT INTO
+
+SELECT * FROM MESSAGE
+DROP TABLE MESSAGE
+
+slee
+
+INSERT INTO message
+VALUES(message_seq.nextval, 'asdasd', 'testid123', '123a', 0, sysdate, null, 0, 1)
+
+CREATE TABLE PROFIT(
+	SEQ NUMBER PRIMARY KEY,
+	ID VARCHAR2(50) NOT NULL,
+	PDATE DATE NOT NULL,
+	PROFIT_MONEY NUMBER NOT NULL
+)
+
+CREATE SEQUENCE PROFIT_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+CREATE TABLE SPEND(
+	SEQ NUMBER PRIMARY KEY,
+	ID VARCHAR2(50) NOT NULL,
+	SDATE DATE NOT NULL,
+	SPEND_MONEY NUMBER NOT NULL
+)
+
+CREATE SEQUENCE SPEND_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+select * from profit
+select * from spend
+
+SELECT * FROM MEMBER_AUTH
+	
+SELECT * FROM TAB
+
+
+
+CREATE SEQUENCE EXCHANGE_SEQ
+START WITH 1
+INCREMENT BY 1;
+
+CREATE TABLE EXCHANGE(
+	SEQ NUMBER(10) PRIMARY KEY,
+	ID VARCHAR2(50) NOT NULL,
+	BANK VARCHAR2(30) NOT NULL,
+	BANKNUMBER VARCHAR2(100) NOT NULL,
+	EXCHANGEMONEY NUMBER(30) NOT NULL,
+	EXDATE VARCHAR2(30) NOT NULL,
+	EXCHECK NUMBER(1) NOT NULL
+)
+      
+
+insert into exchange
+values(exchange_seq.nextval, 'testid123', '테스트은행', '123-123-123', '1', sysdate, 1)
+
+
+select * from exchange
+       
+update exchange
+set excheck = 1
+
+drop table exchange
+       
+select * from message       
+       
+SELECT * FROM MEMBER
+       
+      UPDATE MEMBER
+      SET auth = 1
+      where id='testid123'
+       
+		
+      
+      
+      
+      
+      
+      
+      
+      
+create table authorities(
+	seq number primary key,
+	id varchar2(50) not null,
+	authority varchar2(100) not null
+)      
+      
+insert into authorities
+values(authorities_seq.nextval, 'testid1234', 'ROLE_ADMIN')
+
+create sequence inwoo_mem_seq
+start with 1
+increment by 1
+      
+CREATE TABLE inwoo_mem (
+	SEQ BIGINT(20) NOT NULL AUTO_INCREMENT,
+	ID VARCHAR(1000) NOT NULL COMMENT '아이디',
+	PW VARCHAR(1000) NOT NULL COMMENT '비밀번호',
+	isAccountNonExpired` VARCHAR(1000) NULL DEFAULT 'true' COMMENT '계정만료여부',
+	isAccountNonLock` VARCHAR(1000) NULL DEFAULT 'true' COMMENT '계정잠금여부',
+	isCredentialslsNonExpired` VARCHAR(1000) NULL DEFAULT 'true' COMMENT '자격만료여부',
+	isEnabled` VARCHAR(1000) NULL DEFAULT 'true' COMMENT '사용가능여부',
+	RDATE` DATETIME NOT NULL,
+	PRIMARY KEY (`SEQ`),
+	UNIQUE INDEX `UNIQUE_ID` (`ID`)
+)      
+
+create table inwoo_mem(
+	seq number primary key,
+	id varchar2(1000),
+	pw varchar2(1000) not null,
+	isaccountnonexpired varchar2(50) not null,
+	isaccountnonlock varchar2(50) not null,
+	iscredentialsisnonexpired varchar2(50) not null,
+	isenabled varchar2(50) not null,
+	rdate date not null
+)      
+
+UPDATE INWOO_MEM SET PW='' WHERE SEQ=1;
+
+select * from inwoo_mem
+      insert into inwoo_mem
+      values(inwoo_mem_seq.nextval, 'testid123', '$2a$10$r5AZlzl7JMxff/K6iRM28u31cEYID.xGNmiZjDhoNTFpaFdeZDDjO', 'no', 'no', 'no', 'yes', sysdate)
+      
+      
+  		SELECT 
+		  mem.id as userid, pw as userpw, enabled, authority
+		FROM 
+		  INWOO_MEM mem LEFT OUTER JOIN AUTHORITIES auth on mem.id = auth.id 
+		 
+      
+      
+      insert into inwoo_mem
+      values(2, 'testid1234', '$2a$10$9EAYjjWR/SPn6mhUT0UB3uTJaYAVQvyC0udJftvay31zlzEQZxmQS', 'no', 'no', 'no', 'yes', sysdate)

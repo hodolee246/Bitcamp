@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+			<!-- Table Row(tr) 테이블의 로우행을 잡는다.
+				Table Data(td) 웹에서 테이블의 컬럼은 테이블 데이터로 사용한다.
+			-->
+<div align="center">			
+<table border="1" style="width: 80%">	
+	<tr>
+		<td>홍</td>
+		<td>길동</td>
+		<td>24</td>
+	</tr>
+	<tr>		
+		<td>전</td>
+		<td>인우</td>
+		<td>21</td>
+	</tr>
+	<tr>		
+		<td>일</td>
+		<td>지매</td>
+		<td>26</td>
+	</tr>	
+</table>
+</div>
+
+
+</body>
+</html>

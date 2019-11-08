@@ -1,0 +1,64 @@
+1566789173626	Rename package 'bit.com.project.controller'
+1566789194565	Rename type 'BitLoginController'
+1566789219407	Rename package 'bit.com.project.dao'
+1566789224163	Rename package 'bit.com.project.dao.Impl'
+1566789229374	Rename package 'bit.com.project.model'
+1566789234490	Rename package 'bit.com.project.service'
+1566789239794	Rename package 'bit.com.project.service.Impl'
+1566789372543	Rename type 'HelloController'
+1566790566419	Rename type 'BitLoginDao'
+1566790570768	Rename type 'BitLoginDaoImpl'
+1566790575327	Rename type 'BitLoginService'
+1566790582695	Rename type 'BitLoginServiceImpl'
+1566802129031	Rename resource 'BitLogin.xml'
+1566802136300	Delete element
+1566803174073	Delete elements
+1566812714134	Rename resource 'Member'
+1566812722658	Move 3 resources to 'bbs'
+1566814048472	Move 3 resources to 'member'
+1566814052862	Move 'bbslist.jsp' to 'bbs'
+1566816902601	Move 'index.jsp' to '0826bbs'
+1566816908784	Move 'index.jsp' to 'WebContent'
+1566869942561	Rename resource 'bbsdetail.jsp'
+1566869949803	Rename resource 'bbslist.jsp'
+1566877476479	Delete element
+1566958292535	Delete element
+1566958297604	Rename package 'bit.com.a.aop'
+1566962069955	Delete element
+1566962768027	Move compilation unit
+1566969538300	Copy folder
+1566969548816	Copy file
+1566969616628	Copy file
+1566969656753	Copy package
+1566969664939	Copy package
+1566969687296	Copy package
+1566969701767	Copy package
+1566969734024	Copy package
+1566969742622	Copy package
+1566969757638	Copy package
+1566969829283	Copy package
+1566969833095	Copy package
+1566974734566	Copy file
+1566978090972	Copy package
+1566978116151	Copy compilation unit
+1566978121022	Copy compilation unit
+1566978129900	Copy compilation unit
+1566978136449	Copy compilation unit
+1566978241685	Copy file
+1566978968869	Copy file
+1566979761150	Copy files
+1567037798052	Copy package
+1567037826090	Copy package
+1567037952057	Copy compilation unit
+1567038507157	Copy package
+1567038797898	Copy package
+1567045017381	Copy package
+1567045021939	Copy package
+1567045033695	Copy package
+1567045040887	Copy package
+1567048193734	Copy package
+1567048205259	Copy compilation unit
+1567048208963	Copy package
+1567048216340	Copy compilation unit
+1567048222323	Copy compilation unit
+1567142691212	Copy files

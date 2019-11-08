@@ -1,0 +1,16 @@
+package main;
+
+import child.SubClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+
+		SubClass sub = new SubClass(123);
+		
+		sub.method();
+
+	}
+
+}

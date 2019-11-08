@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div align="center">
+<table>
+	<tr>
+		<td><h2>타이머</h2></td>
+	</tr>
+</table>
+<br>
+<table>
+	<tr>
+		<td>
+			<select id="set">
+				<option value="180">3분</option>
+				<option value="120">2분</option>
+				<option value="60">1분</option>
+			</select>
+		</td>
+		
+		
+		<td><button type="button" onclick="timeSet()">버튼</button></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><h3>타이머</h2></td>
+	</tr>
+</table>
+</div>
+<script type="text/javascript">
+	var _second = 1;
+
+function timeSet() {
+	
+	var _time = parseInt(document.getElementById("set").value);
+	var v = document.getElementsByTagName("BODY")[0]
+	v.getElementsByTagName("h3")[0].innerHTML = _time;
+	v.getElementsByTagName("h3")[0].innerHTML = v.getElementsByTagName("h3")[0].innerHTML - _second;
+	if(v.getElementsByTagName("h3")[0].innerHTML == 0){
+		alert("끝났습니다.");
+	}
+}
+setInterval("timeSet()", 1000);	// 초당 한번씩 불러라
+
+</script>
+</body>
+</html>

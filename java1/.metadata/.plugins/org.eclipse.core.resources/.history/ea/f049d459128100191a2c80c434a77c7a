@@ -1,0 +1,24 @@
+package myclass;
+
+public class MyClass {
+
+	
+	// class 변수(멤버) 선언 영역
+	public int number;
+	
+	public String name;
+	
+	// class 멤버 함수       Class 메소드(멤버)
+	public void method() {
+		
+		System.out.println("MyClass method()");
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+}

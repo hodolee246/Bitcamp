@@ -1,0 +1,10 @@
+package dao;
+
+public class DaoInterface {
+
+	
+	public DaoInterface() {
+		
+	}
+	
+}

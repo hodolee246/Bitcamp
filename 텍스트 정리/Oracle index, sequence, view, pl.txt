@@ -1,0 +1,407 @@
+/*
+INDEX
+    index 검색용 색인
+    원하는 정보와 위치를 빠르고 정확하게 알아낼수 있는 방법
+    -- 자동생성 : Primary key, Unique 내부에서 만들어줌
+    -- 수종생성 : Query
+    
+    생성해야 좋은 경우
+    1.where절이나 join조건안에 자주 사용되는 컬럼 department_id
+    2.null값이 많이 포함되어 있는 컬럼           manager_id
+    3.where절이나 join조건안에 두개이상의 컬럼
+    
+    생성해서 안좋은 경우
+    1. 테이블 크기(row)가 작을때(3000개이하) 만들게 되면 오히려 속도를 저하시킴
+    2. 테이블이 자주 갱신될떄
+*/
+
+CREATE TABLE EMP_COPY
+AS
+SELECT * FROM employees;
+
+-- 자동생성 인덱스 자동생성
+
+ALTER TABLE EMP_COPY
+ADD
+CONSTRAINT PK_EMPCOPY_01 PRIMARY KEY(EMPLOYEE_ID);
+
+-- INDEX 확인
+SELECT *
+FROM ALL_INDEXES
+WHERE INDEX_NAME IN('PK_EMPCOPY_01'); -- 인덱스 명칭이랑 PRIMARY 아이디랑 같다
+
+-- 강제 생성
+CREATE INDEX EMP_INDEX01
+ON EMP_COPY(MANAGER_ID); -- index 검색을 빨리하기 위한 목적
+
+DROP INDEX EMP_INDEX01;
+
+
+/*
+SEQUENCE
+    sequence : 유일한 값을 생성해 주는 Oracle Object다
+    회원번호, 게시판의 글 번호
+    sequence를 생성하면, Primary key 와 같이 순차적으로 증가하는
+    column을 자동적으로 생성할 수 있다
+    sequence 는 초기화가 불가능 하다. ( 누적되는 숫자라고 생각하자 )
+    1
+    2 
+    3
+*/
+
+CREATE SEQUENCE TEST_SEQ
+INCREMENT BY 1      -- 1씩 증가(++)
+START WITH 10       -- 시작되는 값
+MAXVALUE 120        -- 최대로 증가하는 값 생략이 가능하다. 생략시 값 설정은 최대로 된다.
+MINVALUE 1;         -- 최대값의 반대
+
+-- CURRVAL == 현재 시퀀스의 값
+-- 맨처음 실행시 오류가 난다 한번도 진행된 적이 없기에 현재값이 없으므로 오류가 난다 그러므로 넥스트를 한번이상 시켜야지 작동이 된다.
+SELECT TEST_SEQ.CURRVAL
+FROM DUAL;
+
+-- NEXTVAL == 진행 값
+
+SELECT TEST_SEQ.nextval
+FROM DUAL;
+
+-- SEQUENCE 수정
+ALTER SEQUENCE TEST_SEQ
+INCREMENT BY 3;
+
+-- SEQUENCE 초기화가 불가능하다. (삭제하고 다시 만들어야 한다.)
+DROP SEQUENCE TEST_SEQ;
+
+
+-- INSERT INTO EMPLOYEES(EMPLOYEES_SEQ.NEXTVAL,
+
+-- 동의어(SYNONYM / 객체의 별명)
+
+/*
+ 1.   INT array_postion_number[];
+ 2.   int arrPosnum[] = array_opstion_number;
+ 3.   arrPosNum[0] = 1;
+*/
+
+CREATE SYNONYM "사원들"
+FOR EMPLOYEES;      -- EMPLOYEES 테이블을 자기가 원하는 이름대로 바꿔서 데이터를 넣는거다.
+
+SELECT
+    *
+FROM "사원들";
+
+INSERT INTO "사원들"
+VALUES(EMPLOYEES_SEQ.NEXTVAL, '인우', '전', 'GOHOME', '123-4567', TO_DATE('2019/11/13', 'YYYY/MM/DD'),
+'IT_PROG', 20000, NULL, 100, 10);
+
+SELECT
+    *
+FROM EMPLOYEES
+
+/*
+    view : 가상 테이블                           *dual : 가상 테이블
+    실제 저장되는 것은 아니다(view)  --> pointer
+    [int * p;
+    int number;
+    p = &number;  number를 통해서 p로 접근을 할 수 있어진다.] 자바
+    한개의 view로 여러개의 테이블의 데이터를 검색하는 것이 가능하다.
+    처리 속도가 빠르다.
+    제한을 설정할 수 있다. --> read only  view는 실체가 없어서 저장공간이 없다.
+*/
+
+CREATE VIEW UB_TEST_01(
+
+    JOB_ID,
+    JOC_TITLE,
+    MIN_SALARY
+)
+AS
+SELECT JOB_ID, JOB_TITLE, MIN_SALARY
+FROM JOBS;
+
+SELECT
+    *
+FROM UB_TEST_01;
+
+INSERT INTO UB_TEST_01
+VALUES('DEVELOPER', '개발자', 1000);
+
+SELECT
+    *
+FROM JOBS
+
+ROLLBACK;
+COMMIT;
+
+CREATE TABLE TB_TEST_02(
+    KEY_01 VARCHAR2(10),
+    KEY_02 VARCHAR2(10),
+    COL_01 VARCHAR2(20),
+    COL_02 VARCHAR2(20),
+    CONSTRAINT PK_TEST_02 PRIMARY KEY(KEY_01, KEY_02)
+);
+CREATE OR REPLACE VIEW UB_TEST_02(  -- OR REPLACE == 생성을 할때마다 위에 덮씌워서 생성을 시킨다(원래라면 그냥 생성하면 이미 있다고 오류가 뜬다.)
+    KEY_01,
+    KEY_02,
+    COL_01,
+    CONSTRAINT PK_UB_TEST_02 PRIMARY KEY(KEY_01, KEY_02)
+        DISABLE NOVALIDATE   
+)
+AS
+SELECT KEY_01, KEY_02, COL_01
+FROM TB_TEST_02;
+/*
+    무결성 = CONSTRAINT
+    PRIMARY KEY (기본키)   UNIQUE KEY + NOT NULL
+    UNIQUE      고유키     하나밖에 없는 + NULL 허용
+    NOT NULL              NULL을 허용 안함
+    CHECK                 지정한 값이나 범위안의 값이외에 NUMM을 허용
+    FORELGN KEY           1. TABLE. 2.TABLE 연결  NULL 허용
+*/
+
+SELECT * FROM TB_TEST_02;
+SELECT * FROM UB_TEST_02;
+
+INSERT INTO UB_TEST_02(KEY_01, KEY_02, COL_01)
+VALUES('AAA', 'aaa', '111');
+
+INSERT INTO UB_TEST_02(KEY_01, KEY_02, COL_01)
+VALUES('AAA', 'aaa', '111'); -- 중복이기에 오류가 발생한다(기본키)
+
+INSERT INTO UB_TEST_02(KEY_01, KEY_02, COL_01)
+VALUES('AAA', '', '111'); -- 널이니까 오류가 발생한다(기본키)
+
+INSERT INTO UB_TEST_02(KEY_01, KEY_02, COL_01)
+VALUES('AAA', 'AAA', '111'); -- KEY_01, KEY_02는 한 쌍의 기본키 이기에 중복이 아니게 된다.
+-- AAA aaa
+-- AAA AAA 
+
+CREATE OR REPLACE VIEW EMPVIEW(
+    "사원번호",     
+    "성",
+    "이메일",
+    "입사일",
+    "업무",
+    CONSTRAINT PK_UB_EMP PRIMARY KEY("사원번호") DISABLE NOVALIDATE
+    -- 기본키 아이디 값은 충돌(중복)날 경우 오류가 발생한다.
+    -- 기본키 아이디 설정하는 이유는 설정을 해야 원할때 테이블의 기본키를 삭제할 수 있다 그렇지 않을경우 테이블을 날려야한다.
+    -- 기본키 설정 컬럼은 한글도 가능하다
+)
+AS
+SELECT employee_id, LAST_NAME, EMAIL, HIRE_DATE, JOB_ID
+FROM EMPLOYEES
+WITH READ ONLY;     -- VIEW를 창문으로 데이터를 보는것만 가능하다 (수정은 불가능하다)
+
+SELECT
+    *
+FROM EMPVIEW;
+
+INSERT INTO EMPVIEW
+VALUES(300,'집가고싶다','GOHOME@NAVER.COM', SYSDATE, 'GO_HOME');
+-- READ ONLY에 데이터를 집어넣으려고 했기에 오류가 발생한다.
+
+/*
+    
+    PL/SQL Procedural extension to Structured Query Language
+    Query를 함수화로 바꾸는 작업이 PL 이다
+    script만 쓰는 형식, Procedure 형식, function 형식, 트리거 형식
+    SQL을 확장한 순차적 처리 언어 이다.
+    데이터베이스 질의어인 SQL과 일반 프로그래밍 언어의 특성을 결합한 언어이다.
+*/
+
+
+-- PL 기본 구조
+/*
+    선언부 : 사용할 변수나 상수를 선언
+    실행부 : 실제 처리한 logic부분을 감당하는 부분
+    예외처리 : 처리중에 발생할 수 있는 각종 오류를 일단 처리할 수 있는겉들을 처리
+*/
+
+SET SERVEROUT ON	-- 출력을 하기위해서는 각 서버마다 이 명령어를 실행해줘야한다.
+BEGIN
+    -- 실행부
+ DBMS_OUTPUT.PUT_LINE('HELLO PL');
+END;
+
+DECLARE -- 선언부
+    message VARCHAR2(10);
+BEGIN   -- 실행부
+    message := 'hello pl';
+    
+    DBMS_OUTPUT.PUT_LINE(MESSAGE);
+        -- 예외처리부
+END;
+/
+-- IF 조건문
+DECLARE
+    COUNTER INTEGER;
+BEGIN
+    COUNTER := 1;
+    COUNTER := COUNTER + 1;
+    
+    IF COUNTER IS NULL THEN
+        DBMS_OUTPUT.PUT_LINE('result:counter is null');
+    ELSE
+        DBMS_OUTPUT.PUT_LINE('result:counter is NOT null');
+    END IF;    
+END;
+/
+
+
+-- FOR
+
+DECLARE
+    counter integer;
+    i integer ;
+
+BEGIN
+    FOR I IN 1..9 LOOP
+        DBMS_OUTPUT.PUT_LINE('i = ' || i);
+        COUNTER := 2 * i;
+        dbms_output.put_line('2 * ' || i || ' = ' || counter);
+    END LOOP;
+END;
+/
+
+
+-- loop
+
+DECLARE
+    v_cnt number := 0;
+    v_tot number := 0;
+BEGIN
+    LOOP
+        EXIT WHEN v_cnt = 10;       -- v_cnt 가 10 이면 탈출
+        
+        v_cnt := v_cnt + 1;
+        v_tot := v_tot + v_cnt;
+        
+    END LOOP;
+    dbms_output.put_line('v_cnt = ' || v_cnt);
+    dbms_output.put_line('v_tot = ' || v_tot);
+END;
+/
+
+-- while
+
+DECLARE
+    v_cnt number := 0;
+    v_tot number := 0;
+BEGIN
+    WHILE v_cnt < 10
+    LOOP
+        
+        v_cnt := v_cnt + 1;
+        v_tot := v_tot + v_cnt;
+        
+    END LOOP;
+    dbms_output.put_line('v_cnt = ' || v_cnt);
+    dbms_output.put_line('v_tot = ' || v_tot);
+END;
+/
+
+-- goto
+
+DECLARE
+    v_name varchar2(10) := 'JEON';
+    v_case number := 1;
+BEGIN
+    CASE WHEN MOD(v_case, 2) = 0 THEN
+             GOTO test1;
+         WHEN MOD(v_case, 2) = 1 THEN
+             GOTO test2;
+         ELSE
+             GOTO ERR;
+     END CASE;        
+<<test1>>
+    dbms_output.put_line('v_name = ' || ' is woman');
+    GOTO sub_end;
+<<test2>>
+    dbms_output.put_line('v_name = ' || ' is man');
+    GOTO sub_end;
+<<ERR>>
+    dbms_output.put_line('ERR');
+    GOTO sub_end;
+<<sub_end>>
+    dbms_output.put_line('exit');
+END;
+/
+
+
+-- 예외처리부
+
+DECLARE
+    counter integer;
+BEGIN
+    counter := 10;
+    counter := counter / 0;
+    dbms_output.put_line(counter);
+    
+EXCEPTION WHEN OTHERS THEN  -- 예외처리부
+    dbms_output.put_line('OTHERS error');
+    -- 예외처리부는 여러개가 있을수 있다. exception 코드만 안다면...
+END;
+/
+
+-- varray : variable
+   --        변수
+DECLARE
+    TYPE varray_test IS VARRAY(3) OF INTEGER;   -- int형 배열이다 변수를 선언한게 아니라 타입을 선언한거다.
+    varray1 varray_test; -- 이게 변수선언
+BEGIN
+    varray1 := varray_test(11, 22, 33);
+    dbms_output.put_line(varray1(2)); -- 자바랑 다르게 1번지 부터 시작한다 2번지를 출력하면 22가 출력된다.
+END;
+/
+
+ACCEPT p_deptno PROMPT '부서 번호를 입력하시오(급여의 합):'   -- ACCEPT PROMPT WINDOW
+
+DECLARE
+    v_salTotal NUMBER;
+BEGIN
+    SELECT SUM(salary) INTO v_saltotal
+    FROM employees
+    WHERE department_id = &p_deptno;
+    
+    dbms_output.put_line(&p_deptno || '번 부서의 급여의 합은 ' || TO_CHAR(v_saltotal, '$999,999,999'));
+END;
+/
+
+-- 사원번호 입력 받고 그 사원의 급여에 1000을 더한 값으로 갱신하라.
+
+ACCEPT p_no PROMPT '사원 번호를 입력해주세요 :'
+
+DECLARE
+    p_sal employees.salary%TYPE := 1000;
+    p_salTotal Number;
+BEGIN
+    UPDATE employees
+    SET salary = salary + p_sal
+    WHERE employee_id = &p_no;
+    
+    SELECT salary into p_salTotal
+    FROM employees
+    WHERE employee_id = &p_no;
+    
+     dbms_output.put_line(&p_no || '번 사원의 급여 + 1000 :' || p_salTotal);
+end;
+/
+
+rollback;
+
+DECLARE
+    -- ROWTYPE
+    v_emp employees%ROWTYPE;   -- 똑같은 자료형 타입 변수를 사용한다
+BEGIN
+    SELECT employee_id, first_name, last_name, salary
+        INTO v_emp.employee_id, v_emp.first_name, v_emp.last_name, v_emp.salary
+    FROM employees
+    WHERE employee_id = 100;
+    
+    
+    dbms_output.put_line('사원번호' || v_emp.employee_id);
+    dbms_output.put_line('이름' || v_emp.first_name);
+    dbms_output.put_line('성' || v_emp.last_name);
+    dbms_output.put_line('급여' || v_emp.salary);
+END;
+/

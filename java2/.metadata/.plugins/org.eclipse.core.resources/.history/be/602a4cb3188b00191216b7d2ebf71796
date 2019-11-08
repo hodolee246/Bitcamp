@@ -1,0 +1,57 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/* interface Animal 
+		 
+		 Cat			Cow			  Dog		AnimalFactory
+	 
+		 */
+		
+		
+		
+		Animal ani1 = AnimalFactory.Create("야옹이");
+	//	list.add(ani1);
+		
+	//	Animal ani1 = AnimalFactory.Create("멍멍이");
+	//	list.add(ani1); 이런식으로 할 수 있다.
+		
+		
+		ani1.printDescript();
+	//	Cat cat = (Cat)ani1;
+	//	cat.CatMethod();
+		
+		Animal ani2 = AnimalFactory.Create("개");
+		ani2.printDescript();
+		Dog dog = (Dog)ani2;
+		dog.DogMethod();
+		
+		Animal ani3 = AnimalFactory.Create("황소");
+		ani3.printDescript();
+		Cow cow = (Cow)ani3;
+		cow.CowMethod();
+		
+		String aniName[] = {"개", "야옹이", "황소"};
+		
+		List<Animal> list = new ArrayList<Animal>();
+		Animal ani = AnimalFactory.Create("야옹이");
+		list.add(ani);
+		ani = AnimalFactory.Create("개");
+		list.add(ani);
+		ani = AnimalFactory.Create("황소");
+		list.add(ani);
+		
+		
+		for (int i = 0; i < list.size(); i++) {
+			Animal a = list.get(i);
+			a.printDescript();
+		}
+	}
+
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<p style="background-color : #ff0000" class="_color">tag(1) P</p>
+
+<p style="background-color : #00ff00" class="_color">tag(2) P</p>
+
+<p style="background-color : #0000ff" class="_color">tag(3) P</p>
+
+<script type="text/javascript">
+$(function () {
+	$("._color").click(function () {
+		// getter
+//		var color = $(this).css("background-color");
+//		alert(color);
+		
+		//setter	object 구분자를 this 로 설정, setter 값을 다중으로 설정할때
+//		$(this).css("background-color", "gray");
+//		$(this).text("abcd");
+		$(this).css({
+			"background-color":"#abcdef",
+			"font-size":"200%",
+			"border":"3px solid #ff0000"});
+	});
+});
+
+</script>
+
+</body>
+</html>

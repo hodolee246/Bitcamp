@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<div id="q20">
+<img alt="사진이없습니다." src="">
+</div>
+
+<ul class="eee">
+<li>리스트1</li>
+<li>리스트2</li>
+<li>리스트3</li>
+<li>리스트4</li>
+<li>리스트5</li>
+<li>리스트6</li>
+</ul>
+<p id="q21"></p>
+
+<script type="text/javascript">
+
+$(function () {
+	var abc = $(".eee").length();
+	alert(abc);
+
+});
+</script>
+
+</body>
+</html>

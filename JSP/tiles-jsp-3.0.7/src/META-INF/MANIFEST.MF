@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.tiles.jsp.taglib;version="3.0.7"
+Implementation-Title: Tiles - JSP support
+Implementation-Version: 3.0.7
+Specification-Vendor: The Apache Software Foundation
+Built-By: mck
+Tool: Bnd-1.50.0
+Bundle-Name: Tiles - JSP support
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.tiles
+Bundle-Version: 3.0.7
+Build-Jdk: 1.7.0_51
+Bnd-LastModified: 1470917768125
+Bundle-ManifestVersion: 2
+Specification-Title: Tiles - JSP support
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: Tiles JSP support: Classes and tag libraries to us
+ e Tiles in a  JSP environment.
+Bundle-SymbolicName: org.apache.tiles.jsp
+Bundle-DocURL: http://tiles.apache.org/framework/tiles-jsp/
+Import-Package: javax.servlet.jsp,javax.servlet.jsp.tagext,org.apache.
+ tiles,org.apache.tiles.autotag.core.runtime,org.apache.tiles.request,
+ org.apache.tiles.request.jsp.autotag,org.apache.tiles.template
+Specification-Version: 3.0.7
+Archiver-Version: Plexus Archiver
+

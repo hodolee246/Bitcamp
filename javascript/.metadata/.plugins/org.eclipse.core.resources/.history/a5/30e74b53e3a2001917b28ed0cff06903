@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2>미술관 및 박물관의 링크</h2>
+<br>
+<select id="_sel" onclick="func()">
+	<option>서울시립미술관</option>
+	<option>구립현대미술관</option>
+	<option>예술의전당</option>
+	<option>국립중앙박물관</option>
+	<option>서울역사박물관</option>
+	<option>국립민속박물관</option>
+</select>
+
+<script type="text/javascript">
+
+http://sema.seoul.go.kr/	서울시립미술관
+http://www.mmca.go.kr/		국립현대미술관
+http://www.sac.or.kr/		예술의전당
+http://www.museum.go.kr/	국립중앙박물관
+http://www.museum.seoul.kr/	서울역사박물관
+http://www.nfm.go.kr/		국립민속박물관
+
+
+</script>
+</body>
+</html>

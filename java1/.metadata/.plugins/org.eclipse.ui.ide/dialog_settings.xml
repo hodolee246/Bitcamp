@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="E:\jave1\file1 t"/>
+			<item value="E:\jave1\number21016(T)"/>
+			<item value="E:\jave1\baseball met t"/>
+			<item value="E:\java\number baseball"/>
+			<item value="E:\jave1\sorting1"/>
+			<item value="E:\java\selectSort"/>
+			<item value="E:\java\project21"/>
+			<item value="E:\java\Calculator"/>
+			<item value="E:\java\project22"/>
+			<item value="E:\java\Array3"/>
+			<item value="E:\java\study5"/>
+			<item value="E:\java\work4"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+</section>

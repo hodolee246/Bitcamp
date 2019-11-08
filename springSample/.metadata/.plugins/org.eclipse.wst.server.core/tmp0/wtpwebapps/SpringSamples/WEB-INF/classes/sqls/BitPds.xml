@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="Pds">
+
+<select id="getPdslist" parameterType="bit.com.a.model.BbsParam" resultType="bit.com.a.model.PdsDto">
+	SELECT SEQ, ID, TITLE, CONTENT, OLDFILENAME, FILENAME, READCOUNT, DOWNCOUNT, REGDATE
+	FROM (SELECT ROW_NUMBER()OVER(ORDER BY SEQ DESC)AS RNUM,
+			SEQ, ID, TITLE, CONTENT, OLDFILENAME, FILENAME, READCOUNT, DOWNCOUNT, 
+			REGDATE
+			FROM PDS
+			WHERE 1=1
+			<if test="s_category != null and s_category != ''
+			and s_keyword != null and s_keyword != '' ">
+				<if test="s_category == 'title'">
+					AND TITLE LIKE '%'||#{s_keyword}||'%'
+				</if>
+				<if test="s_category == 'contents'">
+					AND CONTENT LIKE '%'||#{s_keyword}||'%'
+				</if>
+				<if test="s_category == 'writer'">
+					AND ID LIKE '%'||#{s_keyword}||'%'
+				</if>
+			</if>
+			) A
+			WHERE RNUM BETWEEN ${start} AND ${end}
+</select>
+
+<select id="pdsDetail" parameterType="java.lang.Integer" resultType="bit.com.a.model.PdsDto">
+	SELECT * FROM PDS
+	WHERE SEQ = #{seq}
+</select>
+
+
+<select id="pdsFileName" parameterType="java.lang.Integer" resultType="java.lang.String">
+	SELECT FILENAME
+	FROM PDS
+	WHERE SEQ = #{seq}
+</select>
+
+<select id="pdsOldName" parameterType="java.lang.Integer" resultType="java.lang.String">
+	SELECT OLDFILENAME
+	FROM PDS
+	WHERE SEQ = #{seq}
+</select>
+
+<insert id="uploadPds" parameterType="bit.com.a.model.PdsDto">
+	INSERT INTO PDS(SEQ, ID, TITLE, CONTENT, OLDFILENAME, FILENAME, READCOUNT, DOWNCOUNT, REGDATE)
+	VALUES(SEQ_PDS.NEXTVAL, #{id}, #{title}, #{content}, #{oldfilename}, #{filename}, 0, 0, SYSDATE)
+</insert>
+
+<update id="downCount" parameterType="java.lang.Integer">
+	UPDATE PDS
+	SET DOWNCOUNT = DOWNCOUNT +1
+	WHERE SEQ = #{seq}
+</update>
+
+<update id="readCount" parameterType="java.lang.Integer">
+	UPDATE PDS
+	SET READCOUNT = READCOUNT +1
+	WHERE SEQ = #{seq}
+</update>
+
+<delete id="pdsDelete" parameterType="java.lang.Integer">
+	DELETE PDS
+	WHERE SEQ = #{seq}
+</delete>
+
+<update id="pdsUpdate" parameterType="bit.com.a.model.PdsDto">
+	UPDATE PDS
+	SET TITLE = #{title}, CONTENT = #{content}, OLDFILENAME = #{oldfilename}, FILENAME = #{filename}
+	WHERE SEQ = #{seq}
+</update>
+
+
+
+<select id="pdsList" parameterType="bit.com.a.model.BbsParam" resultType="java.lang.Integer">
+	SELECT NVL(COUNT(*), 0) AS CNT
+	FROM PDS
+	WHERE 1=1
+	<if test="s_category != null and s_category != ''
+		  	and s_keyword != null and s_keyword != ''">		  	
+		  	<if test="s_category == 'title'">
+		  		AND TITLE LIKE '%'||#{s_keyword}||'%'
+		  	</if>
+		  	<if test="s_category == 'contents'">
+		  		AND CONTENT LIKE '%'||#{s_keyword}||'%'
+		  	</if>
+		  	<if test="s_category == 'writer'">
+		  		AND ID LIKE '%'||#{s_keyword}||'%'
+		  	</if>		  
+		  </if>
+</select>
+
+
+</mapper>

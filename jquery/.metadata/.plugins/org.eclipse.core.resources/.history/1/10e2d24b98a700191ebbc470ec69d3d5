@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<img src="b_pic2.jpg">
+
+<script type="text/javascript">
+
+$(function () {
+	$('img').mouseover(function() {
+		$('img').attr("src", "")
+	})
+})
+
+</script>
+</body>
+</html>

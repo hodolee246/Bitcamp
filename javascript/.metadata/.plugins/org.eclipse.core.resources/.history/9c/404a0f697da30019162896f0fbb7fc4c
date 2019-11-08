@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+다음 이차 방정식을 해를 구하고, 그 버튼을 클릭하십시오. <br><br>
+
+<h1>
+x<sup>2</sup>-5x=-6
+</h1>
+<br><br>
+
+<button type="button"" onclick="x1()"> x = 1</button> &ensp;&ensp;&ensp;
+<button type="button"" onclick="x2()"> x = 2</button> &ensp;&ensp;&ensp;
+<button type="button"" onclick="x3()"> x = 3</button> &ensp;&ensp;&ensp;
+<button type="button"" onclick="x4()"> x = 4</button> &ensp;&ensp;&ensp;
+<button type="button"" onclick="x5()"> x = 5</button> &ensp;&ensp;&ensp;
+
+</body>
+</html>

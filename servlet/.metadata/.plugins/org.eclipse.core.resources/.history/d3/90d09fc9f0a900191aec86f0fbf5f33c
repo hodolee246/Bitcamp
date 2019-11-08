@@ -1,0 +1,44 @@
+package sample05;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter pw = resp.getWriter();
+		
+		String frut[] = req.getParameterValues("ft");
+		
+		pw.append("<html>");
+		
+		pw.append("<head>");
+		
+		pw.append("<title>제목</title>");
+		
+		pw.append("</head>");
+		
+		pw.append("<body>");
+		for (int i = 0; i < frut.length; i++) {
+			
+			pw.append("<p>" + frut[i] + "</p>");
+		}
+		
+		pw.append("</body>");
+		
+		pw.append("</html>");
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+
+}

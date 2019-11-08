@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>다음 생일까지 남은 일수</h1>
+<br><br>
+다음 버튼을 클릭하여 생일을 입력하면, <br>
+다음 생일까지 남은 일수를 볼 수 있습니다.
+<br><br>
+<button type="button" onclick="dayto()">생일 입력</button>
+
+<script type="text/javascript">
+function dayto() {
+var _now = new Date();
+var _dday = prompt("생일 입력", "");
+var _mon = _dday.substr(0,2);
+alert(_mon);
+var _day = _dday.substr(2,4);
+alert(_day);
+var abc = _now.getFullYear();
+alert(abc);
+var bbc = _mon.getMonth()+1;
+alert(bbc);
+var _nowtime = new Date(_now.getFullYear(), _mon.getMonth()+1, _day.getHours());
+alert(_nowtime);
+}
+
+</script>
+</body>
+</html>

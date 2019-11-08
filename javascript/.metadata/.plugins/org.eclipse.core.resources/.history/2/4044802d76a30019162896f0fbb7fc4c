@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table border="1">
+	<tr>
+		<th bgcolor="green" style="color: white; padding:10px">네이버</th>
+		<td style="padding: 10px">http://www.naver.com/</td>
+		<td style="padding: 10px"><button type="button" onclick="window.open('http://www.naver.com/')">열기</button></td>
+		<!-- <td style="padding: 10px"><button type="button" onclick="func('naver')">열기</button></td> -->
+									<!--  jQuery 기준 target="_self"(그냥열기) or target="_blank"(새창열기 -->
+	</tr>
+	<tr>
+		<th bgcolor="green" style="color: white; padding:10px">다음</th>
+		<td style="padding: 10px">http://www.daum.net/</td>
+		<td style="padding: 10px"><button type="button" onclick="window.open('http://www.daum.net/')">열기</button></td>
+	</tr>
+	<tr>
+		<th bgcolor="green" style="color: white; padding:10px">줌</th>
+		<td style="padding: 10px">http://zum.com/</td>
+		<td style="padding: 10px"><button type="button" onclick="window.open('http://zum.com/')">열기</button></td>
+	</tr>
+
+</table>
+
+<script type="text/javascript">
+
+/* function func( n ) {
+	if(n == "naver"){
+		location.href = "http://www."
+	}
+} */
+
+</script>
+
+</body>
+</html>

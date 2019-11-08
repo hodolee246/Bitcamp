@@ -1,0 +1,15 @@
+package capsul;
+
+public class Myclass {
+
+	
+	private int number;  // privata == 개인적인
+	String name;
+	
+	
+	
+	
+	
+	
+	
+}

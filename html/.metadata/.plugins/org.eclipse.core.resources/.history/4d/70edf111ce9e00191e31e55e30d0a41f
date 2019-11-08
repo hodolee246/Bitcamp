@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+
+
+
+
+<!-- ifram: web page in web page 웹페이지 안에 웹페이지 -->
+
+<h3>index1.html head</h3>
+
+
+<iframe src="index.html" width="400" height="300"></iframe>
+
+<iframe srcdoc="http://zum.com" width="300" height="200"></iframe>
+
+
+
+<h3>index1.html footer</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+v
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

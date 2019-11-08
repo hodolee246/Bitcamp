@@ -1,0 +1,200 @@
+/*
+    block되어 있는 처리 -> 함수화
+    PROCEDURE 처리    - INSERT, DELETE, UPDATE, SELECT(펑션에서 사용 주로 사용해서 사용빈도가 낮음(거의 없음)
+                        1. IN, OUT(return value)
+    FUNCTION 처리     - 사용불가능(INSERT, DELETE, UPDATE) SELECT(주로 사용함)
+         FUNCTION 기본요소  1. 매개변수
+                           2. RETURN VALUE
+
+    PROCEDURE				FUNCTION
+    PL/SQL문으로 실행			식의 일부로 사용할 수 있다. SELECT FUNC('WARD') FROM EMP; 	RETURN값이 존재함으로 이런식으로 사용이 가능하다.
+    RETURN DATETYPE 이 없다		RETURN DATATYPE은 필수로 정의해줘야한다.
+    RETURN 할 수 있다.			반드시 기필코 절대로 RETURN을 해줘야 한다.
+    insert, delete, update, select		select function을 많이 사용한다.
+
+                        
+*/
+
+-- PROCEDURE
+SET SERVEROUTPUT ON
+
+CREATE OR REPLACE PROCEDURE pl_func(inNumber IN NUMBER, outNumber OUT NUMBER)
+IS      
+    -- 선언부
+    
+    
+BEGIN   
+    -- 실행부
+    DBMS_OUTPUT.PUT_LINE('inNumber:' || inNumber);
+    
+    outNumber := 112233;
+    
+    -- 예외처리부
+END;
+/
+
+-- 외부 변수 선언
+VAR val NUMBER ;
+
+-- 프로시저 호출
+EXECUTE pl_func(123, :val);             -- 하나더 알고가기 EXECUTE = 실행 흔히 쓰는 exe 가 execute 약자이다.
+
+-- 변수 출력
+-- 1. dual 에 출력
+-- 2. print 로 출력
+
+PRINT val;
+
+-- 매개변수 없는 경우
+CREATE OR REPLACE PROCEDURE Hell_procedure  -- 매개변수를 넣지 않는경우 괄호는 하지 말자!
+IS
+    msg VARCHAR2(100);
+BEGIN
+    msg := 'Hell PROCEDURE';
+    DBMS_OUTPUT.PUT_LINE(msg);
+END;
+/
+
+
+
+EXEC Hell_procedure;
+
+
+-- DEPARTMENTS 테이블에다가 ROW를 추가를 해보자!
+CREATE OR REPLACE PROCEDURE add_deptCol(p_deptno IN departments.department_id%TYPE,
+                                        p_deptname IN departments.department_name%TYPE,
+                                        p_loc IN departments.location_id%TYPE)
+IS
+    -- 변수는 없으니 선언부는 생략~
+BEGIN
+    INSERT into departments(department_id, department_name, location_id)
+    VALUES(p_deptno, p_deptname, p_loc);
+    
+EXCEPTION WHEN OTHERS THEN
+    DBMS_OUTPUT.PUT_LINE('추가에 실패했습니다');
+    --ROLLBACK;
+END;
+/
+
+EXEC add_deptCol(300, '전인우 엔터테이먼트', 1500);
+
+SELECT
+    *
+FROM departments;
+
+-- Function return value *(프로시져는 매게변수로 return value로 받는다)
+-- 입력받은 값으로 부터 10%의 세율을취득하는 함수
+
+CREATE OR REPLACE FUNCTION tax_value(p_val IN NUMBER)
+    RETURN NUMBER   -- 리턴 자료형 설정해줘야 한다.
+
+IS
+
+BEGIN
+    RETURN (p_val * 0.1);
+END;
+/   
+
+
+SELECT tax_value(100)
+FROM dual;
+
+VAR t_val NUMBER;
+EXECUT :t_val := tax_value(100);
+print t_val;
+
+
+-- 사원 번호를 입력하면, 사원의 급여를 리턴하는 FUNCTION 을 만들어보자!
+
+CREATE OR REPLACE FUNCTION empno_sal(p_empno IN NUMBER)
+    RETURN NUMBER
+IS
+    v_sal employees.salary%TYPE;
+BEGIN
+    SELECT salary into v_sal
+    FROM employees
+    WHERE employee_id = p_empno;
+    
+    RETURN v_sal;       -- 반드시 리턴문이 존재해야한다 (반드시)(무조건)(절대)
+END;
+/
+SELECT empno_sal(102)
+FROM dual;
+
+/*
+    호출해서 실행한다 exec 이름();
+    -- procedure    애는 리턴값이 없어도됨 사용하는거(insert, delete, update)
+    -- function     애는 리턴값이 반드시 있어야함 (절대, 기필코, 무조건) 사용하는거(select)
+    
+    -- trigger  -   촉발시키다. 스스로 발생(약간 function 의 일종이지만 function은 실행을 시켜야하지만 애는 자동으로 실행함)
+    insert : 새로 넣는거라 old 값이 없음(예전값(그전값))             했을때 실행을 해라 이런식으로... ?!?! 
+    delete : 삭제하는거라 NEW 값이 없음(새로 생긴값)
+    update  : 둘다 있는건 update만 있다. 
+
+    사원번호 1001이 사장데이터라면 누가 변경하려고 하면 변경 못하게 막을때 트리거를 사용하여
+    너 변경 하지마! 형식으로 자동으로 실행되면서 막을수 있게 하는 그런용도로 사용된다.
+*/
+    
+
+SET serveroutput on
+
+CREATE OR REPLACE TRIGGER triger_test   -- 애는 매개변수 없음! why(밖에서 호출하는게 아니라 바로 실행되기 때문에)
+   -- BEFORE AFTER 2개의 명령어로 뭐뭐하기전에 싱행되게 혹은 하고나서 실행되게 설정을 한다.
+    BEFORE
+        UPDATE ON departments       -- departments table을 업데이트 하기전에! 실행되게끔
+        FOR EACH row                -- 돌아가기 전에 모든 ROW(행) 에 적용해라
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('변경전 컬럼의 값' || :OLD.department_name);     -- 문자 그대로 변경전
+    DBMS_OUTPUT.PUT_LINE('변경후 컬럼의 값' || :NEW.department_name);     -- 변경후
+END;
+/
+
+
+update departments
+set department_name = '개발'
+WHERE department_id = 60;
+
+rollback;
+
+CREATE OR REPLACE TRIGGER sum_trigger
+    BEFORE
+        INSERT OR UPDATE ON employees
+        FOR EACH ROW
+DECLARE
+    avg_sal NUMBER;
+BEGIN
+    SELECT round( avg(salary), 3) INTO avg_sal
+    FROM empolyees;   
+    
+    INSERT INTO employees(employee_id, last_name, hire_date, department_id, job_id, salary, email)
+    VALUES(500, 'tiger', sysdate, 60, 'IT_PROG', 10000, 'tigert@naver.com');
+    
+    DBMS_OUTPUT.PUT_LINE('급여 평균:' || avg_sal);
+
+END;
+/
+
+SELECT round(avg(salary), 3)
+FROM employees;
+
+
+-- 사번을 수정하지 못하게 할 경우
+-- 삭제 할수 없게 할 경우
+-- 입력 할수 없게 할 경우  영구결번 or 예
+CREATE OR REPLACE TRIGGER emp_tigger
+    BEFORE
+        UPDATE OR DELETE OR INSERT ON employees
+        FOR EACH ROW
+BEGIN
+    IF UPDATING THEN
+        IF :OLD.employee_id = '100' THEN
+            RAISE_APPLICATION_ERROR(-20001, '이 사원번호는 수정할수 없습니다.');
+        END IF;
+    END IF; 
+END;
+/
+
+UPDATE employees
+SET salary = 2500
+WHERE employee_id = 100;
+

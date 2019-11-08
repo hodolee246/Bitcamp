@@ -1,0 +1,168 @@
+package work2;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		// 입력 5명의 학생의 성적 번호, 이름, 국어, 영어, 수학
+
+		// 2차원 배열	String students[5][5]
+		String students[][] ;
+		
+		int sum ;
+		// input
+		students = input();
+		// sum
+		sum = allSum(students);
+		System.out.println("학생 성적의 총합계" + sum);
+		
+		// 각 학생의 성적 합계
+		int memSUm = studentSum(1001, students);
+		System.out.println(memSUm + "번 학생의 성적의 합계 : " + memSUm);
+		// 각 학생의 성적 평균
+		double avg = studentAvg(1001, students);
+		// 성적의 1등 = MAX 
+		
+		// ALL print
+		allprint(students);
+		
+	}
+
+	static String[][] input(){
+		
+		Scanner sc = new Scanner(System.in);
+		
+		String students[][] = new String[5][5];
+		// 2차원배열 Tip : 앞에 배열은 '열' 뒤에 배열은 '행'
+		
+		int member = 1001;
+		
+		for (int i = 0; i < students.length; i++) {
+			
+		
+			String number = 1001 + i + "";
+			students[i][0] = number;
+			
+			// 이름을 입력 받는다.
+			
+			System.out.print("이름 : " );
+			String name = sc.next();
+			students[i][1] = name;	// 직접 집어넣어도 상관없지만 알아보기 쉽게 2차례로 나뉘어서 타이핑
+			System.out.println();
+			
+			// 국어 점수 input
+			System.out.print("국어 : ");
+			String lang = sc.next();
+			students[i][2] = lang;
+			System.out.println();
+			
+			// 영어 점수 input
+			System.out.print("영어 : ");
+			String eng = sc.next();
+			students[i][3] = eng;
+			System.out.println();
+			
+			// 수학 점수 input
+			System.out.print("수학 : ");
+			String math = sc.next();
+			students[i][4] = math;
+			System.out.println();
+			
+			}
+
+		
+		return students;
+		
+		
+	}
+		static void allprint(String students[][]) {
+			
+			for (int i = 0; i < students.length; i++) {
+				
+				for (int j = 0; j < students[0].length; j++) {
+					
+					System.out.println(students[i][j] + " ");
+					
+				}
+				
+			}
+			
+			
+		}
+	
+		static int allSum(String students[][]) {
+			
+			int sum = 0 ;
+			
+			for (int i = 0; i < students.length; i++) {
+				
+				for (int j = 2; j < students[1].length; j++) {
+					
+					
+					
+					sum = sum + Integer.parseInt(students[i][j]);
+				}
+			}
+		
+			return sum;
+			
+		}
+	
+		static int studentSum(int no, String students[][]){
+			
+			int sum = 0 ;
+			
+			/*for (int i = 0; i < students.length; i++) {
+				
+				int number = Integer.parseInt(students[i][0]);
+				
+				if(number == no ) {
+					
+					for (int j = 2; j < students[0].length; j++) {
+						
+						sum = sum + Integer.parseInt(students[i][j]);
+						
+					}
+				}
+			}*/
+			int findindex = -1;
+			
+			for (int i = 0; i < students.length; i++) {
+				
+				int number = Integer.parseInt(students[i][0]);
+				
+				if(number == no ) {
+					findindex = i ;
+					break;
+				}
+			}
+			
+			if( findindex == -1) {
+				System.out.println("학생 정보를 찾을 수 없습니다.");
+				return 0;
+			}
+			
+			// 합계
+			
+			for (int i = 2; i < students.length; i++) {
+					sum = sum + Integer.parseInt(students[findindex][i]);
+				}
+				return sum;
+			}
+	
+		static double studentAvg(int no, String students[][]) {
+			
+			int sum = studentSum(no, students);
+			double avg = (double)sum / 3;
+			return avg;
+			
+		}
+		
+		
+		
+		
+		
+}

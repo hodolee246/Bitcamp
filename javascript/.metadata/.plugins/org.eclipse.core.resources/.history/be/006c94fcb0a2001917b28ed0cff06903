@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>집</h1>을 가고싶지만 지금 시간은:
+
+<form name="frm">
+
+<input type="text" size="8.5" name="timebox">
+
+</form>
+
+</body>
+</html>

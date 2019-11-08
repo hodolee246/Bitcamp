@@ -1,0 +1,100 @@
+package main;
+
+import java.util.Calendar;
+
+import test.testClass;
+import vo.MemberVo;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+		MyClass mycls = new MyClass();
+		mycls.method();
+		mycls.function();
+		
+		MyClass mycls = MyClass.getInstance();
+		
+		Calendar cal = Calendar.getInstance();
+
+		// class array
+		YouClass ycls[] = new YouClass[5]; // 배열만 생성 == 비어있는 instance 만 선언된다 (변수만 선언)
+		YouClass ycls0, ycls1, ycls2;
+		for (int i = 0; i < ycls.length; i++) {
+			ycls[i] = new YouClass();
+		}
+		
+		ycls[0].setNumber(1);
+		ycls[0].method();
+		
+		// 3명의 data
+		MemberVo member[] = new MemberVo[3];
+		
+		for (int i = 0; i < member.length; i++) {
+			member[i] = new MemberVo();
+		}
+		
+		member[0].setAge(20);
+		member[0].setName("강아지");
+		
+		member[1].setAge(21);
+		member[1].setName("고양이");
+		
+		member[2].setAge(10);
+		member[2].setName("송아지");
+		
+		for (int i = 0; i < member.length; i++) {
+			System.out.println(member[i].toString());
+		}
+		*/
+		
+		
+		testClass tc[] = new testClass[4];
+		
+		for (int i = 0; i < tc.length; i++) {
+			tc[i] = new testClass();
+		}
+		
+		tc[0].setYear(3);
+		tc[0].setball("축구");
+		
+		tc[1].setYear(5);
+		tc[1].setball("농구");
+		
+		tc[2].setYear(8);
+		tc[2].setball("탁구");
+		
+		tc[3].setYear(10);
+		tc[3].setball("배구");
+		
+		for (int i = 0; i < tc.length; i++) {
+			System.out.println(tc[i].toString());
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+
+
+
+
+
+
+
+

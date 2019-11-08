@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+  table.ab{
+  
+  table{
+    width: 100%;
+
+   	
+    border-collapse: collapse;
+    
+    background-color: yellow;
+  }
+th, td{
+    border-bottom: 1px solid #444444;
+    padding: 10px;
+  }
+  }
+</style>
+</head>
+<body>
+
+<table class="ab" rules="none" border="5">
+<col width="28%"><col width="36%"><col width="36%">
+<caption>가격표</caption>
+<tr>
+<th>크기</th>
+<th>대용량</th>
+<th>가격</th>
+</tr>
+<tr>
+<td align="center"><b>보통</b></td>
+<td>500g</td>
+<td>4,800원</td>
+</tr>
+<tr>
+<td align="center"><b>대</b></td>
+<td>800g</td>
+<td>7,200원</td>
+</tr>
+<tr>
+<td align="center"><b>특대</b></td>
+<td><a style="color: red">1,200g</a></td>
+<td><a style="color: red">10,000원</a></td>
+</tr>
+
+</table>
+
+
+
+
+
+</body>
+</html>

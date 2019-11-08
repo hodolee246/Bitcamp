@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%
+String name = request.getParameter("t1");
+
+String addr1 = request.getParameter("t2");
+String addr2 = request.getParameter("t3");
+
+String addr3 = request.getParameter("ta");
+
+String pnum1 = request.getParameter("t4");
+String pnum2 = request.getParameter("t5");
+String pnum3 = request.getParameter("t6");
+
+String time = request.getParameter("_select");
+
+%>

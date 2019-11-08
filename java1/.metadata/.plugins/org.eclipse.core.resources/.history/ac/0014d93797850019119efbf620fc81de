@@ -1,0 +1,16 @@
+package ro;
+
+public class Robot {
+	
+	
+	private String name;
+	
+	public Robot(String name) {
+		this.name = name;
+	}
+	
+	public void print() {
+		System.out.println(name);
+	}
+	
+}

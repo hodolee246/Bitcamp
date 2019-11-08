@@ -1,0 +1,81 @@
+package sortingclass;
+
+import java.util.Scanner;
+
+public class sortingClass {
+
+	Scanner scan = new Scanner(System.in);
+	
+	
+	
+	public int array[];
+	
+	
+	public int[] arrayindexnumber() {
+		System.out.println("배열의 크기를 입력해 주세요(Index Number)");
+		int count = scan.nextInt();
+		array = new int[count];
+		return array;
+	}
+		
+	public void arraynumber(int array[]) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(i+1 + " 번째 배열에 넣을 값을 입력해 주세요");
+			array[i] = scan.nextInt();
+		}
+			
+	}
+	public void howtosorting(int array[]) {
+		boolean abc = false;
+		
+		System.out.println("어떻게 정렬 하시겠습니까? 오름차순(1), 내림차순(2) ");
+		int count = scan.nextInt();
+		
+		for (int i = 0; i < array.length -1; i++) {
+			
+			for (int j = i+1; j < array.length; j++) {
+				
+				if(count == 1) {
+					
+					if(array[i] > array[j]) {
+						swap(array, i, j);
+						abc = true;
+					}
+				}else if(count == 2) {
+					
+					if(array[i] < array[j] ) {
+						swap(array, i, j);
+						abc = true;
+					}
+				}else if(count >= 3 || count < 1) {
+					System.out.println("오름차순(1), 내림차순(2)");
+				}
+			}
+		}
+		}
+		
+	
+	
+	public void swap(int array[], int i, int j) {
+		
+		int temp ;
+		temp = array[i];
+		array[i] = array[j];
+		array[j] = temp;
+
+	}
+	
+	public void allprint() {
+		
+		for (int i = 0; i < array.length; i++) {
+			System.out.println(array[i]);
+		}
+	}
+	
+	
+	
+}
+
+
+
+

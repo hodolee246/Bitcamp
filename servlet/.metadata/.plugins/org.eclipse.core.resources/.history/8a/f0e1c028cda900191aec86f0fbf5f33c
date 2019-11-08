@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--  Server + Applet = Servlet
+
+		Web(html, client) <-> Java(String, Object, Server) <-> DB(oracle)
+		
+			http://xxx.xxx.xxx.xxx:8090/project명/index.html 이런식으로 파일을 접근해서 요청을 한다.
+Web Browser	 request(요청)	Web Application Server(WAS) 가 2개가있다
+client ---------------- > 	Web Server -- >  Web Container	< -- > DB
+										 	 Servlet
+										 	 서블릿에서는
+										 	 *.html
+											 *.jsp
+										 	 *.php	이런식으로 웹문서를 찾는다
+ 		<----------------				<----
+			response(응답)
+
+
+
+  -->
+
+
+
+</body>
+</html>

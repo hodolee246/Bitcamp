@@ -1,0 +1,378 @@
+JQuery 사용법
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">  w3school 에서 링크(코드)복사
+</script> -->
+<!-- <script type="text/javascript" src = "./js/jquery.min.js">  첫번째 url 에서 소스복사후 파일 저장 js폴더
+</script> -->
+<script src ="https://code.jquery.com/jquery-3.4.1.min.js">	/* jquery 사이트 다운로드에서 링크(코드)복사 */
+</script>
+</head>
+<body>
+<!-- 
+	Java Script: client 언어(화면). front end.	web server랑은 관련이 없다.
+	CSS(cascading style sheet): 디자인 담당.  front end.
+	JQuery : Java Script를 경량화 시켜놓은것 (간략화). client언어
+			Ajax를 포함한다. Ajax는 server 와 client가 모두 필요하다.
+			DOM 을 단순화 시켜놓은 것 이다.
+
+	JQuery-UI : 버튼, 슬라이드... 제일 모양이 이쁘다...?? 디자인적으로 좋다.
+	
+				this -> 자기 자신을 가리키는 Object.
+ -->
+
+<p id="demo">여기가 p태그 입니다. id demo</p>
+
+<h3 id="demo">여기가 h3태그 입니다. id demo</h3>
+
+<p class="demo">여기가 p태그 입니다. class demo</p>
+
+<h3 class="demo">여기가 p태그 입니다. class demo</h3>
+<pre>
+입력:<input type="text" id="tid" value="abcde">
+<button type="button" id="btn" >입력</button>
+</pre>
+<script type="text/javascript">
+// JS
+/* var arrPtag = document.getElementsByTagName("p");
+
+for(i = 0; i < arrPtag.length; i++){
+	arrPtag[i].innerHTML = "Hello P tag";
+} */
+$(document).ready(function () {
+	alert("JQuery active");
+
+	/*
+		사용방법
+		$(태그명 or class or id).핸들러 함수명(파라메터 값);
+	*/
+
+	/* $("p").html("Hello P tag");		
+	$("p").html("<b>Hello P tag</b>");  html은 적용 가능 */
+	/* $("p").text("<b>Hello P tag JQuery</b>");  text는 적용 x */	 
+	
+	// JS	code
+	/* var demo = document.getElementById("demo").innerHTML;	//getter
+	document.getElementById("demo").innerHTML = "world JS";	//setter id 는 하나만 인식한다. */
+	
+	// JQuery code
+	var demo = $("#demo").text();		// getter
+	alert(demo);
+	$("#demo").text("World JQuery"); 	// setter
+
+	$("#btn").click(function () {
+		var text = $("#tid").val();		// getter
+		alert(text);
+		$("#tid").val("안녕하세요");
+	});
+	
+});
+	// JS	code
+/* function func() {
+	var text = document.getElementById("tid").value;
+	alert(text);
+} */
+--------------------------------------------------------------------------------------------------------------
+jquery 메소드 생성 후 호출
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src = "./js/jquery.min.js">
+</script>
+
+</head>
+<body>
+
+<!-- // Java Script
+<p id="ptag" onclick="func()">click</p>
+<button type="button" onclick="func()">click</button>
+
+<script type="text/javascript">
+function func() {
+	alert("클릭");
+</script>
+} -->
+
+
+<p id="ptag">클릭</p>
+
+<button type="button">클릭</button>
+
+<script type="text/javascript">
+$(document).ready(function () {		/* 아래와 실행속도 차이가 있음 위는 문서를 먼저 읽고나서 함수를 실행한다*/
+});
+
+$(function () {
+	/* $("#ptag").click(function () {
+		alert("p tag click");
+	});
+	
+	$("button").click(function (){
+		alert("button click");
+	}); */
+	/* $("#ptag").on("click", function () {
+		alert("on p tag click");
+	}); */
+	$("#ptag").on("click", clickFunc);	/* 매개변수 없을떄에는 그냥 함수 이름만 적어준다. */
+});
+
+function clickFunc() {
+	alert("clickFunc 호출");
+}
+
+</script>
+
+</body>
+</html>
+----------------------------------------------------------------------------------------------------------
+메소드 실행으로인한 css값 변경
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<p>p tag</p>
+
+<div>
+	<p>div in p tag1</p>
+
+	<p>div in p tag2</p>
+</div>
+
+<script type="text/javascript">
+$(function () {
+	/* 
+	$('p').click(function () {
+		alert("p tag click");
+	});
+	 */
+	/*  
+	$('div p').click(function () {
+		alert("div p tag click");
+		$('div p').hide();	// <-> show()			hide는 화면에서 숨길뿐 사라지지는 않는다.
+	});
+	 */
+	$('p').on("click", function () {
+	//	$(this).hide();
+		$(this).css("background", "#00ff00");	// setter
+		
+		var color = $(this).css("background");	// getter		
+		alert(color);	// background 정보를 받아서 출력한다 여기서 background 정보에는 background 의 설정된 "모든" 정보가 있다.
+	});	
+});
+</script>
+
+<br><br>
+<!-- 
+<h3 class="cls" onmouseover="mousefunc()"
+	style="background-color: green">h3 tag class cls</h3>
+ -->
+
+<h3 class="cls" style="background-color: green">h3 tag class cls</h3>
+ 
+<script type="text/javascript">
+function mousefunc() {
+	alert("h3 범위에 들어 왔습니다");
+}
+
+$(document).ready(function() {
+	$(".cls").mouseover(function() {
+	//	alert("JQuery h3 범위에 들어 왔습니다");
+	//	$(".cls").css("background", "#ffff00");
+		$(this).css("background", "#ff0000");		
+	});
+	
+	$(".cls").mouseout(function() {	
+		$(this).css("background", "green");		// background-color 처럼 정확하게 명시를 해줘도 상관은 없다
+	});					//  background 처럼 넓은 의미로 명시할경우 한가지 값이 아닌 여러가지 값을 넣기가 좋다.
+	
+	$('p').mouseover(function() {
+		$(this).css("background", "#aabbcc");
+	});
+	$('p').mouseout(function() {
+		$(this).css("background", "#ffffff");
+	});
+});
+
+</script>
+
+
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------
+리시트 차일드 응용
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src = "./js/jquery.min.js">
+</script>
+</head>
+<body>
+
+<p>p tag</p>
+
+<p id="demo">p tag id demo</p>
+
+<p class="cls">p tag class cls</p>
+
+<p name="_name">p tag name _name</p>
+
+<button type="button">click</button>
+
+<script type="text/javascript">
+
+$(function () {
+	
+	$("p").click(function () {
+		console.log( $(this).text() );	// 누른것 obj 의 text(value)를 콘솔창에 띄운다.
+	});
+	
+	$("button").click(function () {
+		/* $('p').hide(); */
+		/* $('*').hide(); */		// 안의 있는 태그를 전부다 숨겨라(버튼까지 사라진다.)
+	//	$('p#demo').hide();	//	p태그 중 id가 demo인 놈만 숨겨라	
+	//	$('p.cls').hide();	// p태그중 클래스 cls만 숨겨라
+		$('p[name=_name]').hide();	// name 접근방법
+	});
+	
+});
+</script>
+
+<br><br>
+
+<ul id="list">
+	<li>Coffee</li>
+		<ul>
+			<li>black</li>
+			<li>Milk</li>
+		</ul>
+	<li>Tea</li>
+	<li>Milk</li>
+</ul>
+
+<button type="button" id="btn">선택</button>
+
+<script type="text/javascript">
+
+$(function () {
+	$("#btn").click(function () {
+	//	$("#list").hide();
+	
+	//	$("ul li:first").hide();	첫번째 리스트를 숨겨라
+	//	$("#list li:first").hide();	id가 리스트인 첫번째놈을 숨겨라
+	
+	//	$("ul ul li:first-child").hide();	// 문자 그대로 li의 첫번째 자식노드가 숨겨진다. black 이 숨겨진다.	
+		$("ul ul li:nth-child(2)").hide();	// li의 두번째 자식인 milk 가 숨겨진다.
+		
+	});
+});
+
+</script>
+
+</body>
+</html>
+
+----------------------------------------------------------------------------------------------------------
+테이블 데이터 넣기
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<link rel = "stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>수영시합</h1>
+<button type="button" id="woman">여성부</button>
+<button type="button" id="man">남성부</button>
+
+<br><br>
+
+<table border="1" id="result">
+<tr>
+	<th></th>
+	<th>name</th>
+	<th>time</th>
+</tr>
+<tr>
+	<th>우승</th>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<th>2위</th>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<th>3위</th>
+	<td></td>
+	<td></td>
+</tr>
+</table>
+<script type="text/javascript">
+/*	file io	*/
+var woman = [			// 2중배열로 데이터를 집어넣는다.
+		["", ""],
+		["김영희", "01:06:17"],
+		["이수빈", "01:16:52"],
+		["김영희", "01:21:31"],
+];
+var man = [
+	["", ""],
+	["홍길동", "01:01:41"],
+	["일지매", "01:03:24"],
+	["정수동", "01:06:39"],
+];
+
+$(function() {
+	
+//	$("tr:eq(1) td:eq(0)").html("데이터");
+//	$("tr:even").css("background-color", "#00ff00");
+	
+	$("#woman").click(function() {
+		for (var i = 0; i < 4; i++) {
+			for (var j = 0; j < 2; j++) {
+				$("tr:eq(" + i + ") td:eq(" + j + ")").html(woman[i][j]);
+			}
+		}
+	});
+	$("#man").click(function() {
+		for (var i = 0; i < 4; i++) {
+			for (var j = 0; j < 2; j++) {
+				$("tr:eq(" + i + ") td:eq(" + j + ")").html(man[i][j]);
+			}
+		}
+	});
+	$("td").mouseover(function () {
+		$(this).css("background-color", "#00ff00");
+	});
+	$("td").mouseout(function () {
+		$(this).css("background-color", "red");
+	});			
+});
+
+</script>
+</body>
+</html>
+
+
+</script>
+
+</body>
+</html>

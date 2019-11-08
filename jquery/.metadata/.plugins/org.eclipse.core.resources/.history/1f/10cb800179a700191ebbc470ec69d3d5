@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+
+<!--
+	DOM Document Object Model
+	
+	Java Script : innerHTML, value
+	
+	JQuery : html(), text(), css(), attr(), prop()
+							
+		setter -> css("background-color", "#123456");
+						한개 이상일때
+				  css({"background-color" : "#123456", 
+				  		"border" : "3px soild #123789",
+				  		"" : ""... })
+ 		getter -> var v = $("#id").css("background-color");
+ 		
+ 		setter -> $(id, class, name, tag).val( 값 );
+ 				  $(id, class, name, tag).text( 값 );	텍스트 필드인경우
+ 				  $(id, class, name, tag).html( 값 + "<br>" ); html 인경우 태그도 같이 사용이 가능하다.
+ 				  
+ 				  $(id, class, name, tag).css("특성명", "값");
+ 				  
+ 		getter -> var v = $(id, class, name, tag).val();		  
+ 			  	  var cv = $(id, class, name, tag).css("특성명");
+ 
+ 		form : $(id, class, name, tag).attr("action", "파일명").submit();
+-->
+ 		
+<!-- 일반 tag -->
+<p id="test">일본 정부가 한국에 반도체·디스플레이 핵심 소재 수출 규제를 강화하는 등 ‘경제적 공격’을 가하고, 이에 <b>반발해</b> 국내에서 ‘일본 제품 불매운동’이 펼쳐지고 있다.</p>
+<button type="button" id="btntext">show text</button>
+<button type="button" id="btnhtml">show html</button>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$("#btntext").click(function () {	// text만 가지고 오기에 <b> 태그는 무시한다
+		var text = $("#test").text();
+		alert(text);
+	});
+	$("#btnhtml").click(function () {	// html 은 모든 태그도 포함해서 <b> 태그도 가져온다.
+		var html = $("#test").html();
+		alert(html);
+	});
+	
+});
+</script>
+
+<br><br>
+
+<!-- 입력(input, select) -->
+
+<input type="text" id="text" value="테스트">
+<button type="button" id="btnText">show value</button>
+
+<script type="text/javascript">
+$(function () {
+	$("#btnText").click(function() {
+		var v = $("#text").val();
+		alert(v);
+	});
+});
+</script>
+
+<br><br>
+
+<!-- attr -->
+
+<p>
+	<a href="hrrp://www.naver.com" id="naver">네이버</a>
+</p>
+
+</body>
+</html>
+
+
+

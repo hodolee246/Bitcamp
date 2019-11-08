@@ -1,0 +1,49 @@
+package qwe2;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+	
+		Scanner scan=new Scanner(System.in);
+		
+	/*
+		int a ;
+		
+		a = scan.nextInt();
+		
+		if(a <= 10)
+		{
+			System.out.println(" 많이 더 하셔야 합니다.");
+		}
+		else if (a <= 15)
+		{
+			System.out.println("조금 더 하셔야 합니다.");
+		}
+		else
+		{
+			System.out.println("충분합니다.");
+		}
+		*/
+		int ir;
+		int ray[]=new int[7];
+		
+		ray[0] = 2;
+		ray[1] = 6;
+		ray[2] = 18;
+		ray[3] = 54;
+		ray[4] = 162;
+		ray[5] = 486;
+		ray[6] = 1458;
+
+		
+		ir = (int)(Math.random()*ray.length);
+		
+		System.out.println("랜덤 숫자 =" + ray[ir]);
+		
+		
+		
+	}
+
+}

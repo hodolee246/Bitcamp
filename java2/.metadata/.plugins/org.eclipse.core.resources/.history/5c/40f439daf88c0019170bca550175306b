@@ -1,0 +1,160 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import dto.Batter;
+import dto.Human;
+import dto.Pitcher;
+import single.Singleton;
+
+public class SelectView extends Frame implements ActionListener, WindowListener {
+
+	Label label[] = new Label[6];
+	Label label2[] = new Label[5];
+	
+	TextField tf;
+	
+	Button btn1, btn2;
+	
+	
+	public SelectView() {
+		super("SelectView");
+		
+		setLayout(null);
+		
+		
+		for (int i = 0; i < label.length; i++) {
+			label[i] = new Label();
+			label[i].setBounds(50, 100 + (40 * i), 80, 30);
+			add(label[i]);
+		}
+		label[0].setText("Name");
+		label[1].setText("Age");
+		label[2].setText("height");
+		
+		tf = new TextField();
+		tf.setBounds(150, 100, 80, 30);
+		add(tf);
+		
+		for (int i = 0; i < label2.length; i++) {
+			label2[i] = new Label();
+			label2[i].setBounds(150, 100 + (40*i), 80, 30);
+			add(label2[i]);
+		}
+		
+		btn1 = new Button("Select");
+		btn1.setBounds(50, 400, 80, 30);
+		btn1.addActionListener(this);
+		add(btn1);
+		
+		btn2 = new Button("Back");
+		btn2.setBounds(150, 400, 80, 30);
+		btn2.addActionListener(this);
+		add(btn2);
+		
+		setBounds(0, 0, 640	, 480);
+		setVisible(true);
+		
+		addWindowListener(this);
+		
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		Singleton si = Singleton.getInstance();
+		if(obj == btn1) {
+			String name = tf.getText();
+			Human hu = si.dao.select(name);
+			if(hu instanceof Batter) {
+				label[3].setText("Ball");
+				label[4].setText("Hit");
+				label[5].setText("Hitavg");
+				
+				int age = hu.getAge();
+				double height = hu.getHeight();
+				int ball = ((Batter) hu).getBat();
+				int hit = ((Batter) hu).getHit();
+				double hitavg = ((Batter) hu).getHitAvg();
+				
+				label2[0].setText(age + "");
+				label2[1].setText(height + "");
+				label2[2].setText(ball + "");
+				label2[3].setText(hit + "");
+				label2[4].setText(hitavg + "");
+			}else if(hu instanceof Pitcher) {
+				label[3].setText("Win");
+				label[4].setText("Lose");
+				label[5].setText("Defence");
+				
+				int age = hu.getAge();
+				double height = hu.getHeight();
+				int Win = ((Pitcher) hu).getWin();
+				int Lose = ((Pitcher) hu).getLose();
+				double Defence = ((Pitcher) hu).getDefence();
+				
+				label2[0].setText(age + "");
+				label2[1].setText(height + "");
+				label2[2].setText(Win + "");
+				label2[3].setText(Lose + "");
+				label2[4].setText(Defence + "");
+			}
+		}else if(obj == btn2) {
+			new MenuView();
+			this.dispose();
+		}
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

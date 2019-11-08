@@ -1,0 +1,7 @@
+package Child;
+
+import parent.ParentClass;
+
+public class ChildClass extends ParentClass {
+
+}

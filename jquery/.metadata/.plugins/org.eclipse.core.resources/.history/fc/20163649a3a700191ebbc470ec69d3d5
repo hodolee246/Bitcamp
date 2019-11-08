@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	line-height: 1cm;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<h2>Detail</h2>
+
+<textarea rows="2" cols="10" id="ta" placeholder="insert"></textarea> <br>
+답글:<button type="button" id="btn1"></button>
+</body>
+</html>

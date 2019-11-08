@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="checkbox" id="money" onclick="Money()"> 야간 조명(20,000원)
+<input type="checkbox" id="money" onclick="Money()"> 배구 네트x2면(4,000원)
+<input type="checkbox" id="money" onclick="Money()"> 배구x10개(5,000원)
+<input id="baseball" type="text" value=40800>원
+<script type="text/javascript">
+var arr = new Array(3);
+
+arr[0] = document.money.elements[0].value;
+arr[1] = document.money.elements[1].value;
+arr[2] = document.money.elements[2].value;
+function money() {
+	
+if(document.money.elements[n].value == true){
+	total = total + arr[n];
+}else {
+	total = total - arr[n];
+}
+}
+
+</script>
+</body>
+</html>

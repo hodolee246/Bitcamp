@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>다음 생일까지 남은 일수</h1>
+<br><br>
+다음 버튼을 크릭하여 생일을 입력하면, <br>
+다음 생일까지 남은 일수를 볼 수 있습니다.
+<br><br>
+<button type="button" onclick="dayto()">생일 입력</button>
+
+<script type="text/javascript">
+function dayto() {
+var _day = prompt("생일 입력", "");
+	
+}
+
+</script>
+</body>
+</html>

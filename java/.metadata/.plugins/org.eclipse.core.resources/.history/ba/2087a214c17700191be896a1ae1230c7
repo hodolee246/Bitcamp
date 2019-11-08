@@ -1,0 +1,25 @@
+package project15;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		for(int i =1;i<11;i++)
+		{
+			for(int y = 1; y <6; y++)
+			{
+				
+				System.out.print("*" + +y);
+		
+				}
+		
+			System.out.print("\n");
+			}
+		}
+
+	}
+
+

@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.tiles.template;version="3.0.7"
+Implementation-Title: Tiles - Template Technologies Support
+Implementation-Version: 3.0.7
+Specification-Vendor: The Apache Software Foundation
+Built-By: mck
+Tool: Bnd-1.50.0
+Bundle-Name: Tiles - Template Technologies Support
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.tiles
+Bundle-Version: 3.0.7
+Build-Jdk: 1.7.0_51
+Bnd-LastModified: 1470917721350
+Bundle-ManifestVersion: 2
+Specification-Title: Tiles - Template Technologies Support
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: Common code for integration of Tiles for different
+  templating technologies.
+Bundle-SymbolicName: org.apache.tiles-template
+Bundle-DocURL: http://tiles.apache.org/framework/tiles-template/
+Import-Package: org.apache.tiles,org.apache.tiles.access,org.apache.ti
+ les.autotag.core.runtime,org.apache.tiles.mgmt,org.apache.tiles.reque
+ st,org.slf4j
+Specification-Version: 3.0.7
+Archiver-Version: Plexus Archiver
+

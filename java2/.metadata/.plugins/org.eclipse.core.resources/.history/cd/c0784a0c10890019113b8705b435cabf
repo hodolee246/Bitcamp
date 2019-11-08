@@ -1,0 +1,28 @@
+package processing;
+
+import java.util.Scanner;
+
+import dao.DaoInterface;
+import dto.Human;
+import single.Singleton;
+
+public class UpdateClass implements DaoInterface{
+	Scanner sc = new Scanner(System.in);
+	Singleton si = Singleton.getInstance();
+	public UpdateClass() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void Process() {
+		System.out.println("수정할 이름을 입력해주세요.");
+		String name = sc.next();
+		SearchClass ss = new SearchClass();
+		int key = ss.search(name);
+		Human hu = si.TMap.get(key);
+		System.out.println(hu.toString());
+		
+		
+	}
+
+}

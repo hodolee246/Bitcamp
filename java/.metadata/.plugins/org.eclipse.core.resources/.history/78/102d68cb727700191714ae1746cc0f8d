@@ -1,0 +1,50 @@
+package study3;
+
+public class classMain {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+
+			&	(AND)			1 * 1 = 1
+			|	(OR)			1 + 1 = 1
+			^	(XOR)			1(+)1 = 1
+			<<	(Left Shift)	*2	0001 0010
+			>>	(Right Shift)	/2	1000 0100
+			~	 0 -> 1	1 -> 0
+
+		*/
+		
+		int number;
+		number = 5;            
+		number = number << 4;	// 0101 0000
+		
+		System.out.println("number = " + number);
+		
+		number = number >> 5;	// 0000 0010
+		
+		System.out.println("number = " + number);
+		
+		int num1, num2;
+		
+		num1 = 128;		// 1000 0000	0x80
+		num2 = 56;		// 0011 1000	0x38
+		
+	//	num1 = (num1 & num2) | (num1 & num2);
+		num2 =~(num1 ^ num2);
+		
+		System.out.println("num1 = "+num1);
+		
+		System.out.println("num2 = "+num2);
+		
+		// 1000 0000
+		// 0011 1000
+		// 1011 1000
+		// 0100 0111
+		
+		System.out.println("Num2 = " + num2);
+		
+	}
+
+}

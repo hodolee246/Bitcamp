@@ -1,0 +1,30 @@
+package calendar;
+
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		 
+		 	Calendar, Data  (
+		 
+		 */
+		
+	// 첫번째	Calendar cal = new GregorianCalendar();
+
+				Calendar cal = Calendar.getInstance(); // 두번째
+				// 일정관리 = 예약 시스템
+				
+				// 날짜 취득 
+				int year = cal.get(Calendar.YEAR);
+				int month = cal.get(Calendar.MONTH) + 1; // 0 ~ 11
+				int day = cal.get(Calendar.DATE);
+				
+				System.out.println(year + "년" + month + "월" + day + "일");
+				
+				
+	}
+
+}

@@ -1,0 +1,28 @@
+#Spring Security Exam Project
+server:
+  port: 18081   # 내장톰켓의 포트번호 이용
+#JSP config 서버 톰캣이 jsp 사용할 수 있게 해주는 부분
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+#custume error page 에러 페이지 설정
+  error:
+    whitelabel:
+      enabled: false
+ 
+#db config
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/  # viewresolver
+      suffix: .jsp
+  datasource:
+    hikari:
+      jdbc-url: jdbc:oracle:thin:@localhost:1521/xe
+      pool-name: hikari-cp
+      maximum-pool-size: 30
+      minimum-idle: 2
+      driver-class-name: oracle.jdbc.OracleDriver
+      username: hr
+      password: hr

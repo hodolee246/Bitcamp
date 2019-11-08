@@ -1,0 +1,28 @@
+package project17;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+		
+		int a ;
+		
+		a = scan.nextInt();
+		if(a > 9 && a < 20)
+		{
+			System.out.println("입력한 수는 10보다 크고 20보다 작습니다.");
+		}
+		else if(a > 19 && a <30)
+		{
+			System.out.println("입력한 수는 20보다 크고 30보다 작습니다.");
+		}
+		else if(a > 29 && a <40)
+		{
+			System.out.println("입력한 수는 30보다 크고 40보다 작습니다.");
+		}
+	}
+
+}

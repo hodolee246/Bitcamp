@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+cookie : 저장공간(client) == String
+		ex) id, password 저장하는 공간, 방문회수
+		Java Script에서 접근이 가능하다.
+		저장 기한이 존재한다
+		
+		
+session : 저장공간(server) == Object setAttribute, getAttribute		
+ 		ex) id, password, MemberDto
+ 		저장 기한
+ -->
+
+</body>
+</html>

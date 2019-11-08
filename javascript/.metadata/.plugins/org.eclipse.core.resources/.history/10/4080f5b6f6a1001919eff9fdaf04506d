@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<br>
+
+<input type="text" id="time" size="45px" >
+<br><br>
+
+<button onclick="displayDate()">지금시각</button>
+
+<script type="text/javascript">
+
+function displayDate() {
+	
+	document.getElementById("demo").innerHTML = Date();
+	document.getElementById("time").value = Date();
+}
+
+setInterval("displayDate()", 1000);	// 초당 한번씩 불러라
+
+</script>
+
+<br><br>
+
+<h3 id="h3t"></h3>
+
+<script type="text/javascript">
+var d = new Date();
+
+// setter
+//d = new Date(2019, 10-1, 12, 3, 27, 31, 100)
+//			  연도	 월     일 시  분  초  밀리세컨초
+
+//d = new Date("October 15 2020 12:32:27");
+
+//document.getElementById("h3t").innerHTML = d.getDay();		// 요일
+//document.getElementById("h3t").innerHTML = d.getFullYear();	// 년도
+//document.getElementById("h3t").innerHTML = d.getMonth()+1;	// 월
+//document.getElementById("h3t").innerHTML = d.getDate();		// 일
+//document.getElementById("h3t").innerHTML = d.getHours();		// 시간
+//document.getElementById("h3t").innerHTML = d.getMinutes();	// 분
+//document.getElementById("h3t").innerHTML = d.getSeconds();	// 초
+
+// 달의 마지막날
+var lastDay = new Date(d.getFullYear() + "", d.getMonth()+1+"", 0).getDate(); // 달의 마지막날 구하기
+document.getElementById("h3t").innerHTML = lastDay;
+
+</script>
+
+<p id="pid">p id pid</p>
+
+<br><br>
+
+<p class="pclass">p class pclass</p>
+
+<br><br>
+
+<p name = "pname">p name pname</p>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

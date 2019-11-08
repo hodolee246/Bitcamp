@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>2개의 주사위</h1>
+<br><br>
+버튼을 클릭하면 2개의 주사위가 랜덤으로 표시됩니다.<br>
+
+<img src="sai_1.gif" id="_a">
+<img src="sai_1.gif" id="_b">
+
+<br><br>
+<button type="button" onclick="_random()">리롤</button>
+
+<script type="text/javascript">
+
+
+function _random() {
+	var diceA = Math.floor((Math.random()*6));	
+	imgArray[diceA];
+	var diceB = Math.floor((Math.random()*6));
+	imgArray[diceB];
+}
+
+</script>
+</body>
+</html>

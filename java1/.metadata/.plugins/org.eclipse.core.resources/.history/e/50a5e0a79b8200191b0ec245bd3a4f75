@@ -1,0 +1,10 @@
+package constructor;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		MyClass cls = new MyClass();
+
+	}
+
+}

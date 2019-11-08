@@ -1,0 +1,24 @@
+package project;
+
+/*
+ 	이름 텍스트
+	나이 셀렉트
+	성별 라디오
+	취미 체크
+	생년 제이커리
+	연봉 셀렉트 
+ */
+
+public class ummDto {
+
+	private String name;
+	private String age;
+	private String[] mw;
+	private String[] hb;
+	private String year;
+	private String month;
+	private String day;
+	private String week;
+	private String sal;
+	
+}

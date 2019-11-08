@@ -1,0 +1,42 @@
+package main;
+
+import doing.DoingClass;
+import eating.Eating;
+import robot.Robot;
+import sing.SingClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+	
+/*
+		Robot rtb[] = new Robot[3];
+		
+		rtb[0] = new DoingClass();
+		rtb[1] = new Eating();
+		rtb[2] = new SingClass();
+	
+		*/
+	
+		Robot rb = new DoingClass();
+		Robot rb2 = new Eating();
+		Robot rb3 = new SingClass();
+		
+		System.out.println();
+		
+		rb.print();
+		rb2.print();
+		rb3.print();
+		
+		DoingClass d = (DoingClass)rb;
+		d.method();
+		
+		Eating e = (Eating)rb2;
+		e.method();
+		
+		SingClass s = (SingClass)rb3;
+		s.method();
+		
+	}
+
+}

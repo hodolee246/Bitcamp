@@ -1,0 +1,18 @@
+package com.exam.app.common.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.exam.app.common.model.Testmember;
+import java.lang.String;
+import java.util.List;
+
+public interface TestmemberRepository extends JpaRepository<Testmember, Long> {
+	
+	List<Testmember> findByNameAndInfo(String name, String info);
+	
+	List<Testmember> findBypwAndInfo(String pw, String info);
+	
+	List<Testmember> findById(String id);
+	
+	
+}

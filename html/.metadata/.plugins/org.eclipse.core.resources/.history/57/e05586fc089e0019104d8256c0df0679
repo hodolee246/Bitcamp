@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+tag 안에 tag를 사용할 수 있는 tag
+
+<p>보통의 텍스트</p>
+
+<p><b>두꺼운 텍스트</b></p>
+
+<p><strong>스트롱 텍스트</strong></p>
+
+<p style = "font-size:200%"><b>ptag + 속성 + bold</b></p>
+
+</body>
+</html>

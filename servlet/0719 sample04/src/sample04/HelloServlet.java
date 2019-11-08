@@ -1,0 +1,59 @@
+package sample04;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String code = req.getParameter("code");
+		
+		// init-param -> web.xml
+		String tax = this.getInitParameter("tax");
+		
+		PrintWriter pw = resp.getWriter();
+		
+		pw.append("<html>");
+		
+		pw.append("<head>");
+		
+		pw.append("<title>제목</title>");
+		
+		pw.append("</head>");
+		
+		pw.append("<body>");
+		
+		pw.append("<h3>Hello Servlet</h3>");
+		pw.append("<p>Hello Servlet</p>");
+		pw.append("<p>" + code + "</p>");
+		
+		if(code.equals("200")) {
+			pw.println("<p> 200:SC_OK</p>");
+		}else {
+			if(code.equals("404")) {	// 403 : 접근제한
+				resp.sendError(HttpServletResponse.SC_NOT_FOUND, "nofound");
+			}else if(code.equals("500")){
+				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR,"server ...");
+			}
+		}
+		
+		pw.println("<p>tax: " + tax + "</p>");
+		
+		pw.append("</body>");
+		
+		pw.append("</html>");
+		
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+
+}

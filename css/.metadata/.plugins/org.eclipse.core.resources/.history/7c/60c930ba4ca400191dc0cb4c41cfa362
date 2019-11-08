@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+table{
+	width : 80%;
+	border-collapse: collapse;
+	border: 2px solid blue;
+	padding-bottom: 200%;
+}
+
+th{
+	color: red;
+	text-align: center;
+
+	
+}
+
+</style>
+</head>
+<body>
+
+<table>
+	<tr>
+		<th>#box 텍스트의 행 사이 공간을</th>
+	</tr>
+	<tr>
+		<th>200%로 설정합니다.</th>
+	</tr>
+</table>
+
+</body>
+</html>

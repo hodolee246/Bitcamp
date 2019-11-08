@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button type="button" onclick="loadXMLDoc()">내용변경</button>
+
+<p id="demo">p tag</p>
+
+<script type="text/javascript">
+
+var xhttp = new XMLHttpRequest();
+
+function loadXMLDoc() {
+	
+	xhttp.onreadystatechange = function () {
+		
+	}
+	xhttp.open("POST", "test.txt", true);	/* 이 파일을 post 방식으로 읽어라! */
+	xhttp.send();
+}
+
+
+</script>
+</body>
+</html>

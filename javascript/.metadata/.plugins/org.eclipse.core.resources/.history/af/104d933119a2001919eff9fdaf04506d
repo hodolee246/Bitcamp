@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>환영합니다</h1><br><br>
+※현재 시간은<input type="text" id="_time">
+
+<script type="text/javascript">
+var d = new Date();
+
+document.getElementById(""_time"").innerHTML = d.getHours();
+</script>
+</body>
+</html>

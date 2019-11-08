@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+이름:<input type="text"><br><br>
+
+이메일:<input type="text"><br><br>
+<!-- 
+<input onchange="func()">	handling 기존처리에서 다른 함수를 호출하는 행동
+ -->
+<p>here is p1</p>
+<p>here is p2</p>
+<br>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	$("input").focus(function () {	// focus == 선택하다
+		$(this).css("background-color", "skyblue");
+	});
+	$("input").blur(function () {
+		$(this).css("background-color", "#fff");
+	});
+	$('p').mouseover(function () {
+		$(this).css("background-color", "#ffff00");
+	});
+	$('p').mouseout(function () {
+		$(this).css("background-color", "#fff");
+	});
+	/* $('p').mousedown(function () {	// 클릭시 text(데이터를 가지고옴)
+		alert($(this).text());	 
+	}); */
+	$('p').dblclick(function () {	// 더블 클릭시 text(데이터를 가지고옴)
+		alert($(this).text());	 
+	});
+});
+
+</script>
+
+<br><br>
+
+<button type="button" id="hideBtn">hide</button>
+<button type="button" id="showBtn">show</button>
+<button type="button" id="toggleBtn">toggle</button>
+<br><br>
+
+<div align="center">
+	<div class="test" style="background-color: green; width: 50%; height: 100px; text-align: center;">
+	I can do it!!
+	</div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+	$("#hideBtn").click(function () {	// 0.5초 동안 애니메이션 효과로 div 태그가 숨겨진다.
+		$(".test").hide(500);	
+	});
+	$("#showBtn").click(function () {	// 0.5초동안 애니메이션 효과로 div 태그가 나타난다
+		$(".test").show(500);	
+	});
+	$("#toggleBtn").click(function () {	// 0.5초 동안 나타나고 숨겨지는 토글
+		$(".test").toggle(500);	
+	});
+	
+	$(".text").mouseenter(function() {
+		
+	});
+	$(".text").mouseleave(function() {
+		
+	});
+});
+</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

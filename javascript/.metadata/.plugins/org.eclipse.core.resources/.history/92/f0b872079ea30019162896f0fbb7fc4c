@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h3>단가 x 수량 일람표</h3>
+<table border="1" id="table1">
+	<tr>
+		<th></th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
+</table>
+
+
+<script type="text/javascript">
+
+/* var _table = document.createElement("table"); */
+
+
+
+var Element = document.getElementById("table1");
+	
+
+
+
+var	_tr = document.createElement("tr");
+for (var i = 0; i < 4; i++) {
+	var	_th = document.createElement("th");
+	_tr.appendChild(_th);
+}
+	Element.appendChild(_tr);
+	
+	for (var i = 0; i < 10; i++) {
+
+	var	_tr2 = document.createElement("tr");
+	var	_th2 = document.createElement("th");
+		_tr2.appendChild(_th2);
+		for (var y = 0; y < 3; i++) {
+		var	_td = document.createElement("td");
+			_tr2.appendChild(_td);			
+		}
+		Element.appendChild(_tr2);
+	}
+		
+
+
+
+
+
+/* var _a = 300;
+var _b = 450;
+var _c = 520;
+
+var _count = 1;
+document.getElementsByTagName('td').length
+
+
+
+for (var i = 4; i < 14; i++) {
+	document.getElementsByTagName('th').[i].innerHtml = _count;
+	_count ++;
+}
+
+for (var i = 0; i < 30; i++) {
+	if(i % 3 == 0){
+		document.getElementsByTagName('td')[i].innerHTML = (_a + "원");
+		_a = _a + 300;
+	}else if( i % 3 == 1){
+		document.getElementsByTagName('td')[i].innerHTML = (_b + "원");
+		_b = _b + 450;
+	}else if( i % 3 == 2){
+		document.getElementsByTagName('td')[i].innerHTML = (_c + "원");
+		_c = _c + 520;
+	}
+} */
+
+</script>
+
+</body>
+</html>

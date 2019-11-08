@@ -1,0 +1,86 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dto.Human;
+
+public class MemberDao {
+	
+	private List<Human> list;
+	private int sequence;
+	
+	public MemberDao() {
+		list = new ArrayList<Human>();
+		
+		// file load
+		
+		// sequence 설정
+		
+		sequence = 1001;
+	}
+	
+	public void insert(Human h) {
+		h.setNumber(sequence);
+		list.add(h);
+		
+		sequence = sequence + 1;
+	}
+	
+	public boolean delete(String name) {
+		Human h = select(name);
+		System.out.println(name);
+		if(h == null) {
+			return false;
+		}else {
+			
+			list.remove(h);
+			return true;
+		}
+	}
+	
+	public Human select(String name) {
+		Human h = null;
+		for (int i = 0; i < list.size(); i++) {
+			Human human = list.get(i);
+			if(name.equals(human.getName())) {
+				h = list.get(i);
+				System.out.println(h.toString());
+				break;
+			}
+		}		
+		return h;
+	}
+	
+	public void update(Human olddata, Human newdata) {
+		Human h = select(olddata.getName());
+				
+		int findIndex = -1;
+		for (int i = 0; i < list.size(); i++) {
+			Human human = list.get(i);
+			if(human == h) {
+				findIndex = i;
+				break;
+			}
+		}
+		// 수정
+		list.set(findIndex, newdata);
+	}
+	
+	public List<Human> allDatas() {
+		return list;
+	}
+	
+	public void allprint() {
+		for (int i = 0; i < list.size(); i++) {
+			System.out.println(list.get(i).toString());
+		}
+	}
+	
+
+}
+
+
+
+
+

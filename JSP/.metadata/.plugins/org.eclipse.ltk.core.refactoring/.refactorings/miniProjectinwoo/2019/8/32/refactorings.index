@@ -1,0 +1,83 @@
+1565051778402	Rename resource 'mainView.jsp'
+1565051790800	Delete element
+1565052004685	Delete element
+1565060069396	Delete element
+1565062414144	Delete element
+1565062663120	Delete element
+1565066884509	Delete element
+1565066889262	Rename resource 'botLogo_navy.jpg'
+1565066967257	Delete element
+1565066968306	Delete element
+1565068013235	Delete element
+1565078280811	Delete element
+1565078287642	Delete element
+1565078622897	Rename package 'miniProject'
+1565078634305	Delete element
+1565078796585	Rename type 'orderDto'
+1565079658661	Rename resource 'main.jsp'
+1565081205091	Delete element
+1565081206190	Delete element
+1565081207183	Delete element
+1565081344158	Delete element
+1565086788158	Rename resource 'NewFile.jsp'
+1565087451255	Rename resource 'NewFile.jsp'
+1565088047381	Rename type 'OrderDto'
+1565088057801	Rename package 'orderDto'
+1565146693004	Rename resource 'NewFile2.jsp'
+1565146752528	Delete element
+1565146759197	Delete element
+1565146767282	Delete element
+1565146772498	Delete element
+1565146786350	Delete element
+1565146797360	Delete element
+1565166966339	Rename resource 'NewFile1.jsp'
+1565173258476	Rename package 'BookingDao'
+1565173261974	Rename package 'BookingDto'
+1565175491919	Rename resource 'index.jsp'
+1565259397862	Move compilation unit
+1565260831831	Delete element
+1565260833166	Delete element
+1565260834233	Delete element
+1565260837308	Delete element
+1565260843222	Delete element
+1565261119116	Rename resource 'fristBook.jsp'
+1565261120971	Rename resource 'secondBook.jsp'
+1565261123008	Rename resource 'thirdBook.jsp'
+1565261590021	Rename resource 'a.jsp'
+1565261597420	Rename resource 'b.jsp'
+1565261604990	Rename resource 'secondBook.jsp'
+1565261623649	Rename resource 'thirdBook.jsp'
+1565261648049	Rename resource 'c.jsp'
+1565308914155	Rename resource 'fristBook.jsp'
+1565308916777	Rename resource 'secondBook.jsp'
+1565308918161	Rename resource 'thirdBook.jsp'
+1565311084172	Delete element
+1565311180209	Delete elements
+1565311260380	Copy files
+1565311270505	Delete elements
+1565311489700	Rename resource 'a.jsp'
+1565311493652	Rename resource 'b.jsp'
+1565311497448	Rename resource 'c.jsp'
+1565313580188	Delete elements
+1565314471548	Copy files
+1565314500129	Move 'header.jsp' to 'Booking'
+1565314503263	Move 'footer.jsp' to 'Booking'
+1565314513820	Rename resource 'test.jsp'
+1565314534000	Delete element
+1565314538865	Delete element
+1565314539719	Delete element
+1565318086960	Delete element
+1565328296964	Rename type 'Common_servlet'
+1565328419974	Rename package 'Dto'
+1565328422682	Rename package 'dyo'
+1565328425491	Rename package 'Dao'
+1565328606035	Rename resource 'Booking'
+1565329822590	Move 'Main.jsp' to 'WebContent'
+1565331951946	Move 'Main.jsp' to 'booking'
+1565333104475	Delete elements
+1565333333987	Rename resource 'booking'
+1565343222252	Copy files
+1565343231242	Copy package
+1565348167702	Copy folders
+1565412114483	Delete elements
+1565416020521	Copy file

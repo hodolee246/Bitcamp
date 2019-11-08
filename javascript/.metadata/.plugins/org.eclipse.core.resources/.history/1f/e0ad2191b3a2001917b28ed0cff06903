@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- String, Number  -->
+
+<p id="demo"></p>
+
+<p id="p1">메시는 정말 최선을 다했지만 아쉽게도 골대를 맞거나 아슬아슬하게 찬스를 놓치는 바람에 또 다시 눈물을 흘리고야 말았네요.
+</p>
+
+<script type="text/javascript">
+var str = document.getElementById("p1").innerHTML;
+
+
+document.getElementById("demo").innerHTML = str;
+</script>
+
+</body>
+</html>

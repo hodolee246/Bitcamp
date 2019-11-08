@@ -1,0 +1,66 @@
+package main;
+
+import java.util.Scanner;
+
+import dao.DaoInterface;
+import processing.AllPrintClass;
+import processing.DeleteClass;
+import processing.InsertClass;
+import processing.SelectClass;
+import processing.UpdateClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		/*
+		InsertClass in = new InsertClass();
+		DeleteClass del = new DeleteClass();
+		SelectClass sel = new SelectClass();
+		UpdateClass up = new UpdateClass();
+		AllPrintClass all = new AllPrintClass();
+		DaoInterface dao = new DaoInterface() {
+			*/
+		DaoInterface dao;
+		boolean b = false;
+		while(b) {
+			
+			System.out.println("1. 입력");
+			System.out.println("2. 삭제");
+			System.out.println("3. 검색");
+			System.out.println("4. 수정");
+			System.out.println("5. 출력");
+			System.out.println("6. 출력순서");
+			System.out.println("7. 종료");
+			int n = sc.nextInt();
+		
+			
+			switch (n) {
+			case 1:
+				dao = new InsertClass();
+				dao.Process();
+				break;
+			case 2:	
+				del.Process();
+				break;
+			case 3:
+				sel.Process();
+				break;
+			case 4:
+				up.Process();
+				break;
+			case 5:
+				dao = new AllPrintClass();
+				dao.Process();
+				break;
+			case 6:
+				break;
+			case 7:
+				b = true;
+				break;
+			}
+		}
+	}
+}
+		

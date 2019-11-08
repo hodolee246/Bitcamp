@@ -1,0 +1,26 @@
+package main;
+
+import java.io.FileReader;
+
+import javax.xml.parsers.DocumentBuilderFactory;
+
+import org.w3c.dom.Document;
+
+import jdk.internal.org.xml.sax.InputSource;
+
+public class mainClass {
+
+	public static void main(String[] args)throws Exception {
+		// TODO Auto-generated method stub
+
+//		datas.xml java parsing
+		
+		Document xml = null;
+		
+		InputSource is = new InputSource(new FileReader("d:\\tmp\\datas.xml"));
+		
+		xml = DocumentBuilderFactory.newInstance().newDocumentBuilder().parse(is);
+		
+	}
+
+}

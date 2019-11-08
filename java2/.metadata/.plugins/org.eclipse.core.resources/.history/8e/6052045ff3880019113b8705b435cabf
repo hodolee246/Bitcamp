@@ -1,0 +1,17 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class SelectClass implements DaoInterface{
+
+	public SelectClass() {
+		
+	}
+	
+	public void Procces() {
+		
+		
+		
+	}
+	
+}

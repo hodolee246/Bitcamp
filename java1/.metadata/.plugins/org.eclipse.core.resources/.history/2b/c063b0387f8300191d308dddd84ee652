@@ -1,0 +1,14 @@
+package robot;
+
+import ro.Robot;
+
+public class SingClass extends Robot {
+	private String name;
+	
+	public SingClass(String name) {
+		super(name);
+	}
+	public void print(String name) {
+		this.name = name;
+	}
+}

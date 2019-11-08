@@ -1,0 +1,52 @@
+package cast;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+			우선순위
+			boolean
+			
+			byte			1
+			short char		2
+			int				4
+			long			8
+			
+			float			4
+			double			8
+			
+			자동 자료형 변환, 강제 자료형 (cast) 변환
+			
+
+		*/
+		
+		short sh = 1 ;
+		int i ;
+		i = sh; 	// 자동 자료형 변환
+		System.out.println("i = " + i);
+		
+		i = 25;
+		sh = (short)i; // cast 변환 
+		System.out.println("sh = " + sh);
+		
+		long l = 32342213213123L;
+		
+		float f; 
+		
+		f = l;
+		System.out.println("f = " + f);
+		
+		double d;
+		
+		d = l;
+		System.out.println("d = " + d);
+		f= (float) d;
+		
+		double r;
+		r= (int)(Math.random()*10);
+		
+		System.out.println("r = " + r );
+		
+	}
+
+}

@@ -1,0 +1,20 @@
+package main;
+
+public class Unit {
+
+	public static void main(String[] args) {
+		
+		int x, y; // 현재 위치
+		
+		void mmove(int x, int y) {
+			// 지정한 위지로 이동한다
+			this.x = x;
+			this.y = y;
+		}
+			
+		
+		
+		
+	}
+
+}

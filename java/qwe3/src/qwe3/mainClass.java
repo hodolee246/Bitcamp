@@ -1,0 +1,98 @@
+package qwe3;
+
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		Scanner scan = new Scanner(System.in);
+		int in, out, now ;
+		in = 0;
+		out = 0;
+		now = 0;
+		
+		int number, money ;
+		
+		System.out.println("────────────────────────────");
+		System.out.println("1.예금  | 2.출금 | 3.잔고 | 4.종료");
+		System.out.println("────────────────────────────");
+		System.out.print("선택 :");
+		number = scan.nextInt();
+		
+		while(number ==4) {
+			if(number ==1) {
+				System.out.print("예금액 :");
+				money = scan.nextInt();
+				now = now + money;
+			}
+		}
+		
+		/*if( number == 1)
+		{
+			while(in) {
+			System.out.print("예금액 :");
+			money = scan.nextInt();
+			now = now + money;
+		}
+		else if(number ==2)
+		{
+			System.out.print("출금액: ");
+			money = scan.nextInt();
+			now = now - money;					
+		}
+		else if(number ==3)
+		{
+			System.out.print("잔고: " + now);					
+		}
+		else if(number ==4) {
+			System.out.print("이용해주셔서 감사합니다");
+		}
+		
+		
+		*/
+		
+		int a ;
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+a = (int)(Math.random()*9);
+		
+		System.out.println(a);
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+
+	}
+
+}

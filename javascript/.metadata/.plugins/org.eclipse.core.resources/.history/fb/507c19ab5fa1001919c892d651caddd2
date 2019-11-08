@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<img id="tahiti" alt="이미지가 없습니다." src="./tahiti01s.jpg" onclick="alert('타히티')">
+<br>
+<img id="tahiti" alt="이미지가 없습니다." src="./tahiti01s.jpg" onclick="clickIMG()">
+<br><br><br><br><br>
+<table>
+<tr>
+	<td>문제</td>
+</tr>
+<tr>
+	<td>한국에서 제일 높은산은?</td>
+	<td><button type="button" onclick="high()">해답</button>
+</tr>
+</table>
+<br><br><br><br><br>
+
+<table>
+<tr>
+	<td>a=10, b=4에 대해서</td>
+</tr>
+<tr>
+	<td>변수『a』 와 『b』의 계산결과를 표시합니다.</td>
+</tr>
+<tr>
+	<td><button type="button" onclick="add()">덧셈</button>
+	<button type="button" onclick="minus()">뺄셈</button>
+	<button type="button" onclick="mult()">곱셈</button>
+	<button type="button" onclick="devide()">나눗셈</button>
+	<button type="button" onclick="mod()">나머지</button>
+	</td>
+</tr>
+</table>
+<br><br><br><br>
+<h1>체육관 이용요금</h1>
+<table>
+<tr>
+	<td>기본 사용료(2면,4시간)40,800원</td>
+</tr>
+<tr>	
+	<td><input type="checkbox" name="base" value="20000"> 야간 조명(20,000원)</td>
+</tr>
+<tr>	
+	<td><input type="checkbox" name="base" value="4000"> 배구 네트x2면(4,000원)</td>
+</tr>
+<tr>	
+	<td><input type="checkbox" name="base" value="5000"> 배구x10개(5,000원)</td>
+</tr>
+<tr>	
+	<td>합계 금액</td>
+</tr>
+<tr>
+</tr>
+<tr>	
+	<td><input id="baseball" type="text" value="40,800">원</td>
+	<td><button type="button" onclick="Money()" >계산</button></td>
+</tr>
+</table>
+<script type="text/javascript">
+
+function clickIMG() {
+	alert("타히티의 사진입니다.!!!!!!!");
+}
+function high() {
+	alert("아 인터넷에 검색하십시오.");
+}
+function add() {
+	alert("14");
+}
+function minus() {
+	alert("6");
+}
+function mult() {
+	alert("40");
+}
+function devide() {
+	alert("2");
+}
+function mod() {
+	alert("2");
+}
+
+function Money(){
+	var size = document.getElementsByName("check").length;
+    for(var i = 0; i < size; i++){
+        if(document.getElementsByName("base")[i].checked == true){
+            var num = document.getElementsByName("check")[i].value;
+            var money = parseInt("num");
+            alert(money);
+        }
+    }
+    document.getElementById("baseball").value = money;
+}
+
+
+
+</script>
+
+</body>
+</html>

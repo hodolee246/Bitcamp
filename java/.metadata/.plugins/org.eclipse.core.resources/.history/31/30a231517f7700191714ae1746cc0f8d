@@ -1,0 +1,38 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		/*
+		
+			for : loop(순환, 반복) 문
+		
+		   			포문
+		
+			for( 순환, 반복)
+			
+			 for( 초기화 (선언)(1) ; 조건문 (4); 연산식(3))
+			 	// 처리(2)(5)
+			 	 
+			 	 
+			 	 int num = 0 ;
+			 	 
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			 	 num = num + 1;
+			
+		*/
+		
+		int i;
+		for(i=0; i<10;i = i + 1)
+		{
+			System.out.println("loop i:"+i);
+		}
+			System.out.println("loop out i:"+i);
+		
+
+	}
+
+}

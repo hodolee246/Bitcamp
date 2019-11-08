@@ -1,0 +1,7 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class UpdateClass extends DaoInterface{
+
+}

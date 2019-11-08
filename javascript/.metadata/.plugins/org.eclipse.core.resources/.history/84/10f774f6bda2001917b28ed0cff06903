@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<select id="_in">
+	<option>2진수</option>
+	<option>8진수</option>
+	<option>10진수</option>
+	<option>16진수</option>
+</select>
+
+<input type="text" id="intext">
+
+<br>
+
+<select id="_out">
+	<option>2진수</option>
+	<option>8진수</option>
+	<option>10진수</option>
+	<option>16진수</option>
+</select>
+
+<input type="text" id="outtext">	
+
+<br><br>
+
+<button type="button" onclick="func()">변환</button>
+	
+<script type="text/javascript">
+function func() {
+	
+
+var inindex = document.getElementById("_in").selectedIndex;
+var outindex = document.getElementById("_out").selectedIndex;
+
+if(inindex == 0){
+	var _in = parseInt(document.getElementById("intext").value);	
+	if(outindex == 0){
+		document.getElementById("outtext").value = _in;
+	}else if(outindex == 1){
+		var re = parseInt(_in, 2);
+		re = _in.toString(8);
+		document.getElementById("outtext").value = re;
+	}
+}
+
+}
+
+
+</script>	
+	
+</body>
+</html>

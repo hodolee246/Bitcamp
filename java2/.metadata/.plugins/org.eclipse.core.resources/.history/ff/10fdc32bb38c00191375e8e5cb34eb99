@@ -1,0 +1,53 @@
+package view;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+
+public class WindowTest1 extends JFrame implements ActionListener{
+
+//	JRadioButton r1, r2, r3;
+	JRadioButton radiob[] = new JRadioButton[3];
+	ButtonGroup group;
+	
+	public WindowTest1() {
+		super("JRadioButton");
+		
+		setLayout(null);
+		
+		group = new ButtonGroup();
+		/*r1 = new JRadioButton("Jave");
+		r1.setSelected(false);
+		r1.addActionListener(this);
+		
+		r1.setBounds(50, 100, 100, 50);
+		add(r1);
+		*/
+		String title[] = {"Java", "C", "Python"};
+		for (int i = 0; i < radiob.length; i++) {
+			radiob[i] = new JRadioButton(title[i]);
+			radiob[i].setSelected(false);
+			radiob[i].addActionListener(this);
+			
+			radiob[i].setBounds(50, 100 + (50 * i), 100, 50);
+			add(radiob[i]);
+		}
+		
+		
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+}

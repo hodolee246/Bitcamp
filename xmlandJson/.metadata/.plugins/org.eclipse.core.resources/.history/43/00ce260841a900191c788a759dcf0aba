@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="tagp">asd</p>
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(xmlhttp.status == 200 && xmlhttp.readyState == 4){
+		func(this.responseText);
+	}
+}
+xmlhttp.open("GET", "book.json", true);
+xmlhttp.send();
+
+var _key;
+function func(resp) {
+	var arr = JSON.parse(resp);	// String -> json
+	var booktxt = "";
+	
+	
+	
+	for (var i = 0; i < arr.length; i++) {
+		
+		for(key in arr[0]){
+			
+			booktxt += arr[i].key;
+			
+			}
+		
+	}
+	
+	document.getElementById("tagp").innerHTML = booktxt;
+	
+	
+	
+	
+}
+
+</script>
+
+</body>
+
+
+</html>

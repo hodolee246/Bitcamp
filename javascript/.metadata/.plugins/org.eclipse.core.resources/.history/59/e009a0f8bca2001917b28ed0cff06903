@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<select>
+	<option>2진수</option>
+	<option>8진수</option>
+	<option>10진수</option>
+	<option>16진수</option>
+</select>
+
+<input type="text" id="intext">
+
+<br>
+
+<select>
+	<option>2진수</option>
+	<option>8진수</option>
+	<option>10진수</option>
+	<option>16진수</option>
+</select>
+
+<input type="text" id="outtext">	
+
+<br><br>
+
+<button type="button" onclick="finc()">변환</button>
+	
+</body>
+</html>

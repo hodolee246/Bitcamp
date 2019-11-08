@@ -1,0 +1,14 @@
+package doing;
+
+import dao.DaoInterface;
+
+public class DeleteClass extends DaoInterface{
+
+	public DeleteClass() {
+		
+	}
+	
+	
+	
+	
+}

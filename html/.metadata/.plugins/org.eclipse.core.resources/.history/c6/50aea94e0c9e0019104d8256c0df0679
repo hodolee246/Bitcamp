@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- font -->
+<font size = "1" color = "#07ac0b">폰트 크기 1 색은 초록색 계열</font>
+
+<br>
+
+<font size = "2" color = "#27acdb">폰트 크기 2 색은 파란색 계열</font>
+
+<br>
+
+<font size = "3" color = "#07ffff">폰트 크기 3 색은 하늘색 계열</font>
+
+<br>
+
+<font>폰트 기본크기</font>
+
+<br>
+
+<pre>
+#과학#우주#암흑물질#암흑에너지#우주론
+<font size ="5" color = "#0000ff">#빅뱅</font>
+</pre>
+
+<!-- div : 자체만으로 의미가 없다. 태그를 함께 묶을 떄,
+	범위를 설정으로 묶을 수 있는 태그. JS에 접근하기 용이하다.
+ -->
+
+<div align="center" style="color: red;"> <!-- 이런식으로 사용하기 보다는 자바 스크립트에서 접근하기 위해 사용하는 경우가 많다. -->
+<font size = "5"> 5 size Text </font>
+<br>
+<p>p Tag</p>
+<h3>h3 Tag</h3>
+</div>
+
+
+<div style="border-style: solid; border-color: blue;
+		margin-left: 20px; padding-top: 30px; background-color: grean">
+		margin : 밖의 여백, padding : 안쪽 여백
+<h1> 여기가 H1 Tag 입니다.</h1>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

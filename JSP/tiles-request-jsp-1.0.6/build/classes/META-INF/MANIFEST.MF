@@ -1,0 +1,31 @@
+Manifest-Version: 1.0
+Export-Package: org.apache.tiles.request.jsp;version="1.0.6",org.apach
+ e.tiles.request.jsp.extractor;version="1.0.6",org.apache.tiles.reques
+ t.jsp.autotag;version="1.0.6"
+Implementation-Title: Tiles Request - JSP support
+Implementation-Version: 1.0.6
+Specification-Vendor: The Apache Software Foundation
+Built-By: nlebas
+Tool: Bnd-1.50.0
+Bundle-Name: Tiles Request - JSP support
+Created-By: Apache Maven Bundle Plugin
+Bundle-Vendor: The Apache Software Foundation
+Implementation-Vendor: The Apache Software Foundation
+Implementation-Vendor-Id: org.apache.tiles
+Bundle-Version: 1.0.6
+Build-Jdk: 1.7.0_67
+Bnd-LastModified: 1410838681019
+Bundle-ManifestVersion: 2
+Specification-Title: Tiles Request - JSP support
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-Description: JSP implementation of the Tiles Request framework.
+Bundle-SymbolicName: org.apache.tiles-request-jsp
+Bundle-DocURL: http://tiles.apache.org/tiles-request/tiles-request-jsp
+ /
+Import-Package: javax.servlet,javax.servlet.http,javax.servlet.jsp,jav
+ ax.servlet.jsp.tagext,org.apache.tiles.autotag.core.runtime,org.apach
+ e.tiles.request,org.apache.tiles.request.attribute,org.apache.tiles.r
+ equest.collection,org.apache.tiles.request.servlet,org.slf4j
+Specification-Version: 1.0.6
+Archiver-Version: Plexus Archiver
+

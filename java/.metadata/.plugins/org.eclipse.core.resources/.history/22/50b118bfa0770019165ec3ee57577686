@@ -1,0 +1,36 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+
+		/*
+		
+			brek == 탈출(escape) == retur
+		
+		*/
+
+		int num =1 ;
+		
+		switch(num)
+		{
+		case 1:
+			System.out.println("num = 1");
+			break;
+		case 2:
+			System.out.println("num = 1");
+			break;
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+div.message{
+
+	background-color: orange;
+	border: 2px solid;
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="message"><img src="exq.gif">참고 이 메시지에 주의 하세요!</div>
+
+
+</body>
+</html>

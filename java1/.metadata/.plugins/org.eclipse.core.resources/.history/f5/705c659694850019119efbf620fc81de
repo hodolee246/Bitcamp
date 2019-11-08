@@ -1,0 +1,21 @@
+package parent;
+
+public class ParentClass {
+
+	int x = 100;
+	
+	public ParentClass() {
+		this(200);
+		
+		System.out.println("Parent Parent() 1");
+	}
+	
+	public ParentClass(int x) {
+		this.x = x;
+	}
+	
+	public int getX() {
+		return x;
+	}
+	
+}

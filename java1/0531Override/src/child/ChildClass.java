@@ -1,0 +1,28 @@
+package child;
+
+import sup.SuperClass;
+
+public class ChildClass extends SuperClass {
+
+	public ChildClass() {
+		System.out.println("ChildClass ChildClass()");
+	}
+	
+	public ChildClass(int number) {
+		
+		super(number); // super 는 this 랑 같이 사용을 못한다.
+		System.out.println("ChildClass ChildClass(int number)");
+	}
+	
+	public void overRideMethod() { // Over Ride
+	//	super.overRideMethod();  // super class method가 출력된다.
+		System.out.println("ChildClass overRideMethod()");
+		// Overrid 정의 자식 클래스에서 재정의 하는걸 말한다 (메소드를)
+	}
+	
+	public void function() {
+		System.out.println("ChildClass function()");
+	}
+	
+	
+}

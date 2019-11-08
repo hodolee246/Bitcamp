@@ -1,0 +1,18 @@
+
+public class test {
+	
+	int e = 0;
+    int d = 0;
+    
+    for (int i = 1; i < 45; i++) {
+       if( i % 8 == 0) {
+          return;
+       }
+       if( i % 2 == 0) {
+          e = e-1;
+          d = d+1;
+       }
+       e = e+d;
+    }
+    
+}

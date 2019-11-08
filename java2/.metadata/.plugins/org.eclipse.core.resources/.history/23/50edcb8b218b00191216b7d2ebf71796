@@ -1,0 +1,28 @@
+package main;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import abstractweapon.AbstractWeapon;
+import abstractweapon.AtypeClass;
+import abstractweapon.BtypeClass;
+import person.Person;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+	
+		List<Person> aa = new ArrayList<Person>();
+		
+		Person human = new Person();
+		human.Create(new BtypeClass());
+		
+		
+		aa.add(human);
+		
+		
+		
+		
+	}
+
+}

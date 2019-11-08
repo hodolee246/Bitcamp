@@ -1,0 +1,23 @@
+package single;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dao.MemberDao;
+import dto.Human;
+
+public class Singleton {
+
+	private static Singleton s = new Singleton();
+	public MemberDao dao;
+	public String name;
+	private Singleton() {
+		System.out.println("singleton 생성자 실행");
+		dao = new MemberDao();
+	}
+	
+	public static Singleton getInstance() {
+		return s;
+	}
+	
+}

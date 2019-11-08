@@ -1,0 +1,222 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		//String == 문자열
+		//wrapper class   c에서는 string 이 없어서 char 로 배열을 만들어서 사용한다.
+		
+		String str; // string 클래스명 == class template(형태)
+					// str 변수(object:객체) --> instance(주체)
+		
+		str = "안녕하세요"; // 문자열을 그냥 넣을수있다.
+		System.out.println(str);
+		
+		String str1 = new String("하 이"); // "new" 가 붙어있다는 동적 할당이다.
+		//원래 라면 이렇게 사용을 해야하지만 Wrapper Class 이기 때문에 그냥  Value 값을 입력하고 사용을 할수있다. (Wrapper Clas == 편리하게 사용하기 위해 만든것)
+		
+		System.out.println(str1); // str = "adsadas" 이렇게 집어넣은거랑 string str1 = new string("gasda"); 동일하게 값이 넣어진다.
+									// 그래서 뭘로 쓰든 상관은 없다 결론 : 쓰고 싶은거 쓰자.
+		
+		String str2 = "반갑습니다." ;
+		
+		String str3;
+						//문자열과 문자열을 더하는 방법
+		str3 = str1 + str2; 
+		System.out.println(str3); // str3 == "하이반갑습니다." 가 출력이 된다.
+ 		
+		// concat()
+		String str4 = "건강하세요";
+		
+		String str5=str3.concat(str4); // 대상1.concat(대상2); 으로 문자열과 문자열을 합할수 있다 위에 대상1 + 대상2 로 합하는 방법과 동일한 방법이 출력이된다. 쓰고싶은거 쓰자
+		System.out.println(str5);
+		
+		char cdata[] = {'h','e','l','l','o'};
+		
+		String str6 = new String(cdata);		// string 에 char 배열을 집어넣으면서 선언할수 있다. 근데 굳이 글을 한번에 쓰는데 한글짜 씩 따로따로 써서 붙일 필요가 있을까?
+		System.out.println(str6);
+		
+		/*
+		 	class 인간
+		 		기능(함수(function) == 메소드 (method))
+		 			먹는다
+		 			걷는다  	이 3개의 행위를 처리해주는게 기능이다.
+		 			공부한다 						
+		 								인풋이 함수로 가는거고
+		 						   		↓---------	input     들어가는(input)값이 하나일수도 있지만 여러개일수도 있다.
+		원리가 이렇게된다.		대상 = 함수( , , , )		\  /_________
+							↑						|			 |
+							|						|	+5 처리	 |
+							|						|_______	_|
+							|								/  \
+							--------------------------------output 들어오는(n) 갯수만큼 출력된다.
+		
+		*/																
+		
+		// 자주쓰는함수 equals == 문자열 비교 함수이다.
+		
+		String str7 = "Hello";
+		String str8 = "Hell";
+		str8 = str8 + "o";
+		if(str7==str8) {
+			System.out.println("str7과str8은 똑같습니다.");
+		}
+		else {
+			System.out.println("str7과str8은 다릅니다.");
+		}
+		if(str7.equals(str8)==true) {
+			System.out.println("str7과str8은 똑같습니다");	
+		}
+		else {
+			System.out.println("다르다");
+		}
+		// 그냥 == 으로 문자열을 확인할때에는 문자열이 수정이 되었어도 수정이되기 전 값으로 비교를 하기 떄문에 값이 다르다고 인식을 한다. 대상1(수정전) = 대상2
+		// equals라는 함수로 문자열끼리 서로 비교를 할경우 최종으로 수정이된 값으로 비교를 하여 결과를 출력한다 대상1(수정됨) == 대상2
+		
+		
+		boolean b = str7.equals(str8);
+		if( b==true) {
+			System.out.println("위와 아래랑 같은 처리를 한다.");
+		}
+		else {
+			System.out.println("위와 아래랑 다른 처리를 한다");
+		}
+		// indexOF == 문자 검색을 위한 함수. 앞부분 부터 검색을 한다. 찾은 문자의 index number 를 돌려준다.
+	
+		String str9 = "abcdeabcdeabcde";
+		
+		int n = str9.indexOf("d");
+		// indexOF == 찾고자 하는 index number 를 앞에서부터 참조하여 찾는다 참조 번지는 맨 앞이 0번지 이다.
+		//last indexOF == 찾고자 하는 index number 를 뒤에서부터 참조하여 찾는다 참조 번지는 맨 뒤가 0번지 이다.
+		int n2 = str9.lastIndexOf("d");
+		
+		System.out.println(n);
+		System.out.println(n2);
+		
+		// length == 문자열의 길이를 구하는 함수 "system." 이라는 문자열의 길이를 정수형 변수에 담아서 표현을 한다.
+		int len = str9.length();
+		System.out.println(len);
+		
+		//replace == 수정
+		String str10 = "A*B*C*D";
+		
+		String repStr = str10.replace("*", "-");
+		System.out.println(repStr);
+		
+		str10 = "발목 잡힌 국내증시…\"中소비주, 美 배당ETF 주목\"";
+		
+		repStr =str10.replace("증시…", " ");  // replace 본인이 원하는 문자열의 내용을 바꾸는 함수  문자열 변수 A = 변수b.replace("대상1", "대상2"); 대상1을 2로 바꾼다.
+		System.out.println(repStr);
+		
+		/*split -> token을 이용해서 문자열을 자른다
+		 (본인이 지정한 기준으로 커팅을 한다
+		 예를들어 나는 가나다/가다라/마바사 라는 문자열을 자르고 싶을때 토큰을 /로 취급을 하고 짜르면 가나다 가다라 마바사 이렇게 잘라진다.)
+		split 사용을 할때 배열로 사용을한다.
+			
+			이름	 나이		생년월일	주소
+			홍길동-24-2011/01/13-서울시		'-'(마이너스) 이거를 token 이라한다. == - 가 token 이아니라 자신이 알기 쉽게 지정한것을 token이라한다
+			
+			홍길동
+			24
+			2001/01/13
+			서울시
+		
+		*/
+		String str11 = "홍길동-24-2011/01/13-서울시";
+		
+		String splits[] = str11.split("-");
+		for(int i=0; i<splits.length; i++) {
+			System.out.println("split["+i+"] ="+splits[i]);
+		}
+		
+		/*
+		System.out.println("split[0] ="+splits[0]);
+		System.out.println("split[1] ="+splits[1]);
+		System.out.println("split[2] ="+splits[2]);
+		System.out.println("split[3] ="+splits[3]);
+		*/
+		
+		//substring 문자를 가져올수있다 가져올때 어디서 부터 어디까지 가져올지 지정해줄수 있다.-> substr
+		
+		String substr = str11.substring(0); // 가져올 시작위치를 가져온다 0번지를 잡을시 문자 전부다 마지막글짜가 10번지라면 10을 쓸경우 마지막 글짜 한글자만 되낟.
+		
+		System.out.println(substr);
+		
+		substr = str11.substring(4,6);
+		System.out.println(substr);
+		
+		// 모든문자를 대문자로 바꾸는함수 toupperCase
+		// 모든문자를 소문자로 바꾸는함수 tolowerCase
+		
+
+		String str12 = "abcABC";
+		
+		String upStr = str12.toUpperCase();
+		System.out.println(upStr);
+		String lowStr = str12.toLowerCase();
+		System.out.println(lowStr);
+		
+		char c = 'A'; 	// ASCII -> 65 'a' -> 97
+		
+		System.out.println("c ="+c+" " +(int)c);
+		
+		System.out.println("c ="+(char)(c+32));   
+		//  char 형으로 변수를 만들고 거기에 알파벳을 집어넣고 출력을 할경우 문자형으로 출력을 하면 해당 알파벳이 뜨지만 숫자형으로 출력시 아스키 코드값이 뜬다.
+		//	그래서 d를 입력시 "를 생략하고 사용을 한뒤 값을 더하고 그걸 문자형으로 형변환시 아스키코드값의 해당하는 것을 출력이 가능하다.
+		
+		// toString == String 으로 바꿔주는 함수
+		
+		String str13 = "안녕하세요";
+		System.out.println(str13);
+		System.out.println(str13.toString()); // 원래라면 아래 방식으로 출력을 하지만 결과값이 똑같으므로 거의 안쓴다.
+		
+		// trim == 공백을 없애주는 함수
+		String str14 = " 		java	java		java 					";
+		String trimStr = str14.trim();
+		System.out.println(trimStr); //맨 앞부분과 맨 뒷부분 공백이 사라진다
+		//예를들어 인터넷에"         가나다       "이런식으로 공백으로 검색을 하면 결과값으로 그냥 :"가나다"로 앞과 뒤의 공백이 없어지면서 출력이된다.
+		
+		
+		// valueOF == 숫자를 문자열로 문자열을 숫자로 변경을 할수있게 해주는 함수
+
+		int num = 123;
+		long lo = 1234L;
+		double d = 123.4567;
+		
+		String snum = String.valueOf(num);
+		String slo = String.valueOf(lo);
+		String sd = String.valueOf(d);
+		System.out.println(snum +1);
+		
+		String _snum = num + "";
+		String _sd = sd + "";
+		System.out.println(_snum + _sd);
+		
+		//contains 탐색하는 함수
+		//알고리즘(정렬, 트리, 셔플, 탐색) 정렬은 정렬 트리는 1->2->4->8 이런식으로 나뉘어지는거 셔플은 섞는거고 탐색은 어디에있는지 찾는거고
+		String str15 = "서울시 강남구";
+		boolean  rb;
+		rb = str15.contains("서울");
+		if(rb == true) {
+			System.out.println("문자열이 존재합니다.");
+		}
+		else {
+			System.out.println("문자열을 못찾았습니다.");
+		}
+		
+		//보통 사용방법 리플레이스로 공백을 지우고 컨태인스로 문자를 입력한다.
+		
+		//charAt : index number를 넣으면 문자를 돌려준다.
+		String str16 = "가나다라마" ;
+		
+		char ch = str16.charAt(2);
+		System.out.println(ch);
+		
+		
+		
+		
+		
+		
+	}
+
+}

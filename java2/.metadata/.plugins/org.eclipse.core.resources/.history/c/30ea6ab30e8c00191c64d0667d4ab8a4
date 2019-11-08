@@ -1,0 +1,16 @@
+package main;
+
+import UI.InsertMain;
+import UI.InsertPicher;
+
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		new InsertPicher();
+		
+		
+	}
+}
+		

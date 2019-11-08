@@ -1,0 +1,31 @@
+package study3;
+
+public class classMain {
+
+	public static void main(String[] args) {
+		
+		
+		/*
+
+			&	(AND)			1 * 1 = 1
+			|	(OR)			1 + 1 = 1
+			^	(XOR)			1(+)1 = 1
+			<<	(Left Shift)	*2	0001 0010
+			>>	(Right Shift)	/2	1000 0100
+			~	 0 -> 1	1 -> 0
+
+		*/
+		
+		int number;
+		number = 5;            // 0101 0000
+		number = number << 4;
+		
+		System.out.println("number = " + number);
+		
+		number = number >> 5;
+		
+		System.out.println("number = " + number);
+		
+	}
+
+}

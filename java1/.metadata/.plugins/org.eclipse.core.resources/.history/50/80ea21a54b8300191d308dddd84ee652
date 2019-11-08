@@ -1,0 +1,19 @@
+package parent;
+
+public class Parent {
+
+	public void Parent() {
+		
+		System.out.println("Parent Parent()");
+		
+	}
+	
+	public void Parent(int i) {
+		
+		// this();
+		
+		System.out.println("Parent Parent(int i)");
+	}
+	
+	
+}

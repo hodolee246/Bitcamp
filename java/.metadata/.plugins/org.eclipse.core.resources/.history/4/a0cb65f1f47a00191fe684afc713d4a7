@@ -1,0 +1,120 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Scanner scan = new Scanner(System.in);
+	/*	
+		int b1, b2, b3 ;
+		b1 = b2 = b3 = 0;
+		int user = 0 ;
+		for (int i = 0; i < i+1; i++) {
+
+		b1 = (int)((Math.random()*8)+1);
+		b2 = (int)(Math.random()*9);
+		b3 = (int)(Math.random()*9);
+		
+		if(b1 != b2
+		&& b2 != b3
+		&& b1 != b3) {
+			break;
+		}
+		
+		String _b1 = String.valueOf(b1);
+		String _b2 = String.valueOf(b2);
+		String _b3 = String.valueOf(b3);
+		
+		}
+			for (int i = 0; i < 10; i++) {
+				System.out.println("숫자 3개를 입력해 주세요");
+				user = scan.nextInt();
+			String _user = String.valueOf(user);
+			char sb = _user.charAt(0);
+			char sb1 = _user.charAt(1);
+			char sb2 = _user.charAt(2);
+			
+			if(_user.equals(sb)) {
+				
+			}
+			
+			
+			
+			}
+			
+			*/
+		
+			int num1, num2, num3;
+			int b, s ;
+			b = s = 0;
+			String game;
+			int userNum[] = new int[3];
+			int comnum[] = new int[3];
+			int user_Num = 0;
+			num1 = num2 = num3 = 0;
+			while(true) {
+				
+				
+			while(true) {
+			num1 = (int)(Math.random()*9+1);
+			num2 = (int)(Math.random()*10);
+			num3 = (int)(Math.random()*10);
+			if(num1 != num2
+			&& num2 != num3
+			&& num1 != num3) {
+				
+			comnum[0] = num1;
+			comnum[1] = num2;
+			comnum[2] = num3;
+			
+			break ;
+			}
+			}
+			System.out.print(comnum[0]);
+			System.out.print(comnum[1]);
+			System.out.print(comnum[2]);
+			out:for (int k = 1; k < 11; k++) {
+				s = b = 0;
+			
+				System.out.println("숫자를 입력해 주세요");
+				user_Num = scan.nextInt();
+				userNum[0] = user_Num / 100;
+				userNum[1] = user_Num / 10 % 10;
+				userNum[2] = user_Num % 10;
+				
+			for (int i = 0; i < comnum.length; i++) {
+				
+				for (int j = 0; j < userNum.length; j++) {
+					if(comnum[i] == userNum[j] && i== j) {
+						s++;if(s == 3) {
+							System.out.println("정답입니다.");
+							break out;
+						}
+					}
+					else if(comnum[i] != userNum[i] && comnum[i] == userNum[j]) {
+						b++;
+					}
+					
+				}
+			}
+			
+			
+			
+			
+			}
+			System.out.println("게임을 계속 하시려면 아무 문자나 입력해 주시고 그만하실 경우 (n)입력을 바랍니다.");
+			game = scan.next();
+			if(game.equals("n") 
+			|| game.equals("N")) {
+				System.out.println("수고하셨습니다.");
+				break;
+			}
+			}
+	
+	
+	
+	
+	}
+
+
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--  Server + Applet = Servlet
+
+		Web(html, client) <-> Java(String, Object, Server) <-> DB(oracle)
+			http://xxx.xxx.xxx.xxx:8090/project명/index.html
+Web Browser	 request	Web Application Server(WAS) 가 2개가있다
+client ------------- > 	Web Server	 Web Container		
+
+
+
+
+
+  -->
+
+
+
+</body>
+</html>

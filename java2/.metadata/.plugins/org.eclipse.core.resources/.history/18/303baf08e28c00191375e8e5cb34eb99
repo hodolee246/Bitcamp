@@ -1,0 +1,14 @@
+package main;
+
+import view.WindowTest;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+	//	new WindowTest();
+		long temp = (int)3.9;
+		temp %= 2;
+		System.out.println(temp);
+	}
+
+}

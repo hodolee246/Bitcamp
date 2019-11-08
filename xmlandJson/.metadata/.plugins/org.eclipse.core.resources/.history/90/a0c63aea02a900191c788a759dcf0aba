@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!--
+
+	XML
+	eXtensible Markup Language
+	(확장		표시	언어)
+	
+	html	-> 출력용		html<->xml 사용목적이 다르다!
+	xml		-> 데이터용
+	
+	1. Data관리	-> 배포(file)
+	2. Setting(setup) - 초기화설정
+ 
+ data.txt 라는 파일에 데이터를 아래와 같이 넣었을경우
+ 이름:홍길동
+ 나이:24
+ 주소:논현동
+ 
+ 라는 데이터를 편하게 가지고 오기 위해서는 원하는 데이터에 토근(-)을 달아서
+ 쉽게 가져올 수 있게 한다.
+ 홍길동-24-논현동	->	Parsing -> Parser
+ 
+ <이름>홍길동</이름>
+ <나이>24</나이>
+ <주소>논현동</주소>
+ 
+ xml : 데이터를 배포하기 위하여 공통점으로 통합을 한 데이터
+ -->
+</body>
+</html>

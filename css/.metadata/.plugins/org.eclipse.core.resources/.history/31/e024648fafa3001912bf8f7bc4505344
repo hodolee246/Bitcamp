@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<p align="left">왼쪽 정렬입니다.</p>
+<p align="right">오른쪽 정렬입니다.</p>
+<p align="center">가운데 정렬입니다.</p>
+
+<h3 style="text-align: center;">중앙 정렬</h3>	
+
+</body>
+</html>

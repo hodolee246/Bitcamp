@@ -1,0 +1,30 @@
+package cls;
+
+import single.SingletonClass;
+
+public class MyClass {
+
+	private int mynum;
+	
+	
+	public MyClass() {
+		mynum = 154;
+	}
+
+
+	public int getMynum() {
+		return mynum;
+	}
+
+
+	public void setMynum(int mynum) {
+		this.mynum = mynum;
+	}
+	
+	public void method() {
+		SingletonClass sc = SingletonClass.getInstance();
+		sc.num = mynum;
+	}
+	
+	
+}

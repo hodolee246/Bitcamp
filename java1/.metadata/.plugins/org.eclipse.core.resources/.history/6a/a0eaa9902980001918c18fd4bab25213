@@ -1,0 +1,33 @@
+package exception2;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// NullpointerException => new 를 안해 줘서 발생
+		
+		String str = null;
+		
+		try {
+			System.out.println(str.length());
+		}catch (NullPointerException e) {
+			e.printStackTrace();
+		}
+	//	System.out.println("프로그램 실행중...");
+
+	
+		// ArrayIndexOutOfBoundsException
+		int arr[] = {1, 2, 3};
+		try {
+			System.out.println(arr[3]);
+		}catch (ArrayIndexOutOfBoundsException e) {
+			e.printStackTrace();
+		}
+	
+	
+	
+	
+	
+	
+	}
+
+}

@@ -1,0 +1,13 @@
+package processing;
+
+import dao.DaoInterface;
+
+public class AllPrintClass implements DaoInterface {
+
+	@Override
+	public void Process() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

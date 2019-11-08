@@ -1,0 +1,19 @@
+package main;
+
+import abstractweapon.AtypeClass;
+import abstractweapon.BtypeClass;
+import person.Person;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		Person human = new Person();
+		human.Create(new AtypeClass());
+
+		Person human2 = new Person();
+		human2.Create(new BtypeClass());
+		
+	}
+
+}

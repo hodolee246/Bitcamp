@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Bundle-License: http://www.apache.org/licenses/LICENSE-2.0.txt
+Bundle-SymbolicName: org.xmlunit.xmlunit-core
+Built-By: stefan
+X-Git-Hash: b7a9e84f167c5e1ef3fb72d72dfbaaa24e8366f3 (Branch master)
+Bnd-LastModified: 1561126655755
+Specification-Title: org.xmlunit:xmlunit-core
+Implementation-Vendor-Id: org.xmlunit
+Bundle-DocURL: https://www.xmlunit.org/
+Import-Package: javax.xml.bind,javax.xml.bind.annotation,javax.xml.bin
+ d.util,javax.xml.namespace,javax.xml.parsers,javax.xml.transform,java
+ x.xml.transform.dom,javax.xml.transform.sax,javax.xml.transform.strea
+ m,javax.xml.validation,javax.xml.xpath,org.w3c.dom,org.xml.sax,org.xm
+ l.sax.helpers
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.6))"
+Export-Package: org.xmlunit;version="2.6.3",org.xmlunit.builder;versio
+ n="2.6.3",org.xmlunit.diff;version="2.6.3",org.xmlunit.input;version=
+ "2.6.3",org.xmlunit.transform;version="2.6.3",org.xmlunit.util;versio
+ n="2.6.3",org.xmlunit.validation;version="2.6.3",org.xmlunit.xpath;ve
+ rsion="2.6.3"
+Bundle-Name: org.xmlunit:xmlunit-core
+Implementation-Title: org.xmlunit:xmlunit-core
+Bundle-Description: XMLUnit for Java
+Automatic-Module-Name: org.xmlunit
+Implementation-Version: 2.6.3
+Specification-Vendor: XMLUnit
+Bundle-ManifestVersion: 2
+Bundle-Vendor: XMLUnit
+Tool: Bnd-3.2.0.201605172007
+Implementation-Vendor: XMLUnit
+Bundle-Version: 2.6.3
+X-Compile-Target-JDK: 1.6
+build-time: 2019-06-21T14:16:55Z
+X-Compile-Source-JDK: 1.6
+Created-By: Apache Maven Bundle Plugin
+Build-Jdk: 1.8.0_171
+Specification-Version: 2.6
+Implementation-URL: https://www.xmlunit.org/
+

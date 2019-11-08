@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="demo">
+</div>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(this.readyState == 4 && this.status == 400){
+		
+	}
+}
+xmlhttp.open("GET", "books.json", true);
+xmlhttp.send();
+</script>
+</body>
+</html>

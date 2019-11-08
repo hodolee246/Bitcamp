@@ -1,0 +1,12 @@
+package main;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+//		자바에서 파싱 하는방법
+		
+	}
+
+}

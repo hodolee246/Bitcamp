@@ -1,0 +1,120 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import dto.Batter;
+import dto.Human;
+import dto.Pitcher;
+import single.Singleton;
+
+public class UpdataView extends Frame implements ActionListener, WindowListener {
+
+	Label la;
+	TextField tf;
+	Button btn1, btn2;
+	
+	public UpdataView() {
+		super("UpdataView");
+		
+		setLayout(null);
+		
+		la = new Label("Name");
+		la.setBounds(50, 100, 80, 30);
+		add(la);
+		
+		tf = new TextField();
+		tf.setBounds(130, 100, 150, 30);
+		add(tf);
+		
+		btn1 = new Button("Updata");
+		btn1.setBounds(50, 400, 100, 40);
+		btn1.addActionListener(this);
+		add(btn1);
+		
+		btn2 = new Button("Back");
+		btn2.setBounds(50, 400, 100, 40);
+		btn2.addActionListener(this);
+		add(btn2);
+	
+		setBounds(0, 0, 640, 480);
+		
+		setVisible(true);	
+	
+	
+	
+	}
+	
+	
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		Singleton si = Singleton.getInstance();
+		String str = tf.getText();
+		Human h = si.dao.select(str);
+		if(obj == btn1) {
+			if(h instanceof Pitcher) {
+				new UpdataPitcher();
+				this.dispose();
+			} else if(h instanceof Batter) {
+				new UpdataBatter();
+				this.dispose();
+			}
+		} else if(obj == btn2) {
+			new MenuView();
+			this.dispose();
+			
+		}
+		
+	}
+	@Override
+	public void windowActivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

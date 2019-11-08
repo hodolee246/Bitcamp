@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	JSON -> Java Script Object Notation(표기법)
+	
+	데이터를 저장, 불러오기
+	
+	한쌍(pair) Key:Value == HashMap(Java)
+	
+	Ajax 에서 xml, json 사용을 하는데 json 을 조금더 많이 사용한다.
+ -->
+
+<p id="demo">p tag</p>
+
+<script type="text/javascript">
+// 자바스크립트 배열 잡는 방법  1차원배열  var arr = [1, 2, 3, 4];
+//								2차원배열  var arr2 = [[1, 2], [3, 4]];
+
+
+ 
+ // json 배열 잡는법
+ var arr = [
+	 {
+		 "name":"길동",
+		 "age":24
+	 },
+	 {
+		 "name":"홍동",
+		 "age":23
+	 },
+	 {
+		 "name":"홍길",
+		 "age":22
+	 }
+ ];
+ 
+ document.getElementById("demo").innerHTML
+ //	= arr[0].name + " " + arr[0].age;
+ = arr[1]["name"] + " " + arr[1]["age"];
+ 
+ 
+</script>
+
+</body>
+</html>

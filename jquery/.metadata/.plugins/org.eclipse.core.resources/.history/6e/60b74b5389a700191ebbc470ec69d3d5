@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	line-height: 1cm;
+}
+</style>
+</head>
+<body>
+<h1>송부정보의 입력</h1><br>
+<form>
+이	  름:<input type="text" id="t1" class="_text"><br>
+
+우편번호:<input type="text" id="t2" class="_text" size="5">-
+
+<input type="text" id="t2" class="_text" size="5"> &ensp;&ensp; 
+<button type="button" id="btn">주소변환</button><br>
+
+주	  소:<textarea style="right: 8cm;height: 2cm;" id="ta"></textarea><br>
+
+전화번호:<input type="text" id="t3" class="_text" size="6">-
+		<input type="text" id="t4" class="_text" size="6">-
+		<input type="text" id="t5" class="_text" size="6"><br>
+		
+배달시간:<select id="_select" multiple="multiple">
+	<option>10:00 ~ 12:00</option>
+	<option>12:00 ~ 15:00</option>
+	<option>15:00 ~ 17:00</option>
+	<option>17:00 ~ 20:00</option>
+	<option>지정하지않음</option>	
+		</select><br>
+영수증요청:<input type="checkbox"id="cbox"><br>
+메일 매거진을 수신 <input type="radio" value="신청" id="r1">신청<input type="radio" value="신청하지 않음" id="r2"><br>
+<button type="button" id="btn2">확인화면으로 진행</button>
+				
+</form>
+
+
+</body>
+</html>

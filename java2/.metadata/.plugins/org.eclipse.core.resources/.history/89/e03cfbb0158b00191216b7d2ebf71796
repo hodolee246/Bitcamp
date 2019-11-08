@@ -1,0 +1,11 @@
+package main;
+
+public class Cat implements Animal {
+
+	@Override
+	public void printDescript() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

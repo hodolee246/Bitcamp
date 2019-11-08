@@ -1,0 +1,17 @@
+package main;
+
+import javax.swing.JFrame;
+
+public class WindowTest extends JFrame {
+	
+	
+	
+	public WindowTest() {
+	
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+}

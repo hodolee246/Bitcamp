@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<div id="demo">
+</div>
+
+<script type="text/javascript">
+
+var xmlhttp = new XMLHttpRequest();
+
+xmlhttp.onreadystatechange = function () {
+	if(this.readyState == 4 && this.status == 400){
+		func( xmlhttp.responseText );	// this를 집어넣어도 상관은 없지만 XML 과 구분을 하기 위해서 직접 입력을 해 주었다.
+	}
+}
+xmlhttp.open("GET", "books.json", true);
+xmlhttp.send();
+
+function func( resp ) {
+	alert("1");
+//  alert(arr); 을 찍어보면 문자열이 나타난다 <book>....	
+	arr = JSON.parse(resp);	// String 을 Json type 으로 변환을 해준다 !
+//	하지만 변환후 arr을 찍어주면 object로 출력이 된다!	
+//	JSON.stringify(json);	// Json -> String
+	alert("2");
+	var out = "<table border ='1'>";
+	
+	
+	// key의 출력 -> column
+	
+	out += "<tr>";
+	for (key in arr[0]) {
+		out += "<th>" + key + "</th>";
+	}
+	out += "</tr>";
+	
+	out += "</table>";
+/* 	alert("x");
+	document.getElementById("demo").innerHTML = out; */
+	alert("3");
+	// datas 출력
+	for (var i = 0; i < arr.length; i++) {
+		out += "<tr>";
+		
+		/* out += <"td>" + arr[i].title + "</td>";
+		out += <"td>" + arr[i].author + "</td>";
+		out += <"td>" + arr[i].price + "</td>"; */
+	
+		out += "</tr>";
+	}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="C:\Users\bit\Desktop\새 폴더 (7)\semi_project_파이널[키움]"/>
+		<item value="C:\Users\bit\Desktop\SpringSamplesCal"/>
+		<item value="E:\JSP\testProject"/>
+		<item value="C:\Users\bit\Desktop\백업\miniProject\miniProject(동욱190816)"/>
+		<item value="C:\Users\bit\Desktop\백업\miniProject"/>
+		<item value="C:\Users\bit\Desktop\miniProject(2차)"/>
+		<item value="C:\Users\bit\Desktop\miniProject"/>
+		<item value="E:\JSP\miniProjectinwoo\WebContent"/>
+		<item value="C:\Users\bit\Desktop\0703제출용과제(전인우)"/>
+		<item value="C:\Users\bit\Desktop\새 폴더 (3)\sampl"/>
+		<item value="C:\Users\bit\Desktop\0729 bbs"/>
+		<item value="C:\Users\bit\Desktop\sample"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="710"/>
+		<item key="DIALOG_Y_ORIGIN" value="252"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="DIALOG_HEIGHT" value="402"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+	</section>
+</section>

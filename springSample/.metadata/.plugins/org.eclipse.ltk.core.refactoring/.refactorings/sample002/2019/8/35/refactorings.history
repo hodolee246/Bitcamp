@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;bit.com.a.aop&apos; to &apos;0826bbs/src/bit.com.bbs&apos;&#x0D;&#x0A;- Original project: &apos;sample002&apos;&#x0D;&#x0A;- Destination element: &apos;0826bbs/src/bit.com.bbs&apos;&#x0D;&#x0A;- Original element: &apos;sample002/src/bit.com.a.aop&apos;" description="Copy package" destination="=0826bbs/src&lt;bit.com.bbs" element1="/src&lt;bit.com.a.aop" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1566958285918" version="1.0"/>
+</session>

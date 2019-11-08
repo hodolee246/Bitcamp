@@ -1,0 +1,32 @@
+<!-- 
+
+	Tag			성질들			형태들
+		<태그명 attribute(속성) property(특성)>내용</태그명>
+		
+		<태그명> 이런식으로 사용하는 태그도 있음
+
+		
+
+
+
+
+ -->
+
+
+<!DOCTYPE html>
+
+<html> <!-- root Tag(뿌리태크) 부모태그 -->
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+
+</head>
+
+<body>
+
+
+
+</body>
+
+</html>

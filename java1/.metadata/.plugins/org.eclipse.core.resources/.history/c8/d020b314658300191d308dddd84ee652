@@ -1,0 +1,17 @@
+package child;
+
+import sup.SuperClass;
+
+public class ChildClass extends SuperClass {
+
+	public ChildClass() {
+		System.out.println("ChildClass ChildClass()");
+	}
+	
+	public ChildClass(int number) {
+		
+		super(number); // super 는 this 랑 같이 사용을 못한다.
+		System.out.println("ChildClass ChildClass(int number)");
+	}
+	
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+  #main-title {
+  color:#050099; //글씨 색을 남색으로 설정
+  font-size:70pt;  //글씨 크기
+  margin-top:20%; //위에서부터의 간격
+}
+</style>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<table align="center" height="90">
+	<tr>
+		<td><div id="main-title">Login</div></td>
+	</tr>
+</table>
+
+<table class="t2">
+	<tr>
+		<td><input type="text" value="" size="14"></td>
+	</tr>
+</table>
+
+<table class="t3">
+	<tr>
+		<td><input type="password" value="" size="14"></td>
+	</tr>
+</table>
+<form action="">
+<table class="t4">
+	<tr>
+		<td><input type="submit" value="LOGIN" size="14"></td>
+	</tr>
+</table>
+</form>
+
+
+
+</body>
+</html>

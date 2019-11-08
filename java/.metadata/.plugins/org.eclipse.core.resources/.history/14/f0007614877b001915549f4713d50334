@@ -1,0 +1,31 @@
+package work4;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// 2차원 배열을 1차원 배열에 담는 방법
+
+		int array2[][] = {
+		{11, 12, 13, 14},
+		{21, 22, 23, 24},
+		{31, 32, 33, 34}
+		};
+		int _array[ ] = new int [12];
+		for (int i = 0; i < array2.length; i++) {
+			
+			for (int j = 0; j < array2[0].length; j++) {
+				int array[] = new int[i*j];
+				for (int k = 0; k < array.length; k++) {
+					array[k] = array2[i][j];
+					System.out.println(array[k]);
+				}
+			}
+		}
+
+		}		
+				// 피보나치 수열 - > 30
+				// 0 1 1 2 3 5 8
+				// a 0 b 1 c a+b
+	}
+
+

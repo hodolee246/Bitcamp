@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<table border="1" style="width: 100%">
+<col width = "40%"> <col width = "60%">
+
+<tr>
+	<td rowspan="2">
+		<img src="./png.PNG">
+	</td>
+	<td>12</td>
+</tr>
+
+<tr>
+	<!-- <td>21</td> -->
+	<td>22</td>
+</tr>	
+
+
+</table>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+div#fullScr{
+	width: 800px;
+	height: 500px;
+	background-color: red;
+}
+div#left{
+	width: 400px;
+	height: 500px;
+	background-color: blue;	
+	float: left;
+}
+div#right{
+	width: 400px;
+	height: 500px;
+	background-color: #00ffff;
+	float: left;
+}
+</style>
+</head>
+<body>
+
+<div id="fullScr">
+
+<div id="left">
+	<div id="leftup">
+	</div>
+	<div id="leftdown">
+	</div>
+</div>
+
+<div id="right">
+	<div id="rightup">
+	</div>
+	<div id="rightdown">
+	</div>
+</div>
+
+</div>
+
+</body>
+</html>

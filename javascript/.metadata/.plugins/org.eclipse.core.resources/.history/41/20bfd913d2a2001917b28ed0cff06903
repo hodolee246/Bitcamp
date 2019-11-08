@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 
+<body onload="checkMessage()">
+onload		한번 읽어올때 사용한다 (자주는 안씀)
+<p id="demo"></p>
+
+<script type="text/javascript">
+function checkMessage() {
+//	document.getElementById("demo").innerHTML = "checkMessage() 호출";
+
+}
+</script>
+</body>
+ --> 
+ <body>
+ 
+ <pre>
+ 2003년 호날두와 함께 맨체스터 유나이티드에 입단했던
+ 수비수 조나단 스펙터(33, 올란도 시티)의 회상이다.
+ 스펙터는 9일 미국의 '아메리칸 갬블러'와의 인터뷰를 통해 맨유 생활을 되돌아봤다.
+ 그는 호날두의 초반 모습에 대해 "짜증나는 선수였다"며 입을 열었다.
+ </pre>
+ 
+ <script type="text/javascript">
+ posY = 0;
+ function viewScroll() {
+	window.scroll(0, posY);
+	posY = posY + 2;
+	if(posY == 300) posY = 0;
+	
+	setTimeout("viewScroll()", 100);
+}
+ 
+ </script>
+ 
+ </body>
+ 
+ </html>

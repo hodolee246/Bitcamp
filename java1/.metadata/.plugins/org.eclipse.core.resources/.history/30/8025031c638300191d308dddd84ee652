@@ -1,0 +1,20 @@
+package sup;
+
+public class SuperClass { // extends Object 만약 상속을 안해둘경우 기본 상속값이 있다.
+
+	private int number;
+	
+
+	public SuperClass() {
+		System.out.println("SuperClass SuperClass()");
+	}
+
+
+	public SuperClass(int number) {
+		
+		this.number = number;
+		System.out.println("SuperClass SuperClass(int number)");
+	}
+	
+	
+}

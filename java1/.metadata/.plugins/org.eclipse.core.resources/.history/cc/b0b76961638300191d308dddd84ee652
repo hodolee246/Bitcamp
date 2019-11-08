@@ -1,0 +1,17 @@
+package child;
+
+import sup.SuperClass;
+
+public class SubClass extends SuperClass {
+
+	
+	public SubClass() {
+		System.out.println("SubClass SubClass()");
+	}
+	
+	public SubClass(int number) {
+		
+		super(number);
+		System.out.println("SubClass SubClass(int number)");
+	}
+}

@@ -1,0 +1,49 @@
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		
+		Student s = new Student();
+		s.name = "전인우";
+		s.ban = 1;
+		s.no = 1;
+		s.kor = 70;
+		s.eng = 80;
+		s.math = 90;
+		
+		System.out.println("이름:" + s.name);
+		System.out.println("총점:" + s.getTotal(s.kor, s.eng, s.math));
+		System.out.println("평균:" + s.getAverage());
+		
+		
+		
+		
+	}
+
+}
+
+
+class Student {
+	String name;
+	int ban;
+	int no;
+	int kor;
+	int eng;
+	int math;
+	
+	int getTotal(int kor, int eng, int math) {
+		int total = (kor + eng + math);
+		return total;
+		
+	}
+	
+	double getAverage() {
+		return (double)(kor + eng + math) / 3;
+	}
+	
+	
+	
+}

@@ -1,0 +1,74 @@
+package sample07;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import dto.Member;
+
+@WebServlet("/location")	// annotation(주석문)	
+public class HelloServlet extends HttpServlet {
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+	}
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		System.out.println("HelloServlet doPost");
+		
+		req.setCharacterEncoding("utf-8");
+		
+		String id = req.getParameter("id");
+		String pwd = req.getParameter("pwd");
+		String mydata = req.getParameter("mydata");
+		
+		System.out.println("id:" + id);
+		System.out.println("pwd:" + pwd);
+		System.out.println("mydata:" + mydata);
+		
+	//	resp.sendRedirect("sample?id=" + id + "&pwd=" + pwd);		
+	//	req.setAttribute("id", id);
+		
+		req.setAttribute("mem", new Member(id, pwd));	// 짐싸!
+				
+		req.getRequestDispatcher("sample").forward(req, resp); // 잘가!
+		
+	//	resp.sendRedirect("sample");	// 가긴 가는데 짐은 놓고 감
+		
+		
+		/*
+		 * resp.setContentType("text/html; charset=utf-8");
+		 * 
+		 * PrintWriter pw = resp.getWriter();
+		 * 
+		 * pw.println("<html>");
+		 * 
+		 * pw.println("<head>"); pw.println("<title>제목</title>"); pw.println("</head>");
+		 * 
+		 * pw.println("<body>");
+		 * 
+		 * pw.println("<p>p 태그</p>");
+		 * 
+		 * pw.println("<a href=sample?id=" + id + "&pwd=" + pwd + ">sample에 전송</a>");
+		 * 
+		 * // form
+		 * 
+		 * pw.println("</body>");
+		 * 
+		 * pw.println("</html>"); pw.close();
+		 */
+		// Servlet(hello) -> Servlet(sample)
+		
+	}
+
+	
+}
+
+
+
+

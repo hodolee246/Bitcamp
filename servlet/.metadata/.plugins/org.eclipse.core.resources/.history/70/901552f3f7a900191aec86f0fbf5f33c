@@ -1,0 +1,55 @@
+package sample05;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+public class HelloServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		PrintWriter pw = resp.getWriter();
+		resp.setContentType("text/html; charset=utf-8");
+		String fruit[] = req.getParameterValues("ft");
+		String name = req.getParameter("t1");
+		int age = Integer.parseInt(req.getParameter("t2"));
+		
+		if(name == null || name.equals("")) {
+		resp.sendRedirect("index.html");
+		}else {
+
+
+		pw.append("<html>");
+		
+		pw.append("<head>");
+		
+		pw.append("<title>제목</title>");
+		
+		pw.append("</head>");
+		
+		pw.append("<body>");
+		for (int i = 0; i < fruit.length; i++) {
+			
+			pw.append("<p> 좋아하는 과일 " + fruit[i] + "</p>");
+		}
+		
+		pw.append("<p> 이름:" + name + "</p>");
+		pw.append("<p> 나이:" + age + "</p>");
+		pw.append("</body>");
+		
+		pw.append("</html>");
+		}
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		super.doPost(req, resp);
+	}
+
+}

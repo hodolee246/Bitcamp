@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<form action="location">	<!-- 디폴트값로 설정 -->
+<input type="text" name="name"><br>
+<input type="submit" value="Get방식">
+</form>
+<br>
+<form action="location" method="post">	<!-- 디폴트값로 설정 -->
+<input type="submit" value="Post방식">
+</form>
+
+</body>
+</html>

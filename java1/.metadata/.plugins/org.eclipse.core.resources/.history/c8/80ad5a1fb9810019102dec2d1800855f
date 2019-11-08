@@ -1,0 +1,73 @@
+package baseball;
+
+import java.util.Scanner;
+
+public class baseballClass {
+	Scanner sc = new Scanner(System.in);
+	// 랜덤 숫자 받고 나눠서 배열
+	private int ran[] = new int[3];
+	// 사용자 숫자 받고 나눠서 배열
+	private int user[] = new int[3];
+	// 비교 후 결과 출력
+	
+	// 끝
+	
+	public int[] getRan() {
+		return ran;
+	}
+	public int[] getUser() {
+		return user;
+	}
+	public void ranNum(int ran[]) {
+		
+			int temp = (int)(Math.random());
+			ran[0] = temp / 100;
+			temp = temp % 100;
+			ran[1] = temp / 10;
+			temp = temp % 10;
+			ran[2] = temp;
+		
+	}
+	public void userNum(int user[]) {
+		
+		int temp = sc.nextInt();
+		user[0] = temp / 100;
+		temp = temp % 100;
+		user[1] = temp / 10;
+		temp = temp % 10;
+		user[2] = temp;
+		
+	}
+	public void check(int ran[], int user[]) {
+		int count, s, b;
+		count = s = b = 0;
+		ranNum(ran);
+		
+		while (count == 10) {
+			userNum(user);
+			for (int i = 0; i < ran.length; i++) {
+				for (int j = 0; j < user.length; j++) {
+					if(i == j && ran[i] == user[j]) {
+						s++;
+						if(s ==3) {
+							System.out.println("정답입니다.");
+						}
+					}else if(i != j && ran[i] == user[j]) {
+						b++;
+					}
+				}
+			}
+			System.out.println(s+" 스트라이크" + b + " 볼 입니다.");
+			count ++;
+			
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

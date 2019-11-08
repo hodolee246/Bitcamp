@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<select id="_choice">
+	<option value="job.xml">직업</option>
+	<option value="movie.xml">영화</option>
+</select>
+
+<br>
+<button type="button" onclick="func()">버튼입니다.</button>
+<br>
+
+<p id="ptag">ptag</p>
+
+<script type="text/javascript">
+
+var xhttp = new XMLHttpRequest();
+
+var nodes, nodesName, nodechild, nodechildname; 
+
+function func() {
+	
+xhttp.onreadystatechange = function () {
+	
+	if(this.readyState == 4 && this.status == 200){
+		nodeNameLen(this);
+		alert(nodesName);
+		alert(nodes);
+	}
+	};
+	var vurl = document.getElementById("_choice").value;
+	vurl = vurl + "";
+	xhttp.open("GET", vurl, true);
+	xhttp.send();
+}
+
+	
+	
+
+function nodeNameLen( xml ) {
+	var arr;
+	var xmlDoc;
+	var fnodeName
+	fnodeName = "";
+	var nodecount = 0;
+	
+	xmlDoc = xml.responseXML;
+	
+	arr = xmlDoc.documentElement.childNodes;
+	
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i].nodeType == 1){
+			fnodeName = arr[i].nodeName;
+			nodecount ++;
+		}
+	}
+	nodesName = fnodeName;
+	nodes = nodecount;
+}
+
+function childNodeNameLen() {
+	
+	var _arr;
+	var _xmlDoc;
+	
+	_xmlDoc = xml.responseXML;
+	
+	_arr = _xmlDoc.getElementsByTagName(nodesName)[0];
+	var leng = _arr.childNodes.length;
+	
+}
+
+</script>
+
+</body>
+</html>

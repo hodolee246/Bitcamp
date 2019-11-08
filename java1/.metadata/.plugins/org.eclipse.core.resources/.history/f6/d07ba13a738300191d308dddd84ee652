@@ -1,0 +1,21 @@
+package tank;
+
+public class TankClass {
+
+	int x, y;
+	
+	public void move(int x, int y) {
+		this.x = x;
+		this.y = y;
+		System.out.println("TankClass move(int x, int y)");
+	}
+	
+	public void stop() {
+		System.out.println("TankClass stop()");
+	}
+	
+	public void changeMode() {
+		System.out.println("TankClass changeMode()");
+	}
+	
+}

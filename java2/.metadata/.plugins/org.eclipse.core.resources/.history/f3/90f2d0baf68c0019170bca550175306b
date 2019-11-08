@@ -1,0 +1,108 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.TextField;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class SelectView extends Frame implements ActionListener, WindowListener {
+
+	Label label[] = new Label[6];
+	Label label2[] = new Label[5];
+	
+	TextField tf;
+	
+	Button btn1, btn2;
+	
+	
+	public SelectView() {
+		super("SelectView");
+		
+		setLayout(null);
+		
+		String columns[] = { "name", "age", "height", "defence", "win", "lose" };
+		for (int i = 0; i < label.length; i++) {
+			label[i] = new Label(columns[i]);
+			label[i].setBounds(50, 100 + (40 * i), 80, 30);
+			add(label[i]);
+		}
+		
+		tf = new TextField();
+		tf.setBounds(150, 100, 80, 30);
+		add(tf);
+		
+		for (int i = 0; i < label2.length; i++) {
+			label2[i] = new Label();
+			label2[i].setBounds(150, 100 + (40*i), 80, 30);
+			add(label2[i]);
+		}
+		
+		btn1 = new Button("Select");
+		btn1.setBounds(50, 400, 80, 30);
+		btn1.addActionListener(this);
+		add(btn1);
+		
+		btn2 = new Button("Back");
+		btn2.setBounds(150, 400, 80, 30);
+		btn2.addActionListener(this);
+		add(btn2);
+		
+		
+		
+		
+	}
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent arg0) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+}

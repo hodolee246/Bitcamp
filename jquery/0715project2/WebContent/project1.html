@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<h2>Life on the water</h2>
+<br>
+<button type="button" id="addform">폼의 추가</button>
+	<!-- 버튼은 독립적이기에 대부분 id로 지정한다. -->
+<br>
+<img src="photo1.jpg">	
+<img src="photo2.jpg">
+<br>
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<script type="text/javascript">
+$(function () {
+	
+	$("#addform").click(function () {
+	//	alert("x");
+		$("img").css("border", "5px solid green");
+		$("img").css("border-bottom", "20px solid green");
+	});
+	
+});
+/*
+ 
+	$(function(){
+		$("#addform").click( setFrame );
+	});
+ 	function setFrame() {
+	$("img").css or attr ("border", "10px solid #00ff00"); 		
+ 	// web - json key : value <-> java hashmap
+ 	$("img").css({"border" : "10px solid #00ff00",		// setter
+ 				  "border-bottom" : "10px soild #00ff00"		
+ 		});
+ 	alert( $("img").css("border-bottom"));	// getter
+ 	}
+ 
+ */
+</script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<p>p tag</p>
+
+<div>
+	<p>div in p tag1</p>
+
+	<p>div in p tag2</p>
+</div>
+
+<script type="text/javascript">
+$(function () {
+	/* 
+	$('p').click(function () {
+		alert("p tag click");
+	});
+	 */
+	/*  
+	$('div p').click(function () {
+		alert("div p tag click");
+		$('div p').hide();	// <-> show()			hide는 화면에서 숨길뿐 사라지지는 않는다.
+	});
+	 */
+	$('p').on("click", function () {
+	//	$(this).hide();
+		$(this).css("background", "#00ff00");	// setter
+		
+		var color = $(this).css("background");	// getter		
+		alert(color);	// background 정보를 받아서 출력한다 여기서 background 정보에는 background 의 설정된 "모든" 정보가 있다.
+	});	
+});
+</script>
+
+<br><br>
+<!-- 
+<h3 class="cls" onmouseover="mousefunc()"
+	style="background-color: green">h3 tag class cls</h3>
+ -->
+
+<h3 class="cls" style="background-color: green">h3 tag class cls</h3>
+ 
+<script type="text/javascript">
+function mousefunc() {
+	alert("h3 범위에 들어 왔습니다");
+}
+
+$(document).ready(function() {
+	$(".cls").mouseover(function() {
+	//	alert("JQuery h3 범위에 들어 왔습니다");
+	//	$(".cls").css("background", "#ffff00");
+		$(this).css("background", "#ff0000");		
+	});
+	
+	$(".cls").mouseout(function() {	
+		$(this).css("background", "green");		// background-color 처럼 정확하게 명시를 해줘도 상관은 없다
+	});					//  background 처럼 넓은 의미로 명시할경우 한가지 값이 아닌 여러가지 값을 넣기가 좋다.
+	
+	$('p').mouseover(function() {
+		$(this).css("background", "#aabbcc");
+	});
+	$('p').mouseout(function() {
+		$(this).css("background", "#ffffff");
+	});
+});
+
+</script>
+
+
+</body>
+</html>
+
+
+
+
+

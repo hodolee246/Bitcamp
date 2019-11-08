@@ -1,0 +1,23 @@
+package main;
+
+import child.SubClass;
+import sup.SuperClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+
+		/*
+		SubClass sub = new SubClass(123);
+		
+		sub.method();
+		sub.overRideMethod();
+		*/
+		
+		// 부모 클래스의 인스턴스를 사용하여 자식클래스를 선언함
+		SuperClass sc = new SubClass();
+		
+
+	}
+
+}

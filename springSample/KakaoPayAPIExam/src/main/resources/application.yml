@@ -1,0 +1,10 @@
+#test project
+server:
+  port: 8080
+
+  #JSP config
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+        

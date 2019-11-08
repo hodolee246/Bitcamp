@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<div id="div1" style="width=500px; height=150px; border: 1px soild blue; background-color=00ffff">
+
+<p id="pid">아예 안 보낼 순 없을 것 같으니, 시간만 좀 더 늘리기로 한다?</p>
+
+<p class="pcls"> 유나이티드가 떠나려는 폴를 어떻게든 붙잡고자 모든 노력을 다하는 분위기다.</p>
+
+<h3 class="hcls">한 시즌만 더 머물러달라는 요청을 했다고 한다.</h3>
+
+</div>
+
+<button type="button" id="btn">삭제</button>
+
+<script type="text/javascript">
+
+$(function () {
+	$("#btn").click(function () {
+//		$("*").remove();		모두 지워진다.
+//		$("#div1").remove();	div1 이 지워진다.
+//		$("#div1").empty();		div1 의 안이 비워진다
+//		$(".pcls").remove();	pcls 만 지워진다
+
+//		$("p").remove("#pid, .pcls");	pid 와 pcls 2개가 지워진다.
+	});
+});
+
+</script>
+
+</body>
+</html>

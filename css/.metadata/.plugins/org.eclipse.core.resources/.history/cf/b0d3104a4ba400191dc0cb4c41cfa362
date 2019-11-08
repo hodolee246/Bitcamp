@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+t1.th{
+	color: red;
+}
+
+</style>
+</head>
+<body>
+
+<table class="t1">
+	<tr>
+		<th>
+	</tr>
+	<tr>
+		<td>
+	</tr>
+	<tr>
+		<td>
+	</tr>
+</table>
+
+</body>
+</html>

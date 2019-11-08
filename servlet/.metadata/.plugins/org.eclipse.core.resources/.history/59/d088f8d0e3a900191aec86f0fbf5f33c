@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form action="location" method="get">
+<input type="submit" value="Get">
+<input type="submit" value="Post">
+<input type="text" placeholder="Insert">
+</form>
+
+
+</body>
+</html>

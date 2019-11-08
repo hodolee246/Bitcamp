@@ -1,0 +1,14 @@
+package dao;
+
+public class DaoInterface {
+
+	
+	public DaoInterface() {
+		
+	}
+	
+	public void Procces() {
+		
+	}
+	
+}

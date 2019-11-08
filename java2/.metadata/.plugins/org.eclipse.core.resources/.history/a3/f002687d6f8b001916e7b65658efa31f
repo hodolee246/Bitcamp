@@ -1,0 +1,105 @@
+package tt;
+
+import java.awt.Checkbox;
+import java.awt.CheckboxGroup;
+import java.awt.Frame;
+import java.awt.Panel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+import javax.swing.JComboBox;
+
+public class window extends Frame implements WindowListener, ActionListener {
+
+	
+	public window() {
+		
+		super("this is Title");
+		setSize(640, 480);
+		setLocation(0, 0);
+		setVisible(true);
+		
+		setLayout(null);
+		
+		Checkbox radio1 = new Checkbox("A");
+		Checkbox radio2 = new Checkbox("B");
+		Checkbox radio3 = new Checkbox("C");
+		
+		String phone[] = {"010", "011", "012", "821"};
+		
+		JComboBox cb = new JComboBox(phone);
+		cb.addActionListener(this);
+	
+		
+		Panel p = new Panel();
+		p.add(radio1);
+		p.add(radio2);
+		p.add(radio3);
+		
+		p.setBounds(50, 150, 100, 50);
+		
+		add(p);
+		
+		
+		
+		
+		addWindowListener(this);
+	}
+	
+	
+	
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		System.exit(0);
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+
+
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

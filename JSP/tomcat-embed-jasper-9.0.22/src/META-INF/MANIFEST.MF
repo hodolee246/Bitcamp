@@ -1,0 +1,40 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.9
+Bnd-LastModified: 1562250035677
+Bundle-ManifestVersion: 2
+Bundle-Name: TOMCAT_9_0_22
+Bundle-SymbolicName: TOMCAT_9_0_22
+Bundle-Version: 0
+Created-By: 1.8.0_212 (AdoptOpenJDK)
+DSTAMP: 20190704
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.22
+Import-Package: javax.el,javax.servlet,javax.servlet.descriptor,javax.
+ servlet.http,javax.xml.parsers,javax.xml.stream,org.apache.juli.loggi
+ ng,org.apache.tomcat,org.apache.tomcat.util.descriptor,org.apache.tom
+ cat.util.descriptor.tagplugin,org.apache.tomcat.util.descriptor.tld,o
+ rg.apache.tomcat.util.descriptor.web,org.apache.tomcat.util.digester,
+ org.apache.tomcat.util.scan,org.apache.tomcat.util.security,org.apach
+ e.tools.ant,org.apache.tools.ant.taskdefs,org.apache.tools.ant.types,
+ org.apache.tools.ant.util,org.eclipse.jdt.core.compiler,org.eclipse.j
+ dt.internal.compiler,org.eclipse.jdt.internal.compiler.classfmt,org.e
+ clipse.jdt.internal.compiler.env,org.eclipse.jdt.internal.compiler.im
+ pl,org.eclipse.jdt.internal.compiler.problem,org.xml.sax,org.xml.sax.
+ ext,org.xml.sax.helpers
+Originally-Created-By: 1.8.0_212-b03 ()
+Private-Package: javax.servlet.jsp,javax.servlet.jsp.el,javax.servlet.
+ jsp.resources,javax.servlet.jsp.tagext,org.apache.jasper,org.apache.j
+ asper.compiler,org.apache.jasper.compiler.tagplugin,org.apache.jasper
+ .el,org.apache.jasper.resources,org.apache.jasper.runtime,org.apache.
+ jasper.security,org.apache.jasper.servlet,org.apache.jasper.tagplugin
+ s.jstl,org.apache.jasper.tagplugins.jstl.core,org.apache.jasper.util
+Require-Capability: osgi.ee;filter:="(&(osgi.ee=JavaSE)(version=1.8))"
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+TODAY: July 4 2019
+Tool: Bnd-4.0.0.201805111645
+TSTAMP: 1520
+X-Compile-Source-JDK: 1.8
+X-Compile-Target-JDK: 1.8

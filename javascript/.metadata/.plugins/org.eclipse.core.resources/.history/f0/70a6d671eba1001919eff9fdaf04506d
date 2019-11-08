@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<input type="checkbox" id="money" onclick="Money()"> 야간 조명(20,000원)
+<input type="checkbox" id="money" onclick="Money1()"> 배구 네트x2면(4,000원)
+<input type="checkbox" id="money" onclick="Money2()"> 배구x10개(5,000원)
+<input id="baseball" type="text" value=40800>원
+<script type="text/javascript">
+var arr = new Array(3);
+
+
+
+
+</script>
+</body>
+</html>

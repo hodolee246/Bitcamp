@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<button type="button">실행</button>
+
+<p id="q01">Hello JQuery</p>
+<p id="q02">Hello JQuery</p>
+<p id="q03">Hello JQuery</p>
+<p id="q04">Hello JQuery</p>
+
+<ul id="q05">
+	<li>사과</li>
+	<li>딸기</li>
+	<li>수박</li>
+	<li>망고</li>
+	<li>자두</li>
+	
+</ul>
+
+<script type="text/javascript">
+$(function () {
+	
+	$("button").click(function () {
+		// font color 변경
+		$("#q01").css("color", "red");	// red or #ff0000
+		
+		// font color, background-color 변경
+		$("#q02").css({"color":"red",
+						"background-color":"skyblue"	
+		});
+		
+	//	$("#q03").text("헬로우 제이쿼리");
+		$("#q03").html("<b>헬로우</b> 제이쿼리");
+		
+		// html 변경
+		$("#q04").html("<a href ='#'>World JQuery</a>");
+	});
+	
+});
+
+
+</script>
+
+
+</body>
+</html>
+
+
+

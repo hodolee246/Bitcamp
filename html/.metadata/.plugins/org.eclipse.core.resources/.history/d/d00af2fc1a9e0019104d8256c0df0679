@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<p><a href="http://www.google.com">Google Move</a></p>
+
+
+<a href="index01.html">index1.html으로 이동</a>
+
+
+<br>
+<br>
+
+<a href="index02.html" target="_self">index2.html으로 이동</a>
+
+<br><br>
+
+<a href="index03.html" target = "_blank">index3.html 으로 이동</a>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

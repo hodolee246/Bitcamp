@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<table>
+	<tr>
+		<td><h2>타이머</h2></td>
+	</tr>
+</table>
+<br>
+<table>
+	<tr>
+		<td>
+			<select>
+				<option value="180">3분</option>
+				<option value="120">2분</option>
+				<option value="60">1분</option>
+			</select>
+		</td>
+		
+		
+		<td><button type="button" onclick="timeSet()">버튼</button></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><h3 id="ed">완료까지 </h2></td>
+	</tr>
+</table>
+
+
+</body>
+</html>

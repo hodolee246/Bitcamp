@@ -1,0 +1,59 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int com, user = 0;
+		int w, l ;
+		w = l = 0;
+		int loop = 0;
+		String cho;
+		
+	out2:for (int y = 0; y < y+1; y++) {
+			System.out.println("가위바위보 게임입니다. 하시겠습니까?(Y, N)");
+			cho = scan.next();
+			if(cho.equals("N")
+					|| cho.equals("n")) {
+				System.out.println("안녕히가세요");
+				break out2;
+			}
+	out:for (int i = 0; i < i+1; i++) {
+		com = (int)(Math.random()*3);
+		System.out.print("0[가위], 1[바위], 2[보] ");
+		System.out.println(" 3개중 하나를 입력해 주세요");
+		user = scan.nextInt();
+		
+		int ma = 0;
+		
+		if(user < 0 || user > 2) {
+			System.out.println("잘못 입력하셨습니다.");
+		}
+		else if(com == user) {
+			System.out.println("비기셨습니다.");
+			
+		}
+		else if((com + user !=2 && user > com)
+				|| (com == 2 && user == 0)) {
+			System.out.println("이기셨습니다.");
+			w++;
+			break out;
+		}
+			else {
+				System.out.println("패배하셨습니다.");
+				l++;
+			}
+		
+		}
+			System.out.println(w+"승"+l+"패 입니다.");
+			System.out.println("안녕히 가세요");
+	}	
+		
+			
+		}
+			
+		
+		
+	}
+
+

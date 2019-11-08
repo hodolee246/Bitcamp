@@ -1,0 +1,13 @@
+package main;
+
+public class mianClass {
+
+	public static void main(String[] args) {
+		/*
+		  	Observer : 감시자 
+		  	
+		 */
+		
+	}
+
+}

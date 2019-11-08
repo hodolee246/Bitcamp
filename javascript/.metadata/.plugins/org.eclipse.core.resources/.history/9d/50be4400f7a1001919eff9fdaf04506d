@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<p id="pid">p id pid</p>
+
+<br><br>
+
+<p class="pclass">p class pclass</p>
+
+<br><br>
+
+<p name = "pname">p name pname</p>
+
+<br><br>
+
+<input type="text" id="text">
+
+<br><br>
+
+<button type="button" onclick="func()">버튼</button>
+
+<script type="text/javascript">
+// id
+
+var text = document.getElementById("pid").innerHTML;
+document.getElementById("text").value = text;
+
+
+
+
+</script>
+</body>
+</html>

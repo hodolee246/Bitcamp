@@ -1,0 +1,18 @@
+package main;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		
+		/* interface Animal 
+		 
+		 Cat			Cow			  Dog		AnimalFactory
+	 
+		 */
+		
+		Animal ani1 = AnimalFactory.Create("야옹이");
+		ani1.printDescript();
+	}
+
+}

@@ -1,0 +1,14 @@
+package main;
+
+import baseball.baseballClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		baseballClass bc = new baseballClass();
+		
+		bc.check();
+
+	}
+
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+<select id="_choice">
+	<option value="job.xml">직업</option>
+	<option value="movie.xml">영화</option>
+</select>
+
+<br>
+<button type="button" onclick="func()">버튼입니다.</button>
+<br>
+
+<p id="ptag">ptag</p>
+
+<script type="text/javascript">
+
+var xhttp = new XMLHttpRequest();
+
+var nodes, nodesName, nodechild, nodechildname; 
+
+function func() {
+	
+xhttp.onreadystatechange = function () {
+	
+	if(this.readyState == 4 && this.status == 200){
+		nodeNameLen(this);
+		childNodeNameLen(this);
+
+		/* document.getElementById("ptag").innerHTML = "선택하신 목록의 노드는"
+		+ nodes + "개 있고 이름은" + nodesName + "입니다. 그리고 그 안의 자식 노드는"
+		+ nodechild + "개 있고 이름은" + nodechildname + "입니다."; */
+		
+	}
+	};
+	var vurl = document.getElementById("_choice").value;
+	vurl = vurl + "";
+	xhttp.open("GET", vurl, true);
+	xhttp.send();
+}
+
+	
+	
+
+function nodeNameLen( xml ) {
+	var arr;
+	var xmlDoc;
+	var fnodeName
+	fnodeName = "";
+	var nodecount = 0;
+	
+	xmlDoc = xml.responseXML;
+	
+	arr = xmlDoc.documentElement.childNodes;
+	
+	for (var i = 0; i < arr.length; i++) {
+		if(arr[i].nodeType == 1){
+			fnodeName = arr[i].nodeName;
+			nodecount ++;
+		}
+	}
+	nodesName = fnodeName;
+	nodes = nodecount;
+}
+
+function childNodeNameLen( xml ) {
+	
+	var _arr;
+	var _xmlDoc;
+	var _tagname = nodesName + "";
+	_xmlDoc = xml.responseXML;
+	alert(_tagname);
+	_arr = _xmlDoc.getElementsByTagName(_tagname)[0];
+	var leng = _arr.children.length;
+//	alert(leng);
+
+
+//	var fChild = _arr.children.nodeName;
+//	alert(_arr.children.nodeName);
+	for (var i = 0; i < leng.length; i++) {
+//		if(fChild.nodeType == 1){
+//			nodechildname = fChild.nodeName;
+//			nodechild++;
+//		}
+//		fChild = fChild.nextSibling;
+		alert(_arr.nodeName);
+	}
+}
+
+</script>
+
+</body>
+</html>

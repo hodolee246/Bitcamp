@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body bgcolor="black" style="color: white;">
+<form name="frm">
+<input type="image" src="" id="imgs"> &ensp;&ensp; 사진을 선택 <br>
+<select id="_img" onchange="func()">
+	<option>사진을 선택</option>
+	<option value="meiji01.jpg">첫번째 사진</option>
+	<option value="meiji02.jpg">두번째 사진</option>
+	<option value="meiji03.jpg">세번째 사진</option>
+	<option value="meiji04.jpg">네번째 사진</option>
+</select>
+</form>
+<script type="text/javascript">
+
+function func() {
+	var _imgs = document.getElementById("_img").value;
+	
+	document.frm.imgs.src = _imgs;
+}
+
+</script>
+</body>
+</html>

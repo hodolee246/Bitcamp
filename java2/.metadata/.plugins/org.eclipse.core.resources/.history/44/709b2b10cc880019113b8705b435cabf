@@ -1,0 +1,41 @@
+package cls;
+
+import single.SingletonClass;
+
+public class MyClass {
+
+	private int mynum;
+	private String myname;
+	
+	public MyClass() {
+		mynum = 154;
+	}
+
+
+	@Override
+	public String toString() {
+		return "MyClass [mynum=" + mynum + ", myname=" + myname + "]";
+	}
+
+
+	public int getMynum() {
+		return mynum;
+	}
+
+
+	public void setMynum(int mynum) {
+		this.mynum = mynum;
+	}
+	
+	public void method() {
+		SingletonClass sc = SingletonClass.getInstance();
+		sc.num = mynum;
+		// 생성된 싱글톤 클래스를 리턴을 받고 거기에 mynum 값을 집어넣는다.
+	}
+	
+	public void Function() {
+		SingletonClass sc = SingletonClass.getInstance();
+		sc.name = myname;
+	}
+	
+}

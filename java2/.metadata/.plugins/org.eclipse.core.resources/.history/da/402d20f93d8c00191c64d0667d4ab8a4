@@ -1,0 +1,95 @@
+package UI;
+
+import java.awt.Button;
+import java.awt.Frame;
+import java.awt.TextArea;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+import java.util.Iterator;
+
+import dto.Human;
+import single.Singleton;
+
+public class AllPrint extends Frame implements ActionListener, WindowListener {
+
+	TextArea ta ;
+	Button btn1, btn2;
+	
+	public AllPrint() {
+		super("AllPrint");
+		
+		setLayout(null);
+		
+		ta = new TextArea();
+		ta.setBounds(50, 50, 1000, 600);
+		Singleton si = Singleton.getInstance();
+		
+		Iterator<Integer> it = si.TMap.keySet().iterator();
+		
+		Integer k = 0;
+		while(it.hasNext()) {
+			Integer key = it.next();
+			k = key;
+			Human hu = si.TMap.get(k);
+			ta.insert(hu.toString(), 1);
+			
+			setBounds(0, 0, 640, 480);
+			setVisible(true);
+			
+			addWindowListener(this);
+		}
+		
+		
+	}
+	
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+		System.exit(0);
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

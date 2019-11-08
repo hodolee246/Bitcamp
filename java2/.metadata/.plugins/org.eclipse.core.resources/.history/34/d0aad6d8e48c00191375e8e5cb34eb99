@@ -1,0 +1,91 @@
+package view;
+
+import java.awt.Button;
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
+
+public class InsertView extends Frame implements WindowListener, ActionListener {
+
+	// pitcher
+	// batter
+	// menu
+	Button pitcherBtn;
+	Button batterBtn;
+	
+	public InsertView() {
+		
+		setLayout(null);
+		
+		pitcherBtn = new Button("Pitcher append");
+		pitcherBtn.setBounds(50, 100, 150, 30);
+		pitcherBtn.addActionListener(this);
+		add(pitcherBtn);
+		
+		batterBtn = new Button("batterBtn append");
+		batterBtn.setBounds(50, 100, 150, 30);
+		batterBtn.addActionListener(this);
+		add(batterBtn);
+						
+		setBounds(0, 0, 500, 700);
+		setBackground(Color.GREEN);
+		setVisible(true);
+	}
+			
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object obj = e.getSource();
+		if(obj == pitcherBtn) {
+			new PitcherInsert();
+			this.dispose();			
+		} else if(obj == batterbtn) {
+			
+		}
+	}
+
+	@Override
+	public void windowActivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosed(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowClosing(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeactivated(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowDeiconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowIconified(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void windowOpened(WindowEvent e) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

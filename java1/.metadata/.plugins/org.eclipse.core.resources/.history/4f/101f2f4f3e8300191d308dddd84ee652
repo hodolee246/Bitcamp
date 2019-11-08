@@ -1,0 +1,87 @@
+package main;
+
+import java.util.Scanner;
+
+import dao.DaoClass;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		DaoClass dao = new DaoClass();
+
+		
+		// menu
+
+		/*
+		
+		1. 학생정보를 추가
+		2. 학생정보를 삭제한다
+		3. 학생정보를 검색						
+		4. 학생정보를 수정
+		5. 학생정보를 모두 출력한다.
+		*/
+		/*
+		
+		System.out.println("학생정보 편집기에 오신걸 환영합니다. ");
+		
+		
+	out:while(true) {
+		
+		System.out.println("1. 학생정보 입력");
+		System.out.println("2. 학생정보 삭제");
+		System.out.println("3. 학생정보 검색");
+		System.out.println("4. 학생정보 수정");
+		System.out.println("5. 학생정보 전부 출력");
+		System.out.println("6. 학생정보 편집기 종료");
+			
+		
+		
+		int n = sc.nextInt();
+		
+			switch (n) {
+		case 1:
+			dao.insert();
+			break;
+			
+		case 2:
+			dao.delete();
+			break;
+	
+		case 3:
+			dao.select();
+			break;
+		
+		case 4:
+			dao.update();
+			break;
+			
+		case 5:
+			dao.allprint();
+			break;
+		
+		case 6:
+			System.out.print("이용해 주셔서 감사합니다.");
+			break out;
+			}
+	
+			}
+		
+		
+		*/
+		
+		dao.insert();
+		dao.allprint();
+		
+		dao.insert();
+		dao.allprint();
+		
+		
+	
+		
+	
+		
+		
+	}
+}

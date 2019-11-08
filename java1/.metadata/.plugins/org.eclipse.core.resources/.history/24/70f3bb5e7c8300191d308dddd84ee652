@@ -1,0 +1,54 @@
+package robot;
+
+public class Robot {
+
+	private String name;
+	
+	public Robot(String name) {
+		this.name = name;
+	}
+	
+	public void dance() {
+		System.out.println(name);
+	}
+	
+	public void sing() {
+		System.out.println(name);
+	}
+	
+	public void draw() {
+		System.out.println(name);
+	}
+	
+}
+
+class DanceRobot extends Robot{
+	
+	public DanceRobot(String name) {
+		super(name);
+	}
+	
+	public void dance() {
+		System.out.println("춤을 춥니다.");
+	}
+}
+class SingeRobot extends Robot{
+	
+	public SingeRobot(String name) {
+		super(name);
+	}
+	
+	public void sing() {
+		System.out.println("춤을 춥니다.");
+	}
+}
+class DrawRobot extends Robot{
+	
+	public DrawRobot(String name) {
+		super(name);
+	}
+	
+	public void draw() {
+		System.out.println("춤을 춥니다.");
+	}
+}

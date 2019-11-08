@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int com, user = 0;
+		com = (int)(Math.random()*3);
+		System.out.println(com);
+
+	}
+
+}

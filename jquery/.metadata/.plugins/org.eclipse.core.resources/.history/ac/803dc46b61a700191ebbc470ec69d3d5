@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<style type="text/css">
+.cls{		/* addClass로 cls 클래스명 부여시 적용될 항목 */
+	border: 5px solid green;	/* 테두리를 전부다 5px 일반선 초록색 */
+
+	border-bottom: 20px solid green;	/* 아래 테두리는 20px 일반선 초록색 */
+}
+</style>
+</head>
+<body>
+<h2>Life on the water</h2>
+<br>
+<button type="button" id="changeFrame">프레임의 추가/삭제</button>
+
+<br><br>
+<img src="photo1.jpg">
+<img src="photo2.jpg">
+<br>
+<img src="photo3.jpg">
+<img src="photo4.jpg">
+
+<script type="text/javascript">
+var count = 0;	// 버튼하나로 2가지의 명령을 수행하기 위해 count 변수 선언
+$(function () {
+	$("#changeFrame").click(function () {
+	if(count == 0){
+			$("img").addClass("cls");	//	 img 태그들에게 클래스명 cls 부여
+			count++;	// 다음 클릭시 다른 명령을 실행하기 위해 count 값을 더해준다.
+	}
+	else{
+		$("img").removeClass("cls");
+		count--;	// 실행 이후 그전 명령을 다시 돌아가서 실행할 수 있도록 count 값을 빼준다.
+	}
+		});
+			
+});
+
+
+</script>
+</body>
+</html>

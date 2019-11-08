@@ -1,0 +1,74 @@
+package sample09;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Enumeration;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/world")
+public class WorldServlet extends HttpServlet {
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		resp.setContentType("text/html; charset=utf-8");
+		
+		PrintWriter pw = resp.getWriter();		
+				
+		pw.println("<html>");		
+		
+		pw.println("<head>");
+		pw.println("<title>제목</title>");	
+		pw.println("</head>");
+		
+		pw.println("<body>");
+		
+		pw.println("<h3>World Servlet</h3>");
+		
+		HttpSession session = null;
+		
+		if(session == null) {
+			pw.println("<p>session을 등록합니다.</p>");
+			session = req.getSession(true);
+			
+			session.setAttribute("name", "홍길동");
+			session.setAttribute("age", "24");
+		}
+		
+		pw.println("<p>등록 되어있는 session object 표시를 합니다.</p>");
+		
+		String name = (String)session.getAttribute("name");
+		
+		pw.println("<p> name:" + name + "</p>");
+		
+		Enumeration<String> enum_session = session.getAttributeNames();
+		
+		while(enum_session.hasMoreElements()) {
+			String key = enum_session.nextElement();
+			String val = (String)session.getAttribute(key);
+			
+			pw.println("<p>" + key + ":" + val + "</p>");
+		}
+		
+		pw.println("<br>");
+		
+		pw.println("<a href=\"delsession\">age object 삭제</a>");
+		
+		pw.println("</body>");
+		
+		pw.println("</html>");		
+		pw.close();
+	
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		
+	}
+	
+}

@@ -1,0 +1,78 @@
+package processing;
+
+import java.util.Scanner;
+
+import dao.DaoInterface;
+import dto.Batter;
+import dto.Human;
+import dto.Pitcher;
+import single.Singleton;
+
+public class InsertClass implements DaoInterface{
+	Scanner sc = new Scanner(System.in);
+	
+	private int sequence;
+	
+	Singleton si = Singleton.getInstance();
+	
+	public InsertClass() {
+		// 시퀀스 값주고
+		// 라스트넘 값주고 라스트넘은 싱글톤에서 tmap 받아와서 넘버로 값주고
+		sequence = 1001;
+	}
+	
+	public void InserClass(int count) {
+		
+	}
+
+	@Override
+	public void Process() {
+		System.out.println("(1)투수, (2)타자");
+		int po = sc.nextInt();
+		
+		System.out.println("이름 입력");
+		String name = sc.next();
+		
+		System.out.println("나이 입력");
+		int age = sc.nextInt();
+		
+		System.out.println("키 입력");
+		double height = sc.nextDouble();
+		
+		Human hu = null;
+		
+		if(po == 1) { // 투수 선택시
+			System.out.println("승리횟수 입력");
+			int win = sc.nextInt();
+			
+			System.out.println("패배횟수 입력");
+			int lose = sc.nextInt();
+			
+			System.out.println("방어율 입력");
+			double defence = sc.nextDouble();
+			
+			hu = new Pitcher(sequence, name, age, height, win, lose, defence);
+			
+		}
+		else if(po == 2) { // 타자 선택시
+			System.out.println("볼수 입력");
+			int ball = sc.nextInt();
+			
+			System.out.println("안타횟수 입력");
+			int hit = sc.nextInt();
+			
+			System.out.println("안타율 입력");
+			double hitavg = sc.nextDouble();
+			
+			hu = new Batter(sequence + 1000, name, age, height, ball, hit, hitavg);
+			
+		}
+		
+		si.TMap.put(sequence, hu);
+		
+		sequence++;
+		
+	}
+	
+	
+}

@@ -1,0 +1,25 @@
+package project18;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		int a;
+		int b;
+		int temp ;
+		temp = 0;
+		int temp2 = 0;
+		for(a =0; a <101; a = a+2)
+		{
+			temp = a + temp ;
+			
+		}
+		System.out.println("1부터 100 사이 짝수의 합은:"+temp);
+		
+		for(b =1; b<100; b = b+2)
+		{
+			temp2 =b + temp2;
+		}
+		System.out.println("1부터 100 사이 홀수의 합은:"+temp);
+	}
+
+}

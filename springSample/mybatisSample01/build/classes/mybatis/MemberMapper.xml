@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="mybatis.MemberMapper">
+							<!-- 패키지 명과 같이 입력한다. -->
+	<insert id="add" parameterType="dto.MemberDto">
+		INSERT INTO MEMBERDTO(ID, PWD, EMAIL)
+		VALUES( #{ID}, #{PWD}, #{EMAIL} )
+	</insert>
+
+	<delete id="remove" parameterType="java.lang.String">
+		DELETE FROM MEMBERDTO
+		WHERE ID = #{id}
+	</delete>
+	<delete id="removeobj" parameterType="dto.MemberDto">
+		DELETE FROM MEMBERDTO
+		WHERE ID = #{id}
+	</delete>
+	<update id="updata" parameterType="java.lang.String">
+		UPDATE MEMBERDTO
+		SET PWD = #{pwd}
+	</update>
+	<update id="updataobj" parameterType="dto.MemberDto">
+		UPDATE MEMBERDTO
+		SET ID = #{id}, PWD = #{pwd}, EMAIL = #{email}
+	</update>
+	<update id="updatawhere" parameterType="dto.MemberDto">
+		UPDATE MEMBERDTO
+		SET PWD = #{pwd}
+		WHERE ID = #{id}
+	</update>
+	<select id="find" parameterType="java.lang.String" resultType="dto.MemberDto">
+		SELECT * FROM MEMBERDTO
+		WHERE ID = #{id}
+	</select>
+	<select id="allfind" resultType="dto.MemberDto">
+		SELECT ID, PWD, EMAIL
+		FROM MEMBERDTO
+	</select>
+	
+	<select id="search" parameterType="dto.BbsParam" resultType="dto.BbsDto">
+		SELECT * FROM BBS
+		WHERE 1=1
+		<if test="s_category == 'title'">
+			AND TITLE LIKE '%' || #{keyword} || '%'
+		</if>
+		<if test="s_category == 'content'">
+			AND CONTENT LIKE '%' || #{keyword} || '%'
+		</if>
+	</select>
+	
+</mapper>  

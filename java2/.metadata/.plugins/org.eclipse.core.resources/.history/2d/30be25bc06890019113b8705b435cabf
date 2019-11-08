@@ -1,0 +1,19 @@
+package processing;
+
+import java.util.Iterator;
+
+import dao.DaoInterface;
+import single.Singleton;
+
+public class DescendingClass implements DaoInterface{
+
+	@Override
+	public void Process() {
+		Singleton ss = Singleton.getInstance();
+	Iterable<Integer> it = ss.TMap.descendingKeySet().iterator();
+	
+		
+		
+	}
+
+}

@@ -1,0 +1,8 @@
+
+jsp 값 넘겨받기
+
+var v = "<%=str %>";
+document.write(v);
+
+
+

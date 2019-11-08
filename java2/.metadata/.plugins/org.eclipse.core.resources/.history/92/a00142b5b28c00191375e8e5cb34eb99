@@ -1,0 +1,21 @@
+package view;
+
+import javax.swing.JFrame;
+
+public class WindowTest1 extends JFrame {
+
+	public WindowTest1() {
+		super("JRadioButton");
+		
+		
+		
+		
+		
+		
+		setBounds(0, 0, 640, 480);
+		setVisible(true);
+		
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	}
+	
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+body{
+	line-height: 1cm;
+}
+</style>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+<h2>Detail</h2>
+
+<textarea rows="2" cols="10" id="ta" placeholder="insert"></textarea> <br>
+<button type="button" id="btn1">답글입력</button>
+
+<script type="text/javascript">
+$(function () {
+	$('#btn1').click(function() {
+		var txt = "<br> 답글:<input type = 'text' id ='txt1'>";
+		var btn = "<button type='button' id='btn2'>답글 입력</button>";
+		$('body').append(txt);
+		$('body').append(btn);
+	});
+	$(document).on("click", "#btn2", function() {
+		alert("x");
+	})
+});
+
+</script>
+
+</body>
+</html>

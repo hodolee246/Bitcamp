@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<form name="frm">		<!-- form안에 name 을 적은경우 JS접근하기 위한 목적인 경우가 많다. -->
+<div align="center">
+<table>
+	<tr>
+		<td><h2>타이머</h2></td>
+	</tr>
+</table>
+<br>
+<table>
+	<tr>
+		<td>
+			<select name="set" id="_set">
+				
+				<option value="180">3분</option>
+				<option value="120">2분</option>
+				<option value="60">1분</option>
+			</select>
+		</td>
+		
+		
+		<td><input type="button" value="선택" onclick="noodle()"></td>
+		<td><span id="countdown">시간을 선택</span></td>
+	</tr>
+</table>
+<table>
+	<tr>
+		<td><h3>타이머</h3></td>
+	</tr>
+	<tr>
+		<td><input type="button" value="닫기" onclick="window.close"></td>
+	</tr>
+</table>
+</div>
+</form>
+<script type="text/javascript">
+count = 0;
+time = 0;
+choice = 0;
+
+function noodle() {
+	clearInterval(time);
+	document.getElementById("_set")
+	choice = document.frm.set.selectedIndex;
+	count = document.frm.set.options[choice].value;
+
+	time = setInterval("myTimer()", 1000);
+	alert(time);
+}
+
+function myTimer() {
+	count = count -1;
+	
+	document.getElementById("countdown").innerHTML = "완료까지 <b>" + count + "</b> 초 남았습니다."  ;
+	if(count == 0){
+		clearInterval(time);
+		alert("완료 되었습니다.");
+	}
+}
+
+
+
+
+
+var _second = 1;
+
+function timeSet() {
+	
+	v.getElementsByTagName("h3")[0].innerHTML = v.getElementsByTagName("h3")[0].innerHTML - _second;
+	if(v.getElementsByTagName("h3")[0].innerHTML == 0){
+		alert("끝났습니다.");
+		return;
+	}
+}
+function name() {
+	
+	var _time = parseInt(document.getElementById("set").value);
+	alert(_time);
+	var v = document.getElementsByTagName("BODY")[0]
+	v.getElementsByTagName("h3")[0].innerHTML = _time;
+setInterval("timeSet()", 1000);	// 초당 한번씩 불러라
+}
+
+</script>
+</body>
+</html>

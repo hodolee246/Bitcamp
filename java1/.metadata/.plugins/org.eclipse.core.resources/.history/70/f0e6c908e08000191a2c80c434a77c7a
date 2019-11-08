@@ -1,0 +1,92 @@
+package work3;
+
+import java.io.File;
+import java.io.IOException;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		
+		/*
+			1. 파일생성
+			2. 파일삭제
+			3. 파일수정
+			4. 파일읽기
+			5. 파일추가수정
+			6. 모두출력
+			7. 종료
+		
+		*/
+		File file = null;
+		deleteFile("test");
+		
+		// createFile("test");
+		
+	}
+	
+	static File createFile(String filename) {
+		
+		File dirFile = new File("e:\\tmp"); // 경로지정
+		String fileList[] = dirFile.list();
+		boolean b = false;
+		
+		
+		for (int i = 0; i < fileList.length; i++) {
+			if(fileList[i].equals(filename + ".txt") == true) {
+				b = true;
+				break;
+				
+			}
+		}
+		if(b) {
+			System.out.println("같은 이름의 파일이 존재합니다. 파일을 생성하지 못했습니다.");
+			return null;
+		}
+		File newFile = new File("e:\\tmp\\" + filename + ".txt");
+		
+		try {
+			if(newFile.createNewFile()) {
+				System.out.println(filename +".txt 파일을 생성에 성공했습니다.");
+			}else {
+				System.out.println("파일을 생성에 실패했습니다.");
+				return null;
+			}
+		} catch (IOException e) {
+			System.out.println("예외가 발생했습니다.");
+		}
+		return newFile;
+	}
+	
+	static void deleteFile(String filename) {
+		File File = new File("e:\\tmp\\"); // 경로지정
+		
+		boolean b = File.exists(); // 파일이 있는지 유무를 true, false로 받는다  
+		if(b == false) {
+			System.out.println("삭제할 파일" + filename + ".txt 가 존재하지 않습니다.");
+		}else {
+			if(File.delete()) {
+				System.out.println("파일" + filename + ".txt를 삭제했습니다.");
+			} else {
+				System.out.println("파일" + filename + ".txt를 삭제하지 못했습니다.");
+			}
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+
+
+

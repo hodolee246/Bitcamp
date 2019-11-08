@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<img alt = "헉! 이미지가 없어요 ㅠㅠ" src = "./images/picture.png">
+
+<br><br>
+
+<img alt = "헉! 이미지가 없어요 ㅠㅠ" src = "http://img.cgv.co.kr/Movie/Thumbnail/Poster/000081/81749/81749_185.jpg">
+
+<br><br>
+
+<img alt = "헉! 이미지가 없어요!!" src = "./images/huk (1).gif">
+
+
+
+
+</body>
+</html>

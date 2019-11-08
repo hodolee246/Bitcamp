@@ -1,0 +1,25 @@
+// ------------------------------------------------------------------
+// Transitive dependencies of this project determined from the
+// maven pom organized by organization.
+// ------------------------------------------------------------------
+
+Tiles Request - JSP support
+
+
+From: 'Apache Software Foundation' (http://www.apache.org)
+  - Autotag - Core runtime (http://tiles.apache.org/tiles-autotag/tiles-autotag-core-runtime/) org.apache.tiles:tiles-autotag-core-runtime:jar:1.1.0
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+From: 'QOS.ch' (http://www.qos.ch)
+  - SLF4J API Module (http://www.slf4j.org) org.slf4j:slf4j-api:jar:1.5.8
+
+
+From: 'The Apache Software Foundation' (http://www.apache.org/)
+  - Tiles request - API (http://tiles.apache.org/tiles-request/tiles-request-api/) org.apache.tiles:tiles-request-api:jar:1.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+  - Tiles request - Servlet support (http://tiles.apache.org/tiles-request/tiles-request-servlet/) org.apache.tiles:tiles-request-servlet:jar:1.0.6
+    License: The Apache Software License, Version 2.0  (http://www.apache.org/licenses/LICENSE-2.0.txt)
+
+
+
+

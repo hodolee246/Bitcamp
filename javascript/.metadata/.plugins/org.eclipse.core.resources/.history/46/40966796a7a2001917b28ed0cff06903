@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<button type="button" onclick="document.bgColor= 'RED'">빨강</button>
+
+<button type="button" onclick="ColorSet(1)">파랑</button>
+
+<script type="text/javascript">
+
+function ColorSet( c ) {
+	if(c == 1){
+		document.bgColor = "blue";
+		
+	}else if (c == 2){
+		
+		document.bgColor = "Green";
+	}
+	
+	
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+
+<h2>사진들</h2>
+
+<img src="img01.jpg">
+<img src="img02.jpg">
+<img src="img03.jpg">
+<img src="img04.jpg">
+
+<script type="text/javascript">
+$(function () {
+	$('img').click(function() {
+		$(this).attr("title");
+	})
+})
+</script>
+</body>
+</html>

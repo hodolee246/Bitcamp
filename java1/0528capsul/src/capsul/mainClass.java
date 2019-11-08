@@ -1,0 +1,39 @@
+package capsul;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		 
+		 	캡슐화(은닉성)
+		 	상속성
+		 	다형성
+		 	
+		 	
+		 	캡슐화(은닉성)
+		 	Class 내부에 있는 요소(멤버변수)를 외부와 차단
+		 	
+		 
+		 
+		 
+		 */
+
+		Myclass cls = new Myclass();
+		cls.setNumber(1);
+		
+		int n = cls.getNumber();
+		
+		
+		System.out.println(cls);
+		
+		
+		cls.name = "전인우";
+		
+		Myclass mcls = new Myclass();
+		System.out.println(mcls);
+		
+		System.out.println(mcls.getInstance());
+		
+	}
+
+}

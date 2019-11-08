@@ -1,0 +1,80 @@
+<!-- 
+
+	Tag			성질들			형태들
+		<태그명 attribute(속성) property(특성)>내용</태그명>
+		
+		<태그명> 이런식으로 사용하는 태그도 있음
+
+		
+
+
+
+
+ -->
+
+
+<!DOCTYPE html>
+
+<html> <!-- root Tag(뿌리태크) 부모태그 -->
+
+<head>
+
+
+
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<!--  head란
+	css(디자인) 설정
+	javaScript 설정
+ -->
+</head>
+
+<body>
+'아쉬운 페더러비치의 주루플레이' 추신수, 득점권 타석에서 안타
+
+<!-- Heading --> 
+<h1>
+Title Html
+</h1>
+<h2>
+Title Html
+</h2>
+<h3>
+Title Html
+</h3>
+<h4>
+Title Html
+</h4>
+<h5>
+Title Html
+</h5>
+<h6>
+Title Html
+</h6>
+
+<!-- <paragraph> 단락 나누고 싶으면 -->
+<p>'아쉬운 페더러비치의 주루플레이</p>
+<p>' 추신수, 득점권 타석에서 안타</p>
+
+<!-- Break  개행-->
+배고프고 <br> 집가고싶고 <br> 노래방도 가고싶고 <br> 게임도 하고싶고 (오락실게임)
+
+<!-- Pre Formatted(보고 있는데로) -->
+<pre>
+안녕하세
+요 반갑습니
+다 고생하십
+니다.
+</pre>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+

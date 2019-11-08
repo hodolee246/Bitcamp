@@ -1,0 +1,53 @@
+package work3;
+
+public class mainClass {
+
+	public static void main(String[] args) {
+		/*
+		
+		5x9
+		column	row
+		열		행
+
+		
+		for(int j=0; j<9; j++) {
+			
+			for(int i=0; i<5; i++) {
+			
+				System.out.print("*"); // 행을 만들어주는 for문
+		}
+		System.out.println();	
+	}
+		
+		
+		int len = 0;
+		
+		for(int j=0; j<9; j++) {
+			if(j < 5) len++;
+			else if ( j > 4) len--;
+			for(int i=0; i<len; i++) {
+			
+				System.out.print("*");
+		}
+		System.out.println();	
+	}
+		
+		*/
+		int len = 0;
+		int numArr[] = {3,7,5,6,8,7,6,4,2} ;
+		
+		for(int j=0; j<10; j++) {
+			if(j < numArr[j]) len++;
+			
+			else if(j > numArr[j]+1) len--;
+				
+			for(int i=0; i<numArr[j]; i++) {
+			
+				System.out.print("*");
+		}
+		System.out.println();	
+	}
+		
+	}
+
+}
